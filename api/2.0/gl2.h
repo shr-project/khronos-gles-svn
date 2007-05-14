@@ -697,7 +697,6 @@ GL_APICALL void 		GL_APIENTRY glDeleteFramebuffers (GLsizei n, const GLuint* fra
 GL_APICALL void 		GL_APIENTRY glGenFramebuffers (GLsizei n, GLuint* framebuffers);
 GL_APICALL GLenum 		GL_APIENTRY glCheckFramebufferStatus (GLenum target);
 GL_APICALL void 		GL_APIENTRY glFramebufferTexture2D (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
-GL_APICALL void 		GL_APIENTRY glFramebufferTexture3D (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset);
 GL_APICALL void 		GL_APIENTRY glFramebufferRenderbuffer (GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
 GL_APICALL void 		GL_APIENTRY glGetFramebufferAttachmentParameteriv (GLenum target, GLenum attachment, GLenum pname, GLint* params);
 GL_APICALL void 		GL_APIENTRY glGenerateMipmap (GLenum target);
