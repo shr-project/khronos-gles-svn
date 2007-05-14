@@ -1,0 +1,62 @@
+Name
+
+    OES_fragment_precision_high
+
+Name Strings
+
+    GL_OES_fragment_precision_high
+
+Contact
+
+    Aaftab Munshi (amunshi@ati.com)
+
+IP Status
+
+    None.
+
+Status
+
+    Ratified by the Khronos BOP, July 22, 2005.    
+
+Version
+
+    Last Modifed Date: July 06, 2005
+
+Number
+
+    OpenGL ES Extension #28    
+
+Dependencies
+
+    OpenGL ES 2.0 is required.
+
+Overview
+
+    This extension allows an implementation to support the optional 
+    high precision qualifier for float and integer data types in 
+    fragment shaders.
+
+Issues
+
+    None
+
+New Tokens
+
+    None.
+
+
+New Procedures and Functions
+
+    None.
+
+Errors
+
+    None.
+
+New State
+
+    None.
+
+Revision History
+
+    7/6/2005    Aaftab Munshi    Created the extension

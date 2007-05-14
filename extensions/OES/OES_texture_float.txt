@@ -1,0 +1,141 @@
+Name
+
+    OES_texture_half_float
+    OES_texture_float
+
+Name Strings
+
+    GL_OES_texture_half_float, GL_OES_texture_float
+
+Contact
+
+
+IP Status
+
+    Please refer to the ARB_texture_float extension.
+
+Status
+
+    Ratified by the Khronos BOP, July 22, 2005.
+
+Version
+
+    Last Modified Date:  June 14, 2006
+
+Number
+
+    OpenGL ES Extension #36
+
+Dependencies
+
+    This extension is written against the OpenGL ES 2.0 Specification.
+
+    This extension is derived from the ARB_texture_float extension.
+
+Overview
+
+    These extensions add texture formats with 16- (aka half float) and 32-bit
+    floating-point components.  The 32-bit floating-point components
+    are in the standard IEEE float format.  The 16-bit floating-point
+    components have 1 sign bit, 5 exponent bits, and 10 mantissa bits.
+    Floating-point components are clamped to the limits of the range
+    representable by their format.
+
+    The OES_texture_half_float extension string indicates that the
+    implementation supports 16-bit floating pt texture foramts.
+
+    The OES_texture_float extension string indicates that the 
+    implementation supports 32-bit floating pt texture formats.
+
+    Both these extensions only require NEAREST magnification filter and 
+    NEAREST, and NEAREST_MIPMAP_NEAREST minification filters to be supported.
+
+Issues
+
+    1.  What should we do if magnification filter for a texture with half-float
+        or float channels is set to LINEAR.
+
+        RESOLUTION: The texture will be marked as incomplete.  
+        Only the NEAREST filter is supported.  
+        
+        The cost of doing a LINEAR filter for these texture formats can be
+        quite prohibitive.  There was a discussion on having the shader 
+        generate code to do LINEAR filter by making individual texture calls with a 
+        NEAREST filter but again the computational and memory b/w costs decided 
+        against mandating this approach.  The decision was that this extension
+        would only enable NEAREST magnification filter.  Support for LINEAR
+        magnification filter would be done through a separate extension.
+
+    2.  What should we do if minification filter is set to LINEAR or 
+        LINEAR_MIPMAP_NEAREST, NEAREST_MIPMAP_LINEAR and LINEAR_MIPMAP_LINEAR.
+
+        RESOLUTION: The texture will be marked as incomplete.  Only the NEAREST 
+        and NEAREST_MIPMAP_NEAREST minification filters are supported.  
+
+        This was decided for the same reasons given in issue #1.  The decision
+        was that this extension would only enable NEAREST and NEAREST_MIPMAP_NEAREST
+        minification filters, and the remaining OpenGL ES minification filters
+        would be supported through a separate extension.
+        
+    3.  Should CopyTexImage2D, CopyTexSubImage{2D|3D} be supported for textures
+        with half-float and float channels?
+        
+        RESOLUTION: No.
+
+New Procedures and Functions
+
+   None
+
+New Tokens
+
+    Accepted by the <type> parameter of TexImage2D,  TexSubImage2D, 
+    TexImage3D, and TexSubImage3D
+
+        HALF_FLOAT_OES                0x8D61
+        FLOAT                         0x1406
+
+Additions to Chapter 2 of the OpenGL ES 2.0 Specification (OpenGL Operation)
+
+    Add a new section called 16-Bit Floating-Point Numbers
+
+    A 16-bit floating-point number has a 1-bit sign (S), a 5-bit
+    exponent (E), and a 10-bit mantissa (M).  The value of a 16-bit
+    floating-point number is determined by the following:
+
+        (-1)^S * 0.0,                        if E == 0 and M == 0,
+        (-1)^S * 2^-14 * (M / 2^10),         if E == 0 and M != 0,
+        (-1)^S * 2^(E-15) * (1 + M/2^10),    if 0 < E < 31,
+        (-1)^S * INF,                        if E == 31 and M == 0, or
+        NaN,                                 if E == 31 and M != 0,
+
+    where
+
+        S = floor((N mod 65536) / 32768),
+        E = floor((N mod 32768) / 1024), and
+        M = N mod 1024.
+
+    Implementations are also allowed to use any of the following
+    alternative encodings:
+
+        (-1)^S * 0.0,                        if E == 0 and M != 0,
+        (-1)^S * 2^(E-15) * (1 + M/2^10),    if E == 31 and M == 0, or
+        (-1)^S * 2^(E-15) * (1 + M/2^10),    if E == 31 and M != 0,
+
+    Any representable 16-bit floating-point value is legal as input
+    to a GL command that accepts 16-bit floating-point data.  The
+    result of providing a value that is not a floating-point number
+    (such as infinity or NaN) to such a command is unspecified, but
+    must not lead to GL interruption or termination.  Providing a
+    denormalized number or negative zero to GL must yield predictable
+    results.
+
+
+Revision History
+
+    04/29/2005    0.1    Original draft.
+    06/29/2005    0.2    Added issues on why only NEAREST and 
+                         NEAREST_MIPMAP_NEAREST filters are required.
+    04/21/2006    0.3    Added TexSubImage2D and TexSubImage3D as
+                         functions that take the new tokens.
+    06/14/2006    0.4    CopyTexImage2D, CopyTexSubImag{2D|3D} are
+                         not supported.

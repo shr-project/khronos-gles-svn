@@ -1,0 +1,7 @@
+The GL_OES_blend_subtract extension adds two additional blending
+equations, GL_FUNC_SUBTRACT and GL_FUNC_REVERSE_SUBTRACT.
+
+For more information, see the OpenGL ES 1.1 Extension Pack document
+in the Khronos API Registry:
+
+    http://www.khronos.org/registry/gles/

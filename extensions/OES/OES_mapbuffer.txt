@@ -1,0 +1,76 @@
+Name
+
+    OES_mapbuffer
+
+Name Strings
+
+    GL_OES_mapbuffer
+
+Contact
+
+    Aaftab Munshi (amunshi@ati.com)
+
+IP Status
+
+    None.
+
+Status
+
+    Ratified by the Khronos BOP, July 22, 2005.
+
+Version
+
+    Last Modifed Date: July 06, 2005
+
+Number
+
+    OpenGL ES Extension #29    
+
+Dependencies
+
+    OpenGL ES 2.0 is required.
+
+Overview
+
+    This extension adds to the vertex buffer object functionality supported
+    by OpenGL ES 2.0, by allowing the entire data storage of a
+    buffer object to be mapped into the client's address space.
+
+Issues
+
+ 
+New Tokens
+
+    Accepted by the <value> parameter of GetBufferParameteriv:
+
+      BUFFER_MAPPED                0x88BC
+
+    Accepted by the <pname> parameter of GetBufferPointerv:
+
+      BUFFER_MAP_POINTER           0x88BD
+
+New Procedures and Functions
+
+    void *MapBuffer(enum target, enum access)
+
+    void UnmapBuffer(enum target)
+
+    Please refer to the OpenGL 2.0 specification for details on how
+    these functions work.
+
+Errors
+
+    None.
+
+New State
+
+(table 6.8)
+                                                       Initial
+Get Value            Type  Get Command          Value  Description
+---------            ----  -----------          -----  -----------
+BUFFER_MAPPED         B    GetBufferParameteriv FALSE  buffer map flag
+BUFFER_MAP_POINTER    Y    GetBufferPointerv    NULL   mapped buffer pointer
+
+Revision History
+
+    7/6/2005    Aaftab Munshi    Created the extension

@@ -1,0 +1,8 @@
+The GL_OES_blend_equation_separate extension provides a separate blend
+equation for RGB and alpha to match the generality available for blend
+factors.
+
+For more information, see the OpenGL ES 1.1 Extension Pack document
+in the Khronos API Registry:
+
+    http://www.khronos.org/registry/gles/
