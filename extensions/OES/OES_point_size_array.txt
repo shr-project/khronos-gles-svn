@@ -25,7 +25,7 @@ Number
 Dependencies
 
     OpenGL ES 1.0 is required.
-    ARB_point_sprite is required
+    OES_point_sprite is required
 
     The extension is written against the OpenGL 1.5 Specification.
 
