@@ -256,8 +256,6 @@ typedef int             GLsizeiptr;
 #define GL_PACK_ALIGNMENT                 0x0D05
 #define GL_MAX_TEXTURE_SIZE               0x0D33
 #define GL_MAX_VIEWPORT_DIMS              0x0D3A
-#define GL_MAX_ELEMENTS_VERTICES          0x80E8
-#define GL_MAX_ELEMENTS_INDICES           0x80E9
 #define GL_SUBPIXEL_BITS                  0x0D50
 #define GL_RED_BITS                       0x0D52
 #define GL_GREEN_BITS                     0x0D53
@@ -681,7 +679,7 @@ GL_APICALL void         GL_APIENTRY glGetShaderInfoLog (GLuint shader, GLsizei b
 GL_APICALL void         GL_APIENTRY glGetShaderSource (GLuint shader, GLsizei bufsize, GLsizei* length, char* source);
 GL_APICALL void         GL_APIENTRY glReleaseShaderCompiler (void);
 GL_APICALL void         GL_APIENTRY glShaderSource (GLuint shader, GLsizei count, const char** string, const GLint* length);
-GL_APICALL void         GL_APIENTRY glShaderBinary (GLint n, GLuint* shaders, GLenum binaryformat, const void* binary, GLint length);
+GL_APICALL void         GL_APIENTRY glShaderBinary (GLint n, const GLuint* shaders, GLenum binaryformat, const void* binary, GLint length);
 GL_APICALL void         GL_APIENTRY glGetShaderPrecisionFormat (GLenum shadertype, GLenum precisiontype, GLint* range, GLint* precision);
 
 /* Framebuffer Object */

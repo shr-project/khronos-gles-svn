@@ -31,16 +31,16 @@
 <h6> OpenGL ES 2.0 Specific </h6>
 
 <ul>
-<li> OpenGL ES 2.0.19
-     <a href="specs/2.0/es_cm_spec_2.0.19.pdf">
-     Difference Specification </a> (March 22, 2007). </li>
+<li> OpenGL ES 2.0.21
+     <a href="specs/2.0/es_cm_spec_2.0.21.pdf">
+     Difference Specification </a> (August 22, 2007). </li>
 <li> OpenGL ES Shading Language 1.0.14
      <a href="specs/2.0/GLSL_ES_Specification_1.0.14.pdf">
      Specification </a> (March 26, 2007). </li>
-<li> <a href="api/2.0/gl2.h"> gl2.h </a> for OpenGL ES 2.0 (February 26,
+<li> <a href="api/2.0/gl2.h"> gl2.h </a> for OpenGL ES 2.0 (August 22,
      2007). </li>
 <li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a> for OpenGL ES 2.0
-     extensions (October 30, 2006). </li>
+     extensions (May 7, 2007). </li>
 </ul>
 
 

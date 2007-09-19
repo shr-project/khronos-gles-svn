@@ -91,8 +91,10 @@ typedef int             GLsizeiptr;
 /*************************************************************/
 
 /* OpenGL ES core versions */
-#define GL_OES_VERSION_1_0                1
-#define GL_OES_VERSION_1_1                1
+#define GL_VERSION_ES_CM_1_0		1
+#define GL_VERSION_ES_CL_1_0		1
+#define GL_VERSION_ES_CM_1_1		1
+#define GL_VERSION_ES_CL_1_1		1
 
 /* Extensions */
 #define GL_OES_byte_coordinates           1
@@ -304,8 +306,6 @@ typedef int             GLsizeiptr;
 #define GL_MAX_PROJECTION_STACK_DEPTH     0x0D38
 #define GL_MAX_TEXTURE_STACK_DEPTH        0x0D39
 #define GL_MAX_VIEWPORT_DIMS              0x0D3A
-#define GL_MAX_ELEMENTS_VERTICES          0x80E8
-#define GL_MAX_ELEMENTS_INDICES           0x80E9
 #define GL_MAX_TEXTURE_UNITS              0x84E2
 #define GL_SUBPIXEL_BITS                  0x0D50
 #define GL_RED_BITS                       0x0D52
@@ -358,7 +358,6 @@ typedef int             GLsizeiptr;
 #define GL_PERSPECTIVE_CORRECTION_HINT    0x0C50
 #define GL_POINT_SMOOTH_HINT              0x0C51
 #define GL_LINE_SMOOTH_HINT               0x0C52
-#define GL_POLYGON_SMOOTH_HINT            0x0C53
 #define GL_FOG_HINT                       0x0C54
 #define GL_GENERATE_MIPMAP_HINT           0x8192
 
@@ -599,8 +598,6 @@ typedef int             GLsizeiptr;
 
 #define GL_BUFFER_SIZE                    0x8764
 #define GL_BUFFER_USAGE                   0x8765
-#define GL_BUFFER_ACCESS                  0x88BB
-
 
 /* Texture combine + dot3 */
 #define GL_SUBTRACT                       0x84E7
