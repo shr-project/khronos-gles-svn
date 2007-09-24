@@ -159,6 +159,10 @@
 </li>
 <li value=38> <a href="extensions/OES/OES_vertex_half_float.txt">GL_OES_vertex_half_float</a>
 </li>
+<li value=39> <a href="extensions/AMD/AMD_compressed_3DC_texture.txt">GL_AMD_compressed_3DC_texture.txt</a>
+</li>
+<li value=40> <a href="extensions/AMD/AMD_compressed_ATC_texture.txt">GL_AMD_compressed_ATC_texture.txt</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

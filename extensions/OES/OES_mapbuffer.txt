@@ -43,17 +43,19 @@ New Tokens
 
     Accepted by the <value> parameter of GetBufferParameteriv:
 
-      BUFFER_MAPPED                0x88BC
+      BUFFER_MAPPED_OES            0x88BC
 
     Accepted by the <pname> parameter of GetBufferPointerv:
 
-      BUFFER_MAP_POINTER           0x88BD
+      BUFFER_MAP_POINTER_OES       0x88BD
 
 New Procedures and Functions
 
-    void *MapBuffer(enum target, enum access)
+    void GetBufferPointervOES(enum target, enum pname, void** params)
 
-    void UnmapBuffer(enum target)
+    void *MapBufferOES(enum target, enum access)
+
+    void UnmapBufferOES(enum target)
 
     Please refer to the OpenGL 2.0 specification for details on how
     these functions work.
@@ -66,11 +68,12 @@ New State
 
 (table 6.8)
                                                        Initial
-Get Value            Type  Get Command          Value  Description
----------            ----  -----------          -----  -----------
-BUFFER_MAPPED         B    GetBufferParameteriv FALSE  buffer map flag
-BUFFER_MAP_POINTER    Y    GetBufferPointerv    NULL   mapped buffer pointer
+Get Value             Type  Get Command          Value  Description
+---------             ----  -----------          -----  -----------
+BUFFER_MAPPED_OES      B    GetBufferParameteriv FALSE  buffer map flag
+BUFFER_MAP_POINTER_OES Y    GetBufferPointervOES NULL   mapped buffer pointer
 
 Revision History
 
-    7/6/2005    Aaftab Munshi    Created the extension
+    9/19/2007    Benj Lipchak     Added OES suffixes, GetBufferPointervOES
+    7/06/2005    Aaftab Munshi    Created the extension

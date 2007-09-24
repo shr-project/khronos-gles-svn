@@ -1,0 +1,119 @@
+Name
+
+    AMD_compressed_ATC_texture
+
+Name Strings
+
+    GL_AMD_compressed_ATC_texture
+
+Contributors
+
+    Aaftab Munshi
+
+Contact
+
+    Benj Lipchak, AMD (benj.lipchak 'at' amd.com)
+
+IP Status
+
+    Please contact AMD regarding any intellectual property questions/issues 
+    associated with this extension.
+
+Status
+
+    Complete.
+
+Version
+
+    Last Modified Date: September 24, 2007
+    Revision: 5
+
+Number
+
+    OpenGL ES Extension #40
+
+Dependencies
+
+    Written based on the wording of the OpenGL ES 1.1 specification.
+
+Overview
+
+    This extension enables support for ATC compressed texture formats.  ATC is 
+    AMD's proprietary compression algorithm for compressing textures for 
+    handheld devices to save on power consumption, memory footprint and 
+    bandwidth.
+
+    Two compression formats are introduced:
+
+    - A compression format for RGB textures.
+    - A compression format for RGBA textures.
+
+New Procedures and Functions
+
+    None.
+
+New Tokens
+
+    Accepted by the <internalformat> parameter of CompressedTexImage2D and
+    CompressedTexImage3DOES.
+
+        ATC_RGB_AMD                        0x8C92
+        ATC_RGBA_AMD                       0x8C93
+
+Additions to Chapter 2 of the OpenGL 1.3 Specification (OpenGL Operation)
+
+    None.
+
+Additions to Chapter 3 of the OpenGL 1.3 Specification (Rasterization)
+
+    Add to Table 3.17:  Specific Compressed Internal Formats
+
+        Compressed Internal Format         Base Internal Format
+        ==========================         ====================
+        ATC_RGB_AMD                        RGB
+        ATC_RGBA_AMD                       RGBA
+
+
+    Add to Section 3.8.3, Alternate Image Specification
+
+    The details of these formats is not disclosed, so refer to AMD's 
+    Compressonator tool in order to encode your textures offline:
+    http://ati.amd.com/developer/compressonator.html
+    
+    OpenGL ES requires that all mip-levels have to be specified when
+    CompressedTexImage2D is called to load a palettized texture.  In this case 
+    the "level" value is either 0 or a negative number to indicate the number of
+    mip-levels.  This rule is not followed when loading an ATC texture.  The 
+    "level" number in this case represents the actual mip-level number,
+    so a negative number will raise an error.
+
+    ATC_RGB_AMD Format
+    ==================
+
+    This format compresses blocks of source texels down to 4 bits per texel.
+    Assuming 8-bit component source texels, this represents a 6:1 compression
+    ratio.
+
+    ATC_RGBA_AMD Format
+    ===================
+
+    This format compresses blocks of source texels down to 8 bits per texel.
+    Assuming 8-bit component source texels, this represents a 4:1 compression
+    ratio.
+
+Errors
+
+    None.
+
+New State
+
+    The queries for NUM_COMPRESSED_TEXTURE_FORMATS and 
+    COMPRESSED_TEXTURE_FORMATS include ATC_RGB_AMD and ATC_RGBA_AMD.
+
+Revision History
+
+    #5 09/24/2007 Jon Leech        Assign extension number.
+    09/05/2007    Benj Lipchak     Cosmetic changes.
+    08/01/2007    Benj Lipchak     Publication readiness.
+    07/07/2005    Aaftab Munshi    Fixed typos.
+    09/15/2004    Aaftab Munshi    Created the document.
