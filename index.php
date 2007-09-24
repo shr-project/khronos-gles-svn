@@ -40,7 +40,7 @@
 <li> <a href="api/2.0/gl2.h"> gl2.h </a> for OpenGL ES 2.0 (August 22,
      2007). </li>
 <li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a> for OpenGL ES 2.0
-     extensions (May 7, 2007). </li>
+     extensions (September 24, 2007). </li>
 </ul>
 
 
