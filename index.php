@@ -163,6 +163,8 @@
 </li>
 <li value=40> <a href="extensions/AMD/AMD_compressed_ATC_texture.txt">GL_AMD_compressed_ATC_texture</a>
 </li>
+<li value=41> <a href="extensions/EXT/texture_filter_anisotropic.txt">GL_EXT_texture_filter_anisotropic</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
