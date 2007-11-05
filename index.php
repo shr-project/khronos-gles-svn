@@ -37,7 +37,7 @@
 <li> OpenGL ES Shading Language 1.0.14
      <a href="specs/2.0/GLSL_ES_Specification_1.0.14.pdf">
      Specification </a> (March 26, 2007). </li>
-<li> <a href="api/2.0/gl2.h"> gl2.h </a> for OpenGL ES 2.0 (August 22,
+<li> <a href="api/2.0/gl2.h"> gl2.h </a> for OpenGL ES 2.0 (October 31,
      2007). </li>
 <li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a> for OpenGL ES 2.0
      extensions (September 24, 2007). </li>
