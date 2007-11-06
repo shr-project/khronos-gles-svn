@@ -20,7 +20,7 @@ Status
 
 Version
 
-    Last Modifed Date: July 06, 2005
+    Last Modifed Date: November 5, 2007
 
 Number
 
@@ -28,11 +28,11 @@ Number
 
 Dependencies
 
-    OpenGL ES 2.0 is required.
+    OpenGL ES 1.0 is required.
 
 Overview
 
-    OpenGL ES 2.0 supports DrawElements with <type> value of
+    OpenGL ES 1.0 supports DrawElements with <type> value of
     UNSIGNED_BYTE and UNSIGNED_SHORT.  This extension adds
     support for UNSIGNED_INT <type> values.
 
@@ -59,4 +59,5 @@ New State
 
 Revision History
 
-    7/6/2005    Aaftab Munshi    Created the extension
+    11/05/2007    Benj Lipchak     Change API version requirement
+    07/06/2005    Aaftab Munshi    Created the extension

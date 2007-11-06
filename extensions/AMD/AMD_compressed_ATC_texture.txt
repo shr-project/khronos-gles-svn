@@ -25,8 +25,8 @@ Status
 
 Version
 
-    Last Modified Date: September 24, 2007
-    Revision: 5
+    Last Modified Date: October 24, 2007
+    Revision: 6
 
 Number
 
@@ -43,10 +43,11 @@ Overview
     handheld devices to save on power consumption, memory footprint and 
     bandwidth.
 
-    Two compression formats are introduced:
+    Three compression formats are introduced:
 
     - A compression format for RGB textures.
-    - A compression format for RGBA textures.
+    - A compression format for RGBA textures using explicit alpha encoding.
+    - A compression format for RGBA textures using interpolated alpha encoding.
 
 New Procedures and Functions
 
@@ -58,7 +59,8 @@ New Tokens
     CompressedTexImage3DOES.
 
         ATC_RGB_AMD                        0x8C92
-        ATC_RGBA_AMD                       0x8C93
+        ATC_RGBA_EXPLICIT_ALPHA_AMD        0x8C93
+        ATC_RGBA_INTERPOLATED_ALPHA_AMD    0x87EE
 
 Additions to Chapter 2 of the OpenGL 1.3 Specification (OpenGL Operation)
 
@@ -69,9 +71,10 @@ Additions to Chapter 3 of the OpenGL 1.3 Specification (Rasterization)
     Add to Table 3.17:  Specific Compressed Internal Formats
 
         Compressed Internal Format         Base Internal Format
-        ==========================         ====================
+        ===============================    ====================
         ATC_RGB_AMD                        RGB
-        ATC_RGBA_AMD                       RGBA
+        ATC_RGBA_EXPLICIT_ALPHA_AMD        RGBA
+        ATC_RGBA_INTERPOLATED_ALPHA_AMD    RGBA
 
 
     Add to Section 3.8.3, Alternate Image Specification
@@ -91,15 +94,24 @@ Additions to Chapter 3 of the OpenGL 1.3 Specification (Rasterization)
     ==================
 
     This format compresses blocks of source texels down to 4 bits per texel.
-    Assuming 8-bit component source texels, this represents a 6:1 compression
-    ratio.
+    Assuming 8-bit component source texels, this represents a 8:1 compression
+    ratio.  This is the best format to use when no alpha channel is needed.
 
-    ATC_RGBA_AMD Format
-    ===================
+    ATC_RGBA_EXPLICIT_ALPHA_AMD Format
+    ==================================
 
     This format compresses blocks of source texels down to 8 bits per texel.
     Assuming 8-bit component source texels, this represents a 4:1 compression
-    ratio.
+    ratio.  This is generally the best format to use when alpha transitions are
+    sharp.
+
+    ATC_RGBA_INTERPOLATED_ALPHA_AMD Format
+    ======================================
+
+    This format compresses blocks of source texels down to 8 bits per texel.
+    Assuming 8-bit component source texels, this represents a 4:1 compression
+    ratio.  This is generally the best format to use when alpha transitions are
+    gradient.
 
 Errors
 
@@ -108,11 +120,13 @@ Errors
 New State
 
     The queries for NUM_COMPRESSED_TEXTURE_FORMATS and 
-    COMPRESSED_TEXTURE_FORMATS include ATC_RGB_AMD and ATC_RGBA_AMD.
+    COMPRESSED_TEXTURE_FORMATS include ATC_RGB_AMD, ATC_RGBA_EXPLICIT_ALPHA_AMD,
+    and ATC_RGBA_INTERPOLATED_ALPHA_AMD.
 
 Revision History
 
-    #5 09/24/2007 Jon Leech        Assign extension number.
+    10/24/2007    Benj Lipchak     Add interpolated alpha RGBA format.
+    09/24/2007    Jon Leech        Assign extension number.
     09/05/2007    Benj Lipchak     Cosmetic changes.
     08/01/2007    Benj Lipchak     Publication readiness.
     07/07/2005    Aaftab Munshi    Fixed typos.

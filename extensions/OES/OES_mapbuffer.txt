@@ -20,7 +20,7 @@ Status
 
 Version
 
-    Last Modifed Date: July 06, 2005
+    Last Modifed Date: November 5, 2007
 
 Number
 
@@ -28,12 +28,12 @@ Number
 
 Dependencies
 
-    OpenGL ES 2.0 is required.
+    OpenGL ES 1.1 is required.
 
 Overview
 
     This extension adds to the vertex buffer object functionality supported
-    by OpenGL ES 2.0, by allowing the entire data storage of a
+    by OpenGL ES 1.1 by allowing the entire data storage of a
     buffer object to be mapped into the client's address space.
 
 Issues
@@ -45,7 +45,7 @@ New Tokens
 
       BUFFER_MAPPED_OES            0x88BC
 
-    Accepted by the <pname> parameter of GetBufferPointerv:
+    Accepted by the <pname> parameter of GetBufferPointervOES:
 
       BUFFER_MAP_POINTER_OES       0x88BD
 
@@ -55,7 +55,7 @@ New Procedures and Functions
 
     void *MapBufferOES(enum target, enum access)
 
-    void UnmapBufferOES(enum target)
+    boolean UnmapBufferOES(enum target)
 
     Please refer to the OpenGL 2.0 specification for details on how
     these functions work.
@@ -67,13 +67,14 @@ Errors
 New State
 
 (table 6.8)
-                                                       Initial
-Get Value             Type  Get Command          Value  Description
----------             ----  -----------          -----  -----------
-BUFFER_MAPPED_OES      B    GetBufferParameteriv FALSE  buffer map flag
-BUFFER_MAP_POINTER_OES Y    GetBufferPointervOES NULL   mapped buffer pointer
+                                                  Initial
+Get Value              Type  Get Command          Value  Description
+---------              ----  -----------          -----  -----------
+BUFFER_MAPPED_OES      B     GetBufferParameteriv FALSE  buffer map flag
+BUFFER_MAP_POINTER_OES Y     GetBufferPointervOES NULL   mapped buffer pointer
 
 Revision History
 
-    9/19/2007    Benj Lipchak     Added OES suffixes, GetBufferPointervOES
-    7/06/2005    Aaftab Munshi    Created the extension
+    11/05/2007    Benj Lipchak     Change API version requirement, fix typos
+    09/19/2007    Benj Lipchak     Added OES suffixes, GetBufferPointervOES
+    07/06/2005    Aaftab Munshi    Created the extension

@@ -155,7 +155,7 @@ New State
 
 Revision History
 
-    #5 09/24/2007 Jon Leech        Assign extension number.
+    09/24/2007    Jon Leech        Assign extension number.
     09/05/2007    Benj Lipchak     Cosmetic changes.
     08/01/2007    Benj Lipchak     Publication readiness.
     06/02/2006    Aaftab Munshi    Added IP status.
