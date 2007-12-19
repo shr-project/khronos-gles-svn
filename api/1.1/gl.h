@@ -1,6 +1,10 @@
 #ifndef __gl_h_
 #define __gl_h_
 
+/* $Id: gl.h 4533 2007-11-26 11:19:35Z markc $ */
+
+#include <GLES/glplatform.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -39,35 +43,6 @@ extern "C" {
 ** compliant with the OpenGL(R) version 1.2.1 Specification.
 */
 
-#if defined(AEE_SIMULATOR)
-#define __GL_EXPORTS
-#endif
-
-#ifdef _WIN32
-#   ifdef __GL_EXPORTS
-#       define GL_API __declspec(dllexport)
-#   else
-#       define GL_API __declspec(dllimport)
-#   endif
-#else
-#   ifdef __GL_EXPORTS
-#       define GL_API
-#   else
-#       define GL_API extern
-#   endif
-#endif
-
-#define GL_APIENTRY 
-
-#ifndef APIENTRY
-#   define APIENTRY GL_APIENTRY
-#endif
- 
-#ifndef GLAPI
-#	define GLAPI GL_API
-#endif
-
-
 typedef unsigned int    GLenum;
 typedef unsigned char   GLboolean;
 typedef unsigned int    GLbitfield;
@@ -91,22 +66,10 @@ typedef int             GLsizeiptr;
 /*************************************************************/
 
 /* OpenGL ES core versions */
-#define GL_VERSION_ES_CM_1_0		1
-#define GL_VERSION_ES_CL_1_0		1
-#define GL_VERSION_ES_CM_1_1		1
-#define GL_VERSION_ES_CL_1_1		1
-
-/* Extensions */
-#define GL_OES_byte_coordinates           1
-#define GL_OES_compressed_paletted_texture 1
-#define GL_OES_draw_texture               1
-#define GL_OES_fixed_point                1
-#define GL_OES_matrix_get                 1
-#define GL_OES_matrix_palette             1
-#define GL_OES_point_size_array           1
-#define GL_OES_point_sprite               1
-#define GL_OES_read_format                1
-#define GL_OES_single_precision           1
+#define GL_VERSION_ES_CM_1_0		  1
+#define GL_VERSION_ES_CL_1_0		  1
+#define GL_VERSION_ES_CM_1_1		  1
+#define GL_VERSION_ES_CL_1_1		  1
 
 /* ClearBufferMask */
 #define GL_DEPTH_BUFFER_BIT               0x00000100
@@ -344,10 +307,8 @@ typedef int             GLsizeiptr;
 /*      GL_TEXTURE_WRAP_S */
 /*      GL_TEXTURE_WRAP_T */
 
-#define GL_IMPLEMENTATION_COLOR_READ_TYPE_OES   0x8B9A
-#define GL_IMPLEMENTATION_COLOR_READ_FORMAT_OES 0x8B9B
-#define GL_NUM_COMPRESSED_TEXTURE_FORMATS       0x86A2
-#define GL_COMPRESSED_TEXTURE_FORMATS           0x86A3
+#define GL_NUM_COMPRESSED_TEXTURE_FORMATS 0x86A2
+#define GL_COMPRESSED_TEXTURE_FORMATS     0x86A3
 
 /* HintMode */
 #define GL_DONT_CARE                      0x1100
@@ -552,18 +513,6 @@ typedef int             GLsizeiptr;
 #define GL_REPEAT                         0x2901
 #define GL_CLAMP_TO_EDGE                  0x812F
 
-/* PixelInternalFormat */
-#define GL_PALETTE4_RGB8_OES              0x8B90
-#define GL_PALETTE4_RGBA8_OES             0x8B91
-#define GL_PALETTE4_R5_G6_B5_OES          0x8B92
-#define GL_PALETTE4_RGBA4_OES             0x8B93
-#define GL_PALETTE4_RGB5_A1_OES           0x8B94
-#define GL_PALETTE8_RGB8_OES              0x8B95
-#define GL_PALETTE8_RGBA8_OES             0x8B96
-#define GL_PALETTE8_R5_G6_B5_OES          0x8B97
-#define GL_PALETTE8_RGBA4_OES             0x8B98
-#define GL_PALETTE8_RGB5_A1_OES           0x8B99
-
 /* VertexPointerType */
 /*      GL_SHORT */
 /*      GL_FLOAT */
@@ -584,17 +533,15 @@ typedef int             GLsizeiptr;
 #define GL_ARRAY_BUFFER                   0x8892
 #define GL_ELEMENT_ARRAY_BUFFER           0x8893
 
-#define GL_ARRAY_BUFFER_BINDING           0x8894
-#define GL_ELEMENT_ARRAY_BUFFER_BINDING   0x8895
-#define GL_VERTEX_ARRAY_BUFFER_BINDING    0x8896
-#define GL_NORMAL_ARRAY_BUFFER_BINDING    0x8897
-#define GL_COLOR_ARRAY_BUFFER_BINDING     0x8898
+#define GL_ARRAY_BUFFER_BINDING               0x8894
+#define GL_ELEMENT_ARRAY_BUFFER_BINDING       0x8895
+#define GL_VERTEX_ARRAY_BUFFER_BINDING        0x8896
+#define GL_NORMAL_ARRAY_BUFFER_BINDING        0x8897
+#define GL_COLOR_ARRAY_BUFFER_BINDING         0x8898
 #define GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING 0x889A
 
 #define GL_STATIC_DRAW                    0x88E4
 #define GL_DYNAMIC_DRAW                   0x88E8
-
-#define GL_WRITE_ONLY                     0x88B9
 
 #define GL_BUFFER_SIZE                    0x8764
 #define GL_BUFFER_USAGE                   0x8765
@@ -629,52 +576,48 @@ typedef int             GLsizeiptr;
 #define GL_DOT3_RGB                       0x86AE
 #define GL_DOT3_RGBA                      0x86AF
 
-/*****************************************************************************************/
-/*                                 OES extension functions                               */
-/*****************************************************************************************/
+/*------------------------------------------------------------------------*
+ * required OES extension tokens
+ *------------------------------------------------------------------------*/
 
-/* OES_draw_texture */
-#define GL_TEXTURE_CROP_RECT_OES          0x8B9D
+/* OES_read_format */
+#ifndef GL_OES_read_format
+#define GL_IMPLEMENTATION_COLOR_READ_TYPE_OES                   0x8B9A
+#define GL_IMPLEMENTATION_COLOR_READ_FORMAT_OES                 0x8B9B
+#endif
 
-/* OES_matrix_get */
-#define GL_MODELVIEW_MATRIX_FLOAT_AS_INT_BITS_OES   0x898D
-#define GL_PROJECTION_MATRIX_FLOAT_AS_INT_BITS_OES  0x898E
-#define GL_TEXTURE_MATRIX_FLOAT_AS_INT_BITS_OES     0x898F
-
-/* OES_matrix_palette */
-#define GL_MAX_VERTEX_UNITS_OES           0x86A4
-#define GL_MAX_PALETTE_MATRICES_OES       0x8842
-#define GL_MATRIX_PALETTE_OES             0x8840
-#define GL_MATRIX_INDEX_ARRAY_OES         0x8844
-#define GL_WEIGHT_ARRAY_OES               0x86AD
-#define GL_CURRENT_PALETTE_MATRIX_OES     0x8843
-
-#define GL_MATRIX_INDEX_ARRAY_SIZE_OES    0x8846
-#define GL_MATRIX_INDEX_ARRAY_TYPE_OES    0x8847
-#define GL_MATRIX_INDEX_ARRAY_STRIDE_OES  0x8848
-#define GL_MATRIX_INDEX_ARRAY_POINTER_OES 0x8849
-#define GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES 0x8B9E
-
-#define GL_WEIGHT_ARRAY_SIZE_OES          0x86AB
-#define GL_WEIGHT_ARRAY_TYPE_OES          0x86A9
-#define GL_WEIGHT_ARRAY_STRIDE_OES        0x86AA
-#define GL_WEIGHT_ARRAY_POINTER_OES       0x86AC
-#define GL_WEIGHT_ARRAY_BUFFER_BINDING_OES 0x889E
+/* GL_OES_compressed_paletted_texture */
+#ifndef GL_OES_compressed_paletted_texture
+#define GL_PALETTE4_RGB8_OES                                    0x8B90
+#define GL_PALETTE4_RGBA8_OES                                   0x8B91
+#define GL_PALETTE4_R5_G6_B5_OES                                0x8B92
+#define GL_PALETTE4_RGBA4_OES                                   0x8B93
+#define GL_PALETTE4_RGB5_A1_OES                                 0x8B94
+#define GL_PALETTE8_RGB8_OES                                    0x8B95
+#define GL_PALETTE8_RGBA8_OES                                   0x8B96
+#define GL_PALETTE8_R5_G6_B5_OES                                0x8B97
+#define GL_PALETTE8_RGBA4_OES                                   0x8B98
+#define GL_PALETTE8_RGB5_A1_OES                                 0x8B99
+#endif
 
 /* OES_point_size_array */
-#define GL_POINT_SIZE_ARRAY_OES           0x8B9C
-#define GL_POINT_SIZE_ARRAY_TYPE_OES      0x898A
-#define GL_POINT_SIZE_ARRAY_STRIDE_OES    0x898B
-#define GL_POINT_SIZE_ARRAY_POINTER_OES   0x898C
-#define GL_POINT_SIZE_ARRAY_BUFFER_BINDING_OES 0x8B9F
+#ifndef GL_OES_point_size_array
+#define GL_POINT_SIZE_ARRAY_OES                                 0x8B9C
+#define GL_POINT_SIZE_ARRAY_TYPE_OES                            0x898A
+#define GL_POINT_SIZE_ARRAY_STRIDE_OES                          0x898B
+#define GL_POINT_SIZE_ARRAY_POINTER_OES                         0x898C
+#define GL_POINT_SIZE_ARRAY_BUFFER_BINDING_OES                  0x8B9F
+#endif
 
-/* OES_point_sprite */
-#define GL_POINT_SPRITE_OES               0x8861
-#define GL_COORD_REPLACE_OES              0x8862
-
+/* GL_OES_point_sprite */
+#ifndef GL_OES_point_sprite
+#define GL_POINT_SPRITE_OES                                     0x8861
+#define GL_COORD_REPLACE_OES                                    0x8862
+#endif
 
 /*************************************************************/
 
+/* Available only in Common profile */
 GL_API void GL_APIENTRY glAlphaFunc (GLenum func, GLclampf ref);
 GL_API void GL_APIENTRY glClearColor (GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
 GL_API void GL_APIENTRY glClearDepthf (GLclampf depth);
@@ -714,6 +657,7 @@ GL_API void GL_APIENTRY glTexParameterf (GLenum target, GLenum pname, GLfloat pa
 GL_API void GL_APIENTRY glTexParameterfv (GLenum target, GLenum pname, const GLfloat *params);
 GL_API void GL_APIENTRY glTranslatef (GLfloat x, GLfloat y, GLfloat z);
 
+/* Available in both Common and Common-Lite profiles */
 GL_API void GL_APIENTRY glActiveTexture (GLenum texture);
 GL_API void GL_APIENTRY glAlphaFuncx (GLenum func, GLclampx ref);
 GL_API void GL_APIENTRY glBindBuffer (GLenum target, GLuint buffer);
@@ -821,29 +765,30 @@ GL_API void GL_APIENTRY glTranslatex (GLfixed x, GLfixed y, GLfixed z);
 GL_API void GL_APIENTRY glVertexPointer (GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
 GL_API void GL_APIENTRY glViewport (GLint x, GLint y, GLsizei width, GLsizei height);
 
-/*****************************************************************************************/
-/*                                 OES extension functions                               */
-/*****************************************************************************************/
-/* OES_matrix_palette */
-GL_API void GL_APIENTRY glCurrentPaletteMatrixOES (GLuint matrixpaletteindex);
-GL_API void GL_APIENTRY glLoadPaletteFromModelViewMatrixOES (void);
-GL_API void GL_APIENTRY glMatrixIndexPointerOES (GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
-GL_API void GL_APIENTRY glWeightPointerOES (GLint size, GLenum type, GLsizei stride, const GLvoid *pointer);
+/*------------------------------------------------------------------------*
+ * Required OES extension functions
+ *------------------------------------------------------------------------*/
 
-/* OES_point_size_array */
+/* GL_OES_read_format */
+#ifndef GL_OES_read_format
+#define GL_OES_read_format 1
+#endif
+
+/* GL_OES_compressed_paletted_texture */
+#ifndef GL_OES_compressed_paletted_texture
+#define GL_OES_compressed_paletted_texture 1
+#endif
+
+/* GL_OES_point_size_array */
+#ifndef GL_OES_point_size_array
+#define GL_OES_point_size_array 1
 GL_API void GL_APIENTRY glPointSizePointerOES (GLenum type, GLsizei stride, const GLvoid *pointer);
+#endif
 
-/* OES_draw_texture */
-GL_API void GL_APIENTRY glDrawTexsOES (GLshort x, GLshort y, GLshort z, GLshort width, GLshort height);
-GL_API void GL_APIENTRY glDrawTexiOES (GLint x, GLint y, GLint z, GLint width, GLint height);
-GL_API void GL_APIENTRY glDrawTexxOES (GLfixed x, GLfixed y, GLfixed z, GLfixed width, GLfixed height);
-
-GL_API void GL_APIENTRY glDrawTexsvOES (const GLshort *coords);
-GL_API void GL_APIENTRY glDrawTexivOES (const GLint *coords);
-GL_API void GL_APIENTRY glDrawTexxvOES (const GLfixed *coords);
-
-GL_API void GL_APIENTRY glDrawTexfOES (GLfloat x, GLfloat y, GLfloat z, GLfloat width, GLfloat height);
-GL_API void GL_APIENTRY glDrawTexfvOES (const GLfloat *coords);
+/* GL_OES_point_sprite */
+#ifndef GL_OES_point_sprite
+#define GL_OES_point_sprite 1
+#endif
 
 #ifdef __cplusplus
 }

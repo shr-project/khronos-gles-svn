@@ -37,21 +37,34 @@
 <li> OpenGL ES Shading Language 1.0.14
      <a href="specs/2.0/GLSL_ES_Specification_1.0.14.pdf">
      Specification </a> (March 26, 2007). </li>
-<li> <a href="api/2.0/gl2.h"> gl2.h </a> for OpenGL ES 2.0 (October 31,
-     2007). </li>
-<li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a> for OpenGL ES 2.0
-     extensions (November 5, 2007). </li>
+<li> <a href="api/2.0/gl2.h"> gl2.h </a>
+     OpenGL ES 2.0 Header File (November 26, 2007). </li>
+<li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a>
+     OpenGL ES 2.0 Extension Header File (November 28, 2007). </li>
+<li> <a href="api/2.0/gl2platform.h"> gl2platform.h </a>
+     OpenGL ES 2.0 Platform-Dependent Macros (November 28, 2007). </li>
 </ul>
 
 
 <h6> OpenGL ES 1.1 Specific </h6>
 
 <ul>
-<li> OpenGL ES 1.1.10 <a href="specs/1.1/es_full_spec.1.1.10.pdf"> Full
-     Specification </a> and <a href="specs/1.1/es_cm_spec_1.1.10.pdf">
-     Difference Specification </a> (April 4, 2007). </li>
-<li> <a href="api/1.1/gl.h"> gl.h </a> for OpenGL ES 1.1 (April 18,
-     2007). </li>
+<li> OpenGL ES 1.1.10
+     <a href="specs/1.1/es_full_spec.1.1.10.pdf"> Full Specification </a>
+     and
+     <a href="specs/1.1/es_cm_spec_1.1.10.pdf"> Difference Specification </a>
+     (April 4, 2007). </li>
+<li> <a href="api/1.1/gl.h"> gl.h </a>
+     OpenGL ES 1.1 Header File (November 26, 2007). </li>
+<li> <a href="api/1.1/glext.h"> glext.h </a>
+     OpenGL ES 1.1 Extension Header File (November 28, 2007). </li>
+<li> <a href="api/1.1/glplatform.h"> glplatform.h </a>
+     OpenGL ES 1.1 Platform-Dependent Macros (November 7, 2007). </li>
+<li> <a href="api/1.1/egl.h"> &lt;GLES/egl.h&gt; </a>
+     EGL Legacy Header File for OpenGL ES 1.1 (December 18, 2007) -
+     requires real &lt;EGL/egl.h&gt; from the
+     <a href="http://www.khronos.org/registry/egl/"> EGL Registry </a>.
+     </li>
 <li> <a href="specs/1.1/opengles_spec_1_1_extension_pack.pdf"> OpenGL ES
      1.1.03 Extension Pack </a> (July 19, 2005). </li>
 </ul>

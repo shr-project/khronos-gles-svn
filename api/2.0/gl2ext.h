@@ -1,9 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-#ifndef __gl2_h_
-#   include <GLES2/gl2.h>
-#endif
+/* $Id: gl2ext.h 4571 2007-11-28 16:33:30Z benj $ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -70,12 +68,6 @@ extern "C" {
 #define GL_PALETTE8_RGB5_A1_OES                                 0x8B99
 #endif
 
-/* GL_OES_read_format */
-#ifndef GL_OES_read_format
-#define GL_IMPLEMENTATION_COLOR_READ_TYPE_OES                   0x8B9A
-#define GL_IMPLEMENTATION_COLOR_READ_FORMAT_OES                 0x8B9B
-#endif
-
 /* GL_OES_EGL_image */
 #ifndef GL_OES_EGL_image
 typedef void* GLeglImageOES;
@@ -93,6 +85,9 @@ typedef void* GLeglImageOES;
 
 /* GL_OES_mapbuffer */
 #ifndef GL_OES_mapbuffer
+/* GL_READ_ONLY and GL_READ_WRITE not supported */
+#define GL_WRITE_ONLY_OES                                       0x88B9
+#define GL_BUFFER_ACCESS_OES                                    0x88BB
 #define GL_BUFFER_MAPPED_OES                                    0x88BC
 #define GL_BUFFER_MAP_POINTER_OES                               0x88BD
 #endif
@@ -111,11 +106,6 @@ typedef void* GLeglImageOES;
 /* GL_OES_stencil4 */
 #ifndef GL_OES_stencil4
 #define GL_STENCIL_INDEX4_OES                                   0x8D47
-#endif
-
-/* GL_OES_stencil8 */
-#ifndef GL_OES_stencil8
-#define GL_STENCIL_INDEX8_OES                                   0x8D48
 #endif
 
 /* GL_OES_texture3D */
@@ -167,11 +157,6 @@ typedef void* GLeglImageOES;
 /* GL_OES_compressed_paletted_texture */
 #ifndef GL_OES_compressed_paletted_texture
 #define GL_OES_compressed_paletted_texture 1
-#endif
-
-/* GL_OES_read_format */
-#ifndef GL_OES_read_format
-#define GL_OES_read_format 1
 #endif
 
 /* GL_OES_EGL_image */
@@ -236,11 +221,6 @@ typedef void (GL_APIENTRYP PFNGLGETBUFFERPOINTERVOESPROC) (GLenum target, GLenum
 /* GL_OES_stencil4 */
 #ifndef GL_OES_stencil4
 #define GL_OES_stencil4 1
-#endif
-
-/* GL_OES_stencil8 */
-#ifndef GL_OES_stencil8
-#define GL_OES_stencil8 1
 #endif
 
 /* GL_OES_texture_3D */
