@@ -178,6 +178,8 @@
 </li>
 <li value=41> <a href="extensions/EXT/texture_filter_anisotropic.txt">GL_EXT_texture_filter_anisotropic</a>
 </li>
+<li value=42> <a href="extensions/EXT/EXT_texture_type_2_10_10_10_REV.txt">GL_EXT_texture_type_2_10_10_10_REV</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
