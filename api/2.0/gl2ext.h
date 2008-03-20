@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Id: gl2ext.h 4571 2007-11-28 16:33:30Z benj $ */
+/* $Id: gl2ext.h 5399 2008-03-20 18:23:59Z benj $ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -83,6 +83,9 @@ typedef void* GLeglImageOES;
 #define GL_DEPTH_COMPONENT32_OES                                0x81A7
 #endif
 
+/* GL_OES_depth_texture */
+/* No new tokens introduced by this extension. */
+
 /* GL_OES_mapbuffer */
 #ifndef GL_OES_mapbuffer
 /* GL_READ_ONLY and GL_READ_WRITE not supported */
@@ -92,10 +95,22 @@ typedef void* GLeglImageOES;
 #define GL_BUFFER_MAP_POINTER_OES                               0x88BD
 #endif
 
+/* GL_OES_packed_depth_stencil */
+#ifndef GL_OES_packed_depth_stencil
+#define GL_DEPTH_STENCIL_OES                                    0x84F9
+#define GL_UNSIGNED_INT_24_8_OES                                0x84FA
+#define GL_DEPTH24_STENCIL8_OES                                 0x88F0
+#endif
+
 /* GL_OES_rgb8_rgba8 */
 #ifndef GL_OES_rgb8_rgba8
 #define GL_RGB8_OES                                             0x8051
 #define GL_RGBA8_OES                                            0x8058
+#endif
+
+/* GL_OES_standard_derivatives */
+#ifndef GL_OES_standard_derivatives
+#define GL_FRAGMENT_SHADER_DERIVATIVE_HINT_OES                  0x8B8B
 #endif
 
 /* GL_OES_stencil1 */
@@ -126,6 +141,16 @@ typedef void* GLeglImageOES;
 /* GL_OES_vertex_half_float */
 /* GL_HALF_FLOAT_OES defined in GL_OES_texture_half_float already. */
 
+/* GL_OES_vertex_type_10_10_10_2 */
+#ifndef GL_OES_vertex_type_10_10_10_2
+#define GL_UNSIGNED_INT_10_10_10_2_OES                          0x8DF6
+#define GL_INT_10_10_10_2_OES                                   0x8DF7
+#endif
+
+/*------------------------------------------------------------------------*
+ * AMD extension tokens
+ *------------------------------------------------------------------------*/
+
 /* GL_AMD_compressed_3DC_texture */
 #ifndef GL_AMD_compressed_3DC_texture
 #define GL_3DC_X_AMD                                            0x87F9
@@ -139,10 +164,19 @@ typedef void* GLeglImageOES;
 #define GL_ATC_RGBA_INTERPOLATED_ALPHA_AMD                      0x87EE
 #endif
 
+/*------------------------------------------------------------------------*
+ * EXT extension tokens
+ *------------------------------------------------------------------------*/
+
 /* GL_EXT_texture_filter_anisotropic */
 #ifndef GL_EXT_texture_filter_anisotropic
 #define GL_TEXTURE_MAX_ANISOTROPY_EXT                           0x84FE
 #define GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT                       0x84FF
+#endif
+
+/* GL_EXT_texture_type_2_10_10_10_REV */
+#ifndef GL_EXT_texture_type_2_10_10_10_REV
+#define UNSIGNED_INT_2_10_10_10_REV_EXT                         0x8368
 #endif
 
 /*------------------------------------------------------------------------*
@@ -180,6 +214,11 @@ typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETRENDERBUFFERSTORAGEOESPROC) (GLenu
 #define GL_OES_depth32 1
 #endif
 
+/* GL_OES_depth_texture */
+#ifndef GL_OES_depth_texture
+#define GL_OES_depth_texture 1
+#endif
+
 /* GL_OES_element_index_uint */
 #ifndef GL_OES_element_index_uint
 #define GL_OES_element_index_uint 1
@@ -208,9 +247,19 @@ typedef GLboolean (GL_APIENTRYP PFNGLUNMAPBUFFEROESPROC) (GLenum target);
 typedef void (GL_APIENTRYP PFNGLGETBUFFERPOINTERVOESPROC) (GLenum target, GLenum pname, void** params);
 #endif
 
+/* GL_OES_packed_depth_stencil */
+#ifndef GL_OES_packed_depth_stencil
+#define GL_OES_packed_depth_stencil 1
+#endif
+
 /* GL_OES_rgb8_rgba8 */
 #ifndef GL_OES_rgb8_rgba8
 #define GL_OES_rgb8_rgba8 1
+#endif
+
+/* GL_OES_standard_derivatives */
+#ifndef GL_OES_standard_derivatives
+#define GL_OES_standard_derivatives 1
 #endif
 
 /* GL_OES_stencil1 */
@@ -272,6 +321,15 @@ typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE3DOES) (GLenum target, GLenum 
 #define GL_OES_vertex_half_float 1
 #endif
 
+/* GL_OES_vertex_type_10_10_10_2 */
+#ifndef GL_OES_vertex_type_10_10_10_2
+#define GL_OES_vertex_type_10_10_10_2 1
+#endif
+
+/*------------------------------------------------------------------------*
+ * AMD extension functions
+ *------------------------------------------------------------------------*/
+
 /* GL_AMD_compressed_3DC_texture */
 #ifndef GL_AMD_compressed_3DC_texture
 #define GL_AMD_compressed_3DC_texture 1
@@ -282,9 +340,18 @@ typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE3DOES) (GLenum target, GLenum 
 #define GL_AMD_compressed_ATC_texture 1
 #endif
 
+/*------------------------------------------------------------------------*
+ * EXT extension functions
+ *------------------------------------------------------------------------*/
+
 /* GL_EXT_texture_filter_anisotropic */
 #ifndef GL_EXT_texture_filter_anisotropic
 #define GL_EXT_texture_filter_anisotropic 1
+#endif
+
+/* GL_EXT_texture_type_2_10_10_10_REV */
+#ifndef GL_EXT_texture_type_2_10_10_10_REV
+#define GL_EXT_texture_type_2_10_10_10_REV 1
 #endif
 
 #ifdef __cplusplus

@@ -38,9 +38,9 @@
      <a href="specs/2.0/GLSL_ES_Specification_1.0.14.pdf">
      Specification </a> (March 26, 2007). </li>
 <li> <a href="api/2.0/gl2.h"> gl2.h </a>
-     OpenGL ES 2.0 Header File (November 26, 2007). </li>
+     OpenGL ES 2.0 Header File (March 20, 2008). </li>
 <li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a>
-     OpenGL ES 2.0 Extension Header File (November 28, 2007). </li>
+     OpenGL ES 2.0 Extension Header File (March 20, 2008). </li>
 <li> <a href="api/2.0/gl2platform.h"> gl2platform.h </a>
      OpenGL ES 2.0 Platform-Dependent Macros (November 28, 2007). </li>
 </ul>
@@ -179,6 +179,14 @@
 <li value=41> <a href="extensions/EXT/texture_filter_anisotropic.txt">GL_EXT_texture_filter_anisotropic</a>
 </li>
 <li value=42> <a href="extensions/EXT/EXT_texture_type_2_10_10_10_REV.txt">GL_EXT_texture_type_2_10_10_10_REV</a>
+</li>
+<li value=43> <a href="extensions/OES/OES_depth_texture.txt">GL_OES_depth_texture</a>
+</li>
+<li value=44> <a href="extensions/OES/OES_packed_depth_stencil.txt">GL_OES_packed_depth_stencil</a>
+</li>
+<li value=45> <a href="extensions/OES/OES_standard_derivatives.txt">GL_OES_standard_derivatives</a>
+</li>
+<li value=46> <a href="extensions/OES/OES_vertex_type_10_10_10_2.txt">GL_OES_vertex_type_10_10_10_2</a>
 </li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>

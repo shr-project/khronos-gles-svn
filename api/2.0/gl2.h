@@ -1,7 +1,7 @@
 #ifndef __gl2_h_
 #define __gl2_h_
 
-/* $Id: gl2.h 4532 2007-11-26 11:12:44Z markc $ */
+/* $Id: gl2.h 5399 2008-03-20 18:23:59Z benj $ */
 
 #include <GLES2/gl2platform.h>
 
@@ -534,14 +534,14 @@ GL_APICALL GLuint       GL_APIENTRY glCreateShader (GLenum type);
 GL_APICALL void         GL_APIENTRY glCullFace (GLenum mode);
 GL_APICALL void         GL_APIENTRY glDeleteBuffers (GLsizei n, const GLuint* buffers);
 GL_APICALL void         GL_APIENTRY glDeleteFramebuffers (GLsizei n, const GLuint* framebuffers);
-GL_APICALL void         GL_APIENTRY glDeleteTextures (GLsizei n, const GLuint* textures);
 GL_APICALL void         GL_APIENTRY glDeleteProgram (GLuint program);
 GL_APICALL void         GL_APIENTRY glDeleteRenderbuffers (GLsizei n, const GLuint* renderbuffers);
 GL_APICALL void         GL_APIENTRY glDeleteShader (GLuint shader);
-GL_APICALL void         GL_APIENTRY glDetachShader (GLuint program, GLuint shader);
+GL_APICALL void         GL_APIENTRY glDeleteTextures (GLsizei n, const GLuint* textures);
 GL_APICALL void         GL_APIENTRY glDepthFunc (GLenum func);
 GL_APICALL void         GL_APIENTRY glDepthMask (GLboolean flag);
 GL_APICALL void         GL_APIENTRY glDepthRangef (GLclampf zNear, GLclampf zFar);
+GL_APICALL void         GL_APIENTRY glDetachShader (GLuint program, GLuint shader);
 GL_APICALL void         GL_APIENTRY glDisable (GLenum cap);
 GL_APICALL void         GL_APIENTRY glDisableVertexAttribArray (GLuint index);
 GL_APICALL void         GL_APIENTRY glDrawArrays (GLenum mode, GLint first, GLsizei count);
