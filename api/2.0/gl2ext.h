@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Id: gl2ext.h 5399 2008-03-20 18:23:59Z benj $ */
+/* $Id: gl2ext.h 5402 2008-03-20 19:37:16Z benj $ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -176,7 +176,7 @@ typedef void* GLeglImageOES;
 
 /* GL_EXT_texture_type_2_10_10_10_REV */
 #ifndef GL_EXT_texture_type_2_10_10_10_REV
-#define UNSIGNED_INT_2_10_10_10_REV_EXT                         0x8368
+#define GL_UNSIGNED_INT_2_10_10_10_REV_EXT                      0x8368
 #endif
 
 /*------------------------------------------------------------------------*
