@@ -1,7 +1,7 @@
 #ifndef __gl2_h_
 #define __gl2_h_
 
-/* $Id: gl2.h 5399 2008-03-20 18:23:59Z benj $ */
+/* $Id: gl2.h 5418 2008-03-26 19:57:12Z oddhack $ */
 
 #include <GLES2/gl2platform.h>
 
@@ -262,7 +262,6 @@ typedef int             GLsizeiptr;
 
 /* HintTarget */
 #define GL_GENERATE_MIPMAP_HINT            0x8192
-#define GL_FRAGMENT_SHADER_DERIVATIVE_HINT 0x8B8B
 
 /* DataType */
 #define GL_BYTE                           0x1400
