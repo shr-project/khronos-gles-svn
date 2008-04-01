@@ -20,7 +20,7 @@ Status
 
 Version
 
-    Last Modified Date: April 22, 2007
+    Last Modified Date: April 1, 2008
 
 Number
 
@@ -193,23 +193,13 @@ New Tokens
     GetFramebufferAttachmentParameterivOES
 
         COLOR_ATTACHMENT0_OES                0x8CE0
-        COLOR_ATTACHMENT1_OES                0x8CE1
-        COLOR_ATTACHMENT2_OES                0x8CE2
-        COLOR_ATTACHMENT3_OES                0x8CE3
-        COLOR_ATTACHMENT4_OES                0x8CE4
-        COLOR_ATTACHMENT5_OES                0x8CE5
-        COLOR_ATTACHMENT6_OES                0x8CE6
-        COLOR_ATTACHMENT7_OES                0x8CE7
-        COLOR_ATTACHMENT8_OES                0x8CE8
-        COLOR_ATTACHMENT9_OES                0x8CE9
-        COLOR_ATTACHMENT10_OES               0x8CEA
-        COLOR_ATTACHMENT11_OES               0x8CEB
-        COLOR_ATTACHMENT12_OES               0x8CEC
-        COLOR_ATTACHMENT13_OES               0x8CED
-        COLOR_ATTACHMENT14_OES               0x8CEE
-        COLOR_ATTACHMENT15_OES               0x8CEF
         DEPTH_ATTACHMENT_OES                 0x8D00
         STENCIL_ATTACHMENT_OES               0x8D20
+
+    Returned by GetFramebufferAttachmentParameterivOES when the
+    <pname> parameter is FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES:
+
+        GL_NONE_OES                          0
 
     Returned by CheckFramebufferStatusOES():
 
@@ -226,7 +216,6 @@ New Tokens
 
         FRAMEBUFFER_BINDING_OES             0x8CA6
         RENDERBUFFER_BINDING_OES            0x8CA7
-        MAX_COLOR_ATTACHMENTS_OES           0x8CDF
         MAX_RENDERBUFFER_SIZE_OES           0x84E8
 
     Returned by GetError():
@@ -236,7 +225,13 @@ New Tokens
 OES_framebuffer_object implements the functionality defined by EXT_framebuffer_object 
 with the following limitations:
 
-    - there is no support for DrawBuffer{s}, ReadBuffer{s}.
+    - EXT versions of the entry points and tokens used by the desktop
+      extension are replaced with OES-suffixed versions, and GL_NONE is
+      replaced with GL_NONE_OES.
+
+    - there is no support for DrawBuffer{s}, ReadBuffer{s}, or multiple
+      color attachments; tokens COLOR_ATTACHMENT[1-15]_OES and
+      MAX_COLOR_ATTACHMENTS_OES are not supported.
 
     - FramebufferTexture2DOES can be used to render 
       directly into the base level of a texture image only.  Rendering to any 
@@ -311,4 +306,8 @@ Revision History
                                   be mandated by OpenGL ES APIs.
     06/03/2006   Aaftab Munshi    Sync to revision 118 of EXT_framebuffer_object
     04/22/2007   Jon Leech        Restore RGB565_OES to "New Tokens" section.
-
+    03/26/2008   Jon Leech        Add NONE_OES to "New Tokens" and use it
+                                  instead of the non-existent (in ES 1.x) NONE.
+    04/01/2008   Ben Bowman,      Remove COLOR_ATTACHMENT[1-15]_OES and
+                 Jon Leech        MAX_COLOR_ATTACHMENTS_OES to match the
+                                  latest headers.
