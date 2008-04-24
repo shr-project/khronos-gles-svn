@@ -20,7 +20,7 @@ Status
 
 Version
 
-    Last Modified Date: April 1, 2008
+    Last Modified Date: April 10, 2008
 
 Number
 
@@ -29,6 +29,12 @@ Number
 Dependencies
 
     OpenGL ES 1.0 is required.
+    OES_rgb8_rgba8 affects the definition of this extension.
+    OES_depth24 affects the definition of this extension.
+    OES_depth32 affects the definition of this extension.
+    OES_stencil1 affects the definition of this extension.
+    OES_stencil4 affects the definition of this extension.
+    OES_stencil8 affects the definition of this extension.
 
 Overview
 
@@ -113,6 +119,20 @@ Overview
     the issues and their resolution.  This extension can be found at
     http://oss.sgi.com/projects/ogl-sample/registry/EXT/framebuffer_object.txt
 
+Issues
+
+    1) This extension should fold in the language developed for the
+       "full" OpenGL ES Specifications; the current difference form is
+       somewhat confusing, particularly since the additional optional
+       renderbuffer formats defined by layered extensions are not
+       documented properly.
+
+       The normal way of writing this would be to omit all mention of
+       these formats from the base extension, and in the layered
+       extensions, state that they are added to the appropriate table or
+       section of the extension. Instead, they are listed as optional
+       here, and the layered extensions are underspecified.
+
 New Procedures and Functions
 
     boolean IsRenderbufferOES(uint renderbuffer);
@@ -162,6 +182,9 @@ New Tokens
     Accepted by the <internalformat> parameter of
     RenderbufferStorageOES:
 
+        DEPTH_COMPONENT16_OES               0x81A5
+        RGBA4_OES                           0x8056
+        RGB5_A1_OES                         0x8057
         RGB565_OES                          0x8D62
         STENCIL_INDEX1_OES                  0x8D46
         STENCIL_INDEX4_OES                  0x8D47
@@ -262,32 +285,58 @@ with the following limitations:
                 Internal Format       Internal format      
                 ---------------       ---------------       
                 RGB565_OES            RGB                
-                RGBA4                 RGBA               
-                RGB5_A1               RGBA               
-                DEPTH_COMPONENT_16    DEPTH_COMPONENT    
+                RGBA4_OES             RGBA
+                RGB5_A1_OES           RGBA
+                DEPTH_COMPONENT16_OES DEPTH_COMPONENT
 
         The following formats are optional:
 
                 Sized                 Base                  
                 Internal Format       Internal format      
-                ---------------       ---------------       
-                RGBA8                 RGBA                    
-                RGB8                  RGB                
-                DEPTH_COMPONENT24     DEPTH_COMPONENT    
-                DEPTH_COMPONENT32     DEPTH_COMPONENT    
+                --------------------- ---------------
+                RGBA8_OES             RGBA
+                RGB8_OES              RGB
+                DEPTH_COMPONENT24_OES DEPTH_COMPONENT
+                DEPTH_COMPONENT32_OES DEPTH_COMPONENT
                 STENCIL_INDEX1_OES    STENCIL_INDEX      
                 STENCIL_INDEX4_OES    STENCIL_INDEX      
                 STENCIL_INDEX8_OES    STENCIL_INDEX      
 
+Dependencies on OES_rgb8_rgba8
+
+    The RGB8_OES and RGBA8_OES <internalformat> parameters to
+    RenderbufferStorageOES are only valid if OES_rgb8_rgba8 is
+    supported.
+
+Dependencies on OES_depth24
+
+    The DEPTH_COMPONENT24_OES <internalformat> parameter to
+    RenderbufferStorageOES is only valid if OES_depth24 is supported.
+
+Dependencies on OES_depth32
+
+    The DEPTH_COMPONENT32_OES <internalformat> parameter to
+    RenderbufferStorageOES is only valid if OES_depth32 is supported.
+
+Dependencies on OES_stencil1
+
+    The STENCIL_INDEX1_OES <internalformat> parameter to
+    RenderbufferStorageOES is only valid if OES_stencil1 is supported.
+
+Dependencies on OES_stencil4
+
+    The STENCIL_INDEX4_OES <internalformat> parameter to
+    RenderbufferStorageOES is only valid if OES_stencil4 is supported.
+
+Dependencies on OES_stencil8
+
+    The STENCIL_INDEX8_OES <internalformat> parameter to
+    RenderbufferStorageOES is only valid if OES_stencil8 is supported.
+
+Errors
        
-       The optional formats are described by the OES_rgb8_rgba8, OES_depth24,
-       OES_depth32, OES_stencil1, OES_stencil4, and OES_stencil8 extensions.
-       Even though these formats are optional in this extension, the OpenGL ES
-       APIs (1.x and 2.x versions) can mandate some or all of these optional formats.
-       
-       If RenderbufferStorageOES is called with an <internalformat> value that is 
-       not supported by the OpenGL ES implementation, an INVALID_ENUM error will 
-       be generated.
+    INVALID_ENUM is generated if RenderbufferStorageOES is called with
+    an unsupported <internalformat>.
 
 Revision History
 
@@ -311,3 +360,10 @@ Revision History
     04/01/2008   Ben Bowman,      Remove COLOR_ATTACHMENT[1-15]_OES and
                  Jon Leech        MAX_COLOR_ATTACHMENTS_OES to match the
                                   latest headers.
+    04/10/2008   Jon Leech        Add enum values and fix names for
+                                  RGBA4_OES, RGB5_A1_OES, and
+                                  DEPTH_COMPONENT16_OES. Add issues
+                                  list. Improve documentation of
+                                  interaction with document interactions
+                                  with optional optional layered
+                                  renderbuffer format extensions.

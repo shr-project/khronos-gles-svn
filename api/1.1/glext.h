@@ -89,7 +89,6 @@ extern "C" {
 
 /* OES_framebuffer_object */
 #ifndef GL_OES_framebuffer_object
-#define GL_NONE_OES                                             0
 #define GL_FRAMEBUFFER_OES                                      0x8D40
 #define GL_RENDERBUFFER_OES                                     0x8D41
 #define GL_RGBA4_OES                                            0x8056
