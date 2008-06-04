@@ -31,12 +31,14 @@
 <h6> OpenGL ES 2.0 Specific </h6>
 
 <ul>
-<li> OpenGL ES 2.0.21
-     <a href="specs/2.0/es_cm_spec_2.0.21.pdf">
-     Difference Specification </a> (August 22, 2007). </li>
-<li> OpenGL ES Shading Language 1.0.14
-     <a href="specs/2.0/GLSL_ES_Specification_1.0.14.pdf">
-     Specification </a> (March 26, 2007). </li>
+<li> OpenGL ES 2.0.22
+     <a href="specs/2.0/es_full_spec_2.0.22.pdf">
+     Full Specification </a> and
+     <a href="specs/2.0/es_cm_spec_2.0.22.pdf">
+     Difference Specification </a> (April 30, 2008). </li>
+<li> OpenGL ES Shading Language 1.0.16
+     <a href="specs/2.0/GLSL_ES_Specification_1.0.16.pdf">
+     Specification </a> (May 15, 2008). </li>
 <li> <a href="api/2.0/gl2.h"> gl2.h </a>
      OpenGL ES 2.0 Header File (March 20, 2008). </li>
 <li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a>
@@ -49,11 +51,11 @@
 <h6> OpenGL ES 1.1 Specific </h6>
 
 <ul>
-<li> OpenGL ES 1.1.10
-     <a href="specs/1.1/es_full_spec.1.1.10.pdf"> Full Specification </a>
+<li> OpenGL ES 1.1.12
+     <a href="specs/1.1/es_full_spec.1.1.12.pdf"> Full Specification </a>
      and
-     <a href="specs/1.1/es_cm_spec_1.1.10.pdf"> Difference Specification </a>
-     (April 4, 2007). </li>
+     <a href="specs/1.1/es_cm_spec_1.1.12.pdf"> Difference Specification </a>
+     (April 24, 2008). </li>
 <li> <a href="api/1.1/gl.h"> gl.h </a>
      OpenGL ES 1.1 Header File (November 26, 2007). </li>
 <li> <a href="api/1.1/glext.h"> glext.h </a>
