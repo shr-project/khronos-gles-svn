@@ -1,7 +1,7 @@
 #ifndef __glext_h_
 #define __glext_h_
 
-/* $Id: glext.h 4571 2007-11-28 16:33:30Z benj $ */
+/* $Id: glext.h 5687 2008-05-13 21:31:32Z oddhack $ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -89,6 +89,7 @@ extern "C" {
 
 /* OES_framebuffer_object */
 #ifndef GL_OES_framebuffer_object
+#define GL_NONE_OES                                             0
 #define GL_FRAMEBUFFER_OES                                      0x8D40
 #define GL_RENDERBUFFER_OES                                     0x8D41
 #define GL_RGBA4_OES                                            0x8056

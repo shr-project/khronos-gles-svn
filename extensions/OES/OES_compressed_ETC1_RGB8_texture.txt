@@ -20,7 +20,7 @@ Status
 
 Version
 
-    Last Modified Date: Oct 25, 2006
+    Last Modified Date: April 24, 2008
 
 Number
 
@@ -46,9 +46,16 @@ Overview
 
 Issues
 
-    None
+    Question: "How does the data format correspond to compressed files
+    created with tool etcpack?"
 
-    
+    If etcpack is used to convert a .ppm file to this format, the top
+    left pixel in the .ppm image will end up in the first block, which
+    in turn will end up at u=0, v=0 when sent to
+    glCompressedTexImage2D. Thus it works exactly the same way as just
+    sending the raw image data from the .ppm format directly to
+    glTexImage2D.
+
 New Procedures and Functions
 
     None
@@ -90,23 +97,32 @@ Additions to Chapter 3 of the OpenGL 1.3 Specification (Rasterization)
     placed in the upper half of a 4x4 block, and the lower half of the
     pixels in the block will not be accessed.
 
-    The first block in the memory will represent the top left block of
-    the texture, the second block will represent the block to the
-    immediate right of that, and so on. Thus the format is a top left
-    oriented format.
+    Pixel a1 (see Figure 3.9.0) of the first block in memory will
+    represent the texture coordinate (u=0, v=0). Pixel a2 in the
+    second block in memory will be adjacent to pixel m1 in the first
+    block, etc until the width of the texture. Then pixel a3 in the
+    following block (third block in memory for a 8x8 texture) will be
+    adjacent to pixel d1 in the first block, etc until the height of
+    the texture. Calling glCompressedTexImage2D to get an 8x8 texture
+    using the first, second, third and fourth block shown in Figure
+    3.9.0 would have the same effect as calling glTexImage2D where the
+    bytes describing the pixels would come in the following memory
+    order: a1 e1 i1 m1 a2 e2 i2 m2 b1 f1 j1 n1 b2 f2 j2 n2 c1 g1 k1 o1
+    c2 g2 k2 o2 d1 h1 l1 p1 d2 h2 l2 p2 a3 e3 i3 m3 a4 e4 i4 m4 b3 f3
+    j3 n3 b4 f4 j4 n4 c3 g3 k3 o3 c4 g4 k4 o4 d3 h3 l3 p3 d4 h4 l4 p4.
 
     The number of bits that represent a 4x4 texel block is 64 bits if
     <internalformat> is given by ETC1_RGB8_OES.
 
     The data for a block is a number of bytes, 
 
-    {a0, a1, a2, a3, a4, a5, a6, a7} 
+    {q0, q1, q2, q3, q4, q5, q6, q7} 
 
-    where byte a0 is located at the lowest memory address and a7 at
+    where byte q0 is located at the lowest memory address and q7 at
     the highest. The 64 bits specifying the block is then represented
     by the following 64 bit integer:
 
-    int64bit = 256*(256*(256*(256*(256*(256*(256*a0+a1)+a2)+a3)+a4)+a5)+a6)+a7;
+    int64bit = 256*(256*(256*(256*(256*(256*(256*q0+q1)+q2)+q3)+q4)+q5)+q6)+q7;
 
     Each 64-bit word contains information about a 4x4 pixel block as
     shown in Figure 3.9.1. There are two modes in ETC1; the
@@ -116,7 +132,7 @@ Additions to Chapter 3 of the OpenGL 1.3 Specification (Rasterization)
     chosen, and if diffbit = 1, then the 'differential' mode is
     chosen. The bit layout for the two modes are different: The bit
     layout for the individual mode is shown in Tables 3.17.1a and
-    3.17.1c, and the bit lay out for the differential mode is laid out
+    3.17.1c, and the bit layout for the differential mode is laid out
     in Tables 3.17.1b and 3.17.1c.
 
     In both modes, the 4x4 block is divided into two subblocks of
@@ -196,7 +212,7 @@ Additions to Chapter 3 of the OpenGL 1.3 Specification (Rasterization)
     that the pixel index for a particular texel is always stored in
     the same bit position, irrespectively of bits 'diffbit' and
     'flipbit'. The pixel index bits are decoded using table
-    3.17.3. If, for instance, if the pixel index bits are 01b = 1, and
+    3.17.3. If, for instance, the pixel index bits are 01b = 1, and
     the modifier table [-29, -9, 9, 29] is used, then the modifier
     value selected for that pixel is 29 (see table 3.17.3). This
     modifier value is now used to additively modify the base
@@ -261,7 +277,7 @@ Additions to Chapter 3 of the OpenGL 1.3 Specification (Rasterization)
      --------------------------------------------------      
     
 
-    Add table 3.17.2: Intensity modifyer sets for ETC1 compressed textures:
+    Add table 3.17.2: Intensity modifier sets for ETC1 compressed textures:
 
     table codeword                modifier table
     ------------------        ----------------------
@@ -275,12 +291,12 @@ Additions to Chapter 3 of the OpenGL 1.3 Specification (Rasterization)
             7                   -183 -47 47 183
 
 
-    Add table 3.17.3 Mapping from pixel index values to modifyer values for
+    Add table 3.17.3 Mapping from pixel index values to modifier values for
     ETC1 compressed textures:
 
     pixel index value
     ---------------
-     msb     lsb           resulting modifyer value
+     msb     lsb           resulting modifier value
     -----   -----          -------------------------
       1       1            -b (large negative value)
       1       0            -a (small negative value)
@@ -289,22 +305,56 @@ Additions to Chapter 3 of the OpenGL 1.3 Specification (Rasterization)
      
 
 
+    Add figure 3.9.0: Pixel layout for a 8x8 texture using four ETC1
+    compressed blocks. Note how pixel a2 in the second block is
+    adjacent to pixel m in the first block.
+
+     First block in mem  Second block in mem
+     ---- ---- ---- ---- .... .... .... ....  --> u direction
+    |a1  |e1  |i1  |m1  |a2  :e2  :i2  :m2  :
+    |    |    |    |    |    :    :    :    : 
+     ---- ---- ---- ---- .... .... .... ....
+    |b1  |f1  |j1  |n1  |b2  :f2  :j2  :n2  : 
+    |    |    |    |    |    :    :    :    : 
+     ---- ---- ---- ---- .... .... .... ....
+    |c1  |g1  |k1  |o1  |c2  :g2  :k2  :o2  : 
+    |    |    |    |    |    :    :    :    : 
+     ---- ---- ---- ---- .... .... .... ....
+    |d1  |h1  |l1  |p1  |d2  :h2  :l2  :p2  : 
+    |    |    |    |    |    :    :    :    : 
+     ---- ---- ---- ---- ---- ---- ---- ---- 
+    :a3  :e3  :i3  :m3  |a4  |e4  |i4  |m4  |
+    :    :    :    :    |    |    |    |    |
+     .... .... .... .... ---- ---- ---- ---- 
+    :b3  :f3  :j3  :n3  |b4  |f4  |j4  |n4  |
+    :    :    :    :    |    |    |    |    |
+     .... .... .... .... ---- ---- ---- ---- 
+    :c3  :g3  :k3  :o3  |c4  |g4  |k4  |o4  |
+    :    :    :    :    |    |    |    |    |
+     .... .... .... .... ---- ---- ---- ---- 
+    :d3  :h3  :l3  :p3  |d4  |h4  |l4  |p4  |
+    :    :    :    :    |    |    |    |    |
+     .... .... .... .... ---- ---- ---- ---- 
+    | Third block in mem  Fourth block in mem
+    v
+    v direction
+
     Add figure 3.9.1: Pixel layout for a ETC1 compressed block:
 
-     ---- ---- ---- ----
+     ---- ---- ---- ---- 
     |a   |e   |i   |m   |
     |    |    |    |    |
-     ---- ---- ---- ----
+     ---- ---- ---- ---- 
     |b   |f   |j   |n   |
     |    |    |    |    |
-     ---- ---- ---- ----
+     ---- ---- ---- ---- 
     |c   |g   |k   |o   |
     |    |    |    |    |
-     ---- ---- ---- ----
+     ---- ---- ---- ---- 
     |d   |h   |l   |p   |
     |    |    |    |    |
-     ---- ---- ---- ----
-
+     ---- ---- ---- ---- 
+     
 
     Add figure 3.9.2: Two 2x4-pixel subblocks side-by-side:
 
@@ -372,12 +422,9 @@ GLX Protocol
 
 Errors
 
-    INVALID_OPERATION is generated by TexImage2D, CompressedTexSubImage2D,
-    CopyTexSubImage2D if <internalformat> is ETC1_RGB8_OES.
-
-    INVALID VALUE is generated by CompressedTexImage2D if
-    <internalformat> is ETC1_RGB8_OES and <level> value is neither
-    zero or a negative value.
+    INVALID_OPERATION is generated by CompressedTexSubImage2D,
+    TexSubImage2D, or CopyTexSubImage2D if the texture image <level>
+    bound to <target> has internal format ETC1_RGB8_OES.
 
 New State
 
@@ -404,3 +451,7 @@ Revision History
          - Changed typos found by Eric Fausett
     10/25/2006    1.1    (Jacob Strom)
          - Added clarification on small textures and endianess
+    04/02/2008    1.11   (Jacob Strom)
+         - Added clarification on coordinate system orientation
+    04/24/2008    1.12   (Jacob Strom)
+         - Improve error description

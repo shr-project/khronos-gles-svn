@@ -188,6 +188,10 @@
 </li>
 <li value=46> <a href="extensions/OES/OES_vertex_type_10_10_10_2.txt">GL_OES_vertex_type_10_10_10_2</a>
 </li>
+<li value=47> <a href="extensions/OES/OES_get_program_binary.txt">GL_OES_get_program_binary</a>
+</li>
+<li value=48> <a href="extensions/AMD/AMD_program_binary_Z400.txt">GL_AMD_program_binary_Z400</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

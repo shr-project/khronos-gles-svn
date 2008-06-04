@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Id: gl2ext.h 5402 2008-03-20 19:37:16Z benj $ */
+/* $Id: gl2ext.h 5767 2008-06-02 17:44:20Z benj $ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -145,6 +145,18 @@ typedef void* GLeglImageOES;
 #ifndef GL_OES_vertex_type_10_10_10_2
 #define GL_UNSIGNED_INT_10_10_10_2_OES                          0x8DF6
 #define GL_INT_10_10_10_2_OES                                   0x8DF7
+#endif
+
+/* GL_OES_get_program_binary */
+#ifndef GL_OES_get_program_binary
+#define GL_PROGRAM_BINARY_LENGTH_OES                            0x8741
+#define GL_NUM_PROGRAM_BINARY_FORMATS_OES                       0x87FE
+#define GL_PROGRAM_BINARY_FORMATS_OES                           0x87FF
+#endif
+
+/* GL_AMD_program_binary_Z400 */
+#ifndef GL_AMD_program_binary_Z400
+#define GL_Z400_BINARY_AMD                                      0x8740
 #endif
 
 /*------------------------------------------------------------------------*
@@ -326,6 +338,17 @@ typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE3DOES) (GLenum target, GLenum 
 #define GL_OES_vertex_type_10_10_10_2 1
 #endif
 
+/* GL_OES_get_program_binary */
+#ifndef GL_OES_get_program_binary
+#define GL_OES_get_program_binary 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glGetProgramBinaryOES (GLuint program, GLsizei bufSize, GLsizei *length, GLenum *binaryFormat, void *binary);
+GL_APICALL void GL_APIENTRY glProgramBinaryOES (GLuint program, GLenum binaryFormat, const void *binary, GLint length);
+#endif
+typedef void (GL_APIENTRYP PFNGLGETPROGRAMBINARYOESPROC) (GLuint program, GLsizei bufSize, GLsizei *length, GLenum *binaryFormat, void *binary);
+typedef void (GL_APIENTRYP PFNGLPROGRAMBINARYOESPROC) (GLuint program, GLenum binaryFormat, const void *binary, GLint length);
+#endif
+
 /*------------------------------------------------------------------------*
  * AMD extension functions
  *------------------------------------------------------------------------*/
@@ -338,6 +361,11 @@ typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE3DOES) (GLenum target, GLenum 
 /* GL_AMD_compressed_ATC_texture */
 #ifndef GL_AMD_compressed_ATC_texture
 #define GL_AMD_compressed_ATC_texture 1
+#endif
+
+/* GL_AMD_program_binary_Z400 */
+#ifndef GL_AMD_program_binary_Z400
+#define GL_AMD_program_binary_Z400 1
 #endif
 
 /*------------------------------------------------------------------------*
