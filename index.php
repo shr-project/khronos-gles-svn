@@ -52,7 +52,7 @@
 
 <ul>
 <li> OpenGL ES 1.1.12
-     <a href="specs/1.1/es_full_spec.1.1.12.pdf"> Full Specification </a>
+     <a href="specs/1.1/es_full_spec_1.1.12.pdf"> Full Specification </a>
      and
      <a href="specs/1.1/es_cm_spec_1.1.12.pdf"> Difference Specification </a>
      (April 24, 2008). </li>
