@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Id: gl2ext.h 5767 2008-06-02 17:44:20Z benj $ */
+/* $Id: gl2ext.h 6209 2008-08-04 10:12:57Z oddhack $ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -86,6 +86,13 @@ typedef void* GLeglImageOES;
 /* GL_OES_depth_texture */
 /* No new tokens introduced by this extension. */
 
+/* GL_OES_get_program_binary */
+#ifndef GL_OES_get_program_binary
+#define GL_PROGRAM_BINARY_LENGTH_OES                            0x8741
+#define GL_NUM_PROGRAM_BINARY_FORMATS_OES                       0x87FE
+#define GL_PROGRAM_BINARY_FORMATS_OES                           0x87FF
+#endif
+
 /* GL_OES_mapbuffer */
 #ifndef GL_OES_mapbuffer
 /* GL_READ_ONLY and GL_READ_WRITE not supported */
@@ -147,18 +154,6 @@ typedef void* GLeglImageOES;
 #define GL_INT_10_10_10_2_OES                                   0x8DF7
 #endif
 
-/* GL_OES_get_program_binary */
-#ifndef GL_OES_get_program_binary
-#define GL_PROGRAM_BINARY_LENGTH_OES                            0x8741
-#define GL_NUM_PROGRAM_BINARY_FORMATS_OES                       0x87FE
-#define GL_PROGRAM_BINARY_FORMATS_OES                           0x87FF
-#endif
-
-/* GL_AMD_program_binary_Z400 */
-#ifndef GL_AMD_program_binary_Z400
-#define GL_Z400_BINARY_AMD                                      0x8740
-#endif
-
 /*------------------------------------------------------------------------*
  * AMD extension tokens
  *------------------------------------------------------------------------*/
@@ -174,6 +169,11 @@ typedef void* GLeglImageOES;
 #define GL_ATC_RGB_AMD                                          0x8C92
 #define GL_ATC_RGBA_EXPLICIT_ALPHA_AMD                          0x8C93
 #define GL_ATC_RGBA_INTERPOLATED_ALPHA_AMD                      0x87EE
+#endif
+
+/* GL_AMD_program_binary_Z400 */
+#ifndef GL_AMD_program_binary_Z400
+#define GL_Z400_BINARY_AMD                                      0x8740
 #endif
 
 /*------------------------------------------------------------------------*
@@ -244,6 +244,17 @@ typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETRENDERBUFFERSTORAGEOESPROC) (GLenu
 /* GL_OES_fragment_precision_high */
 #ifndef GL_OES_fragment_precision_high
 #define GL_OES_fragment_precision_high 1
+#endif
+
+/* GL_OES_get_program_binary */
+#ifndef GL_OES_get_program_binary
+#define GL_OES_get_program_binary 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glGetProgramBinaryOES (GLuint program, GLsizei bufSize, GLsizei *length, GLenum *binaryFormat, void *binary);
+GL_APICALL void GL_APIENTRY glProgramBinaryOES (GLuint program, GLenum binaryFormat, const void *binary, GLint length);
+#endif
+typedef void (GL_APIENTRYP PFNGLGETPROGRAMBINARYOESPROC) (GLuint program, GLsizei bufSize, GLsizei *length, GLenum *binaryFormat, void *binary);
+typedef void (GL_APIENTRYP PFNGLPROGRAMBINARYOESPROC) (GLuint program, GLenum binaryFormat, const void *binary, GLint length);
 #endif
 
 /* GL_OES_mapbuffer */
@@ -336,17 +347,6 @@ typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE3DOES) (GLenum target, GLenum 
 /* GL_OES_vertex_type_10_10_10_2 */
 #ifndef GL_OES_vertex_type_10_10_10_2
 #define GL_OES_vertex_type_10_10_10_2 1
-#endif
-
-/* GL_OES_get_program_binary */
-#ifndef GL_OES_get_program_binary
-#define GL_OES_get_program_binary 1
-#ifdef GL_GLEXT_PROTOTYPES
-GL_APICALL void GL_APIENTRY glGetProgramBinaryOES (GLuint program, GLsizei bufSize, GLsizei *length, GLenum *binaryFormat, void *binary);
-GL_APICALL void GL_APIENTRY glProgramBinaryOES (GLuint program, GLenum binaryFormat, const void *binary, GLint length);
-#endif
-typedef void (GL_APIENTRYP PFNGLGETPROGRAMBINARYOESPROC) (GLuint program, GLsizei bufSize, GLsizei *length, GLenum *binaryFormat, void *binary);
-typedef void (GL_APIENTRYP PFNGLPROGRAMBINARYOESPROC) (GLuint program, GLenum binaryFormat, const void *binary, GLint length);
 #endif
 
 /*------------------------------------------------------------------------*

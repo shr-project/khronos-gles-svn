@@ -1,7 +1,7 @@
 #ifndef __gl2_h_
 #define __gl2_h_
 
-/* $Id: gl2.h 5418 2008-03-26 19:57:12Z oddhack $ */
+/* $Id: gl2.h 6209 2008-08-04 10:12:57Z oddhack $ */
 
 #include <GLES2/gl2platform.h>
 
@@ -78,9 +78,6 @@ typedef int             GLsizeiptr;
 /* Boolean */
 #define GL_FALSE                          0
 #define GL_TRUE                           1
-
-/* \todo check that this should be in core. */
-#define GL_NONE                           0
 
 /* BeginMode */
 #define GL_POINTS                         0x0000
@@ -444,7 +441,6 @@ typedef int             GLsizeiptr;
 #define GL_SHADER_COMPILER                0x8DFA
 
 /* Shader Binary */
-#define GL_PLATFORM_BINARY                0x8D63
 #define GL_SHADER_BINARY_FORMATS          0x8DF8
 #define GL_NUM_SHADER_BINARY_FORMATS      0x8DF9
 
@@ -486,11 +482,12 @@ typedef int             GLsizeiptr;
 #define GL_DEPTH_ATTACHMENT               0x8D00
 #define GL_STENCIL_ATTACHMENT             0x8D20
 
+#define GL_NONE                           0
+
 #define GL_FRAMEBUFFER_COMPLETE                      0x8CD5
 #define GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT         0x8CD6
 #define GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT 0x8CD7
 #define GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS         0x8CD9
-#define GL_FRAMEBUFFER_INCOMPLETE_FORMATS            0x8CDA
 #define GL_FRAMEBUFFER_UNSUPPORTED                   0x8CDD
 
 #define GL_FRAMEBUFFER_BINDING            0x8CA6
@@ -510,9 +507,9 @@ GL_APICALL void         GL_APIENTRY glBindBuffer (GLenum target, GLuint buffer);
 GL_APICALL void         GL_APIENTRY glBindFramebuffer (GLenum target, GLuint framebuffer);
 GL_APICALL void         GL_APIENTRY glBindRenderbuffer (GLenum target, GLuint renderbuffer);
 GL_APICALL void         GL_APIENTRY glBindTexture (GLenum target, GLuint texture);
-GL_APICALL void         GL_APIENTRY glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
-GL_APICALL void         GL_APIENTRY glBlendEquation( GLenum mode );
-GL_APICALL void         GL_APIENTRY glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha);
+GL_APICALL void         GL_APIENTRY glBlendColor (GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
+GL_APICALL void         GL_APIENTRY glBlendEquation ( GLenum mode );
+GL_APICALL void         GL_APIENTRY glBlendEquationSeparate (GLenum modeRGB, GLenum modeAlpha);
 GL_APICALL void         GL_APIENTRY glBlendFunc (GLenum sfactor, GLenum dfactor);
 GL_APICALL void         GL_APIENTRY glBlendFuncSeparate (GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
 GL_APICALL void         GL_APIENTRY glBufferData (GLenum target, GLsizeiptr size, const void* data, GLenum usage);
@@ -600,7 +597,7 @@ GL_APICALL void         GL_APIENTRY glReleaseShaderCompiler (void);
 GL_APICALL void         GL_APIENTRY glRenderbufferStorage (GLenum target, GLenum internalformat, GLsizei width, GLsizei height);
 GL_APICALL void         GL_APIENTRY glSampleCoverage (GLclampf value, GLboolean invert);
 GL_APICALL void         GL_APIENTRY glScissor (GLint x, GLint y, GLsizei width, GLsizei height);
-GL_APICALL void         GL_APIENTRY glShaderBinary (GLint n, const GLuint* shaders, GLenum binaryformat, const void* binary, GLint length);
+GL_APICALL void         GL_APIENTRY glShaderBinary (GLsizei n, const GLuint* shaders, GLenum binaryformat, const void* binary, GLsizei length);
 GL_APICALL void         GL_APIENTRY glShaderSource (GLuint shader, GLsizei count, const char** string, const GLint* length);
 GL_APICALL void         GL_APIENTRY glStencilFunc (GLenum func, GLint ref, GLuint mask);
 GL_APICALL void         GL_APIENTRY glStencilFuncSeparate (GLenum face, GLenum func, GLint ref, GLuint mask);
