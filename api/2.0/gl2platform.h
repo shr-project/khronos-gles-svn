@@ -1,7 +1,7 @@
 #ifndef __gl2platform_h_
 #define __gl2platform_h_
 
-/* $Id: gl2platform.h 4532 2007-11-26 11:12:44Z markc $ */
+/* $Revision: 6254 $ on $Date:: 2008-08-06 16:38:52 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {

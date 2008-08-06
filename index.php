@@ -40,11 +40,11 @@
      <a href="specs/2.0/GLSL_ES_Specification_1.0.16.pdf">
      Specification </a> (May 15, 2008). </li>
 <li> <a href="api/2.0/gl2.h"> gl2.h </a>
-     OpenGL ES 2.0 Header File (July 23, 2008). </li>
+     OpenGL ES 2.0 Header File (August 6, 2008). </li>
 <li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a>
-     OpenGL ES 2.0 Extension Header File (July 19, 2008). </li>
+     OpenGL ES 2.0 Extension Header File (August 6, 2008). </li>
 <li> <a href="api/2.0/gl2platform.h"> gl2platform.h </a>
-     OpenGL ES 2.0 Platform-Dependent Macros (August 4, 2008). </li>
+     OpenGL ES 2.0 Platform-Dependent Macros (August 6, 2008). </li>
 </ul>
 
 
@@ -57,13 +57,13 @@
      <a href="specs/1.1/es_cm_spec_1.1.12.pdf"> Difference Specification </a>
      (April 24, 2008). </li>
 <li> <a href="api/1.1/gl.h"> gl.h </a>
-     OpenGL ES 1.1 Header File (November 26, 2007). </li>
+     OpenGL ES 1.1 Header File (August 6, 2008). </li>
 <li> <a href="api/1.1/glext.h"> glext.h </a>
-     OpenGL ES 1.1 Extension Header File (November 28, 2007). </li>
+     OpenGL ES 1.1 Extension Header File (August 6, 2008). </li>
 <li> <a href="api/1.1/glplatform.h"> glplatform.h </a>
-     OpenGL ES 1.1 Platform-Dependent Macros (November 7, 2007). </li>
+     OpenGL ES 1.1 Platform-Dependent Macros (August 6, 2008). </li>
 <li> <a href="api/1.1/egl.h"> &lt;GLES/egl.h&gt; </a>
-     EGL Legacy Header File for OpenGL ES 1.1 (December 18, 2007) -
+     EGL Legacy Header File for OpenGL ES 1.1 (August 6, 2008) -
      requires real &lt;EGL/egl.h&gt; from the
      <a href="http://www.khronos.org/registry/egl/"> EGL Registry </a>.
      </li>

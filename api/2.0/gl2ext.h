@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Id: gl2ext.h 6209 2008-08-04 10:12:57Z oddhack $ */
+/* $Revision: 6254 $ on $Date:: 2008-08-06 16:38:52 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {

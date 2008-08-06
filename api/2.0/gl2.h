@@ -1,7 +1,7 @@
 #ifndef __gl2_h_
 #define __gl2_h_
 
-/* $Id: gl2.h 6209 2008-08-04 10:12:57Z oddhack $ */
+/* $Revision: 6254 $ on $Date:: 2008-08-06 16:38:52 -0700 #$ */
 
 #include <GLES2/gl2platform.h>
 
@@ -61,7 +61,6 @@ typedef unsigned int    GLuint;
 typedef float           GLfloat;
 typedef float           GLclampf;
 typedef int             GLfixed;
-typedef int             GLclampx;
 
 /* GL types for handling large vertex buffer objects */
 typedef int             GLintptr;
