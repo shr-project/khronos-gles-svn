@@ -194,6 +194,8 @@
 </li>
 <li value=48> <a href="extensions/AMD/AMD_program_binary_Z400.txt">GL_AMD_program_binary_Z400</a>
 </li>
+<li value=49> <a href="extensions/EXT/texture_compression_dxt1.txt">GL_EXT_texture_compression_dxt1</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
