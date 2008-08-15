@@ -45,6 +45,8 @@
      OpenGL ES 2.0 Extension Header File (August 6, 2008). </li>
 <li> <a href="api/2.0/gl2platform.h"> gl2platform.h </a>
      OpenGL ES 2.0 Platform-Dependent Macros (August 6, 2008). </li>
+<li> <a href="http://www.khronos.org/opengles/sdk/docs/man/">
+      OpenGL ES 2.0 Online Manual Pages.</a> </li>
 </ul>
 
 
