@@ -31,11 +31,11 @@
 <h6> OpenGL ES 2.0 Specific </h6>
 
 <ul>
-<li> OpenGL ES 2.0.22
-     <a href="specs/2.0/es_full_spec_2.0.22.pdf">
+<li> OpenGL ES 2.0.23
+     <a href="specs/2.0/es_full_spec_2.0.23.pdf">
      Full Specification </a> and
-     <a href="specs/2.0/es_cm_spec_2.0.22.pdf">
-     Difference Specification </a> (April 30, 2008). </li>
+     <a href="specs/2.0/es_cm_spec_2.0.23.pdf">
+     Difference Specification </a> (August 27, 2008). </li>
 <li> OpenGL ES Shading Language 1.0.16
      <a href="specs/2.0/GLSL_ES_Specification_1.0.16.pdf">
      Specification </a> (May 15, 2008). </li>
