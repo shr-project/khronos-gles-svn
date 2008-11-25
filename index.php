@@ -180,8 +180,6 @@
 </li>
 <li value=40> <a href="extensions/AMD/AMD_compressed_ATC_texture.txt">GL_AMD_compressed_ATC_texture</a>
 </li>
-<li value=41> <a href="extensions/EXT/texture_filter_anisotropic.txt">GL_EXT_texture_filter_anisotropic</a>
-</li>
 <li value=42> <a href="extensions/EXT/EXT_texture_type_2_10_10_10_REV.txt">GL_EXT_texture_type_2_10_10_10_REV</a>
 </li>
 <li value=43> <a href="extensions/OES/OES_depth_texture.txt">GL_OES_depth_texture</a>
@@ -195,8 +193,6 @@
 <li value=47> <a href="extensions/OES/OES_get_program_binary.txt">GL_OES_get_program_binary</a>
 </li>
 <li value=48> <a href="extensions/AMD/AMD_program_binary_Z400.txt">GL_AMD_program_binary_Z400</a>
-</li>
-<li value=49> <a href="extensions/EXT/texture_compression_dxt1.txt">GL_EXT_texture_compression_dxt1</a>
 </li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
