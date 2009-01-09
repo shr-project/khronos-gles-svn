@@ -40,13 +40,16 @@
      <a href="specs/2.0/GLSL_ES_Specification_1.0.16.pdf">
      Specification </a> (May 15, 2008). </li>
 <li> <a href="api/2.0/gl2.h"> gl2.h </a>
-     OpenGL ES 2.0 Header File (August 6, 2008). </li>
+     OpenGL ES 2.0 Header File (December 19, 2008). </li>
 <li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a>
-     OpenGL ES 2.0 Extension Header File (August 6, 2008). </li>
+     OpenGL ES 2.0 Extension Header File (October 28, 2008). </li>
 <li> <a href="api/2.0/gl2platform.h"> gl2platform.h </a>
-     OpenGL ES 2.0 Platform-Dependent Macros (August 6, 2008). </li>
+     OpenGL ES 2.0 Platform-Dependent Macros (December 19, 2008). </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man/">
       OpenGL ES 2.0 Online Manual Pages.</a> </li>
+<li> The latest OpenGL ES 2.0 headers now depend on the shared
+     <a href="../egl/api/khrplatform.h"> khrplatform.h </a>
+     header located in the <a href="../egl/"> EGL Registry </a>
 </ul>
 
 
@@ -59,11 +62,11 @@
      <a href="specs/1.1/es_cm_spec_1.1.12.pdf"> Difference Specification </a>
      (April 24, 2008). </li>
 <li> <a href="api/1.1/gl.h"> gl.h </a>
-     OpenGL ES 1.1 Header File (August 6, 2008). </li>
+     OpenGL ES 1.1 Header File (December 19, 2008). </li>
 <li> <a href="api/1.1/glext.h"> glext.h </a>
-     OpenGL ES 1.1 Extension Header File (August 6, 2008). </li>
+     OpenGL ES 1.1 Extension Header File (October 28, 2008). </li>
 <li> <a href="api/1.1/glplatform.h"> glplatform.h </a>
-     OpenGL ES 1.1 Platform-Dependent Macros (August 6, 2008). </li>
+     OpenGL ES 1.1 Platform-Dependent Macros (December 19, 2008). </li>
 <li> <a href="api/1.1/egl.h"> &lt;GLES/egl.h&gt; </a>
      EGL Legacy Header File for OpenGL ES 1.1 (August 6, 2008) -
      requires real &lt;EGL/egl.h&gt; from the
@@ -71,6 +74,9 @@
      </li>
 <li> <a href="specs/1.1/opengles_spec_1_1_extension_pack.pdf"> OpenGL ES
      1.1.03 Extension Pack </a> (July 19, 2005). </li>
+<li> The latest OpenGL ES 1.1 headers now depend on the shared
+     <a href="../egl/api/khrplatform.h"> khrplatform.h </a>
+     header located in the <a href="../egl/"> EGL Registry </a>
 </ul>
 
 <h6> OpenGL ES 1.0 Specific </h6>
