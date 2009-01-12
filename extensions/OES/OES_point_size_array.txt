@@ -120,3 +120,9 @@ POINT_SIZE_ARRAY_BUFFER_BINDING_OES  Z+    GetIntegerv    0     point size array
 
 Revision History
 
+    2008.12.23    benj            Per Bugzilla 4310, remove language saying that points
+                                  are not drawn if point size array points are invalid,
+                                  since this is not (always) detectable.  This aligns
+                                  point size array behavior with all other array types,
+                                  where implementations can crash if given invalid
+                                  pointers to client data.
