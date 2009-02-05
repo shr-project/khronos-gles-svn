@@ -73,7 +73,7 @@ New Macro Definitions
 
 Additions to Chapter 5 of the OpenGL ES 2.0 specification:
 
-    In section 5.6 (Hints), add the following to the list of supported hints:
+    In section 5.2 (Hints), add the following to the list of supported hints:
 
     FRAGMENT_SHADER_DERIVATIVE_HINT_OES
 

@@ -13,7 +13,7 @@ Contributors
 
 Contact
 
-    Benj Lipchak, AMD (benj.lipchak 'at' amd.com)
+    Benj Lipchak, Apple (lipchak 'at' apple.com)
 
 Status
 
@@ -21,8 +21,8 @@ Status
 
 Version
     
-    Last Modified Date: October 2, 2007
-    Revision: #1
+    Last Modified Date: January 20, 2009
+    Revision: #2
 
 Number
 
@@ -61,26 +61,20 @@ Overview
     that made the standalone 24-bit depth buffer an unattractive proposition in
     the first place.
 
-    This extension provides a new data format, GL_DEPTH_STENCIL_OES, that can be
-    used with glTex[Sub]Image2D, as well as a packed data type,
-    GL_UNSIGNED_INT_24_8_OES, that is meant to be used with 
-    GL_DEPTH_STENCIL_OES.  No other data types are supported with
-    GL_DEPTH_STENCIL_OES.  If OES_depth_texture is supported, 
-    GL_DEPTH_STENCIL_OES/GL_UNSIGNED_INT_24_8_OES provides a more efficient way
-    to supply data for a 24-bit depth texture.
+    If OES_depth_texture is supported, a new data format, GL_DEPTH_STENCIL_OES,
+    as well as a packed data type, UNSIGNED_INT_24_8_OES, together can be used
+    with glTex[Sub]Image2D.  This provides an efficient way to supply data for a
+    24-bit depth texture.  When a texture with DEPTH_STENCIL_OES data is bound
+    for texturing, only the depth component is accessible through the texture
+    fetcher.  
 
-    In addition, a new base internal format, GL_DEPTH_STENCIL_OES, can be used 
-    by both texture images and renderbuffer storage.  When an image with a 
-    DEPTH_STENCIL_OES internal format is attached to both the depth and stencil
-    attachment points of a framebuffer object, then it becomes both the depth 
-    and stencil buffers of the framebuffer.  This fits nicely with hardware that
-    interleaves both depth and stencil data into a single buffer.  When a
-    texture with DEPTH_STENCIL_OES data is bound for texturing, only the depth
-    component is accessible through the texture fetcher.  The stencil data can 
-    be written with TexImage.  When a DEPTH_STENCIL_OES image is attached to the
-    stencil attachment of the bound framebuffer object, the stencil data can be
-    accessed through any operation that reads from or writes to the 
-    framebuffer's stencil buffer.
+    This extension also provides a new sized internal format,
+    DEPTH24_STENCIL8_OES, which can be used for renderbuffer storage.  When a
+    renderbuffer or texture image with a DEPTH_STENCIL_OES base internal format
+    is attached to both the depth and stencil attachment points of a framebuffer
+    object, then it becomes both the depth and stencil buffers of the
+    framebuffer.  This fits nicely with hardware that interleaves both depth and
+    stencil data into a single buffer.
 
 New Procedures and Functions
 
@@ -262,6 +256,12 @@ GLX Protocol
 
     None.
 
+Interactions with OES_depth_texture
+
+    If OES_depth_texture is not available, mentions of DEPTH_STENCIL_OES and
+    UNSIGNED_INT_24_8_OES as format/type combinations accepted by TexImage2D and
+    TexSubImage2D are omitted.
+
 Errors
 
     The error INVALID_ENUM is generated if RenderbufferStorage is called with an
@@ -340,5 +340,7 @@ Issues
 
 Revision History
 
+    #02    01/20/2009    Benj Lipchak    Make the OES_depth_texture interactions
+                                         more explicit.
     #01    10/02/2007    Benj Lipchak    Start with EXT_packed_depth_stencil,
                                          rename OES and remove non-ES stuff.
