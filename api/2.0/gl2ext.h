@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 7173 $ on $Date:: 2009-01-09 11:18:21 -0800 #$ */
+/* $Revision: 7521 $ on $Date:: 2009-03-02 02:33:07 -0800 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -144,6 +144,18 @@ typedef void* GLeglImageOES;
 /* GL_AMD_program_binary_Z400 */
 #ifndef GL_AMD_program_binary_Z400
 #define GL_Z400_BINARY_AMD                                      0x8740
+#endif
+
+/* GL_AMD_performance_monitor */
+#ifndef GL_AMD_performance_monitor
+#define GL_AMD_performance_monitor
+#define GL_COUNTER_TYPE_AMD                                     0x8BC0
+#define GL_COUNTER_RANGE_AMD                                    0x8BC1
+#define GL_UNSIGNED_INT64_AMD                                   0x8BC2
+#define GL_PERCENTAGE_AMD                                       0x8BC3
+#define GL_PERFMON_RESULT_AVAILABLE_AMD                         0x8BC4
+#define GL_PERFMON_RESULT_SIZE_AMD                              0x8BC5
+#define GL_PERFMON_RESULT_AMD                                   0x8BC6
 #endif
 
 /*------------------------------------------------------------------------*
@@ -336,6 +348,35 @@ typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE3DOES) (GLenum target, GLenum 
 /* GL_AMD_program_binary_Z400 */
 #ifndef GL_AMD_program_binary_Z400
 #define GL_AMD_program_binary_Z400 1
+#endif
+
+/* AMD_performance_monitor */
+#ifndef GL_AMD_performance_monitor
+#define GL_AMD_performance_monitor 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glGetPerfMonitorGroupsAMD (GLint *numGroups, GLsizei groupsSize, GLuint *groups);
+GL_APICALL void GL_APIENTRY glGetPerfMonitorCountersAMD (GLuint group, GLint *numCounters, GLint *maxActiveCounters, GLsizei counterSize, GLuint *counters);
+GL_APICALL void GL_APIENTRY glGetPerfMonitorGroupStringAMD (GLuint group, GLsizei bufSize, GLsizei *length, char *groupString);
+GL_APICALL void GL_APIENTRY glGetPerfMonitorCounterStringAMD (GLuint group, GLuint counter, GLsizei bufSize, GLsizei *length, char *counterString);
+GL_APICALL void GL_APIENTRY glGetPerfMonitorCounterInfoAMD (GLuint group, GLuint counter, GLenum pname, void *data);
+GL_APICALL void GL_APIENTRY glGenPerfMonitorsAMD (GLsizei n, GLuint *monitors);
+GL_APICALL void GL_APIENTRY glDeletePerfMonitorsAMD (GLsizei n, GLuint *monitors);
+GL_APICALL void GL_APIENTRY glSelectPerfMonitorCountersAMD (GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *countersList);
+GL_APICALL void GL_APIENTRY glBeginPerfMonitorAMD (GLuint monitor);
+GL_APICALL void GL_APIENTRY glEndPerfMonitorAMD (GLuint monitor);
+GL_APICALL void GL_APIENTRY glGetPerfMonitorCounterDataAMD (GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten);
+#endif
+typedef void (GL_APIENTRYP PFNGLGETPERFMONITORGROUPSAMDPROC) (GLint *numGroups, GLsizei groupsSize, GLuint *groups);
+typedef void (GL_APIENTRYP PFNGLGETPERFMONITORCOUNTERSAMDPROC) (GLuint group, GLint *numCounters, GLint *maxActiveCounters, GLsizei counterSize, GLuint *counters);
+typedef void (GL_APIENTRYP PFNGLGETPERFMONITORGROUPSTRINGAMDPROC) (GLuint group, GLsizei bufSize, GLsizei *length, char *groupString);
+typedef void (GL_APIENTRYP PFNGLGETPERFMONITORCOUNTERSTRINGAMDPROC) (GLuint group, GLuint counter, GLsizei bufSize, GLsizei *length, char *counterString);
+typedef void (GL_APIENTRYP PFNGLGETPERFMONITORCOUNTERINFOAMDPROC) (GLuint group, GLuint counter, GLenum pname, void *data);
+typedef void (GL_APIENTRYP PFNGLGENPERFMONITORSAMDPROC) (GLsizei n, GLuint *monitors);
+typedef void (GL_APIENTRYP PFNGLDELETEPERFMONITORSAMDPROC) (GLsizei n, GLuint *monitors);
+typedef void (GL_APIENTRYP PFNGLSELECTPERFMONITORCOUNTERSAMDPROC) (GLuint monitor, GLboolean enable, GLuint group, GLint numCounters, GLuint *countersList);
+typedef void (GL_APIENTRYP PFNGLBEGINPERFMONITORAMDPROC) (GLuint monitor);
+typedef void (GL_APIENTRYP PFNGLENDPERFMONITORAMDPROC) (GLuint monitor);
+typedef void (GL_APIENTRYP PFNGLGETPERFMONITORCOUNTERDATAAMDPROC) (GLuint monitor, GLenum pname, GLsizei dataSize, GLuint *data, GLint *bytesWritten);
 #endif
 
 /*------------------------------------------------------------------------*
