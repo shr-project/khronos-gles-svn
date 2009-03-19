@@ -1,7 +1,7 @@
 #ifndef __glext_h_
 #define __glext_h_
 
-/* $Revision: 7172 $ on $Date:: 2009-01-09 11:17:41 -0800 #$ */
+/* $Revision: 7671 $ on $Date:: 2009-03-19 00:56:32 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -226,6 +226,11 @@ typedef void* GLeglImageOES;
 #ifndef GL_EXT_texture_filter_anisotropic
 #define GL_TEXTURE_MAX_ANISOTROPY_EXT                           0x84FE
 #define GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT                       0x84FF
+#endif
+
+/* GL_EXT_texture_format_BGRA8888 */
+#ifndef GL_EXT_texture_format_BGRA8888
+#define GL_BGRA                                                 0x80E1
 #endif
 
 /*------------------------------------------------------------------------*
@@ -597,6 +602,11 @@ typedef void (GL_APIENTRYP PFNGLGETTEXGENXVOESPROC) (GLenum coord, GLenum pname,
 /* GL_EXT_texture_filter_anisotropic */
 #ifndef GL_EXT_texture_filter_anisotropic
 #define GL_EXT_texture_filter_anisotropic 1
+#endif
+
+/* GL_EXT_texture_format_BGRA8888 */
+#ifndef GL_EXT_texture_format_BGRA8888
+#define GL_EXT_texture_format_BGRA8888 1
 #endif
 
 #ifdef __cplusplus

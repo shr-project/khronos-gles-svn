@@ -207,6 +207,8 @@
 </li>
 <li value=50> <a href="extensions/AMD/performance_monitor.txt">GL_AMD_performance_monitor</a>
 </li>
+<li value=51> <a href="extensions/EXT/EXT_texture_format_BGRA8888.txt">GL_EXT_texture_format_BGRA8888</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
