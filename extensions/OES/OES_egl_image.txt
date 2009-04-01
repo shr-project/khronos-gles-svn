@@ -22,7 +22,7 @@ Status
 
 Version
 
-    April 22, 2007 (version 4)
+    April 1, 2009 (version 5)
 
 Number
 
@@ -42,11 +42,19 @@ Dependencies
 Overview
 
     This extension provides a mechanism for creating EGLImage targets,
-    such as texture and renderbuffer objects, from EGLImages.
+    such as texture and renderbuffer objects, from EGLImages. See
+    the companion EGL extensions, including but not limited to
+    EGL_KHR_image, EGL_KHR_image_base, EGL_KHR_gl_texture_2D_image,
+    and EGL_KHR_vg_parent_image, for a more detailed rationale and
+    for the mechanisms for creating EGLImages from client API images.
+
+    These EGL extensions are in the EGL Registry at
+
+        http://www.khronos.org/registry/egl/
 
 Glossary
 
-    Please see the EGL_OES_image specification for a list of terms
+    Please see the EGL_KHR_image specification for a list of terms
     used by this specification.
 
 New Types
@@ -338,6 +346,9 @@ Dependencies on OES_framebuffer_object
     INVALID_OPERATION.
 
 Revision History
+
+    #5 (April 1, 2009, Jon Leech)
+       - Added more overview pointing to companion EGL extensions.
 
     #4 (April 22, 2007, Jon Leech)
        - Added updated 'Status' to reflect OpenKODE 1.0 Provisional.
