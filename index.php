@@ -149,7 +149,7 @@
 </li>
 <li value=22> <a href="extensions/OES/OES_texture_mirrored_repeat.txt">GL_OES_texture_mirrored_repeat</a>
 </li>
-<li value=23> <a href="extensions/OES/OES_egl_image.txt">GL_OES_egl_image</a>
+<li value=23> <a href="extensions/OES/OES_EGL_image.txt">GL_OES_EGL_image</a>
 </li>
 <li value=24> <a href="extensions/OES/OES_depth24.txt">GL_OES_depth24</a>
 </li>

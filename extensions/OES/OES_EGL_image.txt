@@ -10,6 +10,7 @@ Contributors
 
     Gary King
     Acorn Pooley
+    Jon Leech
 
 Contacts
 
@@ -22,7 +23,7 @@ Status
 
 Version
 
-    April 1, 2009 (version 5)
+    April 1, 2009 (version 6)
 
 Number
 
@@ -32,7 +33,13 @@ Dependencies
 
     Requires OpenGL-ES 1.1 or OpenGL-ES 2.0.
 
-    Requires EGL 1.2 and the EGL_OES_image extension
+    Requires EGL 1.2 and either the EGL_OES_image or EGL_OES_image_base
+    extensions.
+
+    The EGL_KHR_gl_texture_2D_image, EGL_KHR_gl_texture_cubemap_image,
+    EGL_KHR_gl_texture_3D_image, EGL_KHR_gl_renderbuffer_image, and
+    EGL_KHR_vg_parent_image extensions provide additional functionality
+    layered on EGL_OES_image_base and related to this extension
 
     OES_framebuffer_object affects the wording of this specification
 
@@ -41,14 +48,21 @@ Dependencies
 
 Overview
 
-    This extension provides a mechanism for creating EGLImage targets,
-    such as texture and renderbuffer objects, from EGLImages. See
-    the companion EGL extensions, including but not limited to
-    EGL_KHR_image, EGL_KHR_image_base, EGL_KHR_gl_texture_2D_image,
-    and EGL_KHR_vg_parent_image, for a more detailed rationale and
-    for the mechanisms for creating EGLImages from client API images.
+    This extension provides a mechanism for creating texture and
+    renderbuffer objects sharing storage with specified EGLImage objects
+    (such objects are referred to as "EGLImage targets").
 
-    These EGL extensions are in the EGL Registry at
+    The companion EGL_KHR_image_base and EGL_KHR_image extensions
+    provide the definition and rationale for EGLImage objects.
+
+    Other EGL extensions, such as EGL_KHR_gl_texture_2D_image,
+    EGL_KHR_gl_texture_cubemap_image, EGL_KHR_gl_texture_3D_image,
+    EGL_KHR_gl_renderbuffer_image, and EGL_KHR_vg_parent_image, define
+    the related functionality of creating EGLImage objects from
+    "EGLImage sources" such as OpenGL ES texture or renderbuffers or
+    OpenVG VGImage objects.
+
+    EGL extension specifications are located in the EGL Registry at
 
         http://www.khronos.org/registry/egl/
 
@@ -222,9 +236,10 @@ Issues
         dependent failures?
 
         UNRESOLVED:  This is the same issue described in Issue 14 of the
-        EGL_OES_image specification.  Like the resolution for that issue,
-        this specification should include some minimum requirements, but
-        leave the larger portability problem unresolved at the moment.
+        EGL_KHR_image_base specification. Like the resolution for that
+        issue, this specification should include some minimum
+        requirements, but leave the larger portability problem
+        unresolved at the moment.
 
     4.  Should EGLImageTargetTexture2DOES and
         EGLImageTargetRenderBufferStorageOES result in undefined pixel data,
@@ -330,13 +345,13 @@ Issues
         to resolve Issue 5.  Given the current selections in that issue,
         EGLImageTargetRenderbufferStorage is being used.
 
-Dependencies on EGL_OES_image and EGL 1.1
+Dependencies on EGL_KHR_image, EGL_KHR_image_base, and EGL 1.2
 
-    If either EGL 1.1 or the EGL_OES_image extension is not 
-    supported, all discussion of EGLImages should be ignored, and
-    any calls to either EGLImageTargetTexImage2DOES or
-    EGLImageTargetRenderbufferStorageOES should generate the error
-    INVALID_OPERATION.
+    If EGL 1.2 is not supported, or if neither the EGL_OES_image nor
+    EGL_OES_image_base extensions is supported, all discussion of
+    EGLImages should be ignored, and any calls to either
+    EGLImageTargetTexImage2DOES or EGLImageTargetRenderbufferStorageOES
+    should generate the error INVALID_OPERATION.
 
 Dependencies on OES_framebuffer_object
 
@@ -346,6 +361,14 @@ Dependencies on OES_framebuffer_object
     INVALID_OPERATION.
 
 Revision History
+
+    #6 (April 1, 2009, Acorn Pooley, Jon Leech)
+       - Fix dependancy typo. Mention EGL_KHR_image_base. Correct
+         spelling of EGL_KHR_image and refer to alternate
+         EGL_KHR_image_base. Correct dependency on EGL from 1.1 to 1.2.
+         Change filename in the registry to correspond to capitalization
+         of the extension string. Don't update the version number
+         further until all internal edits are completed.
 
     #5 (April 1, 2009, Jon Leech)
        - Added more overview pointing to companion EGL extensions.
