@@ -31,20 +31,22 @@
 <h6> OpenGL ES 2.0 Specific </h6>
 
 <ul>
-<li> OpenGL ES 2.0.23
-     <a href="specs/2.0/es_full_spec_2.0.23.pdf">
-     Full Specification </a> and
-     <a href="specs/2.0/es_cm_spec_2.0.23.pdf">
-     Difference Specification </a> (August 27, 2008). </li>
+<li> OpenGL ES 2.0.24
+     <a href="specs/2.0/es_full_spec_2.0.24.pdf">
+     Full Specification </a>,
+     <a href="specs/2.0/es_full_spec_2.0.24.withchanges.pdf">
+     Full Specification with changes marked</a>,
+     <a href="specs/2.0/es_cm_spec_2.0.24.pdf">
+     Difference Specification </a> (April 1, 2009). </li>
 <li> OpenGL ES Shading Language 1.0.16
      <a href="specs/2.0/GLSL_ES_Specification_1.0.16.pdf">
      Specification </a> (May 15, 2008). </li>
 <li> <a href="api/2.0/gl2.h"> gl2.h </a>
-     OpenGL ES 2.0 Header File (December 19, 2008). </li>
+     OpenGL ES 2.0 Header File (January 9, 2009). </li>
 <li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a>
-     OpenGL ES 2.0 Extension Header File (October 28, 2008). </li>
+     OpenGL ES 2.0 Extension Header File (April 22, 2009). </li>
 <li> <a href="api/2.0/gl2platform.h"> gl2platform.h </a>
-     OpenGL ES 2.0 Platform-Dependent Macros (December 19, 2008). </li>
+     OpenGL ES 2.0 Platform-Dependent Macros (January 9, 2009). </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man/">
       OpenGL ES 2.0 Online Manual Pages.</a> </li>
 <li> The latest OpenGL ES 2.0 headers now depend on the shared

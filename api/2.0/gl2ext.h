@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 7521 $ on $Date:: 2009-03-02 02:33:07 -0800 #$ */
+/* $Revision: 7973 $ on $Date:: 2009-04-22 19:32:58 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -171,6 +171,11 @@ typedef void* GLeglImageOES;
 /* GL_EXT_texture_type_2_10_10_10_REV */
 #ifndef GL_EXT_texture_type_2_10_10_10_REV
 #define GL_UNSIGNED_INT_2_10_10_10_REV_EXT                      0x8368
+#endif
+
+/* GL_EXT_texture_format_BGRA8888 */
+#ifndef GL_EXT_texture_format_BGRA8888
+#define GL_BGRA                                                 0x80E1
 #endif
 
 /*------------------------------------------------------------------------*
@@ -391,6 +396,11 @@ typedef void (GL_APIENTRYP PFNGLGETPERFMONITORCOUNTERDATAAMDPROC) (GLuint monito
 /* GL_EXT_texture_type_2_10_10_10_REV */
 #ifndef GL_EXT_texture_type_2_10_10_10_REV
 #define GL_EXT_texture_type_2_10_10_10_REV 1
+#endif
+
+/* GL_EXT_texture_format_BGRA8888 */
+#ifndef GL_EXT_texture_format_BGRA8888
+#define GL_EXT_texture_format_BGRA8888 1
 #endif
 
 #ifdef __cplusplus
