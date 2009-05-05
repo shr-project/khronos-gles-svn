@@ -44,7 +44,7 @@
 <li> <a href="api/2.0/gl2.h"> gl2.h </a>
      OpenGL ES 2.0 Header File (January 9, 2009). </li>
 <li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a>
-     OpenGL ES 2.0 Extension Header File (April 22, 2009). </li>
+     OpenGL ES 2.0 Extension Header File (May 5, 2009). </li>
 <li> <a href="api/2.0/gl2platform.h"> gl2platform.h </a>
      OpenGL ES 2.0 Platform-Dependent Macros (January 9, 2009). </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man/">
@@ -66,7 +66,7 @@
 <li> <a href="api/1.1/gl.h"> gl.h </a>
      OpenGL ES 1.1 Header File (December 19, 2008). </li>
 <li> <a href="api/1.1/glext.h"> glext.h </a>
-     OpenGL ES 1.1 Extension Header File (October 28, 2008). </li>
+     OpenGL ES 1.1 Extension Header File (May 5, 2009). </li>
 <li> <a href="api/1.1/glplatform.h"> glplatform.h </a>
      OpenGL ES 1.1 Platform-Dependent Macros (December 19, 2008). </li>
 <li> <a href="api/1.1/egl.h"> &lt;GLES/egl.h&gt; </a>
@@ -90,22 +90,6 @@
 <li> <a href="specs/1.0/opengles_1_0_manual.pdf"> OpenGL ES 1.0 and EGL 1.0
      Reference Manual </a> (updated December 19, 2003). </li>
 </ul>
-
-<!--
-<h6> Extension Header Files </h6>
-<p> The <a href="api/eglext.h"> eglext.h </a> header file defining
-    interfaces for optional extensions is provided here. This header
-    define interfaces (enumerants, prototypes, and for platforms
-    supporting dynamic runtime extension queries, such as Linux and
-    Microsoft Windows, function pointer typedefs) for all registered
-    extensions. </p>
-
-<h6> Enumerant and Function Registry </h6>
-
-<p> The database from which  enumerant ranges are reserved is called
-    <tt><a href="api/eglenum.spec">eglenum.spec</a></tt>. It is in a
-    custom text file format. </p>
--->
 <h6> <a name="otherextspecs"></a>
      Extension Specifications</h6>
 <ol>
