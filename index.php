@@ -211,6 +211,16 @@
 </li>
 <li value=51> <a href="extensions/EXT/EXT_texture_format_BGRA8888.txt">GL_EXT_texture_format_BGRA8888</a>
 </li>
+<li value=52> <a href="extensions/NV/fence.txt">GL_NV_fence</a>
+</li>
+<li value=53> <a href="extensions/IMG/IMG_read_format.txt">GL_IMG_read_format</a>
+</li>
+<li value=54> <a href="extensions/IMG/IMG_texture_compression_pvrtc.txt">GL_IMG_texture_compression_pvrtc</a>
+</li>
+<li value=55> <a href="extensions/QCOM/QCOM_driver_control.txt">GL_QCOM_driver_control</a>
+</li>
+<li value=56> <a href="extensions/QCOM/QCOM_performance_monitor_global_mode.txt">GL_QCOM_performance_monitor_global_mode</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

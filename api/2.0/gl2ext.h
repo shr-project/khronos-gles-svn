@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 7973 $ on $Date:: 2009-04-22 19:32:58 -0700 #$ */
+/* $Revision: 8098 $ on $Date:: 2009-05-05 01:00:26 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -177,6 +177,51 @@ typedef void* GLeglImageOES;
 #ifndef GL_EXT_texture_format_BGRA8888
 #define GL_BGRA                                                 0x80E1
 #endif
+
+/*------------------------------------------------------------------------*
+ * IMG extension tokens
+ *------------------------------------------------------------------------*/
+
+/* GL_IMG_read_format */
+#ifndef GL_IMG_read_format
+#define GL_BGRA_IMG                                             0x80E1
+#define GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG                       0x8365
+#endif
+
+/* GL_IMG_texture_compression_pvrtc */
+#ifndef GL_IMG_texture_compression_pvrtc
+#define COMPRESSED_RGB_PVRTC_4BPPV1_IMG                         0x8C00
+#define COMPRESSED_RGB_PVRTC_2BPPV1_IMG                         0x8C01
+#define COMPRESSED_RGBA_PVRTC_4BPPV1_IMG                        0x8C02
+#define COMPRESSED_RGBA_PVRTC_2BPPV1_IMG                        0x8C03
+#endif
+
+/*------------------------------------------------------------------------*
+ * NV extension tokens
+ *------------------------------------------------------------------------*/
+
+/* GL_NV_fence */
+#ifndef GL_NV_fence
+#define GL_ALL_COMPLETED_NV                                     0x84F2
+#define GL_FENCE_STATUS_NV                                      0x84F3
+#define GL_FENCE_CONDITION_NV                                   0x84F4
+#endif
+
+/*------------------------------------------------------------------------*
+ * QCOM extension tokens
+ *------------------------------------------------------------------------*/
+
+/* GL_QCOM_driver_control */
+/* No new tokens introduced by this extension. */
+
+/* GL_QCOM_perfmon_global_mode */
+#ifndef GL_QCOM_perfmon_global_mode
+#define GL_PERFMON_GLOBAL_MODE_QCOM                             0x8FA0
+#endif
+
+/*------------------------------------------------------------------------*
+ * End of extension tokens, start of corresponding extension functions
+ *------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------*
  * OES extension functions
@@ -401,6 +446,69 @@ typedef void (GL_APIENTRYP PFNGLGETPERFMONITORCOUNTERDATAAMDPROC) (GLuint monito
 /* GL_EXT_texture_format_BGRA8888 */
 #ifndef GL_EXT_texture_format_BGRA8888
 #define GL_EXT_texture_format_BGRA8888 1
+#endif
+
+/*------------------------------------------------------------------------*
+ * IMG extension functions
+ *------------------------------------------------------------------------*/
+
+/* GL_IMG_read_format */
+#ifndef GL_IMG_read_format
+#define GL_IMG_read_format 1
+#endif
+
+/* GL_IMG_texture_compression_pvrtc */
+#ifndef GL_IMG_texture_compression_pvrtc
+#define GL_IMG_texture_compression_pvrtc 1
+#endif
+
+/*------------------------------------------------------------------------*
+ * NV extension functions
+ *------------------------------------------------------------------------*/
+
+/* GL_NV_fence */
+#ifndef GL_NV_fence
+#define GL_NV_fence 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glDeleteFencesNV (GLsizei, const GLuint *);
+GL_APICALL void GL_APIENTRY glGenFencesNV (GLsizei, GLuint *);
+GL_APICALL GLboolean GL_APIENTRY glIsFenceNV (GLuint);
+GL_APICALL GLboolean GL_APIENTRY glTestFenceNV (GLuint);
+GL_APICALL void GL_APIENTRY glGetFenceivNV (GLuint, GLenum, GLint *);
+GL_APICALL void GL_APIENTRY glFinishFenceNV (GLuint);
+GL_APICALL void GL_APIENTRY glSetFenceNV (GLuint, GLenum);
+#endif
+typedef void (GL_APIENTRYP PFNGLDELETEFENCESNVPROC) (GLsizei n, const GLuint *fences);
+typedef void (GL_APIENTRYP PFNGLGENFENCESNVPROC) (GLsizei n, GLuint *fences);
+typedef GLboolean (GL_APIENTRYP PFNGLISFENCENVPROC) (GLuint fence);
+typedef GLboolean (GL_APIENTRYP PFNGLTESTFENCENVPROC) (GLuint fence);
+typedef void (GL_APIENTRYP PFNGLGETFENCEIVNVPROC) (GLuint fence, GLenum pname, GLint *params);
+typedef void (GL_APIENTRYP PFNGLFINISHFENCENVPROC) (GLuint fence);
+typedef void (GL_APIENTRYP PFNGLSETFENCENVPROC) (GLuint fence, GLenum condition);
+#endif
+
+/*------------------------------------------------------------------------*
+ * QCOM extension functions
+ *------------------------------------------------------------------------*/
+
+/* GL_QCOM_driver_control */
+#ifndef GL_QCOM_driver_control
+#define GL_QCOM_driver_control 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glGetDriverControlsQCOM (GLint *num, GLsizei size, GLuint *driverControls);
+GL_APICALL void GL_APIENTRY glGetDriverControlStringQCOM (GLuint driverControl, GLsizei bufSize, GLsizei *length, GLchar *driverControlString);
+GL_APICALL void GL_APIENTRY glEnableDriverControlQCOM (GLuint driverControl);
+GL_APICALL void GL_APIENTRY glDisableDriverControlQCOM (GLuint driverControl);
+#endif
+typedef void (GL_APIENTRYP PFNGLGETDRIVERCONTROLSQCOMPROC) (GLint *num, GLsizei size, GLuint *driverControls);
+typedef void (GL_APIENTRYP PFNGLGETDRIVERCONTROLSTRINGQCOMPROC) (GLuint driverControl, GLsizei bufSize, GLsizei *length, GLchar *driverControlString);
+typedef void (GL_APIENTRYP PFNGLENABLEDRIVERCONTROLQCOMPROC) (GLuint driverControl);
+typedef void (GL_APIENTRYP PFNGLDISABLEDRIVERCONTROLQCOMPROC) (GLuint driverControl);
+#endif
+
+/* GL_QCOM_perfmon_global_mode */
+#ifndef GL_QCOM_perfmon_global_mode
+#define GL_QCOM_perfmon_global_mode 1
 #endif
 
 #ifdef __cplusplus
