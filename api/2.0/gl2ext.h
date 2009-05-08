@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 8115 $ on $Date:: 2009-05-05 14:48:20 -0700 #$ */
+/* $Revision: 8161 $ on $Date:: 2009-05-08 11:19:42 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -148,7 +148,6 @@ typedef void* GLeglImageOES;
 
 /* GL_AMD_performance_monitor */
 #ifndef GL_AMD_performance_monitor
-#define GL_AMD_performance_monitor
 #define GL_COUNTER_TYPE_AMD                                     0x8BC0
 #define GL_COUNTER_RANGE_AMD                                    0x8BC1
 #define GL_UNSIGNED_INT64_AMD                                   0x8BC2

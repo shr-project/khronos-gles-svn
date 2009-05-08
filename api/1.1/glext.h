@@ -1,7 +1,7 @@
 #ifndef __glext_h_
 #define __glext_h_
 
-/* $Revision: 8114 $ on $Date:: 2009-05-05 14:44:32 -0700 #$ */
+/* $Revision: 8160 $ on $Date:: 2009-05-08 11:18:30 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -701,10 +701,10 @@ typedef void (GL_APIENTRYP PFNGLSETFENCENVPROC) (GLuint fence, GLenum condition)
 #ifndef GL_QCOM_driver_control
 #define GL_QCOM_driver_control 1
 #ifdef GL_GLEXT_PROTOTYPES
-GL_APICALL void GL_APIENTRY glGetDriverControlsQCOM (GLint *num, GLsizei size, GLuint *driverControls);
-GL_APICALL void GL_APIENTRY glGetDriverControlStringQCOM (GLuint driverControl, GLsizei bufSize, GLsizei *length, char *driverControlString);
-GL_APICALL void GL_APIENTRY glEnableDriverControlQCOM (GLuint driverControl);
-GL_APICALL void GL_APIENTRY glDisableDriverControlQCOM (GLuint driverControl);
+GL_API void GL_APIENTRY glGetDriverControlsQCOM (GLint *num, GLsizei size, GLuint *driverControls);
+GL_API void GL_APIENTRY glGetDriverControlStringQCOM (GLuint driverControl, GLsizei bufSize, GLsizei *length, char *driverControlString);
+GL_API void GL_APIENTRY glEnableDriverControlQCOM (GLuint driverControl);
+GL_API void GL_APIENTRY glDisableDriverControlQCOM (GLuint driverControl);
 #endif
 typedef void (GL_APIENTRYP PFNGLGETDRIVERCONTROLSQCOMPROC) (GLint *num, GLsizei size, GLuint *driverControls);
 typedef void (GL_APIENTRYP PFNGLGETDRIVERCONTROLSTRINGQCOMPROC) (GLuint driverControl, GLsizei bufSize, GLsizei *length, char *driverControlString);
