@@ -8,7 +8,7 @@ Name Strings
 
 Notice
 
-    Copyright Imagination Technologies Limited, 2005, 2008.
+    Copyright Imagination Technologies Limited, 2005 - 2009.
 
 Contact 
 
@@ -20,7 +20,7 @@ Status
 
 Version 
 
-    Version 1.0
+    Version 1.1
 
 Number
 
@@ -49,8 +49,9 @@ Overview
 
     format                      type
     ------                      ----
-    BGRA_IMG                    UNSIGNED_BYTE
-    BGRA_IMG                    UNSIGNED_SHORT_4_4_4_4_REV_IMG
+    BGRA                        UNSIGNED_BYTE
+    BGRA                        UNSIGNED_SHORT_4_4_4_4_REV
+    BGRA                        UNSIGNED_SHORT_1_5_5_5_REV
 
     E.g. Calling GetIntegerv with a <pname> parameter of
     IMPLEMENTATION_COLOR_READ_FORMAT_OES can now return BGRA, with the
@@ -73,8 +74,12 @@ New Tokens
 
     Accepted by the <format> parameter of ReadPixels:
 
-        GL_BGRA_IMG                          0x80E1
-        GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG    0x8365
+        GL_BGRA                          0x80E1
+
+    Accepted by the <type> parameter of ReadPixels:
+
+        GL_UNSIGNED_SHORT_4_4_4_4_REV    0x8365
+        GL_UNSIGNED_SHORT_1_5_5_5_REV    0x8366
 
 Additions to Chapter 2 of the OpenGL 1.3 Specification (OpenGL Operation)
 
@@ -110,6 +115,7 @@ New Implementation Dependent State
 
 Revision History
 
+    1.1,  21/05/2009  bcb:  Added 1555
     1.0,  10/04/2008  gdc:  Tidied for publication.
     0.2,  25/07/2005  sks:  Added 4444.
     0.1,  18/04/2005  sks:  Initial revision.

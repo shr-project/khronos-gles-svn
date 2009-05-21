@@ -205,6 +205,10 @@
 </li>
 <li value=56> <a href="extensions/QCOM/QCOM_performance_monitor_global_mode.txt">GL_QCOM_performance_monitor_global_mode</a>
 </li>
+<li value=57> <a href="extensions/IMG/IMG_user_clip_plane.txt">GL_IMG_user_clip_plane</a>
+</li>
+<li value=58> <a href="extensions/IMG/IMG_texture_env_enhanced_fixed_function.txt">GL_IMG_texture_env_enhanced_fixed_function</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

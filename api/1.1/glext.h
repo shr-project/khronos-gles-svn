@@ -1,7 +1,7 @@
 #ifndef __glext_h_
 #define __glext_h_
 
-/* $Revision: 8160 $ on $Date:: 2009-05-08 11:18:30 -0700 #$ */
+/* $Revision: 8272 $ on $Date:: 2009-05-21 09:38:34 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -239,16 +239,39 @@ typedef void* GLeglImageOES;
 
 /* GL_IMG_read_format */
 #ifndef GL_IMG_read_format
-#define GL_BGRA_IMG                                             0x80E1
-#define GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG                       0x8365
+#define GL_BGRA                                                 0x80E1
+#define GL_UNSIGNED_SHORT_4_4_4_4_REV                           0x8365
+#define GL_UNSIGNED_SHORT_1_5_5_5_REV                           0x8366
 #endif
 
 /* GL_IMG_texture_compression_pvrtc */
 #ifndef GL_IMG_texture_compression_pvrtc
-#define COMPRESSED_RGB_PVRTC_4BPPV1_IMG                         0x8C00
-#define COMPRESSED_RGB_PVRTC_2BPPV1_IMG                         0x8C01
-#define COMPRESSED_RGBA_PVRTC_4BPPV1_IMG                        0x8C02
-#define COMPRESSED_RGBA_PVRTC_2BPPV1_IMG                        0x8C03
+#define GL_COMPRESSED_RGB_PVRTC_4BPPV1_IMG                      0x8C00
+#define GL_COMPRESSED_RGB_PVRTC_2BPPV1_IMG                      0x8C01
+#define GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG                     0x8C02
+#define GL_COMPRESSED_RGBA_PVRTC_2BPPV1_IMG                     0x8C03
+#endif
+
+/* GL_IMG_user_clip_plane */
+#ifndef GL_IMG_user_clip_plane
+#define GL_CLIP_PLANE0_IMG                                      0x3000
+#define GL_CLIP_PLANE1_IMG                                      0x3001
+#define GL_CLIP_PLANE2_IMG                                      0x3002
+#define GL_CLIP_PLANE3_IMG                                      0x3003
+#define GL_CLIP_PLANE4_IMG                                      0x3004
+#define GL_CLIP_PLANE5_IMG                                      0x3005
+#define GL_MAX_CLIP_PLANES_IMG                                  0x0D32
+#endif
+
+/* GL_IMG_texture_env_enhanced_fixed_function */
+#ifndef GL_IMG_texture_env_enhanced_fixed_function
+#define GL_MODULATE_COLOR_IMG                                   0x8C04
+#define GL_RECIP_ADD_SIGNED_ALPHA_IMG                           0x8C05
+#define GL_TEXTURE_ALPHA_MODULATE_IMG                           0x8C06
+#define GL_FACTOR_ALPHA_MODULATE_IMG                            0x8C07
+#define GL_FRAGMENT_ALPHA_MODULATE_IMG                          0x8C08
+#define GL_ADD_BLEND_IMG                                        0x8C09
+#define GL_DOT3_RGBA_IMG                                        0x86AF
 #endif
 
 /*------------------------------------------------------------------------*
@@ -666,6 +689,22 @@ typedef void (GL_APIENTRYP PFNGLGETTEXGENXVOESPROC) (GLenum coord, GLenum pname,
 /* GL_IMG_texture_compression_pvrtc */
 #ifndef GL_IMG_texture_compression_pvrtc
 #define GL_IMG_texture_compression_pvrtc 1
+#endif
+
+/* GL_IMG_user_clip_plane */
+#ifndef GL_IMG_user_clip_plane
+#define GL_IMG_user_clip_plane 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_API void GL_APIENTRY glClipPlanefIMG (GLenum, const GLfloat *);
+GL_API void GL_APIENTRY glClipPlanexIMG (GLenum, const GLfixed *);
+#endif
+typedef void (GL_APIENTRYP PFNGLCLIPPLANEFIMG) (GLenum p, const GLfloat *eqn);
+typedef void (GL_APIENTRYP PFNGLCLIPPLANEXIMG) (GLenum p, const GLfixed *eqn);
+#endif
+
+/* GL_IMG_texture_env_enhanced_fixed_function */
+#ifndef GL_IMG_texture_env_enhanced_fixed_function
+#define GL_IMG_texture_env_enhanced_fixed_function 1
 #endif
 
 /*------------------------------------------------------------------------*

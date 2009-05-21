@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 8161 $ on $Date:: 2009-05-08 11:19:42 -0700 #$ */
+/* $Revision: 8271 $ on $Date:: 2009-05-21 09:33:40 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -183,16 +183,17 @@ typedef void* GLeglImageOES;
 
 /* GL_IMG_read_format */
 #ifndef GL_IMG_read_format
-#define GL_BGRA_IMG                                             0x80E1
-#define GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG                       0x8365
+#define GL_BGRA                                                 0x80E1
+#define GL_UNSIGNED_SHORT_4_4_4_4_REV                           0x8365
+#define GL_UNSIGNED_SHORT_1_5_5_5_REV                           0x8366
 #endif
 
 /* GL_IMG_texture_compression_pvrtc */
 #ifndef GL_IMG_texture_compression_pvrtc
-#define COMPRESSED_RGB_PVRTC_4BPPV1_IMG                         0x8C00
-#define COMPRESSED_RGB_PVRTC_2BPPV1_IMG                         0x8C01
-#define COMPRESSED_RGBA_PVRTC_4BPPV1_IMG                        0x8C02
-#define COMPRESSED_RGBA_PVRTC_2BPPV1_IMG                        0x8C03
+#define GL_COMPRESSED_RGB_PVRTC_4BPPV1_IMG                      0x8C00
+#define GL_COMPRESSED_RGB_PVRTC_2BPPV1_IMG                      0x8C01
+#define GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG                     0x8C02
+#define GL_COMPRESSED_RGBA_PVRTC_2BPPV1_IMG                     0x8C03
 #endif
 
 /*------------------------------------------------------------------------*
