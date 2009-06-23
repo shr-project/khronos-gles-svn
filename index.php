@@ -211,6 +211,8 @@
 </li>
 <li value=59> <a href="extensions/APPLE/APPLE_texture_2D_limited_npot.txt">GL_APPLE_texture_2D_limited_npot</a>
 </li>
+<li value=60> <a href="extensions/EXT/texture_lod_bias.txt">GL_EXT_texture_lod_bias</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
