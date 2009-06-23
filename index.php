@@ -209,6 +209,8 @@
 </li>
 <li value=58> <a href="extensions/IMG/IMG_texture_env_enhanced_fixed_function.txt">GL_IMG_texture_env_enhanced_fixed_function</a>
 </li>
+<li value=59> <a href="extensions/APPLE/APPLE_texture_2D_limited_npot.txt">GL_APPLE_texture_2D_limited_npot</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
