@@ -1,7 +1,7 @@
 #ifndef __gl2_h_
 #define __gl2_h_
 
-/* $Revision: 7173 $ on $Date:: 2009-01-09 11:18:21 -0800 #$ */
+/* $Revision: 8784 $ on $Date:: 2009-09-02 09:49:17 -0700 #$ */
 
 #include <GLES2/gl2platform.h>
 
@@ -575,7 +575,7 @@ GL_APICALL void         GL_APIENTRY glStencilMask (GLuint mask);
 GL_APICALL void         GL_APIENTRY glStencilMaskSeparate (GLenum face, GLuint mask);
 GL_APICALL void         GL_APIENTRY glStencilOp (GLenum fail, GLenum zfail, GLenum zpass);
 GL_APICALL void         GL_APIENTRY glStencilOpSeparate (GLenum face, GLenum fail, GLenum zfail, GLenum zpass);
-GL_APICALL void         GL_APIENTRY glTexImage2D (GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const void* pixels);
+GL_APICALL void         GL_APIENTRY glTexImage2D (GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const void* pixels);
 GL_APICALL void         GL_APIENTRY glTexParameterf (GLenum target, GLenum pname, GLfloat param);
 GL_APICALL void         GL_APIENTRY glTexParameterfv (GLenum target, GLenum pname, const GLfloat* params);
 GL_APICALL void         GL_APIENTRY glTexParameteri (GLenum target, GLenum pname, GLint param);
