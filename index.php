@@ -77,7 +77,7 @@
 <li> <a href="specs/1.1/opengles_spec_1_1_extension_pack.pdf"> OpenGL ES
      1.1.03 Extension Pack </a> (July 19, 2005). </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/1.1/docs/man/">
-      OpenGL ES 1.1 Online Manual Pages.</a> </li>
+     OpenGL ES 1.1 Online Manual Pages.</a> </li>
 <li> The latest OpenGL ES 1.1 headers now depend on the shared
      <a href="../egl/api/khrplatform.h"> khrplatform.h </a>
      header located in the <a href="../egl/"> EGL Registry </a>
@@ -89,8 +89,10 @@
 <li> <a href="specs/1.0/opengles_spec_1_0.pdf"> OpenGL ES 1.0.02
      Specification </a>. </li>
 <li> <a href="api/1.0/gl.h"> gl.h </a> for OpenGL ES 1.0. </li>
-<li> <a href="specs/1.0/opengles_1_0_manual.pdf"> OpenGL ES 1.0 and EGL 1.0
-     Reference Manual </a> (updated December 19, 2003). </li>
+<li> The old <i>OpenGL ES 1.0 and EGL 1.0 Reference Manual</i> is
+     obsolete and has been removed from the Registry. Please use the
+     <a href="http://www.khronos.org/opengles/sdk/1.1/docs/man/">
+     OpenGL ES 1.1 Online Manual Pages</a> instead. </li>
 </ul>
 <h6> <a name="otherextspecs"></a>
      Extension Specifications</h6>
