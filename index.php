@@ -217,6 +217,14 @@
 </li>
 <li value=60> <a href="extensions/EXT/texture_lod_bias.txt">GL_EXT_texture_lod_bias</a>
 </li>
+<li value=61> <a href="extensions/QCOM/QCOM_writeonly_rendering.txt">GL_QCOM_writeonly_rendering</a>
+</li>
+<li value=62> <a href="extensions/QCOM/QCOM_extended_get.txt">GL_QCOM_extended_get</a>
+</li>
+<li value=63> <a href="extensions/QCOM/QCOM_extended_get2.txt">GL_QCOM_extended_get2</a>
+</li>
+<li value=64> <a href="extensions/EXT/EXT_discard_framebuffer.txt">GL_EXT_discard_framebuffer</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

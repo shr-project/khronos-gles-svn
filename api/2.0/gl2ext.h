@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 8271 $ on $Date:: 2009-05-21 09:33:40 -0700 #$ */
+/* $Revision: 8814 $ on $Date:: 2009-09-09 01:30:32 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -177,6 +177,12 @@ typedef void* GLeglImageOES;
 #define GL_BGRA                                                 0x80E1
 #endif
 
+#ifndef GL_EXT_discard_framebuffer
+#define GL_COLOR_EXT                                            0x1800
+#define GL_DEPTH_EXT                                            0x1801
+#define GL_STENCIL_EXT                                          0x1802
+#endif
+
 /*------------------------------------------------------------------------*
  * IMG extension tokens
  *------------------------------------------------------------------------*/
@@ -218,6 +224,29 @@ typedef void* GLeglImageOES;
 #ifndef GL_QCOM_perfmon_global_mode
 #define GL_PERFMON_GLOBAL_MODE_QCOM                             0x8FA0
 #endif
+
+/* GL_QCOM_writeonly_rendering */
+#ifndef GL_QCOM_writeonly_rendering
+#define GL_WRITEONLY_RENDERING_AMD                              0x8823
+#endif
+
+/* GL_QCOM_extended_get */
+#ifndef GL_QCOM_extended_get
+#define GL_TEXTURE_WIDTH_QCOM                                   0x8BD2
+#define GL_TEXTURE_HEIGHT_QCOM                                  0x8BD3
+#define GL_TEXTURE_DEPTH_QCOM                                   0x8BD4
+#define GL_TEXTURE_INTERNAL_FORMAT_QCOM                         0x8BD5
+#define GL_TEXTURE_FORMAT_QCOM                                  0x8BD6
+#define GL_TEXTURE_TYPE_QCOM                                    0x8BD7
+#define GL_TEXTURE_IMAGE_VALID_QCOM                             0x8BD8
+#define GL_TEXTURE_NUM_LEVELS_QCOM                              0x8BD9
+#define GL_TEXTURE_TARGET_QCOM                                  0x8BDA
+#define GL_TEXTURE_OBJECT_VALID_QCOM                            0x8BDB
+#define GL_STATE_RESTORE                                        0x8BDC
+#endif
+
+/* GL_QCOM_extended_get2 */
+/* No new tokens introduced by this extension. */
 
 /*------------------------------------------------------------------------*
  * End of extension tokens, start of corresponding extension functions
@@ -448,6 +477,14 @@ typedef void (GL_APIENTRYP PFNGLGETPERFMONITORCOUNTERDATAAMDPROC) (GLuint monito
 #define GL_EXT_texture_format_BGRA8888 1
 #endif
 
+#ifndef GL_EXT_discard_framebuffer
+#define GL_EXT_discard_framebuffer 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glDiscardFramebufferEXT (GLenum target, GLsizei numAttachments, GLenum *attachments);
+#endif
+typedef void (GL_APIENTRYP PFNGLDISCARDFRAMEBUFFEREXTPROC) (GLenum target, GLsizei numAttachments, GLenum *attachments);
+#endif
+
 /*------------------------------------------------------------------------*
  * IMG extension functions
  *------------------------------------------------------------------------*/
@@ -509,6 +546,49 @@ typedef void (GL_APIENTRYP PFNGLDISABLEDRIVERCONTROLQCOMPROC) (GLuint driverCont
 /* GL_QCOM_perfmon_global_mode */
 #ifndef GL_QCOM_perfmon_global_mode
 #define GL_QCOM_perfmon_global_mode 1
+#endif
+
+/* GL_QCOM_writeonly_rendering */
+#ifndef GL_QCOM_writeonly_rendering
+#define GL_QCOM_writeonly_rendering 1
+#endif
+
+/* GL_QCOM_extended_get */
+#ifndef GL_QCOM_extended_get
+#define GL_QCOM_extended_get 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glExtGetTexturesQCOM (GLuint *textures, GLint maxTextures, GLint *numTextures);
+GL_APICALL void GL_APIENTRY glExtGetBuffersQCOM (GLuint *buffers, GLint maxBuffers, GLint *numBuffers);
+GL_APICALL void GL_APIENTRY glExtGetRenderbuffersQCOM (GLuint *renderbuffers, GLint maxRenderbuffers, GLint *numRenderbuffers);
+GL_APICALL void GL_APIENTRY glExtGetFramebuffersQCOM (GLuint *framebuffers, GLint maxFramebuffers, GLint *numFramebuffers);
+GL_APICALL void GL_APIENTRY glExtGetTexLevelParameterivQCOM (GLuint texture, GLenum face, GLint level, GLenum pname, GLint *params);
+GL_APICALL void GL_APIENTRY glExtTexObjectStateOverrideiQCOM (GLenum target, GLenum pname, GLint param);
+GL_APICALL void GL_APIENTRY glExtGetTexSubImageQCOM (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, void *texels);
+GL_APICALL void GL_APIENTRY glExtGetBufferPointervQCOM (GLenum target, void **params);
+#endif
+typedef void (GL_APIENTRYP PFNGLEXTGETTEXTURESQCOMPROC) (GLuint *textures, GLint maxTextures, GLint *numTextures);
+typedef void (GL_APIENTRYP PFNGLEXTGETBUFFERSQCOMPROC) (GLuint *buffers, GLint maxBuffers, GLint *numBuffers);
+typedef void (GL_APIENTRYP PFNGLEXTGETRENDERBUFFERSQCOMPROC) (GLuint *renderbuffers, GLint maxRenderbuffers, GLint *numRenderbuffers);
+typedef void (GL_APIENTRYP PFNGLEXTGETFRAMEBUFFERSQCOMPROC) (GLuint *framebuffers, GLint maxFramebuffers, GLint *numFramebuffers);
+typedef void (GL_APIENTRYP PFNGLEXTGETTEXLEVELPARAMETERIVQCOMPROC) (GLuint texture, GLenum face, GLint level, GLenum pname, GLint *params);
+typedef void (GL_APIENTRYP PFNGLEXTTEXOBJECTSTATEOVERRIDEIQCOMPROC) (GLenum target, GLenum pname, GLint param);
+typedef void (GL_APIENTRYP PFNGLEXTGETTEXSUBIMAGEQCOMPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, void *texels);
+typedef void (GL_APIENTRYP PFNGLEXTGETBUFFERPOINTERVQCOMPROC) (GLenum target, void **params);
+#endif
+
+/* GL_QCOM_extended_get2 */
+#ifndef GL_QCOM_extended_get2
+#define GL_QCOM_extended_get2 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glExtGetShadersQCOM (GLuint *shaders, GLint maxShaders, GLint *numShaders);
+GL_APICALL void GL_APIENTRY glExtGetProgramsQCOM (GLuint *programs, GLint maxPrograms, GLint *numPrograms);
+GL_APICALL void GL_APIENTRY glExtIsProgramBinaryQCOM (GLuint program);
+GL_APICALL void GL_APIENTRY glExtGetProgramBinarySourceQCOM (GLuint program, GLenum shadertype, char *source, GLint *length);
+#endif
+typedef void (GL_APIENTRYP PFNGLEXTGETSHADERSQCOMPROC) (GLuint *shaders, GLint maxShaders, GLint *numShaders);
+typedef void (GL_APIENTRYP PFNGLEXTGETPROGRAMSQCOMPROC) (GLuint *programs, GLint maxPrograms, GLint *numPrograms);
+typedef void (GL_APIENTRYP PFNGLEXTISPROGRAMBINARYQCOMPROC) (GLuint program);
+typedef void (GL_APIENTRYP PFNGLEXTGETPROGRAMBINARYSOURCEQCOMPROC) (GLuint program, GLenum shadertype, char *source, GLint *length);
 #endif
 
 #ifdef __cplusplus
