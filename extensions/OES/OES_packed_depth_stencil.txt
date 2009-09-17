@@ -21,8 +21,8 @@ Status
 
 Version
     
-    Last Modified Date: January 20, 2009
-    Revision: #2
+    Last Modified Date: September 17, 2009
+    Revision: #3
 
 Number
 
@@ -334,12 +334,16 @@ Issues
        * No support for proxy targets
        * Sized internal format only used for RenderbufferStorage
        * Format and internal format must match for TexImage2D
-       * No support for DrawPixels, ReadPixels, CopyPixels, or CopyTexImage2D
+       * No support for DrawPixels, ReadPixels, CopyPixels,
+         CopyTexImage2D, or CopyTexSubImage2D
        * No support for GetTexLevelParameter, so no TEXTURE_STENCIL_SIZE_EXT
        * No support for GetTexImage 
 
 Revision History
 
+    #03    09/17/2009    Jon Leech       Add glCopyTexSubImage2D to
+                                         exclusions from OpenGL in
+                                         issue 1 (bug 5335).    
     #02    01/20/2009    Benj Lipchak    Make the OES_depth_texture interactions
                                          more explicit.
     #01    10/02/2007    Benj Lipchak    Start with EXT_packed_depth_stencil,
