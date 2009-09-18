@@ -227,6 +227,8 @@
 </li>
 <li value=64> <a href="extensions/EXT/EXT_discard_framebuffer.txt">GL_EXT_discard_framebuffer</a>
 </li>
+<li value=65> <a href="extensions/EXT/blend_minmax.txt">GL_EXT_blend_minmax</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

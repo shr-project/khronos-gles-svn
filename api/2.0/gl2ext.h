@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 8814 $ on $Date:: 2009-09-09 01:30:32 -0700 #$ */
+/* $Revision: 8936 $ on $Date:: 2009-09-17 17:16:47 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -177,10 +177,16 @@ typedef void* GLeglImageOES;
 #define GL_BGRA                                                 0x80E1
 #endif
 
+/* GL_EXT_discard_framebuffer */
 #ifndef GL_EXT_discard_framebuffer
 #define GL_COLOR_EXT                                            0x1800
 #define GL_DEPTH_EXT                                            0x1801
 #define GL_STENCIL_EXT                                          0x1802
+#endif
+
+#ifndef GL_EXT_blend_minmax
+#define GL_MIN_EXT                                              0x8007
+#define GL_MAX_EXT                                              0x8008
 #endif
 
 /*------------------------------------------------------------------------*
@@ -477,12 +483,18 @@ typedef void (GL_APIENTRYP PFNGLGETPERFMONITORCOUNTERDATAAMDPROC) (GLuint monito
 #define GL_EXT_texture_format_BGRA8888 1
 #endif
 
+/* GL_EXT_discard_framebuffer */
 #ifndef GL_EXT_discard_framebuffer
 #define GL_EXT_discard_framebuffer 1
 #ifdef GL_GLEXT_PROTOTYPES
-GL_APICALL void GL_APIENTRY glDiscardFramebufferEXT (GLenum target, GLsizei numAttachments, GLenum *attachments);
+GL_APICALL void GL_APIENTRY glDiscardFramebufferEXT (GLenum target, GLsizei numAttachments, const GLenum *attachments);
 #endif
-typedef void (GL_APIENTRYP PFNGLDISCARDFRAMEBUFFEREXTPROC) (GLenum target, GLsizei numAttachments, GLenum *attachments);
+typedef void (GL_APIENTRYP PFNGLDISCARDFRAMEBUFFEREXTPROC) (GLenum target, GLsizei numAttachments, const GLenum *attachments);
+#endif
+
+/* GL_EXT_blend_minmax */
+#ifndef GL_EXT_blend_minmax
+#define GL_EXT_blend_minmax 1
 #endif
 
 /*------------------------------------------------------------------------*

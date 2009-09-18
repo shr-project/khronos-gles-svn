@@ -9,6 +9,7 @@ Name Strings
 Contributors
 
     Benji Bowman, Imagination Technologies
+    John Rosasco, Apple
     Richard Schreyer, Apple
     Stuart Smith, Imagination Technologies
     Michael Swift, Apple
@@ -19,12 +20,12 @@ Contacts
 
 Status
 
-    TBD
+    Complete
 
 Version
 
-    Last Modified Date: September 7, 2009
-    Revision: #6
+    Last Modified Date: September 15, 2009
+    Revision: #7
 
 Number
 
@@ -106,7 +107,9 @@ Issues
     
 New Procedures and Functions
 
-    void DiscardFramebufferEXT(enum target, sizei numAttachments, enum *attachments);
+    void DiscardFramebufferEXT(enum target, 
+                               sizei numAttachments, 
+                               const enum *attachments);
 
 New Tokens
 
@@ -128,7 +131,9 @@ Operations and the Framebuffer)
     particular buffer, effectively leaving its contents undefined.  The 
     command
 
-        void DiscardFramebufferEXT(enum target, sizei numAttachments, enum *attachments);
+        void DiscardFramebufferEXT(enum target, 
+                                   sizei numAttachments, 
+                                   const enum *attachments);
 
     effectively signals to the GL that it need not preserve all contents of
     a bound framebuffer object.  <numAttachments> indicates how many 
@@ -164,6 +169,9 @@ Errors
 
 Revision History
 
+    09/15/2009  Benj Lipchak
+        Make attachments argument const enum*.
+        
     09/07/2009  Benj Lipchak
         Minor clarification to overview text.
         
