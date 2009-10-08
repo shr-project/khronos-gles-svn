@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 8936 $ on $Date:: 2009-09-17 17:16:47 -0700 #$ */
+/* $Revision: 9224 $ on $Date:: 2009-10-08 01:52:13 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -233,7 +233,7 @@ typedef void* GLeglImageOES;
 
 /* GL_QCOM_writeonly_rendering */
 #ifndef GL_QCOM_writeonly_rendering
-#define GL_WRITEONLY_RENDERING_AMD                              0x8823
+#define GL_WRITEONLY_RENDERING_QCOM                             0x8823
 #endif
 
 /* GL_QCOM_extended_get */
