@@ -16,7 +16,7 @@ Status
 
 Version
 
-    Last Modifed Date: October 20, 2007
+    Last Modifed Date: October 8, 2009
 
 Number
 
@@ -140,10 +140,10 @@ Additions to Chapter 4, section 4.4.2 of the OpenGL ES 2.0 specification
 
 Errors
 
-    The error INVALID_VALUE is generated if the <format> and <internalFormat>
+    The error INVALID_OPERATION is generated if the <format> and <internalFormat>
     is DEPTH_COMPONENT and <type> is not UNSIGNED_SHORT, or UNSIGNED_INT.
 
-    The error INVALID_VALUE is generated if the <format> and <internalFormat>
+    The error INVALID_OPERATION is generated if the <format> and <internalFormat>
     is not DEPTH_COMPONENT and <type> is UNSIGNED_SHORT, or UNSIGNED_INT.
 
 New State
@@ -165,3 +165,4 @@ Revision History
     9/24/2007    Removed UNSIGNED_INT_24_OES.  Added reasoning to resolutions in Issues section.
                  Removed dependencies on OES_depth24 and OES_depth32.
     10/20/2007   Added issues 4. and 5.
+    10/08/2009   Changed INVALID_VALUE to INVALID_OPERATION error (bug 5209).
