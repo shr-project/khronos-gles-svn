@@ -52,7 +52,7 @@
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man/">
       OpenGL ES 2.0 Online Manual Pages.</a> </li>
 <li> The latest OpenGL ES 2.0 headers now depend on the shared
-     <a href="../egl/api/khrplatform.h"> khrplatform.h </a>
+     <a href="../egl/api/KHR/khrplatform.h"> <KHR/khrplatform.h> </a>
      header located in the <a href="../egl/"> EGL Registry </a>
 </ul>
 
