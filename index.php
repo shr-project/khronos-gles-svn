@@ -229,6 +229,15 @@
 </li>
 <li value=65> <a href="extensions/EXT/blend_minmax.txt">GL_EXT_blend_minmax</a>
 </li>
+<li value=66> <a href="extensions/EXT/EXT_read_format_bgra.txt">GL_EXT_read_format_bgra</a>
+</li>
+<li value=67> <a href="extensions/IMG/IMG_program_binary.txt">GL_IMG_program_binary</a>
+</li>
+<li value=68> <a href="extensions/IMG/IMG_shader_binary.txt">GL_IMG_shader_binary</a>
+</li>
+<li value=69> <a href="extensions/EXT/multi_draw_arrays.txt">GL_EXT_multi_draw_arrays</a>
+     <br> <a href="extensions/EXT/multi_draw_arrays.txt">GL_SUN_multi_draw_arrays</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

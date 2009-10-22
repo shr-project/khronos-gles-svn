@@ -1,7 +1,7 @@
 #ifndef __glext_h_
 #define __glext_h_
 
-/* $Revision: 9223 $ on $Date:: 2009-10-08 01:51:47 -0700 #$ */
+/* $Revision: 9372 $ on $Date:: 2009-10-22 01:35:08 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -254,9 +254,21 @@ typedef void* GLeglImageOES;
 #define GL_STENCIL_EXT                                          0x1802
 #endif
 
+/* GL_EXT_blend_minmax */
 #ifndef GL_EXT_blend_minmax
 #define GL_MIN_EXT                                              0x8007
 #define GL_MAX_EXT                                              0x8008
+#endif
+
+/* GL_EXT_read_format_bgra */
+#ifndef GL_EXT_read_format_bgra
+#define GL_BGRA_EXT                                             0x80E1
+#define GL_UNSIGNED_SHORT_4_4_4_4_REV                           0x8365
+#define GL_UNSIGNED_SHORT_1_5_5_5_REV                           0x8366
+#endif
+
+/* GL_EXT_multi_draw_arrays */
+#ifndef GL_EXT_multi_draw_arrays
 #endif
 
 /*------------------------------------------------------------------------*
@@ -752,6 +764,21 @@ typedef void (GL_APIENTRYP PFNGLDISCARDFRAMEBUFFEREXTPROC) (GLenum target, GLsiz
 /* GL_EXT_blend_minmax */
 #ifndef GL_EXT_blend_minmax
 #define GL_EXT_blend_minmax 1
+#endif
+
+/* GL_EXT_read_format_bgra */
+#ifndef GL_EXT_read_format_bgra
+#define GL_EXT_read_format_bgra 1
+#endif
+
+#ifndef GL_EXT_multi_draw_arrays
+#define GL_EXT_multi_draw_arrays 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_API void GL_APIENTRY glMultiDrawArraysEXT (GLenum, GLint *, GLsizei *, GLsizei);
+GL_API void GL_APIENTRY glMultiDrawElementsEXT (GLenum, const GLsizei *, GLenum, const GLvoid* *, GLsizei);
+#endif /* GL_GLEXT_PROTOTYPES */
+typedef void (GL_APIENTRYP PFNGLMULTIDRAWARRAYSEXTPROC) (GLenum mode, GLint *first, GLsizei *count, GLsizei primcount);
+typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
 #endif
 
 /*------------------------------------------------------------------------*
