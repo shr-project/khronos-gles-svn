@@ -1,7 +1,7 @@
 #ifndef __glext_h_
 #define __glext_h_
 
-/* $Revision: 9372 $ on $Date:: 2009-10-22 01:35:08 -0700 #$ */
+/* $Revision: 9381 $ on $Date:: 2009-10-22 02:43:37 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -277,9 +277,8 @@ typedef void* GLeglImageOES;
 
 /* GL_IMG_read_format */
 #ifndef GL_IMG_read_format
-#define GL_BGRA                                                 0x80E1
-#define GL_UNSIGNED_SHORT_4_4_4_4_REV                           0x8365
-#define GL_UNSIGNED_SHORT_1_5_5_5_REV                           0x8366
+#define GL_BGRA_IMG                                             0x80E1
+#define GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG                       0x8365
 #endif
 
 /* GL_IMG_texture_compression_pvrtc */
