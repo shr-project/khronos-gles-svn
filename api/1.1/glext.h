@@ -1,7 +1,7 @@
 #ifndef __glext_h_
 #define __glext_h_
 
-/* $Revision: 9381 $ on $Date:: 2009-10-22 02:43:37 -0700 #$ */
+/* $Revision: 9428 $ on $Date:: 2009-10-26 09:45:09 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -229,22 +229,10 @@ typedef void* GLeglImageOES;
  * EXT extension tokens
  *------------------------------------------------------------------------*/
 
-/* GL_EXT_texture_filter_anisotropic */
-#ifndef GL_EXT_texture_filter_anisotropic
-#define GL_TEXTURE_MAX_ANISOTROPY_EXT                           0x84FE
-#define GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT                       0x84FF
-#endif
-
-/* GL_EXT_texture_format_BGRA8888 */
-#ifndef GL_EXT_texture_format_BGRA8888
-#define GL_BGRA                                                 0x80E1
-#endif
-
-/* GL_EXT_texture_lod_bias */
-#ifndef GL_EXT_texture_lod_bias
-#define GL_MAX_TEXTURE_LOD_BIAS_EXT                             0x84FD
-#define GL_TEXTURE_FILTER_CONTROL_EXT                           0x8500
-#define GL_TEXTURE_LOD_BIAS_EXT                                 0x8501
+/* GL_EXT_blend_minmax */
+#ifndef GL_EXT_blend_minmax
+#define GL_MIN_EXT                                              0x8007
+#define GL_MAX_EXT                                              0x8008
 #endif
 
 /* GL_EXT_discard_framebuffer */
@@ -254,21 +242,32 @@ typedef void* GLeglImageOES;
 #define GL_STENCIL_EXT                                          0x1802
 #endif
 
-/* GL_EXT_blend_minmax */
-#ifndef GL_EXT_blend_minmax
-#define GL_MIN_EXT                                              0x8007
-#define GL_MAX_EXT                                              0x8008
-#endif
+/* GL_EXT_multi_draw_arrays */
+/* No new tokens introduced by this extension. */
 
 /* GL_EXT_read_format_bgra */
 #ifndef GL_EXT_read_format_bgra
 #define GL_BGRA_EXT                                             0x80E1
-#define GL_UNSIGNED_SHORT_4_4_4_4_REV                           0x8365
-#define GL_UNSIGNED_SHORT_1_5_5_5_REV                           0x8366
+#define GL_UNSIGNED_SHORT_4_4_4_4_REV_EXT                       0x8365
+#define GL_UNSIGNED_SHORT_1_5_5_5_REV_EXT                       0x8366
 #endif
 
-/* GL_EXT_multi_draw_arrays */
-#ifndef GL_EXT_multi_draw_arrays
+/* GL_EXT_texture_filter_anisotropic */
+#ifndef GL_EXT_texture_filter_anisotropic
+#define GL_TEXTURE_MAX_ANISOTROPY_EXT                           0x84FE
+#define GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT                       0x84FF
+#endif
+
+/* GL_EXT_texture_format_BGRA8888 */
+#ifndef GL_EXT_texture_format_BGRA8888
+#define GL_BGRA_EXT                                             0x80E1
+#endif
+
+/* GL_EXT_texture_lod_bias */
+#ifndef GL_EXT_texture_lod_bias
+#define GL_MAX_TEXTURE_LOD_BIAS_EXT                             0x84FD
+#define GL_TEXTURE_FILTER_CONTROL_EXT                           0x8500
+#define GL_TEXTURE_LOD_BIAS_EXT                                 0x8501
 #endif
 
 /*------------------------------------------------------------------------*
@@ -289,17 +288,6 @@ typedef void* GLeglImageOES;
 #define GL_COMPRESSED_RGBA_PVRTC_2BPPV1_IMG                     0x8C03
 #endif
 
-/* GL_IMG_user_clip_plane */
-#ifndef GL_IMG_user_clip_plane
-#define GL_CLIP_PLANE0_IMG                                      0x3000
-#define GL_CLIP_PLANE1_IMG                                      0x3001
-#define GL_CLIP_PLANE2_IMG                                      0x3002
-#define GL_CLIP_PLANE3_IMG                                      0x3003
-#define GL_CLIP_PLANE4_IMG                                      0x3004
-#define GL_CLIP_PLANE5_IMG                                      0x3005
-#define GL_MAX_CLIP_PLANES_IMG                                  0x0D32
-#endif
-
 /* GL_IMG_texture_env_enhanced_fixed_function */
 #ifndef GL_IMG_texture_env_enhanced_fixed_function
 #define GL_MODULATE_COLOR_IMG                                   0x8C04
@@ -309,6 +297,17 @@ typedef void* GLeglImageOES;
 #define GL_FRAGMENT_ALPHA_MODULATE_IMG                          0x8C08
 #define GL_ADD_BLEND_IMG                                        0x8C09
 #define GL_DOT3_RGBA_IMG                                        0x86AF
+#endif
+
+/* GL_IMG_user_clip_plane */
+#ifndef GL_IMG_user_clip_plane
+#define GL_CLIP_PLANE0_IMG                                      0x3000
+#define GL_CLIP_PLANE1_IMG                                      0x3001
+#define GL_CLIP_PLANE2_IMG                                      0x3002
+#define GL_CLIP_PLANE3_IMG                                      0x3003
+#define GL_CLIP_PLANE4_IMG                                      0x3004
+#define GL_CLIP_PLANE5_IMG                                      0x3005
+#define GL_MAX_CLIP_PLANES_IMG                                  0x0D32
 #endif
 
 /*------------------------------------------------------------------------*
@@ -329,16 +328,6 @@ typedef void* GLeglImageOES;
 /* GL_QCOM_driver_control */
 /* No new tokens introduced by this extension. */
 
-/* GL_QCOM_perfmon_global_mode */
-#ifndef GL_QCOM_perfmon_global_mode
-#define GL_PERFMON_GLOBAL_MODE_QCOM                             0x8FA0
-#endif
-
-/* GL_QCOM_writeonly_rendering */
-#ifndef GL_QCOM_writeonly_rendering
-#define GL_WRITEONLY_RENDERING_QCOM                             0x8823
-#endif
-
 /* GL_QCOM_extended_get */
 #ifndef GL_QCOM_extended_get
 #define GL_TEXTURE_WIDTH_QCOM                                   0x8BD2
@@ -356,6 +345,16 @@ typedef void* GLeglImageOES;
 
 /* GL_QCOM_extended_get2 */
 /* No new tokens introduced by this extension. */
+
+/* GL_QCOM_perfmon_global_mode */
+#ifndef GL_QCOM_perfmon_global_mode
+#define GL_PERFMON_GLOBAL_MODE_QCOM                             0x8FA0
+#endif
+
+/* GL_QCOM_writeonly_rendering */
+#ifndef GL_QCOM_writeonly_rendering
+#define GL_WRITEONLY_RENDERING_QCOM                             0x8823
+#endif
 
 /*------------------------------------------------------------------------*
  * End of extension tokens, start of corresponding extension functions
@@ -736,6 +735,36 @@ typedef void (GL_APIENTRYP PFNGLGETTEXGENXVOESPROC) (GLenum coord, GLenum pname,
  * EXT extension functions
  *------------------------------------------------------------------------*/
 
+/* GL_EXT_blend_minmax */
+#ifndef GL_EXT_blend_minmax
+#define GL_EXT_blend_minmax 1
+#endif
+
+/* GL_EXT_discard_framebuffer */
+#ifndef GL_EXT_discard_framebuffer
+#define GL_EXT_discard_framebuffer 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_API void GL_APIENTRY glDiscardFramebufferEXT (GLenum target, GLsizei numAttachments, const GLenum *attachments);
+#endif
+typedef void (GL_APIENTRYP PFNGLDISCARDFRAMEBUFFEREXTPROC) (GLenum target, GLsizei numAttachments, const GLenum *attachments);
+#endif
+
+/* GL_EXT_multi_draw_arrays */
+#ifndef GL_EXT_multi_draw_arrays
+#define GL_EXT_multi_draw_arrays 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_API void GL_APIENTRY glMultiDrawArraysEXT (GLenum, GLint *, GLsizei *, GLsizei);
+GL_API void GL_APIENTRY glMultiDrawElementsEXT (GLenum, const GLsizei *, GLenum, const GLvoid* *, GLsizei);
+#endif /* GL_GLEXT_PROTOTYPES */
+typedef void (GL_APIENTRYP PFNGLMULTIDRAWARRAYSEXTPROC) (GLenum mode, GLint *first, GLsizei *count, GLsizei primcount);
+typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
+#endif
+
+/* GL_EXT_read_format_bgra */
+#ifndef GL_EXT_read_format_bgra
+#define GL_EXT_read_format_bgra 1
+#endif
+
 /* GL_EXT_texture_filter_anisotropic */
 #ifndef GL_EXT_texture_filter_anisotropic
 #define GL_EXT_texture_filter_anisotropic 1
@@ -749,35 +778,6 @@ typedef void (GL_APIENTRYP PFNGLGETTEXGENXVOESPROC) (GLenum coord, GLenum pname,
 /* GL_EXT_texture_lod_bias */
 #ifndef GL_EXT_texture_lod_bias
 #define GL_EXT_texture_lod_bias 1
-#endif
-
-/* GL_EXT_discard_framebuffer */
-#ifndef GL_EXT_discard_framebuffer
-#define GL_EXT_discard_framebuffer 1
-#ifdef GL_GLEXT_PROTOTYPES
-GL_API void GL_APIENTRY glDiscardFramebufferEXT (GLenum target, GLsizei numAttachments, const GLenum *attachments);
-#endif
-typedef void (GL_APIENTRYP PFNGLDISCARDFRAMEBUFFEREXTPROC) (GLenum target, GLsizei numAttachments, const GLenum *attachments);
-#endif
-
-/* GL_EXT_blend_minmax */
-#ifndef GL_EXT_blend_minmax
-#define GL_EXT_blend_minmax 1
-#endif
-
-/* GL_EXT_read_format_bgra */
-#ifndef GL_EXT_read_format_bgra
-#define GL_EXT_read_format_bgra 1
-#endif
-
-#ifndef GL_EXT_multi_draw_arrays
-#define GL_EXT_multi_draw_arrays 1
-#ifdef GL_GLEXT_PROTOTYPES
-GL_API void GL_APIENTRY glMultiDrawArraysEXT (GLenum, GLint *, GLsizei *, GLsizei);
-GL_API void GL_APIENTRY glMultiDrawElementsEXT (GLenum, const GLsizei *, GLenum, const GLvoid* *, GLsizei);
-#endif /* GL_GLEXT_PROTOTYPES */
-typedef void (GL_APIENTRYP PFNGLMULTIDRAWARRAYSEXTPROC) (GLenum mode, GLint *first, GLsizei *count, GLsizei primcount);
-typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
 #endif
 
 /*------------------------------------------------------------------------*
@@ -794,6 +794,11 @@ typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GL
 #define GL_IMG_texture_compression_pvrtc 1
 #endif
 
+/* GL_IMG_texture_env_enhanced_fixed_function */
+#ifndef GL_IMG_texture_env_enhanced_fixed_function
+#define GL_IMG_texture_env_enhanced_fixed_function 1
+#endif
+
 /* GL_IMG_user_clip_plane */
 #ifndef GL_IMG_user_clip_plane
 #define GL_IMG_user_clip_plane 1
@@ -803,11 +808,6 @@ GL_API void GL_APIENTRY glClipPlanexIMG (GLenum, const GLfixed *);
 #endif
 typedef void (GL_APIENTRYP PFNGLCLIPPLANEFIMGPROC) (GLenum p, const GLfloat *eqn);
 typedef void (GL_APIENTRYP PFNGLCLIPPLANEXIMGPROC) (GLenum p, const GLfixed *eqn);
-#endif
-
-/* GL_IMG_texture_env_enhanced_fixed_function */
-#ifndef GL_IMG_texture_env_enhanced_fixed_function
-#define GL_IMG_texture_env_enhanced_fixed_function 1
 #endif
 
 /*------------------------------------------------------------------------*
@@ -854,16 +854,6 @@ typedef void (GL_APIENTRYP PFNGLENABLEDRIVERCONTROLQCOMPROC) (GLuint driverContr
 typedef void (GL_APIENTRYP PFNGLDISABLEDRIVERCONTROLQCOMPROC) (GLuint driverControl);
 #endif
 
-/* GL_QCOM_perfmon_global_mode */
-#ifndef GL_QCOM_perfmon_global_mode
-#define GL_QCOM_perfmon_global_mode 1
-#endif
-
-/* GL_QCOM_writeonly_rendering */
-#ifndef GL_QCOM_writeonly_rendering
-#define GL_QCOM_writeonly_rendering 1
-#endif
-
 /* GL_QCOM_extended_get */
 #ifndef GL_QCOM_extended_get
 #define GL_QCOM_extended_get 1
@@ -900,6 +890,16 @@ typedef void (GL_APIENTRYP PFNGLEXTGETSHADERSQCOMPROC) (GLuint *shaders, GLint m
 typedef void (GL_APIENTRYP PFNGLEXTGETPROGRAMSQCOMPROC) (GLuint *programs, GLint maxPrograms, GLint *numPrograms);
 typedef void (GL_APIENTRYP PFNGLEXTISPROGRAMBINARYQCOMPROC) (GLuint program);
 typedef void (GL_APIENTRYP PFNGLEXTGETPROGRAMBINARYSOURCEQCOMPROC) (GLuint program, GLenum shadertype, char *source, GLint *length);
+#endif
+
+/* GL_QCOM_perfmon_global_mode */
+#ifndef GL_QCOM_perfmon_global_mode
+#define GL_QCOM_perfmon_global_mode 1
+#endif
+
+/* GL_QCOM_writeonly_rendering */
+#ifndef GL_QCOM_writeonly_rendering
+#define GL_QCOM_writeonly_rendering 1
 #endif
 
 #ifdef __cplusplus
