@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 9428 $ on $Date:: 2009-10-26 09:45:09 -0700 #$ */
+/* $Revision: 9499 $ on $Date:: 2009-10-30 13:10:08 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -100,8 +100,8 @@ typedef void* GLeglImageOES;
 #define GL_STENCIL_INDEX4_OES                                   0x8D47
 #endif
 
-/* GL_OES_texture3D */
-#ifndef GL_OES_texture3D
+/* GL_OES_texture_3D */
+#ifndef GL_OES_texture_3D
 #define GL_TEXTURE_WRAP_R_OES                                   0x8072
 #define GL_TEXTURE_3D_OES                                       0x806F
 #define GL_TEXTURE_BINDING_3D_OES                               0x806A
@@ -641,12 +641,12 @@ typedef void (GL_APIENTRYP PFNGLEXTGETBUFFERPOINTERVQCOMPROC) (GLenum target, vo
 #ifdef GL_GLEXT_PROTOTYPES
 GL_APICALL void GL_APIENTRY glExtGetShadersQCOM (GLuint *shaders, GLint maxShaders, GLint *numShaders);
 GL_APICALL void GL_APIENTRY glExtGetProgramsQCOM (GLuint *programs, GLint maxPrograms, GLint *numPrograms);
-GL_APICALL void GL_APIENTRY glExtIsProgramBinaryQCOM (GLuint program);
+GL_APICALL GLboolean GL_APIENTRY glExtIsProgramBinaryQCOM (GLuint program);
 GL_APICALL void GL_APIENTRY glExtGetProgramBinarySourceQCOM (GLuint program, GLenum shadertype, char *source, GLint *length);
 #endif
 typedef void (GL_APIENTRYP PFNGLEXTGETSHADERSQCOMPROC) (GLuint *shaders, GLint maxShaders, GLint *numShaders);
 typedef void (GL_APIENTRYP PFNGLEXTGETPROGRAMSQCOMPROC) (GLuint *programs, GLint maxPrograms, GLint *numPrograms);
-typedef void (GL_APIENTRYP PFNGLEXTISPROGRAMBINARYQCOMPROC) (GLuint program);
+typedef GLboolean (GL_APIENTRYP PFNGLEXTISPROGRAMBINARYQCOMPROC) (GLuint program);
 typedef void (GL_APIENTRYP PFNGLEXTGETPROGRAMBINARYSOURCEQCOMPROC) (GLuint program, GLenum shadertype, char *source, GLint *length);
 #endif
 

@@ -1,7 +1,7 @@
 #ifndef __glext_h_
 #define __glext_h_
 
-/* $Revision: 9428 $ on $Date:: 2009-10-26 09:45:09 -0700 #$ */
+/* $Revision: 9496 $ on $Date:: 2009-10-30 13:04:05 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -883,12 +883,12 @@ typedef void (GL_APIENTRYP PFNGLEXTGETBUFFERPOINTERVQCOMPROC) (GLenum target, vo
 #ifdef GL_GLEXT_PROTOTYPES
 GL_API void GL_APIENTRY glExtGetShadersQCOM (GLuint *shaders, GLint maxShaders, GLint *numShaders);
 GL_API void GL_APIENTRY glExtGetProgramsQCOM (GLuint *programs, GLint maxPrograms, GLint *numPrograms);
-GL_API void GL_APIENTRY glExtIsProgramBinaryQCOM (GLuint program);
+GL_API GLboolean GL_APIENTRY glExtIsProgramBinaryQCOM (GLuint program);
 GL_API void GL_APIENTRY glExtGetProgramBinarySourceQCOM (GLuint program, GLenum shadertype, char *source, GLint *length);
 #endif
 typedef void (GL_APIENTRYP PFNGLEXTGETSHADERSQCOMPROC) (GLuint *shaders, GLint maxShaders, GLint *numShaders);
 typedef void (GL_APIENTRYP PFNGLEXTGETPROGRAMSQCOMPROC) (GLuint *programs, GLint maxPrograms, GLint *numPrograms);
-typedef void (GL_APIENTRYP PFNGLEXTISPROGRAMBINARYQCOMPROC) (GLuint program);
+typedef GLboolean (GL_APIENTRYP PFNGLEXTISPROGRAMBINARYQCOMPROC) (GLuint program);
 typedef void (GL_APIENTRYP PFNGLEXTGETPROGRAMBINARYSOURCEQCOMPROC) (GLuint program, GLenum shadertype, char *source, GLint *length);
 #endif
 

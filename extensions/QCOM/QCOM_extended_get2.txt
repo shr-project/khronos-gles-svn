@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date: May 14, 2009
-    Revision: #1
+    Last Modified Date: October 30, 2009
+    Revision: #2
 
 Number
 
@@ -56,7 +56,7 @@ New Procedures and Functions
     void ExtGetProgramsQCOM(uint* programs, int maxPrograms, 
                             int* numPrograms);
 
-    void ExtIsProgramBinaryQCOM(uint program);
+    boolean ExtIsProgramBinaryQCOM(uint program);
 
     void ExtGetProgramBinarySourceQCOM(uint program, enum shadertype, 
                                        char* source, int* length)
@@ -105,3 +105,6 @@ New State
 Revision History
 
     #01    05/14/2009    Jukka Liimatta       First draft.
+    #02    10/30/2009    Jon Leech            Make ExtIsProgramBinaryQCOM
+                                              return boolean (Khronos bug
+                                              5705).
