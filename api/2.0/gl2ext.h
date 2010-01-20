@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 9499 $ on $Date:: 2009-10-30 13:10:08 -0700 #$ */
+/* $Revision: 10150 $ on $Date:: 2010-01-20 09:30:23 -0800 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -284,6 +284,42 @@ typedef void* GLeglImageOES;
 /* GL_QCOM_writeonly_rendering */
 #ifndef GL_QCOM_writeonly_rendering
 #define GL_WRITEONLY_RENDERING_QCOM                             0x8823
+#endif
+
+/* GL_QCOM_tiled_rendering */
+#ifndef GL_QCOM_tiled_rendering
+#define GL_COLOR_BUFFER_BIT0_QCOM                               0x00000001
+#define GL_COLOR_BUFFER_BIT1_QCOM                               0x00000002
+#define GL_COLOR_BUFFER_BIT2_QCOM                               0x00000004
+#define GL_COLOR_BUFFER_BIT3_QCOM                               0x00000008
+#define GL_COLOR_BUFFER_BIT4_QCOM                               0x00000010
+#define GL_COLOR_BUFFER_BIT5_QCOM                               0x00000020
+#define GL_COLOR_BUFFER_BIT6_QCOM                               0x00000040
+#define GL_COLOR_BUFFER_BIT7_QCOM                               0x00000080
+#define GL_DEPTH_BUFFER_BIT0_QCOM                               0x00000100
+#define GL_DEPTH_BUFFER_BIT1_QCOM                               0x00000200
+#define GL_DEPTH_BUFFER_BIT2_QCOM                               0x00000400
+#define GL_DEPTH_BUFFER_BIT3_QCOM                               0x00000800
+#define GL_DEPTH_BUFFER_BIT4_QCOM                               0x00001000
+#define GL_DEPTH_BUFFER_BIT5_QCOM                               0x00002000
+#define GL_DEPTH_BUFFER_BIT6_QCOM                               0x00004000
+#define GL_DEPTH_BUFFER_BIT7_QCOM                               0x00008000
+#define GL_STENCIL_BUFFER_BIT0_QCOM                             0x00010000
+#define GL_STENCIL_BUFFER_BIT1_QCOM                             0x00020000
+#define GL_STENCIL_BUFFER_BIT2_QCOM                             0x00040000
+#define GL_STENCIL_BUFFER_BIT3_QCOM                             0x00080000
+#define GL_STENCIL_BUFFER_BIT4_QCOM                             0x00100000
+#define GL_STENCIL_BUFFER_BIT5_QCOM                             0x00200000
+#define GL_STENCIL_BUFFER_BIT6_QCOM                             0x00400000
+#define GL_STENCIL_BUFFER_BIT7_QCOM                             0x00800000
+#define GL_MULTISAMPLE_BUFFER_BIT0_QCOM                         0x01000000
+#define GL_MULTISAMPLE_BUFFER_BIT1_QCOM                         0x02000000
+#define GL_MULTISAMPLE_BUFFER_BIT2_QCOM                         0x04000000
+#define GL_MULTISAMPLE_BUFFER_BIT3_QCOM                         0x08000000
+#define GL_MULTISAMPLE_BUFFER_BIT4_QCOM                         0x10000000
+#define GL_MULTISAMPLE_BUFFER_BIT5_QCOM                         0x20000000
+#define GL_MULTISAMPLE_BUFFER_BIT6_QCOM                         0x40000000
+#define GL_MULTISAMPLE_BUFFER_BIT7_QCOM                         0x80000000
 #endif
 
 /*------------------------------------------------------------------------*
@@ -658,6 +694,17 @@ typedef void (GL_APIENTRYP PFNGLEXTGETPROGRAMBINARYSOURCEQCOMPROC) (GLuint progr
 /* GL_QCOM_writeonly_rendering */
 #ifndef GL_QCOM_writeonly_rendering
 #define GL_QCOM_writeonly_rendering 1
+#endif
+
+/* GL_QCOM_tiled_rendering */
+#ifndef GL_QCOM_tiled_rendering
+#define GL_QCOM_tiled_rendering 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glStartTilingQCOM (GLuint x, GLuint y, GLuint width, GLuint height, GLbitfield preserveMask);
+GL_APICALL void GL_APIENTRY glEndTilingQCOM (GLbitfield preserveMask);
+#endif
+typedef void (GL_APIENTRYP PFNGLSTARTTILINGQCOMPROC) (GLuint x, GLuint y, GLuint width, GLuint height, GLbitfield preserveMask);
+typedef void (GL_APIENTRYP PFNGLENDTILINGQCOMPROC) (GLbitfield preserveMask);
 #endif
 
 #ifdef __cplusplus

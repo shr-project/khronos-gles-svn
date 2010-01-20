@@ -238,6 +238,8 @@
 <li value=69> <a href="extensions/EXT/multi_draw_arrays.txt">GL_EXT_multi_draw_arrays</a>
      <br> <a href="extensions/EXT/multi_draw_arrays.txt">GL_SUN_multi_draw_arrays</a>
 </li>
+<li value=70> <a href="extensions/QCOM/QCOM_tiled_rendering.txt">GL_QCOM_tiled_rendering</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
