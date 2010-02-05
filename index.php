@@ -240,6 +240,8 @@
 </li>
 <li value=70> <a href="extensions/QCOM/QCOM_tiled_rendering.txt">GL_QCOM_tiled_rendering</a>
 </li>
+<li value=71> <a href="extensions/OES/OES_vertex_array_object.txt">GL_OES_vertex_array_object</a>
+</li>
 </ol>
 <?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

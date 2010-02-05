@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 10150 $ on $Date:: 2010-01-20 09:30:23 -0800 #$ */
+/* $Revision: 10283 $ on $Date:: 2010-02-05 02:51:19 -0800 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -126,6 +126,11 @@ typedef void* GLeglImageOES;
 
 /* GL_OES_texture_npot */
 /* No new tokens introduced by this extension. */
+
+/* GL_OES_vertex_array_object */
+#ifndef GL_OES_vertex_array_object
+#define GL_VERTEX_ARRAY_BINDING_OES                             0x85B5
+#endif
 
 /* GL_OES_vertex_half_float */
 /* GL_HALF_FLOAT_OES defined in GL_OES_texture_half_float already. */
@@ -472,6 +477,21 @@ typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE3DOES) (GLenum target, GLenum 
 /* GL_OES_texture_npot */
 #ifndef GL_OES_texture_npot
 #define GL_OES_texture_npot 1
+#endif
+
+/* GL_OES_vertex_array_object */
+#ifndef GL_OES_vertex_array_object
+#define GL_OES_vertex_array_object 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glBindVertexArrayOES (GLuint array);
+GL_APICALL void GL_APIENTRY glDeleteVertexArraysOES (GLsizei n, const GLuint *arrays);
+GL_APICALL void GL_APIENTRY glGenVertexArraysOES (GLsizei n, GLuint *arrays);
+GL_APICALL GLboolean GL_APIENTRY glIsVertexArrayOES (GLuint array);
+#endif
+typedef void (GL_APIENTRYP PFNGLBINDVERTEXARRAYOESPROC) (GLuint array);
+typedef void (GL_APIENTRYP PFNGLDELETEVERTEXARRAYSOESPROC) (GLsizei n, const GLuint *arrays);
+typedef void (GL_APIENTRYP PFNGLGENVERTEXARRAYSOESPROC) (GLsizei n, GLuint *arrays);
+typedef GLboolean (GL_APIENTRYP PFNGLISVERTEXARRAYOESPROC) (GLuint array);
 #endif
 
 /* GL_OES_vertex_half_float */
