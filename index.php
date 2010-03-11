@@ -1,10 +1,10 @@
-<?php include("/home/virtual/khronos.org/var/www/html/_inc/doctype.txt"); ?>
+<?php include("../../_inc/doctype.txt"); ?>
 <head>
 <title>Khronos OpenGL ES API Registry</title>
-<?php include("/home/virtual/khronos.org/var/www/html/_inc//registry/registry_head.txt"); ?>
+<?php include("../../_inc/registry/registry_head.txt"); ?>
 </head>
 <body id="developers" class="registry">
-<?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_body.txt"); ?>
+<?php include("../../_inc/registry/registry_body.txt"); ?>
 <h1 class="pagetitle">Khronos OpenGL ES API Registry</h1> <!--	top left shadow-->
 <div id="mainformat">
 
@@ -243,6 +243,6 @@
 <li value=71> <a href="extensions/OES/OES_vertex_array_object.txt">GL_OES_vertex_array_object</a>
 </li>
 </ol>
-<?php include("/home/virtual/khronos.org/var/www/html/_inc/registry/registry_footer.txt"); ?>
+<?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
 </html>
