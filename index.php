@@ -242,6 +242,10 @@
 </li>
 <li value=71> <a href="extensions/OES/OES_vertex_array_object.txt">GL_OES_vertex_array_object</a>
 </li>
+<li value=72> <a href="extensions/NV/coverage_sample.txt">GL_NV_coverage_sample</a>
+</li>
+<li value=73> <a href="extensions/NV/depth_nonlinear.txt">GL_NV_depth_nonlinear</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

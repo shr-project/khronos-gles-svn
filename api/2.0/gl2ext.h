@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 10602 $ on $Date:: 2010-03-04 22:35:34 -0800 #$ */
+/* $Revision: 10798 $ on $Date:: 2010-03-19 17:34:30 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -259,6 +259,24 @@ typedef void* GLeglImageOES;
 #define GL_ALL_COMPLETED_NV                                     0x84F2
 #define GL_FENCE_STATUS_NV                                      0x84F3
 #define GL_FENCE_CONDITION_NV                                   0x84F4
+#endif
+
+/* GL_NV_coverage_sample */
+#ifndef GL_NV_coverage_sample
+#define GL_COVERAGE_COMPONENT_NV                                0x8ED0
+#define GL_COVERAGE_COMPONENT4_NV                               0x8ED1
+#define GL_COVERAGE_ATTACHMENT_NV                               0x8ED2
+#define GL_COVERAGE_BUFFERS_NV                                  0x8ED3
+#define GL_COVERAGE_SAMPLES_NV                                  0x8ED4
+#define GL_COVERAGE_ALL_FRAGMENTS_NV                            0x8ED5
+#define GL_COVERAGE_EDGE_FRAGMENTS_NV                           0x8ED6
+#define GL_COVERAGE_AUTOMATIC_NV                                0x8ED7
+#define GL_COVERAGE_BUFFER_BIT_NV                               0x8000
+#endif
+
+/* GL_NV_depth_nonlinear */
+#ifndef GL_NV_depth_nonlinear
+#define GL_DEPTH_COMPONENT16_NONLINEAR_NV                       0x8E2C
 #endif
 
 /*------------------------------------------------------------------------*
@@ -652,6 +670,22 @@ typedef GLboolean (GL_APIENTRYP PFNGLTESTFENCENVPROC) (GLuint fence);
 typedef void (GL_APIENTRYP PFNGLGETFENCEIVNVPROC) (GLuint fence, GLenum pname, GLint *params);
 typedef void (GL_APIENTRYP PFNGLFINISHFENCENVPROC) (GLuint fence);
 typedef void (GL_APIENTRYP PFNGLSETFENCENVPROC) (GLuint fence, GLenum condition);
+#endif
+
+/* GL_NV_coverage_sample */
+#ifndef GL_NV_coverage_sample
+#define GL_NV_coverage_sample 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glCoverageMaskNV (GLboolean mask);
+GL_APICALL void GL_APIENTRY glCoverageOperationNV (GLenum operation);
+#endif
+typedef void (GL_APIENTRYP PFNGLCOVERAGEMASKNVPROC) (GLboolean mask);
+typedef void (GL_APIENTRYP PFNGLCOVERAGEOPERATIONNVPROC) (GLenum operation);
+#endif
+
+/* GL_NV_depth_nonlinear */
+#ifndef GL_NV_depth_nonlinear
+#define GL_NV_depth_nonlinear 1
 #endif
 
 /*------------------------------------------------------------------------*
