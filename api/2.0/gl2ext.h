@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 10964 $ on $Date:: 2010-04-09 02:09:44 -0700 #$ */
+/* $Revision: 10969 $ on $Date:: 2010-04-09 02:27:15 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -220,6 +220,12 @@ typedef void* GLeglImageOES;
 /* GL_EXT_texture_type_2_10_10_10_REV */
 #ifndef GL_EXT_texture_type_2_10_10_10_REV
 #define GL_UNSIGNED_INT_2_10_10_10_REV_EXT                      0x8368
+#endif
+
+/* GL_EXT_texture_compression_dxt1 */
+#ifndef GL_EXT_texture_compression_dxt1
+#define GL_COMPRESSED_RGB_S3TC_DXT1_EXT                         0x83F0
+#define GL_COMPRESSED_RGBA_S3TC_DXT1_EXT                        0x83F1
 #endif
 
 /*------------------------------------------------------------------------*
@@ -629,6 +635,11 @@ typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GL
 /* GL_EXT_texture_type_2_10_10_10_REV */
 #ifndef GL_EXT_texture_type_2_10_10_10_REV
 #define GL_EXT_texture_type_2_10_10_10_REV 1
+#endif
+
+/* GL_EXT_texture_compression_dxt1 */
+#ifndef GL_EXT_texture_compression_dxt1
+#define GL_EXT_texture_compression_dxt1 1
 #endif
 
 /*------------------------------------------------------------------------*
