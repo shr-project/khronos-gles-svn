@@ -246,6 +246,8 @@
 </li>
 <li value=73> <a href="extensions/NV/depth_nonlinear.txt">GL_NV_depth_nonlinear</a>
 </li>
+<li value=74> <a href="extensions/IMG/IMG_multisampled_render_to_texture.txt">GL_IMG_multisampled_render_to_texture</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

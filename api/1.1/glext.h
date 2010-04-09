@@ -1,7 +1,7 @@
 #ifndef __glext_h_
 #define __glext_h_
 
-/* $Revision: 10601 $ on $Date:: 2010-03-04 22:15:27 -0800 #$ */
+/* $Revision: 10965 $ on $Date:: 2010-04-09 02:11:29 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -318,6 +318,14 @@ typedef void* GLeglImageOES;
 #define GL_CLIP_PLANE4_IMG                                      0x3004
 #define GL_CLIP_PLANE5_IMG                                      0x3005
 #define GL_MAX_CLIP_PLANES_IMG                                  0x0D32
+#endif
+
+/* GL_IMG_multisampled_render_to_texture */
+#ifndef GL_IMG_multisampled_render_to_texture
+#define GL_RENDERBUFFER_SAMPLES_IMG                             0x9133
+#define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_IMG               0x9134
+#define GL_MAX_SAMPLES_IMG                                      0x9135
+#define GL_TEXTURE_SAMPLES_IMG                                  0x9136
 #endif
 
 /*------------------------------------------------------------------------*
@@ -869,6 +877,17 @@ GL_API void GL_APIENTRY glClipPlanexIMG (GLenum, const GLfixed *);
 #endif
 typedef void (GL_APIENTRYP PFNGLCLIPPLANEFIMGPROC) (GLenum p, const GLfloat *eqn);
 typedef void (GL_APIENTRYP PFNGLCLIPPLANEXIMGPROC) (GLenum p, const GLfixed *eqn);
+#endif
+
+/* GL_IMG_multisampled_render_to_texture */
+#ifndef GL_IMG_multisampled_render_to_texture
+#define GL_IMG_multisampled_render_to_texture 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_API void GL_APIENTRY glRenderbufferStorageMultisampleIMG (GLenum, GLsizei, GLenum, GLsizei, GLsizei);
+GL_API void GL_APIENTRY glFramebufferTexture2DMultisampleIMG (GLenum, GLenum, GLenum, GLuint, GLint, GLsizei);
+#endif
+typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEIMG) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
+typedef void (GL_APIENTRYP PFNGLCLIPPLANEXIMG) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
 #endif
 
 /*------------------------------------------------------------------------*
