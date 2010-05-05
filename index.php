@@ -248,6 +248,8 @@
 </li>
 <li value=74> <a href="extensions/IMG/IMG_multisampled_render_to_texture.txt">GL_IMG_multisampled_render_to_texture</a>
 </li>
+<li value=75> <a href="extensions/OES/EGL_KHR_fence_sync.txt">GL_OES_EGL_sync</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
