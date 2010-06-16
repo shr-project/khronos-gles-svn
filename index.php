@@ -250,6 +250,16 @@
 </li>
 <li value=75> <a href="extensions/OES/EGL_KHR_fence_sync.txt">GL_OES_EGL_sync</a>
 </li>
+<li value=76> <a href="extensions/APPLE/rgb_422.txt">GL_APPLE_rgb_422</a>
+</li>
+<li value=77> <a href="extensions/EXT/EXT_shader_texture_lod.txt">GL_EXT_shader_texture_lod</a>
+</li>
+<li value=78> <a href="extensions/APPLE/APPLE_framebuffer_multisample.txt">GL_APPLE_framebuffer_multisample</a>
+</li>
+<li value=79> <a href="extensions/APPLE/APPLE_texture_format_BGRA8888.txt">GL_APPLE_texture_format_BGRA8888</a>
+</li>
+<li value=80> <a href="extensions/APPLE/APPLE_texture_max_level.txt">GL_APPLE_texture_max_level</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

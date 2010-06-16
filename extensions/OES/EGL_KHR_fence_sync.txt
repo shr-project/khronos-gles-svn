@@ -29,7 +29,7 @@ Status
 
 Version
 
-    Version 21, July 22, 2009
+    Version 22, June 15, 2010
 
 Number
 
@@ -69,9 +69,9 @@ Overview
     destroy, query, and wait on) are supported.
 
     The remaining extensions list valid client APIs for fence syncs. The
-    "GL_OES_egl_sync" string indicates that a fence sync object can be
+    "GL_OES_EGL_sync" string indicates that a fence sync object can be
     created in association with a fence command placed in the command
-    stream of a bound OpenGL ES context. The "VG_KHR_egl_sync" string
+    stream of a bound OpenGL ES context. The "VG_KHR_EGL_sync" string
     indicates the same thing for a bound OpenVG context.
 
 New Types
@@ -237,10 +237,10 @@ Changes to Chapter 3 of the EGL 1.2 Specification (EGL Functions and Errors)
     execution of the fence command.
 
     Each client API which supports fence commands indicates this support
-    in the form of a client API extension. If the GL_OES_egl_sync
+    in the form of a client API extension. If the GL_OES_EGL_sync
     extension is supported by OpenGL ES (either version 1.x or 2.0), a
     fence sync object may be created when the currently bound API is
-    OpenGL ES. If the VG_KHR_egl_sync extension is supported by OpenVG,
+    OpenGL ES. If the VG_KHR_EGL_sync extension is supported by OpenVG,
     a fence sync object may be created when the currently bound API is
     OpenVG.
 
@@ -559,6 +559,8 @@ Issues
 
 Revision History
 
+#22 (Jon Leech, June 15, 2010)
+    - Correct minor typos in GL/VG extension names.
 #21 (Jon Leech, May 5, 2010)
     - Correct minor typos, assign extension numbers for EGL, OpenGL ES,
       and OpenVG, and publish in the registry,
