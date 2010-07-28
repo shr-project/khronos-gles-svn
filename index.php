@@ -260,6 +260,10 @@
 </li>
 <li value=80> <a href="extensions/APPLE/APPLE_texture_max_level.txt">GL_APPLE_texture_max_level</a>
 </li>
+<li value=81> <a href="extensions/ARM/ARM_mali_shader_binary.txt">GL_ARM_mali_shader_binary</a>
+</li>
+<li value=82> <a href="extensions/ARM/ARM_rgba8.txt">GL_ARM_rgba8</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

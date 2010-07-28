@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 11739 $ on $Date:: 2010-06-15 22:57:13 -0700 #$ */
+/* $Revision: 12121 $ on $Date:: 2010-07-27 17:50:04 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -210,6 +210,18 @@ typedef void* GLeglImageOES;
 #ifndef GL_APPLE_texture_max_level
 #define GL_TEXTURE_MAX_LEVEL_APPLE                              0x813D
 #endif
+
+/*------------------------------------------------------------------------*
+ * ARM extension tokens
+ *------------------------------------------------------------------------*/
+
+/* GL_ARM_mali_shader_binary */
+#ifndef GL_ARM_mali_shader_binary
+#define GL_MALI_SHADER_BINARY_ARM                               0x8F60
+#endif
+
+/* GL_ARM_rgba8 */
+/* No new tokens introduced by this extension. */
 
 /*------------------------------------------------------------------------*
  * EXT extension tokens
@@ -655,6 +667,20 @@ typedef void (GL_APIENTRYP PFNGLRESOLVEMULTISAMPLEFRAMEBUFFERAPPLEPROC) (void);
 #endif
 
 /*------------------------------------------------------------------------*
+ * ARM extension functions
+ *------------------------------------------------------------------------*/
+
+/* GL_ARM_mali_shader_binary */
+#ifndef GL_ARM_mali_shader_binary
+#define GL_ARM_mali_shader_binary 1
+#endif
+
+/* GL_ARM_rgba8 */
+#ifndef GL_ARM_rgba8
+#define GL_ARM_rgba8 1
+#endif
+
+/*------------------------------------------------------------------------*
  * EXT extension functions
  *------------------------------------------------------------------------*/
 
@@ -744,7 +770,7 @@ GL_APICALL void GL_APIENTRY glRenderbufferStorageMultisampleIMG (GLenum, GLsizei
 GL_APICALL void GL_APIENTRY glFramebufferTexture2DMultisampleIMG (GLenum, GLenum, GLenum, GLuint, GLint, GLsizei);
 #endif
 typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEIMG) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
-typedef void (GL_APIENTRYP PFNGLCLIPPLANEXIMG) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
+typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEIMG) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
 #endif
 
 /*------------------------------------------------------------------------*
