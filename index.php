@@ -264,6 +264,10 @@
 </li>
 <li value=82> <a href="extensions/ARM/ARM_rgba8.txt">GL_ARM_rgba8</a>
 </li>
+<li value=83> <a href="extensions/ANGLE/ANGLE_framebuffer_blit.txt">GL_ANGLE_framebuffer_blit</a>
+</li>
+<li value=84> <a href="extensions/ANGLE/ANGLE_framebuffer_multisample.txt">GL_ANGLE_framebuffer_multisample</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

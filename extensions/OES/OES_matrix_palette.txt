@@ -374,6 +374,8 @@ Addendum: Using this extension.
     glRotatef(yrot, 0.0f, 1.0f, 0.0f);
     glRotatef(zrot, 0.0f, 0.0f, 1.0f);
 
+    glEnable(GL_MATRIX_PALETTE_OES);
+
     glEnableClientState(GL_VERTEX_ARRAY);
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
     glEnableClientState(GL_MATRIX_INDEX_ARRAY_OES);

@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 12121 $ on $Date:: 2010-07-27 17:50:04 -0700 #$ */
+/* $Revision: 12585 $ on $Date:: 2010-09-30 02:06:48 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -177,6 +177,25 @@ typedef void* GLeglImageOES;
 /* GL_AMD_program_binary_Z400 */
 #ifndef GL_AMD_program_binary_Z400
 #define GL_Z400_BINARY_AMD                                      0x8740
+#endif
+
+/*------------------------------------------------------------------------*
+ * ANGLE extension tokens
+ *------------------------------------------------------------------------*/
+
+/* GL_ANGLE_framebuffer_blit */
+#ifndef GL_ANGLE_framebuffer_blit
+#define GL_READ_FRAMEBUFFER_ANGLE                               0x8CA8
+#define GL_DRAW_FRAMEBUFFER_ANGLE                               0x8CA9
+#define GL_DRAW_FRAMEBUFFER_BINDING_ANGLE                       0x8CA6 
+#define GL_READ_FRAMEBUFFER_BINDING_ANGLE                       0x8CAA
+#endif
+
+/* GL_ANGLE_framebuffer_multisample */
+#ifndef GL_ANGLE_framebuffer_multisample
+#define GL_RENDERBUFFER_SAMPLES_ANGLE                           0x8CAB
+#define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_ANGLE             0x8D56
+#define GL_MAX_SAMPLES_ANGLE                                    0x8D57
 #endif
 
 /*------------------------------------------------------------------------*
@@ -634,6 +653,28 @@ typedef void (GL_APIENTRYP PFNGLGETPERFMONITORCOUNTERDATAAMDPROC) (GLuint monito
 /* GL_AMD_program_binary_Z400 */
 #ifndef GL_AMD_program_binary_Z400
 #define GL_AMD_program_binary_Z400 1
+#endif
+
+/*------------------------------------------------------------------------*
+ * ANGLE extension functions
+ *------------------------------------------------------------------------*/
+
+/* GL_ANGLE_framebuffer_blit */
+#ifndef GL_ANGLE_framebuffer_blit
+#define GL_ANGLE_framebuffer_blit 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glBlitFramebufferANGLE (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
+#endif
+typedef void (GL_APIENTRYP PFNGLBLITFRAMEBUFFERANGLEPROC) (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
+#endif
+
+/* GL_ANGLE_framebuffer_multisample */
+#ifndef GL_ANGLE_framebuffer_multisample
+#define GL_ANGLE_framebuffer_multisample 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glRenderbufferStorageMultisampleANGLE (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
+#endif
+typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEANGLEPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 #endif
 
 /*------------------------------------------------------------------------*
