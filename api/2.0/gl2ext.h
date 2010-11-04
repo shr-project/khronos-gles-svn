@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 12585 $ on $Date:: 2010-09-30 02:06:48 -0700 #$ */
+/* $Revision: 12813 $ on $Date:: 2010-11-03 17:33:04 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -428,6 +428,15 @@ typedef void* GLeglImageOES;
 #define GL_MULTISAMPLE_BUFFER_BIT5_QCOM                         0x20000000
 #define GL_MULTISAMPLE_BUFFER_BIT6_QCOM                         0x40000000
 #define GL_MULTISAMPLE_BUFFER_BIT7_QCOM                         0x80000000
+#endif
+
+/*------------------------------------------------------------------------*
+ * VIV extension tokens
+ *------------------------------------------------------------------------*/
+
+/* GL_VIV_shader_binary */
+#ifndef GL_VIV_shader_binary
+#define GL_SHADER_BINARY_VIV                                    0x8FC4
 #endif
 
 /*------------------------------------------------------------------------*
@@ -931,6 +940,15 @@ GL_APICALL void GL_APIENTRY glEndTilingQCOM (GLbitfield preserveMask);
 #endif
 typedef void (GL_APIENTRYP PFNGLSTARTTILINGQCOMPROC) (GLuint x, GLuint y, GLuint width, GLuint height, GLbitfield preserveMask);
 typedef void (GL_APIENTRYP PFNGLENDTILINGQCOMPROC) (GLbitfield preserveMask);
+#endif
+
+/*------------------------------------------------------------------------*
+ * VIV extension tokens
+ *------------------------------------------------------------------------*/
+
+/* GL_VIV_shader_binary */
+#ifndef GL_VIV_shader_binary
+#define GL_VIV_shader_binary 1
 #endif
 
 #ifdef __cplusplus

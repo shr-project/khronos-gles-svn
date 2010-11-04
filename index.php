@@ -268,6 +268,8 @@
 </li>
 <li value=84> <a href="extensions/ANGLE/ANGLE_framebuffer_multisample.txt">GL_ANGLE_framebuffer_multisample</a>
 </li>
+<li value=85> <a href="extensions/VIV/VIV_shader_binary.txt">GL_VIV_shader_binary</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
