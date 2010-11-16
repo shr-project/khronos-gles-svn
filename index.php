@@ -96,6 +96,12 @@
      <a href="http://www.khronos.org/opengles/sdk/1.1/docs/man/">
      OpenGL ES 1.1 Online Manual Pages</a> instead. </li>
 </ul>
+
+<h6> IP Disclosure Statements </h6>
+
+<p> <a href="https://www.khronos.org/files/ip-disclosures/opengl/"> IP
+    Disclosure Statements </a> from Khronos Members which bear on OpenGL
+    and OpenGL ES are available. </p>
 <h6> <a name="otherextspecs"></a>
      Extension Specifications</h6>
 <ol>
