@@ -278,6 +278,8 @@
 </li>
 <li value=86> <a href="extensions/EXT/EXT_frag_depth.txt">GL_EXT_frag_depth</a>
 </li>
+<li value=87> <a href="extensions/OES/OES_EGL_image_external.txt">GL_OES_EGL_image_external</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

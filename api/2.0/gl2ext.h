@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 12813 $ on $Date:: 2010-11-03 17:33:04 -0700 #$ */
+/* $Revision: 13239 $ on $Date:: 2010-12-17 15:13:56 -0800 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -55,6 +55,15 @@ extern "C" {
 /* GL_OES_EGL_image */
 #ifndef GL_OES_EGL_image
 typedef void* GLeglImageOES;
+#endif
+
+/* GL_OES_EGL_image_external */
+#ifndef GL_OES_EGL_image_external
+/* GLeglImageOES defined in GL_OES_EGL_image already. */
+#define GL_TEXTURE_EXTERNAL_OES                                 0x8D65
+#define GL_SAMPLER_EXTERNAL_OES                                 0x8D66
+#define GL_TEXTURE_BINDING_EXTERNAL_OES                         0x8D67
+#define GL_REQUIRED_TEXTURE_IMAGE_UNITS_OES                     0x8D68
 #endif
 
 /* GL_OES_element_index_uint */
@@ -481,6 +490,12 @@ GL_APICALL void GL_APIENTRY glEGLImageTargetRenderbufferStorageOES (GLenum targe
 #endif
 typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETTEXTURE2DOESPROC) (GLenum target, GLeglImageOES image);
 typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETRENDERBUFFERSTORAGEOESPROC) (GLenum target, GLeglImageOES image);
+#endif
+
+/* GL_OES_EGL_image_external */
+#ifndef GL_OES_EGL_image_external
+#define GL_OES_EGL_image_external 1
+/* glEGLImageTargetTexture2DOES defined in GL_OES_EGL_image already. */
 #endif
 
 /* GL_OES_element_index_uint */
