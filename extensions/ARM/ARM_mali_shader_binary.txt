@@ -22,7 +22,7 @@ Status
 
 Version
 
-    Last Modified Date: July 15, 2010
+    Last Modified Date: January 5, 2011
 
 Number
 
@@ -61,12 +61,11 @@ New Tokens
 
 Additions to Chapter 2 of the OpenGL ES 2.0 Specification
 
-    At the end of section 2.10.2 (Loading Shader Binaries) add
+    At the end of section 2.10.2 (Loading Shader Binaries), add:
 
         "Any shader object passed to the ShaderBinary function with
-        with a <binaryFormat> of MALI_SHADER_BINARY_ARM will
-        have its information log overwritten with information about
-        the loading process."
+        a <binaryFormat> of MALI_SHADER_BINARY_ARM will have its information
+        log overwritten with information about the loading process."
 
 Errors
 
@@ -88,12 +87,13 @@ New Implementation Dependent State
 Revision History
 
     #1  08/27/2008   Erik Faye-Lund           First draft.
-    #2  09/04/2008   Aske Simon Christensen   Actual enum value
-                                              Some adjustments
-                                              Mention shader info log
-    #3  09/05/2008   Aske Simon Christensen   Error and log behavior
+    #2  09/04/2008   Aske Simon Christensen   Actual enum value.
+                                              Some adjustments.
+                                              Mention shader info log.
+    #3  09/05/2008   Aske Simon Christensen   Error and log behavior.
     #4  15/07/2010   Bruce Merry              Change status.
                                               Change contact.
                                               Clarify that shader log is
                                               only overwritten when using
                                               MALI_SHADER_BINARY_FORMAT_ARM.
+    #5  05/01/2011   Jan-Harald Fredriksen    Fixed typos.
