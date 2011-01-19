@@ -280,6 +280,8 @@
 </li>
 <li value=87> <a href="extensions/OES/OES_EGL_image_external.txt">GL_OES_EGL_image_external</a>
 </li>
+<li value=88> <a href="extensions/DMP/DMP_shader_binary.txt">GL_DMP_shader_binary</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

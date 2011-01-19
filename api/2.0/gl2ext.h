@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 13239 $ on $Date:: 2010-12-17 15:13:56 -0800 #$ */
+/* $Revision: 13548 $ on $Date:: 2011-01-19 14:21:25 -0800 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -196,7 +196,7 @@ typedef void* GLeglImageOES;
 #ifndef GL_ANGLE_framebuffer_blit
 #define GL_READ_FRAMEBUFFER_ANGLE                               0x8CA8
 #define GL_DRAW_FRAMEBUFFER_ANGLE                               0x8CA9
-#define GL_DRAW_FRAMEBUFFER_BINDING_ANGLE                       0x8CA6 
+#define GL_DRAW_FRAMEBUFFER_BINDING_ANGLE                       0x8CA6
 #define GL_READ_FRAMEBUFFER_BINDING_ANGLE                       0x8CAA
 #endif
 
@@ -302,6 +302,15 @@ typedef void* GLeglImageOES;
 
 /* GL_EXT_shader_texture_lod */
 /* No new tokens introduced by this extension. */
+
+/*------------------------------------------------------------------------*
+ * DMP extension tokens
+ *------------------------------------------------------------------------*/
+
+/* GL_DMP_shader_binary */
+#ifndef GL_DMP_shader_binary
+#define GL_SHADER_BINARY_DMP                                    0x9250
+#endif
 
 /*------------------------------------------------------------------------*
  * IMG extension tokens
@@ -801,6 +810,15 @@ typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GL
 /* GL_EXT_shader_texture_lod */
 #ifndef GL_EXT_shader_texture_lod
 #define GL_EXT_shader_texture_lod 1
+#endif
+
+/*------------------------------------------------------------------------*
+ * DMP extension functions
+ *------------------------------------------------------------------------*/
+
+/* GL_DMP_shader_binary */
+#ifndef GL_DMP_shader_binary
+#define GL_DMP_shader_binary 1
 #endif
 
 /*------------------------------------------------------------------------*
