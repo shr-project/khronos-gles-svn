@@ -21,12 +21,12 @@ Status
 
 Version
 
-    Last Modified Date: October 29, 2009
-    Revision: #1
+    Last Modified Date: February 24, 2011
+    Revision: #2
 
 Number
 
-    ???
+    OpenGL ES Extension #80
 
 Dependencies
 
@@ -132,3 +132,8 @@ New State
 New Implementation Dependent State
 
     None
+
+Revision History
+
+    #2  02/24/2011    Benj Lipchak     Assign extension number
+    #1  10/29/2009    Benj Lipchak     First draft

@@ -297,7 +297,7 @@ and section "3.7.12 Texture State" of the OpenGL ES 2.0 Specification
 
             "In the initial state of a TEXTURE_EXTERNAL_OES texture object,
         the value assigned to TEXTURE_MIN_FILTER and TEXTURE_MAG_FILTER is
-        LINEAR, and the s and s and t wrap modes are both set to
+        LINEAR, and the s and t wrap modes are both set to
         CLAMP_TO_EDGE."
 
 Changes to section "3.7.11 Mipmap Generation" of the OpenGL ES 2.0 Specification
@@ -848,7 +848,7 @@ Issues
         the implementation must fail at link time.
 
         B) Yes, the implememtation may fail in glDrawArrays or glDrawElements
-        if the numer of uniforms required by the program exceeds those
+        if the number of uniforms required by the program exceeds those
         available.  This means that a call to glUniform1i() or glBindTexture()
         can cause a shader program that used to work to stop working.  (Note
         that this is possible anyway since the new external texture may use

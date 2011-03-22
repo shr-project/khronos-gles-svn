@@ -21,12 +21,12 @@ Status
 
 Version
 
-    Last Modified Date: January 5, 2010
-    Revision: #3
+    Last Modified Date: February 24, 2011
+    Revision: #4
 
 Number
 
-    ???
+    OpenGL ES Extension #78
 
 Dependencies
 
@@ -316,14 +316,16 @@ Operations and the Framebuffer)
     them to the draw framebuffer's color attachment.
 
     The pixel copy bypasses the fragment pipeline.  The only fragment
-    operations which affect the resolve are the pixel ownership test and
-    the scissor test.
+    operations which affect the resolve are the pixel ownership test,
+    the scissor test, and dithering.
 
     INVALID_OPERATION is generated if SAMPLE_BUFFERS for the read framebuffer
     is zero, or if SAMPLE_BUFFERS for the draw framebuffer is greater than
     zero, or if the read framebuffer or draw framebuffer does not have a color 
     attachment, or if the dimensions of the read and draw framebuffers 
-    are not identical.
+    are not identical, or if the components in the format of the draw 
+    framebuffer's color attachment are not present in the format of the read
+    framebuffer's color attachment.
 
     INVALID_FRAMEBUFFER_OPERATION is generated if the objects bound to
     DRAW_FRAMEBUFFER_APPLE and READ_FRAMEBUFFER_APPLE are not framebuffer 
@@ -388,7 +390,9 @@ Errors
     SAMPLE_BUFFERS for the read framebuffer is zero, or if SAMPLE_BUFFERS for 
     the draw framebuffer is greater than zero, or if the read framebuffer or 
     draw framebuffer does not have a color attachment, or if the dimensions of 
-    the read and draw framebuffers are not identical.
+    the read and draw framebuffers are not identical, or if the components in 
+    the format of the draw framebuffer's color attachment are not present in 
+    the format of the read framebuffer's color attachment.
 
     OUT_OF_MEMORY is generated when RenderbufferStorageMultisampleAPPLE cannot 
     create storage of the specified size.
@@ -429,6 +433,11 @@ New State
 
 Revision History
 
+    #4, February 24, 2011: Benj Lipchak
+        - assign extension number
+        - clarify that dithering is still performed during resolve
+        - clarify that only format conversions that drop components are allowed
+          during resolve
     #3, January 5, 2010: Benj Lipchak
         - remove the error when read and draw color formats are not identical
         - add an error when missing a color attachment to the read or draw FBO

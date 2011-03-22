@@ -20,12 +20,12 @@ Status
 
 Version
 
-    Last Modified Date: October 27, 2009
-    Revision: 2
+    Last Modified Date: February 24, 2011
+    Revision: 3
 
 Number
 
-    XXX
+    OpenGL ES Extension #79
 
 Dependencies
 
@@ -103,5 +103,6 @@ New Implementation Dependent State
 
 Revision History
 
+    #3  02/24/2011    Benj Lipchak     Assign extension number
     #2  10/27/2009    Benj Lipchak     Add EXT suffix to BGRA token
     #1  05/14/2009    Benj Lipchak     First draft

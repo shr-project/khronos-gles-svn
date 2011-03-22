@@ -28,12 +28,12 @@ Status
 
 Version
 
-    Last Modified Date: January 20, 2010
-    Revision: 2
+    Last Modified Date: February 24, 2011
+    Revision: 3
 
 Number
 
-    ???
+    OpenGL ES Extension #77
 
 Dependencies
 
@@ -256,6 +256,9 @@ Interactions with EXT_texture_anisotropic
     0, Rhomax and Rhomin = 0.
 
 Revision History:
+
+3 - 2011-02-24
+    * Assign extension number
 
 2 - 2010-01-20
     * Naming updates

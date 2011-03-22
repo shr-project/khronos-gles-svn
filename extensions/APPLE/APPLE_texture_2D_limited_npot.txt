@@ -21,8 +21,8 @@ Status
 
 Version
 
-    Date: April 20, 2009
-    Revision: 1.2
+    Date: February 24, 2011
+    Revision: 1.3
 
 Number
 
@@ -179,12 +179,6 @@ Interactions with OES_texture_npot
     If OES_texture_npot is supported, omit the restrictions on mipmapping and
     REPEAT wrap modes which lead to texture incompleteness for 2D textures.
 
-Interactions with OES_framebuffer_object
-
-    If OES_framebuffer_object is supported, GenerateMipmapOES does not throw
-    an INVALID_OPERATION error if either the width or height of the zero level 
-    array are not a power of two.
-
 GLX Protocol
 
     None
@@ -206,6 +200,12 @@ New Implementation Dependent State
     None
 
 Revision History
+
+    Date 02/24/2011
+    Revision: 1.3 (Benj)
+       - remove interaction with OES_framebuffer_object relaxing GenerateMipmap
+         POT base level requirements, since it doesn't make sense to generate
+         mipmaps when mipmapping is disallowed for NPOT textures
 
     Date 06/23/2009
     Revision: 1.2 (Jon Leech)
