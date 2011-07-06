@@ -42,7 +42,7 @@ Overview
     representable by their format.
 
     The OES_texture_half_float extension string indicates that the
-    implementation supports 16-bit floating pt texture foramts.
+    implementation supports 16-bit floating pt texture formats.
 
     The OES_texture_float extension string indicates that the 
     implementation supports 32-bit floating pt texture formats.

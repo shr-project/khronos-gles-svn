@@ -282,6 +282,8 @@
 </li>
 <li value=88> <a href="extensions/DMP/DMP_shader_binary.txt">GL_DMP_shader_binary</a>
 </li>
+<li value=89> <a href="extensions/QCOM/QCOM_alpha_test.txt">GL_QCOM_alpha_test</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

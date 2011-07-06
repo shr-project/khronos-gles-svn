@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 13239 $ on $Date:: 2010-12-17 15:13:56 -0800 #$ */
+/* $Revision: 15035 $ on $Date:: 2011-07-06 02:39:31 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -196,7 +196,7 @@ typedef void* GLeglImageOES;
 #ifndef GL_ANGLE_framebuffer_blit
 #define GL_READ_FRAMEBUFFER_ANGLE                               0x8CA8
 #define GL_DRAW_FRAMEBUFFER_ANGLE                               0x8CA9
-#define GL_DRAW_FRAMEBUFFER_BINDING_ANGLE                       0x8CA6 
+#define GL_DRAW_FRAMEBUFFER_BINDING_ANGLE                       0x8CA6
 #define GL_READ_FRAMEBUFFER_BINDING_ANGLE                       0x8CAA
 #endif
 
@@ -304,6 +304,15 @@ typedef void* GLeglImageOES;
 /* No new tokens introduced by this extension. */
 
 /*------------------------------------------------------------------------*
+ * DMP extension tokens
+ *------------------------------------------------------------------------*/
+
+/* GL_DMP_shader_binary */
+#ifndef GL_DMP_shader_binary
+#define GL_SHADER_BINARY_DMP                                    0x9250
+#endif
+
+/*------------------------------------------------------------------------*
  * IMG extension tokens
  *------------------------------------------------------------------------*/
 
@@ -371,6 +380,13 @@ typedef void* GLeglImageOES;
 /*------------------------------------------------------------------------*
  * QCOM extension tokens
  *------------------------------------------------------------------------*/
+
+/* GL_QCOM_alpha_test */
+#ifndef GL_QCOM_alpha_test
+#define GL_ALPHA_TEST_QCOM                                      0x0BC0
+#define GL_ALPHA_TEST_FUNC_QCOM                                 0x0BC1
+#define GL_ALPHA_TEST_REF_QCOM                                  0x0BC2
+#endif
 
 /* GL_QCOM_driver_control */
 /* No new tokens introduced by this extension. */
@@ -804,6 +820,15 @@ typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GL
 #endif
 
 /*------------------------------------------------------------------------*
+ * DMP extension functions
+ *------------------------------------------------------------------------*/
+
+/* GL_DMP_shader_binary */
+#ifndef GL_DMP_shader_binary
+#define GL_DMP_shader_binary 1
+#endif
+
+/*------------------------------------------------------------------------*
  * IMG extension functions
  *------------------------------------------------------------------------*/
 
@@ -882,6 +907,15 @@ typedef void (GL_APIENTRYP PFNGLCOVERAGEOPERATIONNVPROC) (GLenum operation);
 /*------------------------------------------------------------------------*
  * QCOM extension functions
  *------------------------------------------------------------------------*/
+
+/* GL_QCOM_alpha_test */
+#ifndef GL_QCOM_alpha_test
+#define GL_QCOM_alpha_test 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glAlphaFuncQCOM (GLenum func, GLclampf ref);
+#endif
+typedef void (GL_APIENTRYP PFNGLALPHAFUNCQCOMPROC) (GLenum func, GLclampf ref);
+#endif
 
 /* GL_QCOM_driver_control */
 #ifndef GL_QCOM_driver_control
