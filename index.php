@@ -284,6 +284,20 @@
 </li>
 <li value=89> <a href="extensions/QCOM/QCOM_alpha_test.txt">GL_QCOM_alpha_test</a>
 </li>
+<li value=90> <a href="extensions/EXT/GL_EXT_unpack_subimage.txt">GL_EXT_unpack_subimage</a>
+</li>
+<li value=91> <a href="extensions/NV/GL_NV_draw_buffers.txt">GL_NV_draw_buffers</a>
+</li>
+<li value=92> <a href="extensions/NV/GL_NV_fbo_color_attachments.txt">GL_NV_fbo_color_attachments</a>
+</li>
+<li value=93> <a href="extensions/NV/GL_NV_read_buffer.txt">GL_NV_read_buffer</a>
+</li>
+<li value=94> <a href="extensions/NV/GL_NV_read_depth_stencil.txt">GL_NV_read_depth_stencil</a>
+</li>
+<li value=95> <a href="extensions/NV/GL_NV_texture_compression_s3tc_update.txt">GL_NV_texture_compression_s3tc_update</a>
+</li>
+<li value=96> <a href="extensions/NV/GL_NV_texture_npot_2D_mipmap.txt">GL_NV_texture_npot_2D_mipmap</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
