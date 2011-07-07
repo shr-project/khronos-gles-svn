@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 15035 $ on $Date:: 2011-07-06 02:39:31 -0700 #$ */
+/* $Revision: 15049 $ on $Date:: 2011-07-06 17:28:16 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -278,6 +278,9 @@ typedef void* GLeglImageOES;
 #define GL_UNSIGNED_SHORT_1_5_5_5_REV_EXT                       0x8366
 #endif
 
+/* GL_EXT_shader_texture_lod */
+/* No new tokens introduced by this extension. */
+
 /* GL_EXT_texture_filter_anisotropic */
 #ifndef GL_EXT_texture_filter_anisotropic
 #define GL_TEXTURE_MAX_ANISOTROPY_EXT                           0x84FE
@@ -300,8 +303,12 @@ typedef void* GLeglImageOES;
 #define GL_COMPRESSED_RGBA_S3TC_DXT1_EXT                        0x83F1
 #endif
 
-/* GL_EXT_shader_texture_lod */
-/* No new tokens introduced by this extension. */
+/* GL_EXT_unpack_subimage */
+#ifndef GL_EXT_unpack_subimage
+#define GL_UNPACK_ROW_LENGTH                                    0x0CF2
+#define GL_UNPACK_SKIP_ROWS                                     0x0CF3
+#define GL_UNPACK_SKIP_PIXELS                                   0x0CF4
+#endif
 
 /*------------------------------------------------------------------------*
  * DMP extension tokens
@@ -352,13 +359,6 @@ typedef void* GLeglImageOES;
  * NV extension tokens
  *------------------------------------------------------------------------*/
 
-/* GL_NV_fence */
-#ifndef GL_NV_fence
-#define GL_ALL_COMPLETED_NV                                     0x84F2
-#define GL_FENCE_STATUS_NV                                      0x84F3
-#define GL_FENCE_CONDITION_NV                                   0x84F4
-#endif
-
 /* GL_NV_coverage_sample */
 #ifndef GL_NV_coverage_sample
 #define GL_COVERAGE_COMPONENT_NV                                0x8ED0
@@ -376,6 +376,79 @@ typedef void* GLeglImageOES;
 #ifndef GL_NV_depth_nonlinear
 #define GL_DEPTH_COMPONENT16_NONLINEAR_NV                       0x8E2C
 #endif
+
+/* GL_NV_draw_buffers */
+#ifndef GL_NV_draw_buffers
+#define GL_MAX_DRAW_BUFFERS_NV                                  0x8824
+#define GL_DRAW_BUFFER0_NV                                      0x8825
+#define GL_DRAW_BUFFER1_NV                                      0x8826
+#define GL_DRAW_BUFFER2_NV                                      0x8827
+#define GL_DRAW_BUFFER3_NV                                      0x8828
+#define GL_DRAW_BUFFER4_NV                                      0x8829
+#define GL_DRAW_BUFFER5_NV                                      0x882A
+#define GL_DRAW_BUFFER6_NV                                      0x882B
+#define GL_DRAW_BUFFER7_NV                                      0x882C
+#define GL_DRAW_BUFFER8_NV                                      0x882D
+#define GL_DRAW_BUFFER9_NV                                      0x882E
+#define GL_DRAW_BUFFER10_NV                                     0x882F
+#define GL_DRAW_BUFFER11_NV                                     0x8830
+#define GL_DRAW_BUFFER12_NV                                     0x8831
+#define GL_DRAW_BUFFER13_NV                                     0x8832
+#define GL_DRAW_BUFFER14_NV                                     0x8833
+#define GL_DRAW_BUFFER15_NV                                     0x8834
+#define GL_COLOR_ATTACHMENT0_NV                                 0x8CE0
+#define GL_COLOR_ATTACHMENT1_NV                                 0x8CE1
+#define GL_COLOR_ATTACHMENT2_NV                                 0x8CE2
+#define GL_COLOR_ATTACHMENT3_NV                                 0x8CE3
+#define GL_COLOR_ATTACHMENT4_NV                                 0x8CE4
+#define GL_COLOR_ATTACHMENT5_NV                                 0x8CE5
+#define GL_COLOR_ATTACHMENT6_NV                                 0x8CE6
+#define GL_COLOR_ATTACHMENT7_NV                                 0x8CE7
+#define GL_COLOR_ATTACHMENT8_NV                                 0x8CE8
+#define GL_COLOR_ATTACHMENT9_NV                                 0x8CE9
+#define GL_COLOR_ATTACHMENT10_NV                                0x8CEA
+#define GL_COLOR_ATTACHMENT11_NV                                0x8CEB
+#define GL_COLOR_ATTACHMENT12_NV                                0x8CEC
+#define GL_COLOR_ATTACHMENT13_NV                                0x8CED
+#define GL_COLOR_ATTACHMENT14_NV                                0x8CEE
+#define GL_COLOR_ATTACHMENT15_NV                                0x8CEF
+#endif
+
+/* GL_NV_fbo_color_attachments */
+#ifndef GL_NV_fbo_color_attachments
+#define GL_MAX_COLOR_ATTACHMENTS_NV                             0x8CDF
+/* GL_COLOR_ATTACHMENT{0-15}_NV defined in GL_NV_draw_buffers already. */
+#endif
+
+/* GL_NV_fence */
+#ifndef GL_NV_fence
+#define GL_ALL_COMPLETED_NV                                     0x84F2
+#define GL_FENCE_STATUS_NV                                      0x84F3
+#define GL_FENCE_CONDITION_NV                                   0x84F4
+#endif
+
+/* GL_NV_read_buffer */
+#ifndef GL_NV_read_buffer
+#define GL_READ_BUFFER_NV                                       0x0C02
+#endif
+
+/* GL_NV_read_buffer_front */
+/* No new tokens introduced by this extension. */
+
+/* GL_NV_read_depth */
+/* No new tokens introduced by this extension. */
+
+/* GL_NV_read_depth_stencil */
+/* No new tokens introduced by this extension. */
+
+/* GL_NV_read_stencil */
+/* No new tokens introduced by this extension. */
+
+/* GL_NV_texture_compression_s3tc_update */
+/* No new tokens introduced by this extension. */
+
+/* GL_NV_texture_npot_2D_mipmap */
+/* No new tokens introduced by this extension. */
 
 /*------------------------------------------------------------------------*
  * QCOM extension tokens
@@ -794,6 +867,11 @@ typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GL
 #define GL_EXT_read_format_bgra 1
 #endif
 
+/* GL_EXT_shader_texture_lod */
+#ifndef GL_EXT_shader_texture_lod
+#define GL_EXT_shader_texture_lod 1
+#endif
+
 /* GL_EXT_texture_filter_anisotropic */
 #ifndef GL_EXT_texture_filter_anisotropic
 #define GL_EXT_texture_filter_anisotropic 1
@@ -814,9 +892,9 @@ typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GL
 #define GL_EXT_texture_compression_dxt1 1
 #endif
 
-/* GL_EXT_shader_texture_lod */
-#ifndef GL_EXT_shader_texture_lod
-#define GL_EXT_shader_texture_lod 1
+/* GL_EXT_unpack_subimage */
+#ifndef GL_EXT_unpack_subimage
+#define GL_EXT_unpack_subimage 1
 #endif
 
 /*------------------------------------------------------------------------*
@@ -867,6 +945,36 @@ typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEIMG) (GLenum targ
  * NV extension functions
  *------------------------------------------------------------------------*/
 
+/* GL_NV_coverage_sample */
+#ifndef GL_NV_coverage_sample
+#define GL_NV_coverage_sample 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glCoverageMaskNV (GLboolean mask);
+GL_APICALL void GL_APIENTRY glCoverageOperationNV (GLenum operation);
+#endif
+typedef void (GL_APIENTRYP PFNGLCOVERAGEMASKNVPROC) (GLboolean mask);
+typedef void (GL_APIENTRYP PFNGLCOVERAGEOPERATIONNVPROC) (GLenum operation);
+#endif
+
+/* GL_NV_depth_nonlinear */
+#ifndef GL_NV_depth_nonlinear
+#define GL_NV_depth_nonlinear 1
+#endif
+
+/* GL_NV_draw_buffers */
+#ifndef GL_NV_draw_buffers
+#define GL_NV_draw_buffers 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glDrawBuffersNV (GLsizei n, const GLenum *bufs);
+#endif
+typedef void (GL_APIENTRYP PFNGLDRAWBUFFERSNVPROC) (GLsizei n, const GLenum *bufs);
+#endif
+
+/* GL_NV_fbo_color_attachments */
+#ifndef GL_NV_fbo_color_attachments
+#define GL_NV_fbo_color_attachments 1
+#endif
+
 /* GL_NV_fence */
 #ifndef GL_NV_fence
 #define GL_NV_fence 1
@@ -888,20 +996,43 @@ typedef void (GL_APIENTRYP PFNGLFINISHFENCENVPROC) (GLuint fence);
 typedef void (GL_APIENTRYP PFNGLSETFENCENVPROC) (GLuint fence, GLenum condition);
 #endif
 
-/* GL_NV_coverage_sample */
-#ifndef GL_NV_coverage_sample
-#define GL_NV_coverage_sample 1
+/* GL_NV_read_buffer */
+#ifndef GL_NV_read_buffer
+#define GL_NV_read_buffer 1
 #ifdef GL_GLEXT_PROTOTYPES
-GL_APICALL void GL_APIENTRY glCoverageMaskNV (GLboolean mask);
-GL_APICALL void GL_APIENTRY glCoverageOperationNV (GLenum operation);
+GL_APICALL void GL_APIENTRY glReadBufferNV (GLenum mode);
 #endif
-typedef void (GL_APIENTRYP PFNGLCOVERAGEMASKNVPROC) (GLboolean mask);
-typedef void (GL_APIENTRYP PFNGLCOVERAGEOPERATIONNVPROC) (GLenum operation);
+typedef void (GL_APIENTRYP PFNGLREADBUFFERNVPROC) (GLenum mode);
 #endif
 
-/* GL_NV_depth_nonlinear */
-#ifndef GL_NV_depth_nonlinear
-#define GL_NV_depth_nonlinear 1
+/* GL_NV_read_buffer_front */
+#ifndef GL_NV_read_buffer_front
+#define GL_NV_read_buffer_front 1
+#endif
+
+/* GL_NV_read_depth */
+#ifndef GL_NV_read_depth
+#define GL_NV_read_depth 1
+#endif
+
+/* GL_NV_read_depth_stencil */
+#ifndef GL_NV_read_depth_stencil
+#define GL_NV_read_depth_stencil 1
+#endif
+
+/* GL_NV_read_stencil */
+#ifndef GL_NV_read_stencil
+#define GL_NV_read_stencil 1
+#endif
+
+/* GL_NV_texture_compression_s3tc_update */
+#ifndef GL_NV_texture_compression_s3tc_update
+#define GL_NV_texture_compression_s3tc_update 1
+#endif
+
+/* GL_NV_texture_npot_2D_mipmap */
+#ifndef GL_NV_texture_npot_2D_mipmap
+#define GL_NV_texture_npot_2D_mipmap 1
 #endif
 
 /*------------------------------------------------------------------------*
