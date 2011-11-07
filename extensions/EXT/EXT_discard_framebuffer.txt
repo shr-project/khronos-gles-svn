@@ -123,7 +123,7 @@ New Tokens
 Additions to Chapter 4 of the OpenGL ES 2.0 Specification (Per-Fragment 
 Operations and the Framebuffer)
     
-    Introduce new section 4.2.4:
+    Introduce new section 4.5:
 
     "4.5 Discarding Framebuffer Contents
 

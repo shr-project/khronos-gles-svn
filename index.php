@@ -298,6 +298,20 @@
 </li>
 <li value=96> <a href="extensions/NV/GL_NV_texture_npot_2D_mipmap.txt">GL_NV_texture_npot_2D_mipmap</a>
 </li>
+<li value=97> <a href="extensions/EXT/EXT_color_buffer_half_float.txt">GL_EXT_color_buffer_half_float</a>
+</li>
+<li value=98> <a href="extensions/EXT/EXT_debug_label.txt">GL_EXT_debug_label</a>
+</li>
+<li value=99> <a href="extensions/EXT/EXT_debug_marker.txt">GL_EXT_debug_marker</a>
+</li>
+<li value=100> <a href="extensions/EXT/EXT_occlusion_query_boolean.txt">GL_EXT_occlusion_query_boolean</a>
+</li>
+<li value=101> <a href="extensions/EXT/EXT_separate_shader_objects.txt">GL_EXT_separate_shader_objects</a>
+</li>
+<li value=102> <a href="extensions/EXT/EXT_shadow_samplers.txt">GL_EXT_shadow_samplers</a>
+</li>
+<li value=103> <a href="extensions/EXT/EXT_texture_rg.txt">GL_EXT_texture_rg</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
