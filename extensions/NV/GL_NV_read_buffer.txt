@@ -12,7 +12,7 @@ Contact
 
     Greg Roth, NVIDIA Corporation (groth 'at' nvidia.com)
 
-Status
+Contributors
 
     Koji Ashida, NVIDIA Corporation
     Gregory Prisament, NVIDIA Corporation
@@ -20,7 +20,7 @@ Status
 
 Status
 
-    Draft
+    Complete.
 
 Version
 

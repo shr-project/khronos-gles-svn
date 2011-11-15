@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 16038 $ on $Date:: 2011-11-07 03:44:35 -0800 #$ */
+/* $Revision: 16129 $ on $Date:: 2011-11-15 15:10:07 -0800 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -263,22 +263,22 @@ typedef void* GLeglImageOES;
 
 /* GL_EXT_color_buffer_half_float */
 #ifndef GL_EXT_color_buffer_half_float
-#define RGBA16F_EXT                                             0x881A
-#define RGB16F_EXT                                              0x881B
-#define RG16F_EXT                                               0x822F
-#define R16F_EXT                                                0x822D
-#define FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT               0x8211
-#define UNSIGNED_NORMALIZED_EXT                                 0x8C17
+#define GL_RGBA16F_EXT                                          0x881A
+#define GL_RGB16F_EXT                                           0x881B
+#define GL_RG16F_EXT                                            0x822F
+#define GL_R16F_EXT                                             0x822D
+#define GL_FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT            0x8211
+#define GL_UNSIGNED_NORMALIZED_EXT                              0x8C17
 #endif
 
 /* GL_EXT_debug_label */
 #ifndef GL_EXT_debug_label
-#define PROGRAM_PIPELINE_OBJECT_EXT                             0x8A4F
-#define PROGRAM_OBJECT_EXT                                      0x8B40
-#define SHADER_OBJECT_EXT                                       0x8B48
-#define BUFFER_OBJECT_EXT                                       0x9151
-#define QUERY_OBJECT_EXT                                        0x9153
-#define VERTEX_ARRAY_OBJECT_EXT                                 0x9154
+#define GL_PROGRAM_PIPELINE_OBJECT_EXT                          0x8A4F
+#define GL_PROGRAM_OBJECT_EXT                                   0x8B40
+#define GL_SHADER_OBJECT_EXT                                    0x8B48
+#define GL_BUFFER_OBJECT_EXT                                    0x9151
+#define GL_QUERY_OBJECT_EXT                                     0x9153
+#define GL_VERTEX_ARRAY_OBJECT_EXT                              0x9154
 #endif
 
 /* GL_EXT_debug_marker */
@@ -296,11 +296,11 @@ typedef void* GLeglImageOES;
 
 /* GL_EXT_occlusion_query_boolean */
 #ifndef GL_EXT_occlusion_query_boolean
-#define ANY_SAMPLES_PASSED_EXT                                  0x8C2F
-#define ANY_SAMPLES_PASSED_CONSERVATIVE_EXT                     0x8D6A
-#define CURRENT_QUERY_EXT                                       0x8865
-#define QUERY_RESULT_EXT                                        0x8866
-#define QUERY_RESULT_AVAILABLE_EXT                              0x8867
+#define GL_ANY_SAMPLES_PASSED_EXT                               0x8C2F
+#define GL_ANY_SAMPLES_PASSED_CONSERVATIVE_EXT                  0x8D6A
+#define GL_CURRENT_QUERY_EXT                                    0x8865
+#define GL_QUERY_RESULT_EXT                                     0x8866
+#define GL_QUERY_RESULT_AVAILABLE_EXT                           0x8867
 #endif
 
 /* GL_EXT_read_format_bgra */
@@ -312,12 +312,12 @@ typedef void* GLeglImageOES;
 
 /* GL_EXT_separate_shader_objects */
 #ifndef GL_EXT_separate_shader_objects
-#define VERTEX_SHADER_BIT_EXT                                   0x00000001
-#define FRAGMENT_SHADER_BIT_EXT                                 0x00000002
-#define ALL_SHADER_BITS_EXT                                     0xFFFFFFFF
-#define PROGRAM_SEPARABLE_EXT                                   0x8258
-#define ACTIVE_PROGRAM_EXT                                      0x8259
-#define PROGRAM_PIPELINE_BINDING_EXT                            0x825A
+#define GL_VERTEX_SHADER_BIT_EXT                                0x00000001
+#define GL_FRAGMENT_SHADER_BIT_EXT                              0x00000002
+#define GL_ALL_SHADER_BITS_EXT                                  0xFFFFFFFF
+#define GL_PROGRAM_SEPARABLE_EXT                                0x8258
+#define GL_ACTIVE_PROGRAM_EXT                                   0x8259
+#define GL_PROGRAM_PIPELINE_BINDING_EXT                         0x825A
 #endif
 
 /* GL_EXT_shader_texture_lod */
@@ -325,9 +325,9 @@ typedef void* GLeglImageOES;
 
 /* GL_EXT_shadow_samplers */
 #ifndef GL_EXT_shadow_samplers
-#define TEXTURE_COMPARE_MODE_EXT                                0x884C
-#define TEXTURE_COMPARE_FUNC_EXT                                0x884D
-#define COMPARE_REF_TO_TEXTURE_EXT                              0x884E
+#define GL_TEXTURE_COMPARE_MODE_EXT                             0x884C
+#define GL_TEXTURE_COMPARE_FUNC_EXT                             0x884D
+#define GL_COMPARE_REF_TO_TEXTURE_EXT                           0x884E
 #endif
 
 /* GL_EXT_texture_filter_anisotropic */
@@ -343,10 +343,10 @@ typedef void* GLeglImageOES;
 
 /* GL_EXT_texture_rg */
 #ifndef GL_EXT_texture_rg
-#define RED_EXT                                                 0x1903
-#define RG_EXT                                                  0x8227
-#define R8_EXT                                                  0x8229
-#define RG8_EXT                                                 0x822B
+#define GL_RED_EXT                                              0x1903
+#define GL_RG_EXT                                               0x8227
+#define GL_R8_EXT                                               0x8229
+#define GL_RG8_EXT                                              0x822B
 #endif
 
 /* GL_EXT_texture_type_2_10_10_10_REV */

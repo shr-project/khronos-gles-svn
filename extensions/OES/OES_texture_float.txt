@@ -9,6 +9,7 @@ Name Strings
 
 Contact
 
+    Benj Lipchak, Apple (lipchak 'at' apple.com)
 
 IP Status
 
@@ -20,7 +21,7 @@ Status
 
 Version
 
-    Last Modified Date:  July 26, 2011
+    Last Modified Date:  November 9, 2011
 
 Number
 
@@ -30,7 +31,7 @@ Dependencies
 
     This extension is written against the OpenGL ES 2.0 Specification.
 
-    This extension is derived from the ARB_texture_float extension.
+    OES_texture_3D affects the definition of this extension.
 
 Overview
 
@@ -137,6 +138,15 @@ Additions to Chapter 2 of the OpenGL ES 2.0 Specification (OpenGL Operation)
        half     16         Half-precision floating-point value
                            encoded in an unsigned scalar
 
+Additions to Chapter 3 of the OpenGL ES 2.0 Specification (Rasterization)
+
+    Add to Table 3.2, p. 62:
+
+        type Parameter  Corresponding  Special
+        Token Name      GL Data Type   Interpretation
+        --------------  -------------  --------------
+        HALF_FLOAT_OES  half           No
+                           
     Modify first sentence of "Unpacking", p. 62: 
     
     "Data are taken from client memory as a sequence of one of the GL data
@@ -146,6 +156,11 @@ Additions to Chapter 2 of the OpenGL ES 2.0 Specification (OpenGL Operation)
 
         Format           Type            Bytes per Pixel
         ---------        --------------  ---------------
+        RGBA             FLOAT           16
+        RGB              FLOAT           12
+        LUMINANCE_ALPHA  FLOAT           8
+        LUMINANCE        FLOAT           4
+        ALPHA            FLOAT           4
         RGBA             HALF_FLOAT_OES  8
         RGB              HALF_FLOAT_OES  6
         LUMINANCE_ALPHA  HALF_FLOAT_OES  4
@@ -159,15 +174,11 @@ Additions to Chapter 2 of the OpenGL ES 2.0 Specification (OpenGL Operation)
     fixed-point, components are clamped to [0,1]. Otherwise, values are not 
     modified."
 
-Additions to Chapter 3 of the OpenGL ES 2.0 Specification (Rasterization)
+Interactions with OES_texture_3D
 
-    Add to Table 3.2, p. 62:
+    If OES_texture_3D is not supported, ignore references to TexImage3D and 
+    TexSubImage3D.
 
-        type Parameter  Corresponding  Special
-        Token Name      GL Data Type   Interpretation
-        --------------  -------------  --------------
-        HALF_FLOAT_OES  half           No
-                           
 Revision History
 
     04/29/2005    0.1    Original draft.
@@ -179,3 +190,5 @@ Revision History
                          not supported.
     07/26/2011    0.5    Fix several omissions discovered while writing
                          EXT_color_buffer_half_float.
+    11/09/2011    0.6    Fix missing FLOAT entries in Table 3.4,
+                         add interaction with OES_texture_3D.
