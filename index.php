@@ -312,6 +312,8 @@
 </li>
 <li value=103> <a href="extensions/EXT/EXT_texture_rg.txt">GL_EXT_texture_rg</a>
 </li>
+<li value=104> <a href="extensions/NV/GL_NV_EGL_stream_consumer_external.txt">GL_NV_EGL_stream_consumer_external</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

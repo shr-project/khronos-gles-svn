@@ -26,7 +26,7 @@ Version
 
 Number
 
-    97
+    OpenGL ES Extension #97
 
 Dependencies
 

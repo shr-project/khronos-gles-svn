@@ -27,7 +27,7 @@ Version
 
 Number
 
-    98
+    OpenGL ES Extension #98
 
 Dependencies
     

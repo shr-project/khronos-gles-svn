@@ -28,7 +28,7 @@ Version
 
 Number
 
-    102
+    OpenGL ES Extension #102
 
 Dependencies
 
