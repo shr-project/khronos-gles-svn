@@ -320,7 +320,7 @@
 </li>
 <li value=107> <a href="extensions/EXT/EXT_robustness.txt">GL_EXT_robustness</a>
 </li>
-<li value=108> <a href="extensions/EXT/EXT_multisampled_render_to_texture.txt">GL_EXT_multisampled_render_to_texture</a>
+<li value=108> <a href="extensions/EXT/EXT_texture_storage.txt">GL_EXT_texture_storage</a>
 </li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
