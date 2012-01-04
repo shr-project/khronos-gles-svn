@@ -314,6 +314,14 @@
 </li>
 <li value=104> <a href="extensions/NV/GL_NV_EGL_stream_consumer_external.txt">GL_NV_EGL_stream_consumer_external</a>
 </li>
+<li value=105> <a href="extensions/EXT/EXT_sRGB.txt">GL_EXT_sRGB</a>
+</li>
+<li value=106> <a href="extensions/EXT/EXT_multisampled_render_to_texture.txt">GL_EXT_multisampled_render_to_texture</a>
+</li>
+<li value=107> <a href="extensions/EXT/EXT_robustness.txt">GL_EXT_robustness</a>
+</li>
+<li value=108> <a href="extensions/EXT/EXT_multisampled_render_to_texture.txt">GL_EXT_multisampled_render_to_texture</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
