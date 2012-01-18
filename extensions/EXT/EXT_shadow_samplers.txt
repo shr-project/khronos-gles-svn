@@ -11,6 +11,7 @@ Contributors
     Contributors to ARB_shadow and EXT_shadow_funcs on which this extension 
         is based
     Galo Avila
+    Kelvin Chiu
     Richard Schreyer
 
 Contacts
@@ -23,8 +24,8 @@ Status
 
 Version
 
-    Date: July 22, 2011
-    Revision: 2
+    Date: January 18, 2012
+    Revision: 3
 
 Number
 
@@ -68,6 +69,10 @@ New Tokens
 
     COMPARE_REF_TO_TEXTURE_EXT  0x884E
 
+    Returned in <type> by glGetActiveUniform:
+
+    GL_SAMPLER_2D_SHADOW_EXT    0x8B62 
+
 New GLSL defines
 
     #extension GL_EXT_shadow_samplers : require
@@ -83,7 +88,12 @@ New GLSL functions
 
 Additions to Chapter 2 of the OpenGL ES 2.0 Specification (OpenGL ES Operation)
 
-    None
+    In Section 2.10.4, replace the final sentence on p. 36 with:
+
+    "The type returned can be any of FLOAT, FLOAT_VEC2, FLOAT_VEC3, FLOAT_VEC4,
+    INT, INT_VEC2, INT_VEC3, INT_VEC4, BOOL, BOOL_VEC2, BOOL_VEC3, BOOL_VEC4, 
+    FLOAT_MAT2, FLOAT_MAT3, FLOAT_MAT4, SAMPLER_2D, SAMPLER_CUBE, or 
+    SAMPLER_2D_SHADOW_EXT."
 
 Additions to Chapter 3 of the OpenGL ES 2.0 Specification (Rasterization)
 
@@ -229,3 +239,7 @@ Revision History
    Date: 7/22/2011
    Revision: 2 (Benj Lipchak)
       - Rename from APPLE to EXT
+
+   Date: 1/18/2012
+   Revision: 3 (Kelvin Chiu)
+      - Add GL_SAMPLER_2D_SHADOW_EXT for glGetActiveUniform type
