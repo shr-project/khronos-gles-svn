@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 16482 $ on $Date:: 2012-01-04 10:44:55 -0800 #$ */
+/* $Revision: 16619 $ on $Date:: 2012-01-18 10:00:14 -0800 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -348,6 +348,7 @@ typedef void* GLeglImageOES;
 #define GL_TEXTURE_COMPARE_MODE_EXT                             0x884C
 #define GL_TEXTURE_COMPARE_FUNC_EXT                             0x884D
 #define GL_COMPARE_REF_TO_TEXTURE_EXT                           0x884E
+#define GL_SAMPLER_2D_SHADOW_EXT                                0x8B62
 #endif
 
 /* GL_EXT_sRGB */
