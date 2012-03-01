@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 16619 $ on $Date:: 2012-01-18 10:00:14 -0800 #$ */
+/* $Revision: 16994 $ on $Date:: 2012-02-29 18:29:34 -0800 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -207,6 +207,37 @@ typedef void* GLeglImageOES;
 #define GL_MAX_SAMPLES_ANGLE                                    0x8D57
 #endif
 
+/* GL_ANGLE_instanced_arrays */
+#ifndef GL_ANGLE_instanced_arrays 
+#define GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE                    0x88FE
+#endif
+
+/* GL_ANGLE_pack_reverse_row_order */
+#ifndef GL_ANGLE_pack_reverse_row_order 
+#define GL_PACK_REVERSE_ROW_ORDER_ANGLE                         0x93A4
+#endif
+
+/* GL_ANGLE_texture_compression_dxt3 */
+#ifndef GL_ANGLE_texture_compression_dxt3 
+#define GL_COMPRESSED_RGBA_S3TC_DXT3_ANGLE                      0x83F2
+#endif
+
+/* GL_ANGLE_texture_compression_dxt5 */
+#ifndef GL_ANGLE_texture_compression_dxt5 
+#define GL_COMPRESSED_RGBA_S3TC_DXT5_ANGLE                      0x83F3
+#endif
+
+/* GL_ANGLE_texture_usage */
+#ifndef GL_ANGLE_texture_usage 
+#define GL_TEXTURE_USAGE_ANGLE                                  0x93A2
+#define GL_FRAMEBUFFER_ATTACHMENT_ANGLE                         0x93A3
+#endif
+
+/* GL_ANGLE_translated_shader_source */
+#ifndef GL_ANGLE_translated_shader_source 
+#define GL_TRANSLATED_SHADER_SOURCE_LENGTH_ANGLE                0x93A0
+#endif
+
 /*------------------------------------------------------------------------*
  * APPLE extension tokens
  *------------------------------------------------------------------------*/
@@ -396,13 +427,19 @@ typedef void* GLeglImageOES;
 #define GL_LUMINANCE32F_EXT                                     0x8818
 #define GL_LUMINANCE_ALPHA32F_EXT                               0x8819
 /* reuse GL_RGBA16F_EXT */
-#define GL_RGB16F_EXT                                           0x881B
+/* reuse GL_RGB16F_EXT */
 #define GL_ALPHA16F_EXT                                         0x881C
 #define GL_LUMINANCE16F_EXT                                     0x881E
 #define GL_LUMINANCE_ALPHA16F_EXT                               0x881F
 #define GL_RGB10_A2_EXT                                         0x8059  
 #define GL_RGB10_EXT                                            0x8052
 #define GL_BGRA8_EXT                                            0x93A1
+#define GL_R8_EXT                                               0x8229
+#define GL_RG8_EXT                                              0x822B
+#define GL_R32F_EXT                                             0x822E  
+#define GL_RG32F_EXT                                            0x8230
+#define GL_R16F_EXT                                             0x822D
+#define GL_RG16F_EXT                                            0x822F
 #endif
 
 /* GL_EXT_texture_type_2_10_10_10_REV */
@@ -895,6 +932,45 @@ typedef void (GL_APIENTRYP PFNGLBLITFRAMEBUFFERANGLEPROC) (GLint srcX0, GLint sr
 GL_APICALL void GL_APIENTRY glRenderbufferStorageMultisampleANGLE (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 #endif
 typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEANGLEPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
+#endif
+
+#ifndef GL_ANGLE_instanced_arrays 
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glDrawArraysInstancedANGLE (GLenum mode, GLint first, GLsizei count, GLsizei primcount);
+GL_APICALL void GL_APIENTRY glDrawElementsInstancedANGLE (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount);
+GL_APICALL void GL_APIENTRY glVertexAttribDivisorANGLE (GLuint index, GLuint divisor);
+#endif
+typedef void (GL_APIENTRYP PFLGLDRAWARRAYSINSTANCEDANGLEPROC) (GLenum mode, GLint first, GLsizei count, GLsizei primcount);
+typedef void (GL_APIENTRYP PFLGLDRAWELEMENTSINSTANCEDANGLEPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount);
+typedef void (GL_APIENTRYP PFLGLVERTEXATTRIBDIVISORANGLEPROC) (GLuint index, GLuint divisor);
+#endif
+
+/* GL_ANGLE_pack_reverse_row_order */
+#ifndef GL_ANGLE_pack_reverse_row_order 
+#define GL_ANGLE_pack_reverse_row_order 1
+#endif
+
+/* GL_ANGLE_texture_compression_dxt3 */
+#ifndef GL_ANGLE_texture_compression_dxt3 
+#define GL_ANGLE_texture_compression_dxt3 1
+#endif
+
+/* GL_ANGLE_texture_compression_dxt5 */
+#ifndef GL_ANGLE_texture_compression_dxt5 
+#define GL_ANGLE_texture_compression_dxt5 1
+#endif
+
+/* GL_ANGLE_texture_usage */
+#ifndef GL_ANGLE_texture_usage 
+#define GL_ANGLE_texture_usage 1
+#endif
+
+#ifndef GL_ANGLE_translated_shader_source 
+#define GL_ANGLE_translated_shader_source 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glGetTranslatedShaderSourceANGLE (GLuint shader, GLsizei bufsize, GLsizei *length, GLchar *source);
+#endif
+typedef void (GL_APIENTRYP PFLGLGETTRANSLATEDSHADERSOURCEANGLEPROC) (GLuint shader, GLsizei bufsize, GLsizei *length, GLchar *source);
 #endif
 
 /*------------------------------------------------------------------------*

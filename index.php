@@ -322,6 +322,17 @@
 </li>
 <li value=108> <a href="extensions/EXT/EXT_texture_storage.txt">GL_EXT_texture_storage</a>
 </li>
+<li value=109> <a href="extensions/ANGLE/ANGLE_instanced_arrays.txt">GL_ANGLE_instanced_arrays</a>
+</li>
+<li value=110> <a href="extensions/ANGLE/ANGLE_pack_reverse_row_order.txt">GL_ANGLE_pack_reverse_row_order</a>
+</li>
+<li value=111> <a href="extensions/ANGLE/ANGLE_texture_compression_dxt.txt">GL_ANGLE_texture_compression_dxt3</a>
+     <br> <a href="extensions/ANGLE/ANGLE_texture_compression_dxt.txt">GL_ANGLE_texture_compression_dxt5</a>
+</li>
+<li value=112> <a href="extensions/ANGLE/ANGLE_texture_usage.txt">GL_ANGLE_texture_usage</a>
+</li>
+<li value=113> <a href="extensions/ANGLE/ANGLE_translated_shader_source.txt">GL_ANGLE_translated_shader_source</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

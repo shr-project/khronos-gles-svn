@@ -16,7 +16,7 @@ Status
 
 Version
 
-    Last Modifed Date: October 8, 2009
+    Last Modifed Date: January 29, 2012
 
 Number
 
@@ -76,9 +76,17 @@ Issues
 
 4.  Are cube-map depth textures implemented by this extension?
 
-    Resolution:  Yes.  A very interesting use case is rendering shadows for a point light.
+    Resolution: No. This is defined in OES_depth_texture_cube_map.
+
+    A very interesting use case is rendering shadows for a point light.
     For a point light, you want to be able to render depth values into a cube-map and then 
     use this cube-map depth texture as a shadow map to compute % in shadow at each pixel.
+    
+    The original version of this extension supported cube-map
+    depth textures, but this was contradicted by OES_packed_depth_stencil which
+    only supported 2D textures. Some implementations of OES_depth_texture did
+    not support cube-maps while others did so it was decided to make support for
+    cube-map depth textures a separate extension.
 
 5.  Are 3D depth textures implemented by this extension?
 
@@ -132,6 +140,11 @@ Additions to Chapter 3, section 3.8 of the OpenGL ES 2.0 specification
     There is currently no way for the application to know or find out how the
     depth texture (or any texture) will be stored internally by the OpenGL ES implementation.
 
+    Textures with a base internal format of DEPTH_COMPONENT are supported
+    by texture image specification commands only if <target> is TEXTURE_2D.
+    Using this format in conjunction with any other <target> will result in
+    an INVALID_OPERATION error.
+
     CopyTexImage2D and CopyTexSubImage2D are not supported.
 
 Additions to Chapter 4, section 4.4.2 of the OpenGL ES 2.0 specification
@@ -145,6 +158,8 @@ Errors
 
     The error INVALID_OPERATION is generated if the <format> and <internalFormat>
     is not DEPTH_COMPONENT and <type> is UNSIGNED_SHORT, or UNSIGNED_INT.
+
+    The error INVALID_OPERATION is generated if <target> is not TEXTURE_2D.
 
 New State
 
@@ -166,3 +181,4 @@ Revision History
                  Removed dependencies on OES_depth24 and OES_depth32.
     10/20/2007   Added issues 4. and 5.
     10/08/2009   Changed INVALID_VALUE to INVALID_OPERATION error (bug 5209).
+    01/29/2012   Move depth cube map texture support to OES_depth_texture_cube_map.

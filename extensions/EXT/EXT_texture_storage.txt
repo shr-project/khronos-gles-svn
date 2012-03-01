@@ -23,6 +23,7 @@ Contributors
     Maurice Ribble, Qualcomm
     Lingjun Chen, Qualcomm
     Daniel Koch, Transgaming Inc
+    Benj Lipchak, Apple
 
 Status
 
@@ -30,8 +31,8 @@ Status
 
 Version
 
-    Last Modified Date: 19 January, 2012
-    Author Revision: 25
+    Last Modified Date: 29 February, 2012
+    Author Revision: 26
 
 Number
 
@@ -45,7 +46,7 @@ Dependencies
     OES_depth_texture, OES_packed_depth_stencil,
     OES_compressed_paletted_texture, OES_texture_float, OES_texture_half_float
     EXT_texture_type_2_10_10_10_REV, EXT_texture_format_BGRA8888,
-    EXT_texture3D, OES_texture_npot, APPLE_texture_2D_limited_npot,
+    EXT_texture3D, EXT_texture_rg, APPLE_texture_2D_limited_npot,
     ARB_texture_cube_map, ARB_texture_cube_map_array,
     ARB_texture_rectangle, SGIS_generate_mipmap,
     EXT_direct_state_access, OES_EGL_image, WGL_ARB_render_texture,
@@ -145,6 +146,18 @@ New Tokens
 
       (if EXT_texture_format_BGRA8888 is supported)
         BGRA8_EXT                      0x93A1
+
+      (if EXT_texture_rg is supported)
+        R8_EXT                         0x8229  /* reuse tokens from ARB_texture_rg */
+        RG8_EXT                        0x822B
+
+      (if EXT_texture_rg and OES_texture_float are supported)
+        R32F_EXT                       0x822E  /* reuse tokens from ARB_texture_rg */
+        RG32F_EXT                      0x8230
+
+      (if EXT_texture_rg and OES_texture_half_float are supported)
+        R16F_EXT                       0x822D  /* reuse tokens from ARB_texture_g */
+        RG16F_EXT                      0x822F
 
 
 Additions to Chapter 2 of the OpenGL 3.2 Core Profile Specification
@@ -537,6 +550,27 @@ Dependencies on OpenGL ES
         <internalformat>    <format>   <type>
         ----------------    --------   ------
         BGRA8_EXT           BGRA_EXT   UNSIGNED_BYTE
+
+    If EXT_texture_rg is supported:
+
+        <internalformat>    <format>   <type>
+        ----------------    --------   ------
+        R8_EXT              RED_EXT    UNSIGNED_BYTE
+        RG8_EXT             RG_EXT     UNSIGNED_BYTE
+
+    If EXT_texture_rg and OES_texture_float are supported:
+
+        <internalformat>    <format>   <type>
+        ----------------    --------   ------
+        R32F_EXT            RED_EXT    FLOAT
+        RG32F_EXT           RG_EXT     FLOAT
+
+    If EXT_texture_rg and OES_texture_half_float are supported:
+
+        <internalformat>    <format>   <type>
+        ----------------    --------   ------
+        R16F_EXT            RED_EXT    HALF_FLOAT_OES
+        RG16F_EXT           RG_EXT     HALF_FLOAT_OES
 
 
 Dependencies on texture targets
@@ -946,6 +980,9 @@ Issues
     decision.
 
 Revision History
+
+    Revision 26, 2012/02/29 (Benj Lipchak)
+      - Add interaction with EXT_texture_rg.
 
     Revision 25, 2012/01/19 (bmerry)
       - Clarify that the pixel unpack buffer has no effect.
