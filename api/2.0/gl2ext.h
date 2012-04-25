@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 16994 $ on $Date:: 2012-02-29 18:29:34 -0800 #$ */
+/* $Revision: 17580 $ on $Date:: 2012-04-24 08:54:01 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -461,6 +461,15 @@ typedef void* GLeglImageOES;
 /* GL_DMP_shader_binary */
 #ifndef GL_DMP_shader_binary
 #define GL_SHADER_BINARY_DMP                                    0x9250
+#endif
+
+/*------------------------------------------------------------------------*
+ * FJ extension tokens
+ *------------------------------------------------------------------------*/
+
+/* GL_FJ_shader_binary_GCCSO */
+#ifndef GL_FJ_shader_binary_GCCSO
+#define GCCSO_SHADER_BINARY_FJ                                  0x9260
 #endif
 
 /*------------------------------------------------------------------------*
@@ -1264,6 +1273,15 @@ typedef void (GL_APIENTRYP PFNGLTEXTURESTORAGE3DEXTPROC) (GLuint texture, GLenum
 /* GL_DMP_shader_binary */
 #ifndef GL_DMP_shader_binary
 #define GL_DMP_shader_binary 1
+#endif
+
+/*------------------------------------------------------------------------*
+ * FJ extension functions
+ *------------------------------------------------------------------------*/
+
+/* GL_FJ_shader_binary_GCCSO */
+#ifndef GL_FJ_shader_binary_GCCSO
+#define GL_FJ_shader_binary_GCCSO 1
 #endif
 
 /*------------------------------------------------------------------------*

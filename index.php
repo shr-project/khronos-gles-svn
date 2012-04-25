@@ -333,6 +333,8 @@
 </li>
 <li value=113> <a href="extensions/ANGLE/ANGLE_translated_shader_source.txt">GL_ANGLE_translated_shader_source</a>
 </li>
+<li value=114> <a href="extensions/FJ/shader_binary_GCCSO.txt">GL_FJ_shader_binary_GCCSO</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
