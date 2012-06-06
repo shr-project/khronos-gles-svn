@@ -335,6 +335,8 @@
 </li>
 <li value=114> <a href="extensions/FJ/shader_binary_GCCSO.txt">GL_FJ_shader_binary_GCCSO</a>
 </li>
+<li value=115> <a href="extensions/OES/OES_required_internalformat.txt">GL_OES_required_internalformat</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

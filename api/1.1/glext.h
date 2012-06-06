@@ -1,7 +1,7 @@
 #ifndef __glext_h_
 #define __glext_h_
 
-/* $Revision: 16481 $ on $Date:: 2012-01-04 10:43:56 -0800 #$ */
+/* $Revision: 18098 $ on $Date:: 2012-06-06 09:14:16 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -164,6 +164,9 @@ typedef void* GLeglImageOES;
 #define GL_UNSIGNED_INT_24_8_OES                                0x84FA
 #define GL_DEPTH24_STENCIL8_OES                                 0x88F0
 #endif
+
+/* GL_OES_required_internalformat */
+/* No new tokens introduced by this extension. */
 
 /* GL_OES_rgb8_rgba8 */
 #ifndef GL_OES_rgb8_rgba8
@@ -769,6 +772,11 @@ typedef void (GL_APIENTRYP PFNGLWEIGHTPOINTEROESPROC) (GLint size, GLenum type, 
 /* GL_OES_packed_depth_stencil */
 #ifndef GL_OES_packed_depth_stencil
 #define GL_OES_packed_depth_stencil 1
+#endif
+
+/* GL_OES_required_internalformat */
+#ifndef GL_OES_required_internalformat
+#define GL_OES_required_internalformat 1
 #endif
 
 /* GL_OES_query_matrix */
