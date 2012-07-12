@@ -21,8 +21,8 @@ Status
 
 Version
 
-    Last Modified Date: November 21, 2011
-    Revision: 3
+    Last Modified Date: July 4, 2012
+    Revision: 4
 
 Number
 
@@ -81,16 +81,16 @@ New Tokens
 
     Accepted by the <pname> parameter of GetRenderbufferParameteriv:
 
-        RENDERBUFFER_SAMPLES_EXT                    0x9133
+        RENDERBUFFER_SAMPLES_EXT                    0x8CAB
 
     Returned by CheckFramebufferStatus:
 
-        FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT      0x9134
+        FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT      0x8D56
 
     Accepted by the <pname> parameter of GetBooleanv, GetIntegerv,
     and GetFloatv:
 
-        MAX_SAMPLES_EXT                             0x9135
+        MAX_SAMPLES_EXT                             0x8D57
 
     Accepted by the <pname> parameter of GetFramebufferAttachmentParameteriv:
 
@@ -385,6 +385,16 @@ Issues
     RESOLVED: Use FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT.
 
 Revision History
+
+    Revision 4, 2012/07/04
+     - Fixing bug where enum names clashed with enums in the GL extension
+       EXT_framebuffer_multisample, but with different values defined.
+       This causes obvious problems. As a consequence, values have been
+       updated for the following enums:
+          * RENDERBUFFER_SAMPLES_EXT
+          * FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT
+          * MAX_SAMPLES_EXT
+       The values now match the values in EXT_framebuffer_multisample.
 
     Revision 3, 2011/11/21
       - Fixing a bug in Sample Code where GL_DEPTH_EXT was used instead of

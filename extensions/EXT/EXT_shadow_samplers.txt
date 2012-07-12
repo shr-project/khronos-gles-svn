@@ -24,8 +24,8 @@ Status
 
 Version
 
-    Date: January 18, 2012
-    Revision: 3
+    Date: June 25, 2012
+    Revision: 4
 
 Number
 
@@ -217,6 +217,9 @@ Additions to OpenGL ES Shading Language 1.00 Specification
     texture call is made to a sampler that does not represent a depth texture, 
     then results are undefined."
 
+    Append "precision lowp sampler2DShadow;" to the default precision statements
+    in section 4.5.3.
+
 Dependencies on OES_packed_depth_stencil
 
     If OES_packed_depth_stencil is not supported, then all references to
@@ -243,3 +246,7 @@ Revision History
    Date: 1/18/2012
    Revision: 3 (Kelvin Chiu)
       - Add GL_SAMPLER_2D_SHADOW_EXT for glGetActiveUniform type
+
+   Date: 6/25/2012
+   Revision: 4 (Benj Lipchak)
+      - Specify lowp as the default precision of sampler2DShadow
