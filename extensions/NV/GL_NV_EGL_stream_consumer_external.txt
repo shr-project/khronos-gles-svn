@@ -20,7 +20,7 @@ Status
 
 Version
 
-    Version 2, August 3, 2011
+    Version 3, July 19, 2012
 
 Number
 
@@ -87,9 +87,11 @@ New Types
 
     /* (OpenGL ES 2.x only)
      * New sampler type allowed by the OpenGL ES Shading Language when
-     *      #extension NV_EGL_stream_consumer_external
-     * is used.  (This is also defined by the
-     * GL_OES_EGL_image_external extension.)
+     *      #extension GL_NV_EGL_stream_consumer_external
+     * is used, also available if GL_OES_EGL_image_external is
+     * supported and
+     *      #extension GL_OES_EGL_image_external
+     * is used.
      */
     samplerExternalOES
 
@@ -218,7 +220,7 @@ Additions to Chapter 3 of the OpenGL 1.1 or OpenGL 2.0 Specification
 
         To use a TEXTURE_EXTERNAL_OES texture as the consumer of an
         EGLStream, bind the texture to the active texture unit, and
-        call eglStreamConsumerGLTextureExternalNV() as describe in the
+        call eglStreamConsumerGLTextureExternalNV() as described in the
         EGL_NV_stream_consumer_gltexture extension.  The EGLStream
         must be in the EGL_STREAM_STATE_CREATED_KHR state (i.e. it
         must not be associated with any consumer or producer yet).
@@ -685,6 +687,8 @@ Dependencies on EGL_KHR_image_base and EGL_KHR_image
 
 Revision History
 
+    #3 - (July 19, 2012) Acorn Pooley
+         Fix name used with #extension in glsl.
     #2 - (Aug 3, 2011) Acorn Pooley
          Rename from GL_OES_EGL_stream_consumer_external to
          GL_NV_EGL_stream_consumer_external
