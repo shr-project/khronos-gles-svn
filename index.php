@@ -41,7 +41,7 @@
      Specification </a> (July 12, 2012). </li>
 <li> <a href="api/3.0/gl3.h"> gl3.h </a>
      OpenGL ES 3.0 Header File. </li>
-<li> <a href="api/2.0/gl3ext.h"> gl3ext.h </a>
+<li> <a href="api/3.0/gl3ext.h"> gl3ext.h </a>
      OpenGL ES 3.0 Extension Header File (currently empty). </li>
 <li> <a href="api/3.0/gl3platform.h"> gl3platform.h </a>
      OpenGL ES 3.0 Platform-Dependent Macros. </li>
