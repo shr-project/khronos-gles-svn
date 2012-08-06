@@ -41,16 +41,12 @@
      Specification </a> (July 12, 2012). </li>
 <li> <a href="api/3.0/gl3.h"> gl3.h </a>
      OpenGL ES 3.0 Header File. </li>
-<!--
-<li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a>
-     OpenGL ES 2.0 Extension Header File. </li>
--->
+<li> <a href="api/2.0/gl3ext.h"> gl3ext.h </a>
+     OpenGL ES 3.0 Extension Header File (currently empty). </li>
 <li> <a href="api/3.0/gl3platform.h"> gl3platform.h </a>
      OpenGL ES 3.0 Platform-Dependent Macros. </li>
-<!--
-<li> <a href="http://www.khronos.org/opengles/sdk/docs/man/">
-      OpenGL ES 2.0 Online Manual Pages.</a> </li>
--->
+<li> <a href="http://www.khronos.org/opengles/sdk/docs/man3/">
+      OpenGL ES 3.0 Online Manual Pages.</a> </li>
 <li> The OpenGL ES 3.0 headers depend on the shared
      <a href="../egl/api/KHR/khrplatform.h"> &lt;KHR/khrplatform.h&gt; </a>
      header located in the <a href="../egl/"> EGL Registry </a>
