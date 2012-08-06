@@ -21,14 +21,38 @@
 
 <h6> OpenGL ES Core API Specification, Headers, and Documentation </h6>
 
-<p> The current versions of OpenGL ES are OpenGL ES 2.0 (programmable
-    hardware) and OpenGL ES 1.1 (fixed-function hardware). For
+<p> The current version of OpenGL ES is OpenGL ES 3.0. Specifications
+    for older versions 2.0 and 1.1 are also available below. For
     additional specifications, headers, and documentation not listed
     below, see the <a
     href="http://www.khronos.org/developers/specs/">Khronos.org
     Developer Pages</a>. Header files not labelled with a revision date
     include their last update time in comments near the top of the file.
     </p>
+
+<h6> OpenGL ES 3.0 Specific </h6>
+
+<ul>
+<li> OpenGL ES 3.0.0
+     <a href="specs/3.0/es_spec_3.0.0.pdf"> Specification </a>
+     (August 6, 2012).
+<li> OpenGL ES Shading Language 3.00.3
+     <a href="specs/3.0/GLSL_ES_Specification_3.00.3.pdf">
+     Specification </a> (July 12, 2012). </li>
+<li> <a href="api/3.0/gl3.h"> gl3.h </a>
+     OpenGL ES 3.0 Header File. </li>
+<!-- <li> <a href="api/2.0/gl2ext.h"> gl2ext.h </a>
+     OpenGL ES 2.0 Extension Header File. </li>
+<li> <a href="api/3.0/gl3platform.h"> gl3platform.h </a>
+     OpenGL ES 3.0 Platform-Dependent Macros. </li>
+<li> <a href="http://www.khronos.org/opengles/sdk/docs/man/">
+      OpenGL ES 2.0 Online Manual Pages.</a> </li>
+-->
+<li> The OpenGL ES 3.0 headers depend on the shared
+     <a href="../egl/api/KHR/khrplatform.h"> &lt;KHR/khrplatform.h&gt; </a>
+     header located in the <a href="../egl/"> EGL Registry </a>
+</ul>
+
 
 <h6> OpenGL ES 2.0 Specific </h6>
 
@@ -51,7 +75,7 @@
      OpenGL ES 2.0 Platform-Dependent Macros. </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man/">
       OpenGL ES 2.0 Online Manual Pages.</a> </li>
-<li> The latest OpenGL ES 2.0 headers now depend on the shared
+<li> The OpenGL ES 2.0 headers depend on the shared
      <a href="../egl/api/KHR/khrplatform.h"> &lt;KHR/khrplatform.h&gt; </a>
      header located in the <a href="../egl/"> EGL Registry </a>
 </ul>
@@ -80,7 +104,7 @@
      1.1.03 Extension Pack </a> (July 19, 2005). </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/1.1/docs/man/">
      OpenGL ES 1.1 Online Manual Pages.</a> </li>
-<li> The latest OpenGL ES 1.1 headers now depend on the shared
+<li> The OpenGL ES 1.1 headers depend on the shared
      <a href="../egl/api/khrplatform.h"> khrplatform.h </a>
      header located in the <a href="../egl/"> EGL Registry </a>
 </ul>
@@ -336,6 +360,12 @@
 <li value=114> <a href="extensions/FJ/shader_binary_GCCSO.txt">GL_FJ_shader_binary_GCCSO</a>
 </li>
 <li value=115> <a href="extensions/OES/OES_required_internalformat.txt">GL_OES_required_internalformat</a>
+</li>
+<li value=116> <a href="extensions/OES/OES_surfaceless_context.txt">GL_OES_surfaceless_context</a>
+</li>
+<li value=117> <a href="extensions/KHR/texture_compression_astc_ldr.txt">GL_KHR_texture_compression_astc_ldr</a>
+</li>
+<li value=118> <a href="extensions/KHR/debug.txt">GL_KHR_debug</a>
 </li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
