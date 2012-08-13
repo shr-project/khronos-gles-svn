@@ -1,6 +1,10 @@
 #ifndef __gl3_h_
 #define __gl3_h_
 
+/* 
+ * gl3.h last updated on $Date: 2012-07-23 03:53:52 -0700 (Mon, 23 Jul 2012) $
+ */
+
 #include <GLES3/gl3platform.h>
 
 #ifdef __cplusplus
@@ -8,7 +12,7 @@ extern "C" {
 #endif
 
 /*
-** Copyright (c) 2007-2011 The Khronos Group Inc.
+** Copyright (c) 2007-2012 The Khronos Group Inc.
 **
 ** Permission is hereby granted, free of charge, to any person obtaining a
 ** copy of this software and/or associated documentation files (the
@@ -29,16 +33,6 @@ extern "C" {
 ** TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 ** MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
 */
-
-/* This is a draft release of gl3.h, a header for OpenGL ES 3.0 (Halti)
- * implementations. Please don't package gl3.h for release with other
- * software until it's out of draft status. The structure of the file may
- * change significantly, and the details will probably change slightly as we
- * make sure exactly the right set of interfaces is included.
- *
- * gl3.h last updated on $Date: 2012-01-26 12:04:16 -0800 (Thu, 26 Jan 2012) $
- */
-
 
 /*-------------------------------------------------------------------------
  * Data type definitions
@@ -76,7 +70,7 @@ typedef struct __GLsync *GLsync;
  *-----------------------------------------------------------------------*/
 
 /* OpenGL ES core versions */
-#define GL_ES_VERSION_HALTI                              1
+#define GL_ES_VERSION_3_0                                1
 #define GL_ES_VERSION_2_0                                1
 
 /* OpenGL ES 2.0 */
@@ -804,6 +798,7 @@ typedef struct __GLsync *GLsync;
 #define GL_TEXTURE_IMMUTABLE_FORMAT                      0x912F
 #define GL_MAX_ELEMENT_INDEX                             0x8D6B
 #define GL_NUM_SAMPLE_COUNTS                             0x9380
+#define GL_TEXTURE_IMMUTABLE_LEVELS                      0x8D63
 
 /*-------------------------------------------------------------------------
  * Entrypoint definitions
@@ -1024,8 +1019,8 @@ GL_APICALL GLuint         GL_APIENTRY glGetUniformBlockIndex (GLuint program, co
 GL_APICALL void           GL_APIENTRY glGetActiveUniformBlockiv (GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint* params);
 GL_APICALL void           GL_APIENTRY glGetActiveUniformBlockName (GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei* length, GLchar* uniformBlockName);
 GL_APICALL void           GL_APIENTRY glUniformBlockBinding (GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding);
-GL_APICALL void           GL_APIENTRY glDrawArraysInstanced (GLenum mode, GLint first, GLsizei count, GLsizei primcount);
-GL_APICALL void           GL_APIENTRY glDrawElementsInstanced (GLenum mode, GLsizei count, GLenum type, const GLvoid* indices, GLsizei primcount);
+GL_APICALL void           GL_APIENTRY glDrawArraysInstanced (GLenum mode, GLint first, GLsizei count, GLsizei instanceCount);
+GL_APICALL void           GL_APIENTRY glDrawElementsInstanced (GLenum mode, GLsizei count, GLenum type, const GLvoid* indices, GLsizei instanceCount);
 GL_APICALL GLsync         GL_APIENTRY glFenceSync (GLenum condition, GLbitfield flags);
 GL_APICALL GLboolean      GL_APIENTRY glIsSync (GLsync sync);
 GL_APICALL void           GL_APIENTRY glDeleteSync (GLsync sync);
