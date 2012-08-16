@@ -366,6 +366,8 @@
 </li>
 <li value=118> <a href="extensions/KHR/debug.txt">GL_KHR_debug</a>
 </li>
+<li value=119> <a href="extensions/QCOM/QCOM_binning_control.txt">GL_QCOM_binning_control</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

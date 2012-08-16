@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 18481 $ on $Date:: 2012-07-11 18:07:26 -0700 #$ */
+/* $Revision: 18916 $ on $Date:: 2012-08-16 02:31:16 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -94,7 +94,23 @@ typedef void* GLeglImageOES;
 #endif
 
 /* GL_OES_required_internalformat */
-/* No new tokens introduced by this extension. */
+#ifndef GL_OES_required_internalformat 
+#define GL_ALPHA8_OES                                           0x803C
+#define GL_DEPTH_COMPONENT16_OES                                0x81A5
+/* reuse GL_DEPTH_COMPONENT24_OES */                            
+/* reuse GL_DEPTH24_STENCIL8_OES */                             
+/* reuse GL_DEPTH_COMPONENT32_OES */                            
+#define GL_LUMINANCE4_ALPHA4_OES                                0x8043
+#define GL_LUMINANCE8_ALPHA8_OES                                0x8045
+#define GL_LUMINANCE8_OES                                       0x8040
+#define GL_RGBA4_OES                                            0x8056
+#define GL_RGB5_A1_OES                                          0x8057
+#define GL_RGB565_OES                                           0x8D62
+/* reuse GL_RGB8_OES */                              
+/* reuse GL_RGBA8_OES */  
+/* reuse GL_RGB10_EXT */
+/* reuse GL_RGB10_A2_EXT */
+#endif 
 
 /* GL_OES_rgb8_rgba8 */
 #ifndef GL_OES_rgb8_rgba8
@@ -616,6 +632,14 @@ typedef void* GLeglImageOES;
 #define GL_ALPHA_TEST_QCOM                                      0x0BC0
 #define GL_ALPHA_TEST_FUNC_QCOM                                 0x0BC1
 #define GL_ALPHA_TEST_REF_QCOM                                  0x0BC2
+#endif
+
+/* GL_QCOM_binning_control */
+#ifndef GL_QCOM_binning_control
+#define GL_BINNING_CONTROL_HINT_QCOM                            0x8FB0
+#define GL_CPU_OPTIMIZED_QCOM                                   0x8FB1
+#define GL_GPU_OPTIMIZED_QCOM                                   0x8FB2
+#define GL_RENDER_DIRECT_TO_FRAMEBUFFER_QCOM                    0x8FB3
 #endif
 
 /* GL_QCOM_driver_control */
@@ -1433,6 +1457,11 @@ typedef void (GL_APIENTRYP PFNGLREADBUFFERNVPROC) (GLenum mode);
 GL_APICALL void GL_APIENTRY glAlphaFuncQCOM (GLenum func, GLclampf ref);
 #endif
 typedef void (GL_APIENTRYP PFNGLALPHAFUNCQCOMPROC) (GLenum func, GLclampf ref);
+#endif
+
+/* GL_QCOM_binning_control */
+#ifndef GL_QCOM_binning_control
+#define GL_QCOM_binning_control 1
 #endif
 
 /* GL_QCOM_driver_control */
