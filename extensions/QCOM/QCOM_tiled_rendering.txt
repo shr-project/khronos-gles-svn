@@ -312,10 +312,6 @@ Errors
     INVALID_OPERATION error is generated if Enable(WRITEONLY_RENDERING_QCOM)
     is called between StartTilingQCOM and EndTilingQCOM
 
-    INVALID_VALUE error is generated if StartTilingQCOM is called with a tile
-    whose <x>, <y>, <width> and <height> lie completely outside the extents of
-    the render target
-
 New State
 
     None.

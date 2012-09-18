@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 18916 $ on $Date:: 2012-08-16 02:31:16 -0700 #$ */
+/* $Revision: 19063 $ on $Date:: 2012-08-30 00:35:01 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -133,6 +133,10 @@ typedef void* GLeglImageOES;
 #define GL_STENCIL_INDEX4_OES                                   0x8D47
 #endif
 
+#ifndef GL_OES_surfaceless_context
+#define GL_FRAMEBUFFER_UNDEFINED_OES                            0x8219
+#endif
+
 /* GL_OES_texture_3D */
 #ifndef GL_OES_texture_3D
 #define GL_TEXTURE_WRAP_R_OES                                   0x8072
@@ -172,6 +176,85 @@ typedef void* GLeglImageOES;
 #ifndef GL_OES_vertex_type_10_10_10_2
 #define GL_UNSIGNED_INT_10_10_10_2_OES                          0x8DF6
 #define GL_INT_10_10_10_2_OES                                   0x8DF7
+#endif
+
+/*------------------------------------------------------------------------*
+ * KHR extension tokens
+ *------------------------------------------------------------------------*/
+
+#ifndef GL_KHR_debug
+typedef void (GL_APIENTRYP *GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,GLvoid *userParam);
+#define GL_DEBUG_OUTPUT_SYNCHRONOUS                             0x8242
+#define GL_DEBUG_NEXT_LOGGED_MESSAGE_LENGTH                     0x8243
+#define GL_DEBUG_CALLBACK_FUNCTION                              0x8244
+#define GL_DEBUG_CALLBACK_USER_PARAM                            0x8245
+#define GL_DEBUG_SOURCE_API                                     0x8246
+#define GL_DEBUG_SOURCE_WINDOW_SYSTEM                           0x8247
+#define GL_DEBUG_SOURCE_SHADER_COMPILER                         0x8248
+#define GL_DEBUG_SOURCE_THIRD_PARTY                             0x8249
+#define GL_DEBUG_SOURCE_APPLICATION                             0x824A
+#define GL_DEBUG_SOURCE_OTHER                                   0x824B
+#define GL_DEBUG_TYPE_ERROR                                     0x824C
+#define GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR                       0x824D
+#define GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR                        0x824E
+#define GL_DEBUG_TYPE_PORTABILITY                               0x824F
+#define GL_DEBUG_TYPE_PERFORMANCE                               0x8250
+#define GL_DEBUG_TYPE_OTHER                                     0x8251
+#define GL_DEBUG_TYPE_MARKER                                    0x8268
+#define GL_DEBUG_TYPE_PUSH_GROUP                                0x8269
+#define GL_DEBUG_TYPE_POP_GROUP                                 0x826A
+#define GL_DEBUG_SEVERITY_NOTIFICATION                          0x826B
+#define GL_MAX_DEBUG_GROUP_STACK_DEPTH                          0x826C
+#define GL_DEBUG_GROUP_STACK_DEPTH                              0x826D
+#define GL_BUFFER                                               0x82E0
+#define GL_SHADER                                               0x82E1
+#define GL_PROGRAM                                              0x82E2
+#define GL_QUERY                                                0x82E3
+/* PROGRAM_PIPELINE only in GL */                               
+#define GL_SAMPLER                                              0x82E6
+/* DISPLAY_LIST only in GL */                                   
+#define GL_MAX_LABEL_LENGTH                                     0x82E8
+#define GL_MAX_DEBUG_MESSAGE_LENGTH                             0x9143
+#define GL_MAX_DEBUG_LOGGED_MESSAGES                            0x9144
+#define GL_DEBUG_LOGGED_MESSAGES                                0x9145
+#define GL_DEBUG_SEVERITY_HIGH                                  0x9146
+#define GL_DEBUG_SEVERITY_MEDIUM                                0x9147
+#define GL_DEBUG_SEVERITY_LOW                                   0x9148
+#define GL_DEBUG_OUTPUT                                         0x92E0
+#define GL_CONTEXT_FLAG_DEBUG_BIT                               0x00000002
+#define GL_STACK_OVERFLOW                                       0x0503
+#define GL_STACK_UNDERFLOW                                      0x0504
+#endif
+
+#ifndef GL_KHR_texture_compression_astc_ldr
+#define GL_COMPRESSED_RGBA_ASTC_4x4_KHR                         0x93B0
+#define GL_COMPRESSED_RGBA_ASTC_5x4_KHR                         0x93B1
+#define GL_COMPRESSED_RGBA_ASTC_5x5_KHR                         0x93B2
+#define GL_COMPRESSED_RGBA_ASTC_6x5_KHR                         0x93B3
+#define GL_COMPRESSED_RGBA_ASTC_6x6_KHR                         0x93B4
+#define GL_COMPRESSED_RGBA_ASTC_8x5_KHR                         0x93B5
+#define GL_COMPRESSED_RGBA_ASTC_8x6_KHR                         0x93B6
+#define GL_COMPRESSED_RGBA_ASTC_8x8_KHR                         0x93B7
+#define GL_COMPRESSED_RGBA_ASTC_10x5_KHR                        0x93B8
+#define GL_COMPRESSED_RGBA_ASTC_10x6_KHR                        0x93B9
+#define GL_COMPRESSED_RGBA_ASTC_10x8_KHR                        0x93BA
+#define GL_COMPRESSED_RGBA_ASTC_10x10_KHR                       0x93BB
+#define GL_COMPRESSED_RGBA_ASTC_12x10_KHR                       0x93BC
+#define GL_COMPRESSED_RGBA_ASTC_12x12_KHR                       0x93BD
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR                 0x93D0
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR                 0x93D1
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR                 0x93D2
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR                 0x93D3
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR                 0x93D4
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR                 0x93D5
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR                 0x93D6
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR                 0x93D7
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR                0x93D8
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR                0x93D9
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR                0x93DA
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR               0x93DB
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR               0x93DC
+#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR               0x93DD
 #endif
 
 /*------------------------------------------------------------------------*
@@ -837,6 +920,10 @@ typedef void (GL_APIENTRYP PFNGLGETBUFFERPOINTERVOESPROC) (GLenum target, GLenum
 #define GL_OES_stencil4 1
 #endif
 
+#ifndef GL_OES_surfaceless_context
+#define GL_OES_surfaceless_context 1
+#endif
+
 /* GL_OES_texture_3D */
 #ifndef GL_OES_texture_3D
 #define GL_OES_texture_3D 1
@@ -905,6 +992,41 @@ typedef GLboolean (GL_APIENTRYP PFNGLISVERTEXARRAYOESPROC) (GLuint array);
 #ifndef GL_OES_vertex_type_10_10_10_2
 #define GL_OES_vertex_type_10_10_10_2 1
 #endif
+
+/*------------------------------------------------------------------------*
+ * KHR extension functions
+ *------------------------------------------------------------------------*/
+
+#ifndef GL_KHR_debug
+#define GL_KHR_debug 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glDebugMessageControl (GLenum source, GLenum type, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled);
+GL_APICALL void GL_APIENTRY glDebugMessageInsert (GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *buf);
+GL_APICALL void GL_APIENTRY glDebugMessageCallback (GLDEBUGPROC callback, const void *userParam);
+GL_APICALL GLuint GL_APIENTRY glGetDebugMessageLog (GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog);
+GL_APICALL void GL_APIENTRY glPushDebugGroup (GLenum source, GLuint id, GLsizei length, const GLchar *message);
+GL_APICALL void GL_APIENTRY glPopDebugGroup (void);
+GL_APICALL void GL_APIENTRY glObjectLabel (GLenum identifier, GLuint name, GLsizei length, const GLchar *label);
+GL_APICALL void GL_APIENTRY glGetObjectLabel (GLenum identifier, GLuint name, GLsizei bufSize, GLsizei *length, GLchar *label);
+GL_APICALL void GL_APIENTRY glObjectPtrLabel (const void *ptr, GLsizei length, const GLchar *label);
+GL_APICALL void GL_APIENTRY glGetObjectPtrLabel (const void *ptr, GLsizei bufSize, GLsizei *length, GLchar *label);
+#endif 
+typedef void (GL_APIENTRYP PFNGLDEBUGMESSAGECONTROLPROC) (GLenum source, GLenum type, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled);
+typedef void (GL_APIENTRYP PFNGLDEBUGMESSAGEINSERTPROC) (GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *buf);
+typedef void (GL_APIENTRYP PFNGLDEBUGMESSAGECALLBACKPROC) (GLDEBUGPROC callback, const void *userParam);
+typedef GLuint (GL_APIENTRYP PFNGLGETDEBUGMESSAGELOGPROC) (GLuint count, GLsizei bufsize, GLenum *sources, GLenum *types, GLuint *ids, GLenum *severities, GLsizei *lengths, GLchar *messageLog);
+typedef void (GL_APIENTRYP PFNGLPUSHDEBUGGROUPPROC) (GLenum source, GLuint id, GLsizei length, const GLchar *message);
+typedef void (GL_APIENTRYP PFNGLPOPDEBUGGROUPPROC) (void);
+typedef void (GL_APIENTRYP PFNGLOBJECTLABELPROC) (GLenum identifier, GLuint name, GLsizei length, const GLchar *label);
+typedef void (GL_APIENTRYP PFNGLGETOBJECTLABELPROC) (GLenum identifier, GLuint name, GLsizei bufSize, GLsizei *length, GLchar *label);
+typedef void (GL_APIENTRYP PFNGLOBJECTPTRLABELPROC) (const void *ptr, GLsizei length, const GLchar *label);
+typedef void (GL_APIENTRYP PFNGLGETOBJECTPTRLABELPROC) (const void *ptr, GLsizei bufSize, GLsizei *length, GLchar *label);
+#endif
+
+#ifndef GL_KHR_texture_compression_astc_ldr
+#define GL_KHR_texture_compression_astc_ldr 1
+#endif
+
 
 /*------------------------------------------------------------------------*
  * AMD extension functions
