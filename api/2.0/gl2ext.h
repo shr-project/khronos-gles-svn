@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 19063 $ on $Date:: 2012-08-30 00:35:01 -0700 #$ */
+/* $Revision: 19247 $ on $Date:: 2012-09-19 19:52:05 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -375,6 +375,11 @@ typedef void (GL_APIENTRYP *GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLe
 /*------------------------------------------------------------------------*
  * ARM extension tokens
  *------------------------------------------------------------------------*/
+
+/* GL_ARM_mali_program_binary */
+#ifndef GL_ARM_mali_program_binary
+#define GL_MALI_PROGRAM_BINARY_ARM                              0x8F61
+#endif
 
 /* GL_ARM_mali_shader_binary */
 #ifndef GL_ARM_mali_shader_binary
@@ -1170,6 +1175,11 @@ typedef void (GL_APIENTRYP PFNGLRESOLVEMULTISAMPLEFRAMEBUFFERAPPLEPROC) (void);
 /*------------------------------------------------------------------------*
  * ARM extension functions
  *------------------------------------------------------------------------*/
+
+/* GL_ARM_mali_program_binary */
+#ifndef GL_ARM_mali_program_binary
+#define GL_ARM_mali_program_binary 1
+#endif
 
 /* GL_ARM_mali_shader_binary */
 #ifndef GL_ARM_mali_shader_binary
