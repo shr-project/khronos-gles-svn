@@ -368,6 +368,8 @@
 </li>
 <li value=119> <a href="extensions/QCOM/QCOM_binning_control.txt">GL_QCOM_binning_control</a>
 </li>
+<li value=120> <a href="extensions/ARM/ARM_mali_program_binary.txt">GL_ARM_mali_program_binary</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
