@@ -31,8 +31,8 @@ Status
 
 Version
 
-    Last Modified Date: 29 February, 2012
-    Author Revision: 26
+    Last Modified Date: 24 July, 2012
+    Author Revision: 27
 
 Number
 
@@ -47,7 +47,7 @@ Dependencies
     OES_compressed_paletted_texture, OES_texture_float, OES_texture_half_float
     EXT_texture_type_2_10_10_10_REV, EXT_texture_format_BGRA8888,
     EXT_texture3D, EXT_texture_rg, APPLE_texture_2D_limited_npot,
-    ARB_texture_cube_map, ARB_texture_cube_map_array,
+    APPLE_rgb_422, ARB_texture_cube_map, ARB_texture_cube_map_array,
     ARB_texture_rectangle, SGIS_generate_mipmap,
     EXT_direct_state_access, OES_EGL_image, WGL_ARB_render_texture,
     GLX_EXT_texture_from_pixmap, and core specifications that
@@ -158,6 +158,9 @@ New Tokens
       (if EXT_texture_rg and OES_texture_half_float are supported)
         R16F_EXT                       0x822D  /* reuse tokens from ARB_texture_g */
         RG16F_EXT                      0x822F
+
+      (APPLE_rgb_422 is supported)
+        RGB_422_APPLE                  0x8A1F
 
 
 Additions to Chapter 2 of the OpenGL 3.2 Core Profile Specification
@@ -572,6 +575,12 @@ Dependencies on OpenGL ES
         R16F_EXT            RED_EXT    HALF_FLOAT_OES
         RG16F_EXT           RG_EXT     HALF_FLOAT_OES
 
+    If APPLE_rgb_422 is supported:
+
+        <internalformat>    <format>       <type>
+        ----------------    --------       ------
+        RGB_422_APPLE       RGB_422_APPLE  UNSIGNED_SHORT_8_8_APPLE
+
 
 Dependencies on texture targets
 
@@ -612,6 +621,13 @@ Dependencies on OES_compressed_paletted_texture
     OES_compressed_paletted_texture are not supported by TexStorage*.
     Passing one of these tokens to TexStorage* will generate an
     INVALID_ENUM error.
+
+Dependencies on APPLE_rgb_422
+
+    UNSIGNED_SHORT_8_8_APPLE is implied as the <type> when TexStorage2DEXT
+    is called with <internalformat> RGB_422_APPLE.  Subsequently supplying 
+    UNSIGNED_SHORT_8_8_REV_APPLE as the <type> to a TexSubImage2D updating
+    such an immutable texture will generate an INVALID_OPERATION error.
 
 Errors
 
@@ -980,6 +996,9 @@ Issues
     decision.
 
 Revision History
+
+    Revision 27, 2012/07/24 (Benj Lipchak)
+      - Add interaction with APPLE_rgb_422.
 
     Revision 26, 2012/02/29 (Benj Lipchak)
       - Add interaction with EXT_texture_rg.

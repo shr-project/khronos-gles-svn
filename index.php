@@ -370,6 +370,14 @@
 </li>
 <li value=120> <a href="extensions/ARM/ARM_mali_program_binary.txt">GL_ARM_mali_program_binary</a>
 </li>
+<li value=121> <a href="extensions/EXT/EXT_map_buffer_range.txt">GL_EXT_map_buffer_range</a>
+</li>
+<li value=122> <a href="extensions/EXT/EXT_shader_framebuffer_fetch.txt">GL_EXT_shader_framebuffer_fetch</a>
+</li>
+<li value=123> <a href="extensions/APPLE/APPLE_copy_texture_levels.txt">GL_APPLE_copy_texture_levels</a>
+</li>
+<li value=124> <a href="extensions/APPLE/APPLE_sync.txt">GL_APPLE_sync</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

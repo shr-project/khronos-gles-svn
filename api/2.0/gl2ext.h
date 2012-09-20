@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 19247 $ on $Date:: 2012-09-19 19:52:05 -0700 #$ */
+/* $Revision: 19261 $ on $Date:: 2012-09-20 11:31:59 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -344,13 +344,9 @@ typedef void (GL_APIENTRYP *GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLe
  * APPLE extension tokens
  *------------------------------------------------------------------------*/
 
-/* GL_APPLE_rgb_422 */
-#ifndef GL_APPLE_rgb_422
-#define GL_RGB_422_APPLE                                        0x8A1F
-#define GL_UNSIGNED_SHORT_8_8_APPLE                             0x85BA
-#define GL_UNSIGNED_SHORT_8_8_REV_APPLE                         0x85BB
-#endif
-
+/* GL_APPLE_copy_texture_levels */
+/* No new tokens introduced by this extension. */
+    
 /* GL_APPLE_framebuffer_multisample */
 #ifndef GL_APPLE_framebuffer_multisample
 #define GL_RENDERBUFFER_SAMPLES_APPLE                           0x8CAB
@@ -360,6 +356,45 @@ typedef void (GL_APIENTRYP *GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLe
 #define GL_DRAW_FRAMEBUFFER_APPLE                               0x8CA9
 #define GL_DRAW_FRAMEBUFFER_BINDING_APPLE                       0x8CA6
 #define GL_READ_FRAMEBUFFER_BINDING_APPLE                       0x8CAA
+#endif
+
+/* GL_APPLE_rgb_422 */
+#ifndef GL_APPLE_rgb_422
+#define GL_RGB_422_APPLE                                        0x8A1F
+#define GL_UNSIGNED_SHORT_8_8_APPLE                             0x85BA
+#define GL_UNSIGNED_SHORT_8_8_REV_APPLE                         0x85BB
+#endif
+
+/* GL_APPLE_sync */
+#ifndef GL_APPLE_sync
+
+/* These types are defined with reference to <inttypes.h>
+ * in the Apple extension spec, but here we use the Khronos
+ * portable types in khrplatform.h, and assume those types 
+ * are always defined.
+ * If any other extensions using these types are defined, 
+ * the typedefs must move out of this block and be shared.
+ */
+typedef khronos_int64_t GLint64;
+typedef khronos_uint64_t GLuint64;
+typedef struct __GLsync *GLsync;
+
+#define GL_SYNC_OBJECT_APPLE                                    0x8A53
+#define GL_MAX_SERVER_WAIT_TIMEOUT_APPLE                        0x9111
+#define GL_OBJECT_TYPE_APPLE                                    0x9112
+#define GL_SYNC_CONDITION_APPLE                                 0x9113
+#define GL_SYNC_STATUS_APPLE                                    0x9114
+#define GL_SYNC_FLAGS_APPLE                                     0x9115
+#define GL_SYNC_FENCE_APPLE                                     0x9116
+#define GL_SYNC_GPU_COMMANDS_COMPLETE_APPLE                     0x9117
+#define GL_UNSIGNALED_APPLE                                     0x9118
+#define GL_SIGNALED_APPLE                                       0x9119
+#define GL_ALREADY_SIGNALED_APPLE                               0x911A
+#define GL_TIMEOUT_EXPIRED_APPLE                                0x911B
+#define GL_CONDITION_SATISFIED_APPLE                            0x911C
+#define GL_WAIT_FAILED_APPLE                                    0x911D
+#define GL_SYNC_FLUSH_COMMANDS_BIT_APPLE                        0x00000001
+#define GL_TIMEOUT_IGNORED_APPLE                                0xFFFFFFFFFFFFFFFFull
 #endif
 
 /* GL_APPLE_texture_format_BGRA8888 */
@@ -429,6 +464,16 @@ typedef void (GL_APIENTRYP *GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLe
 #define GL_STENCIL_EXT                                          0x1802
 #endif
 
+/* GL_EXT_map_buffer_range */
+#ifndef GL_EXT_map_buffer_range
+#define GL_MAP_READ_BIT_EXT                                     0x0001
+#define GL_MAP_WRITE_BIT_EXT                                    0x0002
+#define GL_MAP_INVALIDATE_RANGE_BIT_EXT                         0x0004
+#define GL_MAP_INVALIDATE_BUFFER_BIT_EXT                        0x0008
+#define GL_MAP_FLUSH_EXPLICIT_BIT_EXT                           0x0010
+#define GL_MAP_UNSYNCHRONIZED_BIT_EXT                           0x0020
+#endif
+
 /* GL_EXT_multisampled_render_to_texture */
 #ifndef GL_EXT_multisampled_render_to_texture
 #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT           0x8D6C
@@ -477,6 +522,11 @@ typedef void (GL_APIENTRYP *GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLe
 #define GL_PROGRAM_SEPARABLE_EXT                                0x8258
 #define GL_ACTIVE_PROGRAM_EXT                                   0x8259
 #define GL_PROGRAM_PIPELINE_BINDING_EXT                         0x825A
+#endif
+
+/* GL_EXT_shader_framebuffer_fetch */
+#ifndef GL_EXT_shader_framebuffer_fetch
+#define GL_FRAGMENT_SHADER_DISCARDS_SAMPLES_EXT                 0x8A52
 #endif
 
 /* GL_EXT_shader_texture_lod */
@@ -1146,9 +1196,13 @@ typedef void (GL_APIENTRYP PFLGLGETTRANSLATEDSHADERSOURCEANGLEPROC) (GLuint shad
  * APPLE extension functions
  *------------------------------------------------------------------------*/
 
-/* GL_APPLE_rgb_422 */
-#ifndef GL_APPLE_rgb_422
-#define GL_APPLE_rgb_422 1
+/* GL_APPLE_copy_texture_levels */
+#ifndef GL_APPLE_copy_texture_levels
+#define GL_APPLE_copy_texture_levels 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glCopyTextureLevelsAPPLE (GLuint destinationTexture, GLuint sourceTexture, GLint sourceBaseLevel, GLsizei sourceLevelCount);
+#endif
+typedef void (GL_APIENTRYP PFNGLCOPYTEXTURELEVELSAPPLEPROC) (GLuint destinationTexture, GLuint sourceTexture, GLint sourceBaseLevel, GLsizei sourceLevelCount);
 #endif
 
 /* GL_APPLE_framebuffer_multisample */
@@ -1160,6 +1214,32 @@ GL_APICALL void GL_APIENTRY glResolveMultisampleFramebufferAPPLE (void);
 #endif /* GL_GLEXT_PROTOTYPES */
 typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEAPPLEPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 typedef void (GL_APIENTRYP PFNGLRESOLVEMULTISAMPLEFRAMEBUFFERAPPLEPROC) (void);
+#endif
+
+/* GL_APPLE_rgb_422 */
+#ifndef GL_APPLE_rgb_422
+#define GL_APPLE_rgb_422 1
+#endif
+
+/* GL_APPLE_sync */
+#ifndef GL_APPLE_sync
+#define GL_APPLE_sync 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL GLsync GL_APIENTRY glFenceSyncAPPLE (GLenum condition, GLbitfield flags);
+GL_APICALL GLboolean GL_APIENTRY glIsSyncAPPLE (GLsync sync);
+GL_APICALL void GL_APIENTRY glDeleteSyncAPPLE (GLsync sync);
+GL_APICALL GLenum GL_APIENTRY glClientWaitSyncAPPLE (GLsync sync, GLbitfield flags, GLuint64 timeout);
+GL_APICALL void GL_APIENTRY glWaitSyncAPPLE (GLsync sync, GLbitfield flags, GLuint64 timeout);
+GL_APICALL void GL_APIENTRY glGetInteger64vAPPLE (GLenum pname, GLint64 *params);
+GL_APICALL void GL_APIENTRY glGetSyncivAPPLE (GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values);
+#endif
+typedef GLsync (GL_APIENTRYP PFNGLFENCESYNCAPPLEPROC) (GLenum condition, GLbitfield flags);
+typedef GLboolean (GL_APIENTRYP PFNGLISSYNCAPPLEPROC) (GLsync sync);
+typedef void (GL_APIENTRYP PFNGLDELETESYNCAPPLEPROC) (GLsync sync);
+typedef GLenum (GL_APIENTRYP PFNGLCLIENTWAITSYNCAPPLEPROC) (GLsync sync, GLbitfield flags, GLuint64 timeout);
+typedef void (GL_APIENTRYP PFNGLWAITSYNCAPPLEPROC) (GLsync sync, GLbitfield flags, GLuint64 timeout);
+typedef void (GL_APIENTRYP PFNGLGETINTEGER64VAPPLEPROC) (GLenum pname, GLint64 *params);
+typedef void (GL_APIENTRYP PFNGLGETSYNCIVAPPLEPROC) (GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values);
 #endif
 
 /* GL_APPLE_texture_format_BGRA8888 */
@@ -1236,6 +1316,17 @@ typedef void (GL_APIENTRYP PFNGLPOPGROUPMARKEREXTPROC) (void);
 GL_APICALL void GL_APIENTRY glDiscardFramebufferEXT (GLenum target, GLsizei numAttachments, const GLenum *attachments);
 #endif
 typedef void (GL_APIENTRYP PFNGLDISCARDFRAMEBUFFEREXTPROC) (GLenum target, GLsizei numAttachments, const GLenum *attachments);
+#endif
+
+/* GL_EXT_map_buffer_range */
+#ifndef GL_EXT_map_buffer_range
+#define GL_EXT_map_buffer_range 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY *glMapBufferRangeEXT (GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access);
+GL_APICALL void GL_APIENTRY glFlushMappedBufferRangeEXT (GLenum target, GLintptr offset, GLsizeiptr length);
+#endif
+typedef void* (GL_APIENTRYP PFNGLMAPBUFFERRANGEEXTPROC) (GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access);
+typedef void (GL_APIENTRYP PFNGLFLUSHMAPPEDBUFFERRANGEEXTPROC) (GLenum target, GLintptr offset, GLsizeiptr length);
 #endif
 
 /* GL_EXT_multisampled_render_to_texture */
@@ -1365,6 +1456,11 @@ typedef void (GL_APIENTRYP PFNGLPROGRAMUNIFORMMATRIX3FVEXTPROC) (GLuint program,
 typedef void (GL_APIENTRYP PFNGLPROGRAMUNIFORMMATRIX4FVEXTPROC) (GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 typedef void (GL_APIENTRYP PFNGLVALIDATEPROGRAMPIPELINEEXTPROC) (GLuint pipeline);
 typedef void (GL_APIENTRYP PFNGLGETPROGRAMPIPELINEINFOLOGEXTPROC) (GLuint pipeline, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
+#endif
+
+/* GL_EXT_shader_framebuffer_fetch */
+#ifndef GL_EXT_shader_framebuffer_fetch
+#define GL_EXT_shader_framebuffer_fetch 1
 #endif
 
 /* GL_EXT_shader_texture_lod */
