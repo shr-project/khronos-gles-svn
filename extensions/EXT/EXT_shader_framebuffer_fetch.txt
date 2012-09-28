@@ -16,8 +16,8 @@ Status
 
 Version
 
-    Last Modified Date: June 21, 2012
-    Author Revision: 2
+    Last Modified Date: September 24, 2012
+    Author Revision: 3
 
 Number
 
@@ -78,13 +78,7 @@ Issues
     is restricting usage of the framebuffer color, which can generally only be
     done with detailed flow-control analysis.
     
-    3. How does the use of gl_LastFragData interact with
-       OES_standard_derivatives?
-    
-    RESOLVED: Derivatives are taken across corresponding samples of adjacent
-    pixels.
-    
-    4. What is the precision of gl_LastFragData in practice?
+    3. What is the precision of gl_LastFragData in practice?
     
     RESOLVED: Three options were considered for this functionality:
     
@@ -102,7 +96,7 @@ Issues
     precision of intermediate results from calculations using the
     framebuffer color.
 
-    5. How does this extension iteract with conventional blending?
+    4. How does this extension iteract with conventional blending?
     
     RESOLVED: There is no interaction.  The two remain orthogonal.  The rest
     of the pipeline continues as usual after the fragment shader stage.
@@ -214,6 +208,7 @@ Interactions with OES_standard_derivatives
 
 Revision History
 
+    Version 3, 2012/09/24 - Remove obsolete issue 3 about derivatives
     Version 2, 2012/06/21 - Fix MULTISAMPLE enabled -> SAMPLE_BUFFERS = 1,
                             recast from APPLE to multivendor EXT, clarify that
                             gl_LastFragData reflects value written by previous
