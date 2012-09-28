@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 19318 $ on $Date:: 2012-09-27 17:16:51 -0700 #$ */
+/* $Revision: 19320 $ on $Date:: 2012-09-27 19:09:06 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -1065,6 +1065,7 @@ GL_APICALL void GL_APIENTRY glObjectLabel (GLenum identifier, GLuint name, GLsiz
 GL_APICALL void GL_APIENTRY glGetObjectLabel (GLenum identifier, GLuint name, GLsizei bufSize, GLsizei *length, GLchar *label);
 GL_APICALL void GL_APIENTRY glObjectPtrLabel (const void *ptr, GLsizei length, const GLchar *label);
 GL_APICALL void GL_APIENTRY glGetObjectPtrLabel (const void *ptr, GLsizei bufSize, GLsizei *length, GLchar *label);
+GL_APICALL void GL_APIENTRY glGetPointerv (GLenum pname, void **params);
 #endif 
 typedef void (GL_APIENTRYP PFNGLDEBUGMESSAGECONTROLPROC) (GLenum source, GLenum type, GLenum severity, GLsizei count, const GLuint *ids, GLboolean enabled);
 typedef void (GL_APIENTRYP PFNGLDEBUGMESSAGEINSERTPROC) (GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *buf);
@@ -1076,6 +1077,7 @@ typedef void (GL_APIENTRYP PFNGLOBJECTLABELPROC) (GLenum identifier, GLuint name
 typedef void (GL_APIENTRYP PFNGLGETOBJECTLABELPROC) (GLenum identifier, GLuint name, GLsizei bufSize, GLsizei *length, GLchar *label);
 typedef void (GL_APIENTRYP PFNGLOBJECTPTRLABELPROC) (const void *ptr, GLsizei length, const GLchar *label);
 typedef void (GL_APIENTRYP PFNGLGETOBJECTPTRLABELPROC) (const void *ptr, GLsizei bufSize, GLsizei *length, GLchar *label);
+typedef void (GL_APIENTRYP PFNGLGETPOINTERVPROC) (GLenum pname, void **params);
 #endif
 
 #ifndef GL_KHR_texture_compression_astc_ldr
