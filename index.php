@@ -378,6 +378,8 @@
 </li>
 <li value=124> <a href="extensions/APPLE/APPLE_sync.txt">GL_APPLE_sync</a>
 </li>
+<li value=125> <a href="extensions/EXT/EXT_multiview_draw_buffers.txt">GL_EXT_multiview_draw_buffers</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->

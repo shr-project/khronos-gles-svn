@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 19320 $ on $Date:: 2012-09-27 19:09:06 -0700 #$ */
+/* $Revision: 19333 $ on $Date:: 2012-09-28 18:02:09 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -481,6 +481,15 @@ typedef struct __GLsync *GLsync;
 #define GL_RENDERBUFFER_SAMPLES_EXT                             0x8CAB
 #define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT               0x8D56
 #define GL_MAX_SAMPLES_EXT                                      0x8D57
+#endif
+
+/* GL_EXT_multiview_draw_buffers */
+#ifndef GL_EXT_multiview_draw_buffers
+#define GL_COLOR_ATTACHMENT_EXT                                 0x90F0
+#define GL_MULTIVIEW_EXT                                        0x90F1
+#define GL_DRAW_BUFFER_EXT                                      0x0C01
+#define GL_READ_BUFFER_EXT                                      0x0C02
+#define GL_MAX_MULTIVIEW_BUFFERS_EXT                            0x90F2
 #endif
 
 /* GL_EXT_multi_draw_arrays */
@@ -1340,6 +1349,19 @@ GL_APICALL void GL_APIENTRY glFramebufferTexture2DMultisampleEXT (GLenum, GLenum
 #endif
 typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEEXTPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEEXTPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
+#endif
+
+/* GL_EXT_multiview_draw_buffers */
+#ifndef GL_EXT_multiview_draw_buffers
+#define GL_EXT_multiview_draw_buffers 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glReadBufferIndexedEXT (GLenum src, GLint index);
+GL_APICALL void GL_APIENTRY glDrawBuffersIndexedEXT (GLint n, const GLenum *location, const GLint *indices);
+GL_APICALL void GL_APIENTRY glGetIntegeri_vEXT (GLenum target, GLuint index, GLint *data);
+#endif
+typedef void (GL_APIENTRYP PFNGLREADBUFFERINDEXEDEXTPROC) (GLenum src, GLint index);
+typedef void (GL_APIENTRYP PFNGLDRAWBUFFERSINDEXEDEXTPROC) (GLint n, const GLenum *location, const GLint *indices);
+typedef void (GL_APIENTRYP PFNGLGETINTEGERI_VEXTPROC) (GLenum target, GLuint index, GLint *data);
 #endif
 
 #ifndef GL_EXT_multi_draw_arrays
