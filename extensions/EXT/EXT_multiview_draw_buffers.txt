@@ -22,7 +22,7 @@ Version
 
 Number
 
-    OpenGL ES Extension #124
+    OpenGL ES Extension #125
 
 Status
     
