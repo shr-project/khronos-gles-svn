@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 19368 $ on $Date:: 2012-10-04 16:44:44 -0700 #$ */
+/* $Revision: 19436 $ on $Date:: 2012-10-10 10:37:04 -0700 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -368,6 +368,7 @@ typedef void (GL_APIENTRYP GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLen
 /* GL_APPLE_sync */
 #ifndef GL_APPLE_sync
 
+#ifndef __gl3_h_
 /* These types are defined with reference to <inttypes.h>
  * in the Apple extension spec, but here we use the Khronos
  * portable types in khrplatform.h, and assume those types 
@@ -378,6 +379,7 @@ typedef void (GL_APIENTRYP GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLen
 typedef khronos_int64_t GLint64;
 typedef khronos_uint64_t GLuint64;
 typedef struct __GLsync *GLsync;
+#endif
 
 #define GL_SYNC_OBJECT_APPLE                                    0x8A53
 #define GL_MAX_SERVER_WAIT_TIMEOUT_APPLE                        0x9111
