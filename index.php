@@ -380,6 +380,8 @@
 </li>
 <li value=125> <a href="extensions/EXT/EXT_multiview_draw_buffers.txt">GL_EXT_multiview_draw_buffers</a>
 </li>
+<li value=126> <a href="extensions/NV/draw_texture.txt">GL_NV_draw_texture</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
