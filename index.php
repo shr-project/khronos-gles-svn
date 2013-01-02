@@ -382,6 +382,26 @@
 </li>
 <li value=126> <a href="extensions/NV/draw_texture.txt">GL_NV_draw_texture</a>
 </li>
+<li value=127> <a href="extensions/NV/GL_NV_packed_float.txt">GL_NV_packed_float</a>
+</li>
+<li value=128> <a href="extensions/NV/GL_NV_texture_compression_s3tc.txt">GL_NV_texture_compression_s3tc</a>
+</li>
+<li value=129> <a href="extensions/NV/GL_NV_3dvision_settings.txt">GL_NV_3dvision_settings</a>
+</li>
+<li value=130> <a href="extensions/NV/GL_NV_texture_compression_latc.txt">GL_NV_texture_compression_latc</a>
+</li>
+<li value=131> <a href="extensions/NV/GL_NV_platform_binary.txt">GL_NV_platform_binary</a>
+</li>
+<li value=132> <a href="extensions/NV/GL_NV_pack_subimage.txt">GL_NV_pack_subimage</a>
+</li>
+<li value=133> <a href="extensions/NV/GL_NV_texture_array.txt">GL_NV_texture_array</a>
+</li>
+<li value=134> <a href="extensions/NV/GL_NV_pixel_buffer_object.txt">GL_NV_pixel_buffer_object</a>
+</li>
+<li value=135> <a href="extensions/NV/GL_NV_bgr.txt">GL_NV_bgr</a>
+</li>
+<li value=136> <a href="extensions/OES/OES_depth_texture_cube_map.txt">GL_OES_depth_texture_cube_map</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
