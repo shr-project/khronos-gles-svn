@@ -33,9 +33,9 @@
 <h6> OpenGL ES 3.0 Specific </h6>
 
 <ul>
-<li> OpenGL ES 3.0.0
-     <a href="specs/3.0/es_spec_3.0.0.pdf"> Specification </a>
-     (August 6, 2012).
+<li> OpenGL ES 3.0.1
+     <a href="specs/3.0/es_spec_3.0.1.pdf"> Specification </a>
+     (January 10, 2013).
 <li> OpenGL ES Shading Language 3.00.3
      <a href="specs/3.0/GLSL_ES_Specification_3.00.3.pdf">
      Specification </a> (July 12, 2012). </li>
