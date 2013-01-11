@@ -402,6 +402,8 @@
 </li>
 <li value=136> <a href="extensions/OES/OES_depth_texture_cube_map.txt">GL_OES_depth_texture_cube_map</a>
 </li>
+<li value=137> <a href="extensions/EXT/EXT_color_buffer_float.txt">GL_EXT_color_buffer_float</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
