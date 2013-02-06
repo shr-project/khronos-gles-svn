@@ -404,6 +404,30 @@
 </li>
 <li value=137> <a href="extensions/EXT/EXT_color_buffer_float.txt">GL_EXT_color_buffer_float</a>
 </li>
+<li value=138> <a href="extensions/ANGLE/ANGLE_depth_texture.txt">GL_ANGLE_depth_texture</a>
+</li>
+<li value=139> <a href="extensions/ANGLE/ANGLE_program_binary.txt">GL_ANGLE_program_binary</a>
+</li>
+<li value=140> <a href="extensions/IMG/GL_IMG_texture_compression_pvrtc2.txt">GL_IMG_texture_compression_pvrtc2</a>
+</li>
+<li value=141> <a href="extensions/NV/GL_NV_draw_instanced.txt">GL_NV_draw_instanced</a>
+</li>
+<li value=142> <a href="extensions/NV/GL_NV_framebuffer_blit.txt">GL_NV_framebuffer_blit</a>
+</li>
+<li value=143> <a href="extensions/NV/GL_NV_framebuffer_multisample.txt">GL_NV_framebuffer_multisample</a>
+</li>
+<li value=144> <a href="extensions/NV/GL_NV_generate_mipmap_sRGB.txt">GL_NV_generate_mipmap_sRGB</a>
+</li>
+<li value=145> <a href="extensions/NV/GL_NV_instanced_arrays.txt">GL_NV_instanced_arrays</a>
+</li>
+<li value=146> <a href="extensions/NV/GL_NV_shadow_samplers_array.txt">GL_NV_shadow_samplers_array</a>
+</li>
+<li value=147> <a href="extensions/NV/GL_NV_shadow_samplers_cube.txt">GL_NV_shadow_samplers_cube</a>
+</li>
+<li value=148> <a href="extensions/NV/GL_NV_sRGB_formats.txt">GL_NV_sRGB_formats</a>
+</li>
+<li value=149> <a href="extensions/NV/GL_NV_texture_border_clamp.txt">GL_NV_texture_border_clamp</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
