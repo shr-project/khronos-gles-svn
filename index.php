@@ -307,7 +307,7 @@
 </li>
 <li value=89> <a href="extensions/QCOM/QCOM_alpha_test.txt">GL_QCOM_alpha_test</a>
 </li>
-<li value=90> <a href="extensions/EXT/GL_EXT_unpack_subimage.txt">GL_EXT_unpack_subimage</a>
+<li value=90> <a href="extensions/EXT/EXT_unpack_subimage.txt">GL_EXT_unpack_subimage</a>
 </li>
 <li value=91> <a href="extensions/NV/GL_NV_draw_buffers.txt">GL_NV_draw_buffers</a>
 </li>
