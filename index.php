@@ -309,17 +309,17 @@
 </li>
 <li value=90> <a href="extensions/EXT/EXT_unpack_subimage.txt">GL_EXT_unpack_subimage</a>
 </li>
-<li value=91> <a href="extensions/NV/GL_NV_draw_buffers.txt">GL_NV_draw_buffers</a>
+<li value=91> <a href="extensions/NV/NV_draw_buffers.txt">GL_NV_draw_buffers</a>
 </li>
-<li value=92> <a href="extensions/NV/GL_NV_fbo_color_attachments.txt">GL_NV_fbo_color_attachments</a>
+<li value=92> <a href="extensions/NV/NV_fbo_color_attachments.txt">GL_NV_fbo_color_attachments</a>
 </li>
-<li value=93> <a href="extensions/NV/GL_NV_read_buffer.txt">GL_NV_read_buffer</a>
+<li value=93> <a href="extensions/NV/NV_read_buffer.txt">GL_NV_read_buffer</a>
 </li>
-<li value=94> <a href="extensions/NV/GL_NV_read_depth_stencil.txt">GL_NV_read_depth_stencil</a>
+<li value=94> <a href="extensions/NV/NV_read_depth_stencil.txt">GL_NV_read_depth_stencil</a>
 </li>
-<li value=95> <a href="extensions/NV/GL_NV_texture_compression_s3tc_update.txt">GL_NV_texture_compression_s3tc_update</a>
+<li value=95> <a href="extensions/NV/NV_texture_compression_s3tc_update.txt">GL_NV_texture_compression_s3tc_update</a>
 </li>
-<li value=96> <a href="extensions/NV/GL_NV_texture_npot_2D_mipmap.txt">GL_NV_texture_npot_2D_mipmap</a>
+<li value=96> <a href="extensions/NV/NV_texture_npot_2D_mipmap.txt">GL_NV_texture_npot_2D_mipmap</a>
 </li>
 <li value=97> <a href="extensions/EXT/EXT_color_buffer_half_float.txt">GL_EXT_color_buffer_half_float</a>
 </li>
@@ -335,7 +335,7 @@
 </li>
 <li value=103> <a href="extensions/EXT/EXT_texture_rg.txt">GL_EXT_texture_rg</a>
 </li>
-<li value=104> <a href="extensions/NV/GL_NV_EGL_stream_consumer_external.txt">GL_NV_EGL_stream_consumer_external</a>
+<li value=104> <a href="extensions/NV/NV_EGL_stream_consumer_external.txt">GL_NV_EGL_stream_consumer_external</a>
 </li>
 <li value=105> <a href="extensions/EXT/EXT_sRGB.txt">GL_EXT_sRGB</a>
 </li>
@@ -382,23 +382,23 @@
 </li>
 <li value=126> <a href="extensions/NV/draw_texture.txt">GL_NV_draw_texture</a>
 </li>
-<li value=127> <a href="extensions/NV/GL_NV_packed_float.txt">GL_NV_packed_float</a>
+<li value=127> <a href="extensions/NV/NV_packed_float.txt">GL_NV_packed_float</a>
 </li>
-<li value=128> <a href="extensions/NV/GL_NV_texture_compression_s3tc.txt">GL_NV_texture_compression_s3tc</a>
+<li value=128> <a href="extensions/NV/NV_texture_compression_s3tc.txt">GL_NV_texture_compression_s3tc</a>
 </li>
-<li value=129> <a href="extensions/NV/GL_NV_3dvision_settings.txt">GL_NV_3dvision_settings</a>
+<li value=129> <a href="extensions/NV/NV_3dvision_settings.txt">GL_NV_3dvision_settings</a>
 </li>
-<li value=130> <a href="extensions/NV/GL_NV_texture_compression_latc.txt">GL_NV_texture_compression_latc</a>
+<li value=130> <a href="extensions/NV/NV_texture_compression_latc.txt">GL_NV_texture_compression_latc</a>
 </li>
-<li value=131> <a href="extensions/NV/GL_NV_platform_binary.txt">GL_NV_platform_binary</a>
+<li value=131> <a href="extensions/NV/NV_platform_binary.txt">GL_NV_platform_binary</a>
 </li>
-<li value=132> <a href="extensions/NV/GL_NV_pack_subimage.txt">GL_NV_pack_subimage</a>
+<li value=132> <a href="extensions/NV/NV_pack_subimage.txt">GL_NV_pack_subimage</a>
 </li>
-<li value=133> <a href="extensions/NV/GL_NV_texture_array.txt">GL_NV_texture_array</a>
+<li value=133> <a href="extensions/NV/NV_texture_array.txt">GL_NV_texture_array</a>
 </li>
-<li value=134> <a href="extensions/NV/GL_NV_pixel_buffer_object.txt">GL_NV_pixel_buffer_object</a>
+<li value=134> <a href="extensions/NV/NV_pixel_buffer_object.txt">GL_NV_pixel_buffer_object</a>
 </li>
-<li value=135> <a href="extensions/NV/GL_NV_bgr.txt">GL_NV_bgr</a>
+<li value=135> <a href="extensions/NV/NV_bgr.txt">GL_NV_bgr</a>
 </li>
 <li value=136> <a href="extensions/OES/OES_depth_texture_cube_map.txt">GL_OES_depth_texture_cube_map</a>
 </li>
@@ -408,25 +408,25 @@
 </li>
 <li value=139> <a href="extensions/ANGLE/ANGLE_program_binary.txt">GL_ANGLE_program_binary</a>
 </li>
-<li value=140> <a href="extensions/IMG/GL_IMG_texture_compression_pvrtc2.txt">GL_IMG_texture_compression_pvrtc2</a>
+<li value=140> <a href="extensions/IMG/IMG_texture_compression_pvrtc2.txt">GL_IMG_texture_compression_pvrtc2</a>
 </li>
-<li value=141> <a href="extensions/NV/GL_NV_draw_instanced.txt">GL_NV_draw_instanced</a>
+<li value=141> <a href="extensions/NV/NV_draw_instanced.txt">GL_NV_draw_instanced</a>
 </li>
-<li value=142> <a href="extensions/NV/GL_NV_framebuffer_blit.txt">GL_NV_framebuffer_blit</a>
+<li value=142> <a href="extensions/NV/NV_framebuffer_blit.txt">GL_NV_framebuffer_blit</a>
 </li>
-<li value=143> <a href="extensions/NV/GL_NV_framebuffer_multisample.txt">GL_NV_framebuffer_multisample</a>
+<li value=143> <a href="extensions/NV/NV_framebuffer_multisample.txt">GL_NV_framebuffer_multisample</a>
 </li>
-<li value=144> <a href="extensions/NV/GL_NV_generate_mipmap_sRGB.txt">GL_NV_generate_mipmap_sRGB</a>
+<li value=144> <a href="extensions/NV/NV_generate_mipmap_sRGB.txt">GL_NV_generate_mipmap_sRGB</a>
 </li>
-<li value=145> <a href="extensions/NV/GL_NV_instanced_arrays.txt">GL_NV_instanced_arrays</a>
+<li value=145> <a href="extensions/NV/NV_instanced_arrays.txt">GL_NV_instanced_arrays</a>
 </li>
-<li value=146> <a href="extensions/NV/GL_NV_shadow_samplers_array.txt">GL_NV_shadow_samplers_array</a>
+<li value=146> <a href="extensions/NV/NV_shadow_samplers_array.txt">GL_NV_shadow_samplers_array</a>
 </li>
-<li value=147> <a href="extensions/NV/GL_NV_shadow_samplers_cube.txt">GL_NV_shadow_samplers_cube</a>
+<li value=147> <a href="extensions/NV/NV_shadow_samplers_cube.txt">GL_NV_shadow_samplers_cube</a>
 </li>
-<li value=148> <a href="extensions/NV/GL_NV_sRGB_formats.txt">GL_NV_sRGB_formats</a>
+<li value=148> <a href="extensions/NV/NV_sRGB_formats.txt">GL_NV_sRGB_formats</a>
 </li>
-<li value=149> <a href="extensions/NV/GL_NV_texture_border_clamp.txt">GL_NV_texture_border_clamp</a>
+<li value=149> <a href="extensions/NV/NV_texture_border_clamp.txt">GL_NV_texture_border_clamp</a>
 </li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
