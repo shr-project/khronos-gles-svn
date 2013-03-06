@@ -1,7 +1,7 @@
 #ifndef __gl2ext_h_
 #define __gl2ext_h_
 
-/* $Revision: 20582 $ on $Date:: 2013-02-13 11:35:39 -0800 #$ */
+/* $Revision: 20771 $ on $Date:: 2013-03-05 18:53:24 -0800 #$ */
 
 #ifdef __cplusplus
 extern "C" {
@@ -655,7 +655,7 @@ typedef struct __GLsync *GLsync;
 
 /* GL_FJ_shader_binary_GCCSO */
 #ifndef GL_FJ_shader_binary_GCCSO
-#define GCCSO_SHADER_BINARY_FJ                                  0x9260
+#define GL_GCCSO_SHADER_BINARY_F                                0x9260
 #endif
 
 /*------------------------------------------------------------------------*
@@ -1257,9 +1257,9 @@ GL_APICALL void GL_APIENTRY glDrawArraysInstancedANGLE (GLenum mode, GLint first
 GL_APICALL void GL_APIENTRY glDrawElementsInstancedANGLE (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount);
 GL_APICALL void GL_APIENTRY glVertexAttribDivisorANGLE (GLuint index, GLuint divisor);
 #endif
-typedef void (GL_APIENTRYP PFLGLDRAWARRAYSINSTANCEDANGLEPROC) (GLenum mode, GLint first, GLsizei count, GLsizei primcount);
-typedef void (GL_APIENTRYP PFLGLDRAWELEMENTSINSTANCEDANGLEPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount);
-typedef void (GL_APIENTRYP PFLGLVERTEXATTRIBDIVISORANGLEPROC) (GLuint index, GLuint divisor);
+typedef void (GL_APIENTRYP PFNGLDRAWARRAYSINSTANCEDANGLEPROC) (GLenum mode, GLint first, GLsizei count, GLsizei primcount);
+typedef void (GL_APIENTRYP PFNGLDRAWELEMENTSINSTANCEDANGLEPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount);
+typedef void (GL_APIENTRYP PFNGLVERTEXATTRIBDIVISORANGLEPROC) (GLuint index, GLuint divisor);
 #endif
 
 /* GL_ANGLE_pack_reverse_row_order */
@@ -1292,7 +1292,7 @@ typedef void (GL_APIENTRYP PFLGLVERTEXATTRIBDIVISORANGLEPROC) (GLuint index, GLu
 #ifdef GL_GLEXT_PROTOTYPES
 GL_APICALL void GL_APIENTRY glGetTranslatedShaderSourceANGLE (GLuint shader, GLsizei bufsize, GLsizei *length, GLchar *source);
 #endif
-typedef void (GL_APIENTRYP PFLGLGETTRANSLATEDSHADERSOURCEANGLEPROC) (GLuint shader, GLsizei bufsize, GLsizei *length, GLchar *source);
+typedef void (GL_APIENTRYP PFNGLGETTRANSLATEDSHADERSOURCEANGLEPROC) (GLuint shader, GLsizei bufsize, GLsizei *length, GLchar *source);
 #endif
 
 /*------------------------------------------------------------------------*
