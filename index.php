@@ -62,7 +62,11 @@
      <a href="specs/2.0/es_full_spec_2.0.25.withchanges.pdf">
      Full Specification with changes marked</a>,
      <a href="specs/2.0/es_cm_spec_2.0.25.pdf">
-     Difference Specification </a> (November 2, 2010). </li>
+     Difference Specification </a> (November 2, 2010).
+     A
+     <a href="http://www.cutt.co.jp/book/978-4-87783-267-4.html">
+     Japanese translation </a> of the specification is also available.
+     </li>
 <li> OpenGL ES Shading Language 1.0.17
      <a href="specs/2.0/GLSL_ES_Specification_1.0.17.pdf">
      Specification </a> (May 12, 2009). </li>
@@ -427,6 +431,8 @@
 <li value=148> <a href="extensions/NV/NV_sRGB_formats.txt">GL_NV_sRGB_formats</a>
 </li>
 <li value=149> <a href="extensions/NV/NV_texture_border_clamp.txt">GL_NV_texture_border_clamp</a>
+</li>
+<li value=150> <a href="extensions/EXT/EXT_disjoint_timer_query.txt">GL_EXT_disjoint_timer_query</a>
 </li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
