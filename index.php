@@ -434,6 +434,8 @@
 </li>
 <li value=150> <a href="extensions/EXT/EXT_disjoint_timer_query.txt">GL_EXT_disjoint_timer_query</a>
 </li>
+<li value=151> <a href="extensions/EXT/EXT_draw_buffers.txt">GL_EXT_draw_buffers</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
