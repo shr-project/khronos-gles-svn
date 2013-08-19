@@ -436,6 +436,10 @@
 </li>
 <li value=151> <a href="extensions/EXT/EXT_draw_buffers.txt">GL_EXT_draw_buffers</a>
 </li>
+<li value=152> <a href="extensions/EXT/texture_sRGB_decode.txt">GL_EXT_texture_sRGB_decode</a>
+</li>
+<li value=153> <a href="extensions/EXT/EXT_sRGB_write_control.txt">GL_EXT_sRGB_write_control</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
