@@ -440,6 +440,14 @@
 </li>
 <li value=153> <a href="extensions/EXT/EXT_sRGB_write_control.txt">GL_EXT_sRGB_write_control</a>
 </li>
+<li value=154> <a href="extensions/EXT/texture_compression_s3tc.txt">GL_EXT_texture_compression_s3tc</a>
+</li>
+<li value=155> <a href="extensions/EXT/EXT_pvrtc_sRGB.txt">GL_EXT_pvrtc_sRGB</a>
+</li>
+<li value=156> <a href="extensions/EXT/EXT_instanced_arrays.txt">GL_EXT_instanced_arrays</a>
+</li>
+<li value=157> <a href="extensions/EXT/draw_instanced.txt">GL_EXT_draw_instanced</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
