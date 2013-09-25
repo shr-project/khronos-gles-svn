@@ -448,6 +448,12 @@
 </li>
 <li value=157> <a href="extensions/EXT/draw_instanced.txt">GL_EXT_draw_instanced</a>
 </li>
+<li value=158> <a href="extensions/NV/NV_copy_buffer.txt">GL_NV_copy_buffer</a>
+</li>
+<li value=159> <a href="extensions/NV/NV_explicit_attrib_location.txt">GL_NV_explicit_attrib_location</a>
+</li>
+<li value=160> <a href="extensions/NV/NV_non_square_matrices.txt">GL_NV_non_square_matrices</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
