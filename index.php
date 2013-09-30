@@ -366,7 +366,8 @@
 </li>
 <li value=116> <a href="extensions/OES/OES_surfaceless_context.txt">GL_OES_surfaceless_context</a>
 </li>
-<li value=117> <a href="extensions/KHR/texture_compression_astc_ldr.txt">GL_KHR_texture_compression_astc_ldr</a>
+<li value=117> <a href="extensions/KHR/texture_compression_astc_hdr.txt">GL_KHR_texture_compression_astc_hdr</a>
+     <br> <a href="extensions/KHR/texture_compression_astc_hdr.txt">GL_KHR_texture_compression_astc_ldr</a>
 </li>
 <li value=118> <a href="extensions/KHR/debug.txt">GL_KHR_debug</a>
 </li>
