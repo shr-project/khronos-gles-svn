@@ -455,6 +455,8 @@
 </li>
 <li value=160> <a href="extensions/NV/NV_non_square_matrices.txt">GL_NV_non_square_matrices</a>
 </li>
+<li value=161> <a href="extensions/EXT/shader_integer_mix.txt">GL_EXT_shader_integer_mix</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
