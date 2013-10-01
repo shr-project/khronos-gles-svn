@@ -457,6 +457,8 @@
 </li>
 <li value=161> <a href="extensions/EXT/shader_integer_mix.txt">GL_EXT_shader_integer_mix</a>
 </li>
+<li value=162> <a href="extensions/OES/OES_texture_compression_astc.txt">GL_OES_texture_compression_astc</a>
+</li>
 </ol>
 <?php include("../../_inc/registry/registry_footer.txt"); ?>
 </body>  <!-- END pagewrapper -->
