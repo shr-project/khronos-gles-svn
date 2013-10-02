@@ -1,23 +1,24 @@
-<?php include("../../_inc/doctype.txt"); ?>
-<head>
-<title>Khronos OpenGL ES API Registry</title>
-<?php include("../../_inc/registry/registry_head.txt"); ?>
-</head>
-<body id="developers" class="registry">
-<?php include("../../_inc/registry/registry_body.txt"); ?>
-<h1 class="pagetitle">Khronos OpenGL ES API Registry</h1> <!--	top left shadow-->
+<?php
+$static_title = 'Khronos OpenGL ES Registry';
+$static_breadcrumb = array(
+    '/registry/gles' => 'OpenGL ES Registry'
+);
+include_once("../../assets/static_pages/khr_page_top.php");
+?>
+
+<h1 class="pagetitle">Khronos OpenGL ES Registry</h1>
 <div id="mainformat">
 
 
-<h1 style="text-align:center"> Khronos OpenGL ES API Registry </h1>
+<h1 style="text-align:center"> Khronos OpenGL ES Registry </h1>
 
-<p> The OpenGL ES API registry contains specifications of the core API;
-    specifications of Khronos- and vendor-approved OpenGL ES extensions;
-    header files corresponding to the specifications; and other related
-    documentation. The companion
-    <a href="http://www.opengl.org/registry/"> OpenGL API Registry </a>
-    has related material including the enumerant registry (shared
-    between OpenGL ES and OpenGL).
+<p> The OpenGL ES registry contains specifications of the core API and
+    shading language; specifications of Khronos- and vendor-approved
+    OpenGL ES extensions; header files corresponding to the
+    specifications; and other related documentation. The companion <a
+    href="http://www.opengl.org/registry/"> OpenGL Registry </a> has
+    related material including the enumerant registry (shared between
+    OpenGL ES and OpenGL).
 
 <h6> OpenGL ES Core API Specification, Headers, and Documentation </h6>
 
@@ -460,6 +461,6 @@
 <li value=162> <a href="extensions/OES/OES_texture_compression_astc.txt">GL_OES_texture_compression_astc</a>
 </li>
 </ol>
-<?php include("../../_inc/registry/registry_footer.txt"); ?>
-</body>  <!-- END pagewrapper -->
+<?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
+</body>
 </html>
