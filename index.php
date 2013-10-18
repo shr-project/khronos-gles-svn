@@ -573,6 +573,9 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=162> <a href="extensions/OES/OES_texture_compression_astc.txt">GL_OES_texture_compression_astc</a>
 </li>
+<li value=163> <a href="extensions/NV/blend_equation_advanced.txt">GL_NV_blend_equation_advanced</a>
+     <br> <a href="extensions/NV/blend_equation_advanced.txt">GL_NV_blend_equation_advanced_coherent</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
