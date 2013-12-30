@@ -576,6 +576,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li value=163> <a href="extensions/NV/blend_equation_advanced.txt">GL_NV_blend_equation_advanced</a>
      <br> <a href="extensions/NV/blend_equation_advanced.txt">GL_NV_blend_equation_advanced_coherent</a>
 </li>
+<li value=164> <a href="extensions/INTEL/performance_query.txt">GL_INTEL_performance_query</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
