@@ -578,6 +578,12 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=164> <a href="extensions/INTEL/performance_query.txt">GL_INTEL_performance_query</a>
 </li>
+<li value=165> <a href="extensions/ARM/ARM_shader_framebuffer_fetch.txt">GL_ARM_shader_framebuffer_fetch</a>
+</li>
+<li value=166> <a href="extensions/ARM/ARM_shader_framebuffer_fetch_depth_stencil.txt">GL_ARM_shader_framebuffer_fetch_depth_stencil</a>
+</li>
+<li value=167> <a href="extensions/EXT/EXT_shader_pixel_local_storage.txt">GL_EXT_shader_pixel_local_storage</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
