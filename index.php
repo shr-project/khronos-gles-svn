@@ -25,6 +25,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <b><a href="#specs">Current OpenGL ES API and Shading Language
      Specifications and Reference Pages</a></b>
      <ul>
+     <li> <a href="#specs31">OpenGL ES 3.1 Specifications</a> </li>
      <li> <a href="#specs3">OpenGL ES 3 Specifications</a> </li>
      <li> <a href="#specs2">OpenGL ES 2 Specifications</a> </li>
      <li> <a href="#specs11">OpenGL ES 1.1 Specifications</a> </li>
@@ -32,7 +33,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      </ul> </li>
 <li> <b><a href="#headers">Core API and Extension Header Files</a></b>
      <ul>
-     <li> <a href="#headers3">OpenGL ES 3 Header Files</a> </li>
+     <li> <a href="#headers31">OpenGL ES 3.1 Header Files</a> </li>
+     <li> <a href="#headers3">OpenGL ES 3.0 Header Files</a> </li>
      <li> <a href="#headers2">OpenGL ES 2 Header Files</a> </li>
      <li> <a href="#headers1">OpenGL ES 1.1 Header Files</a> </li>
      <li> <a href="#headerskhr">Shared Khronos Header File</a> </li>
@@ -50,14 +52,30 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <h6> <a name="specs"></a> OpenGL ES Core API and Shading Language
      Specifications and Reference Pages </h6>
 
-<p> The current version of OpenGL ES is OpenGL ES 3.0. Specifications
-    for older versions 2.0, 1.1, and 1.0 are also available below. For
-    additional specifications, headers, and documentation not listed
+<p> The current version of OpenGL ES is OpenGL ES 3.1. Specifications
+    for older versions 3.0, 2.0, 1.1, and 1.0 are also available below.
+    For additional specifications, headers, and documentation not listed
     below, see the <a
     href="http://www.khronos.org/developers/specs/">Khronos.org
     Developer Pages</a>. Header files not labelled with a revision date
     include their last update time in comments near the top of the file.
     </p>
+
+<h6> <a name="specs31"></a> OpenGL ES 3.1 Specifications and
+     Documentation </h6>
+
+<ul>
+<li> OpenGL ES 3.1 Specification (March 17, 2014),
+     <a href="specs/3.1/es_spec_3.1.pdf"> without changes marked </a>
+     and
+     <a href="specs/3.1/es_spec_3.1.withchanges.pdf"> with changes marked </a>. </li>
+<li> OpenGL ES Shading Language 3.10 Specification (March 17, 2014)
+     <a href="specs/3.1/GLSL_ES_Specification_3.10.pdf"> without changes marked </a>
+     and
+     <a href="specs/3.1/GLSL_ES_Specification_3.10.withchanges.pdf"> with changes marked </a>. </li>
+<li> <a href="http://www.khronos.org/opengles/sdk/docs/man31/">
+      OpenGL ES 3.1 Online Manual Pages.</a> </li>
+</ul>
 
 <h6> <a name="specs3"></a> OpenGL ES 3.0 Specifications and
      Documentation </h6>
@@ -130,8 +148,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <p> Because extensions vary from platform to platform and driver to
     driver, OpenGL ES segregates headers for each API version into a
-    header for the core API (OpenGL ES 1.0, 1.1, 2.0, or 3.0) and a
-    separate header defining extension interfaces for that core API.
+    header for the core API (OpenGL ES 1.0, 1.1, 2.0, 3.0, and 3.1) and
+    a separate header defining extension interfaces for that core API.
     These header files are supplied here for developers and platform
     vendors. They define interfaces including enumerants, prototypes,
     and for platforms supporting dynamic runtime extension queries, such
@@ -156,16 +174,29 @@ include_once("../../assets/static_pages/khr_page_top.php");
     obtained here, typically when new extensions are supplied
     on a platform. </p>
 
+<p> <a name="headers31"></a> <b> OpenGL ES 3.1 Headers </b> </p>
+
+<ul>
+<li> <tt><a href="api/GLES3/gl31.h"> &lt;GLES3/gl31.h&gt; </a></tt>
+     OpenGL ES 3.1 Header File. </li>
+<li> <tt><a href="api/GLES2/gl2ext.h"> &lt;GLES2/gl2ext.h&gt; </a></tt>
+     OpenGL ES Extension Header File (this header is defined to contain
+     all defined extension interfaces for OpenGL ES 2.0 and all later
+     versions, since later versions are backwards-compatible with OpenGL
+     ES 2.0).
+     </li>
+<li> <tt><a href="api/GLES3/gl3platform.h"> &lt;GLES3/gl3platform.h&gt; </a></tt>
+     OpenGL ES 3.1 Platform-Dependent Macros (this header is shared with
+     OpenGL ES 3.0). </li>
+</ul>
+
 <p> <a name="headers3"></a> <b> OpenGL ES 3.0 Headers </b> </p>
 
 <ul>
 <li> <tt><a href="api/GLES3/gl3.h"> &lt;GLES3/gl3.h&gt; </a></tt>
      OpenGL ES 3.0 Header File. </li>
 <li> <tt><a href="api/GLES2/gl2ext.h"> &lt;GLES2/gl2ext.h&gt; </a></tt>
-     OpenGL ES 2.0 and 3.0 Extension Header File (this header is defined
-     to contain all extension interfaces for both OpenGL ES 2.0 and 3.0,
-     since OpenGL ES 3.0 is backward-compatible with OpenGL ES 2.0).
-     </li>
+     OpenGL ES Extension Header File. </li>
 <li> <tt><a href="api/GLES3/gl3platform.h"> &lt;GLES3/gl3platform.h&gt; </a></tt>
      OpenGL ES 3.0 Platform-Dependent Macros. </li>
 </ul>
@@ -176,7 +207,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <tt><a href="api/GLES2/gl2.h"> &lt;GLES2/gl2.h&gt; </a></tt>
      OpenGL ES 2.0 Header File. </li>
 <li> <tt><a href="api/GLES2/gl2ext.h"> &lt;GLES2/gl2ext.h&gt; </a></tt>
-     OpenGL ES 2.0 and 3.0 Extension Header File. </li>
+     OpenGL ES Extension Header File. </li>
 <li> <tt><a href="api/GLES2/gl2platform.h"> &lt;GLES2/gl2platform.h&gt; </a></tt>
      OpenGL ES 2.0 Platform-Dependent Macros. </li>
 </ul>
@@ -226,12 +257,12 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <h6> <a name="headersold"></a> <b> Legacy OpenGL ES Headers </b> </h6>
 
-<p> Current versions of the OpenGL ES 3.0 and 2.0 headers are
+<p> Current versions of the OpenGL ES 3.1, 3.0 and 2.0 headers are
     autogenerated from the <a href="#specfiles">XML API Registry</a>.
-    Older, handcoded versions of these headers are functionally
-    equivalent, but structurally different. We are no longer maintaining
-    the handcoded headers, but they remain available for comparison:
-    </p>
+    Older, handcoded versions of the 3.0 and 2.0 headers are
+    functionally equivalent, but structurally different. We are no
+    longer maintaining the handcoded headers, but they remain available
+    for comparison: </p>
 
 <ul>
 <li> Legacy OpenGL ES 3
@@ -583,6 +614,21 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li value=166> <a href="extensions/ARM/ARM_shader_framebuffer_fetch_depth_stencil.txt">GL_ARM_shader_framebuffer_fetch_depth_stencil</a>
 </li>
 <li value=167> <a href="extensions/EXT/EXT_shader_pixel_local_storage.txt">GL_EXT_shader_pixel_local_storage</a>
+</li>
+<li value=168> <a href="extensions/KHR/blend_equation_advanced.txt">GL_KHR_blend_equation_advanced</a>
+     <br> <a href="extensions/KHR/blend_equation_advanced.txt">GL_KHR_blend_equation_advanced_coherent</a>
+</li>
+<li value=169> <a href="extensions/OES/OES_sample_shading.txt">GL_OES_sample_shading</a>
+</li>
+<li value=170> <a href="extensions/OES/OES_sample_variables.txt">GL_OES_sample_variables</a>
+</li>
+<li value=171> <a href="extensions/OES/OES_shader_image_atomic.txt">GL_OES_shader_image_atomic</a>
+</li>
+<li value=172> <a href="extensions/OES/OES_shader_multisample_interpolation.txt">GL_OES_shader_multisample_interpolation</a>
+</li>
+<li value=173> <a href="extensions/OES/OES_texture_stencil8.txt">GL_OES_texture_stencil8</a>
+</li>
+<li value=174> <a href="extensions/OES/OES_texture_storage_multisample_2d_array.txt">GL_OES_texture_storage_multisample_2d_array</a>
 </li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
