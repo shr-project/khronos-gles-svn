@@ -1,7 +1,8 @@
 <?php
 $static_title = 'Khronos OpenGL ES Registry';
 $static_breadcrumb = array(
-    '/registry/gles' => 'OpenGL ES Registry'
+    '/registry/' => 'Registry',
+    'NOLINK' => 'OpenGL ES Registry'
 );
 include_once("../../assets/static_pages/khr_page_top.php");
 ?>
