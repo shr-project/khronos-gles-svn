@@ -33,14 +33,14 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 26320 $ on $Date: 2014-04-17 03:07:07 -0700 (Thu, 17 Apr 2014) $
+** Khronos $Revision: 26645 $ on $Date: 2014-05-14 10:00:42 -0700 (Wed, 14 May 2014) $
 */
 
 #ifndef GL_APIENTRYP
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20140417 */
+/* Generated on date 20140514 */
 
 /* Generated C header for:
  * API: gles2
@@ -917,6 +917,8 @@ GL_APICALL void GL_APIENTRY glGetIntegeri_vEXT (GLenum target, GLuint index, GLi
 #define GL_COMPRESSED_SRGB_PVRTC_4BPPV1_EXT 0x8A55
 #define GL_COMPRESSED_SRGB_ALPHA_PVRTC_2BPPV1_EXT 0x8A56
 #define GL_COMPRESSED_SRGB_ALPHA_PVRTC_4BPPV1_EXT 0x8A57
+#define GL_COMPRESSED_SRGB_ALPHA_PVRTC_2BPPV2_IMG 0x93F0
+#define GL_COMPRESSED_SRGB_ALPHA_PVRTC_4BPPV2_IMG 0x93F1
 #endif /* GL_EXT_pvrtc_sRGB */
 
 #ifndef GL_EXT_read_format_bgra
