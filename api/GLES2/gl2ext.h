@@ -33,14 +33,14 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 26696 $ on $Date: 2014-05-17 14:48:55 -0700 (Sat, 17 May 2014) $
+** Khronos $Revision: 26744 $ on $Date: 2014-05-21 03:11:42 -0700 (Wed, 21 May 2014) $
 */
 
 #ifndef GL_APIENTRYP
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20140517 */
+/* Generated on date 20140521 */
 
 /* Generated C header for:
  * API: gles2
@@ -871,6 +871,10 @@ GL_APICALL void GL_APIENTRY glDrawElementsInstancedEXT (GLenum mode, GLsizei cou
 #endif
 #endif /* GL_EXT_draw_instanced */
 
+#ifndef GL_EXT_geometry_point_size
+#define GL_EXT_geometry_point_size 1
+#endif /* GL_EXT_geometry_point_size */
+
 #ifndef GL_EXT_geometry_shader
 #define GL_EXT_geometry_shader 1
 #define GL_GEOMETRY_SHADER_EXT            0x8DD9
@@ -1173,6 +1177,10 @@ GL_APICALL void GL_APIENTRY glProgramUniformMatrix4x3fvEXT (GLuint program, GLin
 #define GL_COMPARE_REF_TO_TEXTURE_EXT     0x884E
 #define GL_SAMPLER_2D_SHADOW_EXT          0x8B62
 #endif /* GL_EXT_shadow_samplers */
+
+#ifndef GL_EXT_tessellation_point_size
+#define GL_EXT_tessellation_point_size 1
+#endif /* GL_EXT_tessellation_point_size */
 
 #ifndef GL_EXT_tessellation_shader
 #define GL_EXT_tessellation_shader 1

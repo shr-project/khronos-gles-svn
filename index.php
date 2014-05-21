@@ -636,6 +636,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li value=176> <a href="extensions/EXT/EXT_draw_buffers_indexed.txt">GL_EXT_draw_buffers_indexed</a>
 </li>
 <li value=177> <a href="extensions/EXT/EXT_geometry_shader.txt">GL_EXT_geometry_shader</a>
+     <br> <a href="extensions/EXT/EXT_geometry_shader.txt">GL_EXT_geometry_point_size</a>
 </li>
 <li value=178> <a href="extensions/EXT/EXT_gpu_shader5.txt">GL_EXT_gpu_shader5</a>
 </li>
@@ -644,6 +645,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li value=180> <a href="extensions/EXT/EXT_shader_io_blocks.txt">GL_EXT_shader_io_blocks</a>
 </li>
 <li value=181> <a href="extensions/EXT/EXT_tessellation_shader.txt">GL_EXT_tessellation_shader</a>
+     <br> <a href="extensions/EXT/EXT_tessellation_shader.txt">GL_EXT_tessellation_point_size</a>
 </li>
 <li value=182> <a href="extensions/EXT/EXT_texture_border_clamp.txt">GL_EXT_texture_border_clamp</a>
 </li>
