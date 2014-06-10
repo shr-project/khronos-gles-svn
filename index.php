@@ -655,6 +655,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=185> <a href="extensions/EXT/EXT_texture_view.txt">GL_EXT_texture_view</a>
 </li>
+<li value=186> <a href="extensions/EXT/EXT_primitive_bounding_box.txt">GL_EXT_primitive_bounding_box</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
