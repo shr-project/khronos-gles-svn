@@ -33,12 +33,12 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 27020 $ on $Date: 2014-06-10 08:21:59 -0700 (Tue, 10 Jun 2014) $
+** Khronos $Revision: 27118 $ on $Date: 2014-06-19 13:11:41 -0700 (Thu, 19 Jun 2014) $
 */
 
 #include <GLES2/gl2platform.h>
 
-/* Generated on date 20140610 */
+/* Generated on date 20140619 */
 
 /* Generated C header for:
  * API: gles2
