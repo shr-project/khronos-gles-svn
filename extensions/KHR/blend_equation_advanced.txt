@@ -33,7 +33,8 @@ Version
 
 Number
 
-    OpenGL ES Extension #168 (this extension is not yet defined for OpenGL)
+    OpenGL Extension #458
+    OpenGL ES Extension #168
 
 Dependencies
 
