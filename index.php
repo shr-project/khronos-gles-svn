@@ -661,6 +661,12 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=188> <a href="extensions/EXT/EXT_compressed_ETC1_RGB8_sub_texture.txt">GL_EXT_compressed_ETC1_RGB8_sub_texture</a>
 </li>
+<li value=189> <a href="extensions/KHR/robust_buffer_access_behavior.txt">GL_KHR_robust_buffer_access_behavior</a>
+</li>
+<li value=190> <a href="extensions/KHR/robustness.txt">GL_KHR_robustness</a>
+</li>
+<li value=191> <a href="extensions/KHR/context_flush_control.txt">GL_KHR_context_flush_control</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
