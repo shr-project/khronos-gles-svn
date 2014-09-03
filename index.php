@@ -82,9 +82,9 @@ include_once("../../assets/static_pages/khr_page_top.php");
      Documentation </h6>
 
 <ul>
-<li> OpenGL ES 3.0.3
-     <a href="specs/3.0/es_spec_3.0.3.pdf"> Specification </a>
-     (December 18, 2013).
+<li> OpenGL ES 3.0.4
+     <a href="specs/3.0/es_spec_3.0.4.pdf"> Specification </a>
+     (August 27, 2014).
 <li> OpenGL ES Shading Language 3.00.4
      <a href="specs/3.0/GLSL_ES_Specification_3.00.4.pdf">
      Specification </a> (March 6, 2013). </li>
