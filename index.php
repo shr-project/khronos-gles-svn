@@ -669,11 +669,11 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=192> <a href="extensions/DMP/DMP_program_binary.txt">GL_DMP_program_binary</a>
 </li>
-<li value=193> <a href="extensions/clip/APPLE_clip_distance.txt">APPLE_clip_distance</a>
+<li value=193> <a href="extensions/APPLE/APPLE_clip_distance.txt">GL_APPLE_clip_distance</a>
 </li>
-<li value=194> <a href="extensions/color/APPLE_color_buffer_packed_float.txt">APPLE_color_buffer_packed_float</a>
+<li value=194> <a href="extensions/APPLE/APPLE_color_buffer_packed_float.txt">GL_APPLE_color_buffer_packed_float</a>
 </li>
-<li value=195> <a href="extensions/texture/APPLE_texture_packed_float.txt">APPLE_texture_packed_float</a>
+<li value=195> <a href="extensions/APPLE/APPLE_texture_packed_float.txt">GL_APPLE_texture_packed_float</a>
 </li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
