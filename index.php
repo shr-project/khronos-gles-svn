@@ -667,6 +667,14 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=191> <a href="extensions/KHR/context_flush_control.txt">GL_KHR_context_flush_control</a>
 </li>
+<li value=192> <a href="extensions/DMP/DMP_program_binary.txt">GL_DMP_program_binary</a>
+</li>
+<li value=193> <a href="extensions/clip/APPLE_clip_distance.txt">APPLE_clip_distance</a>
+</li>
+<li value=194> <a href="extensions/color/APPLE_color_buffer_packed_float.txt">APPLE_color_buffer_packed_float</a>
+</li>
+<li value=195> <a href="extensions/texture/APPLE_texture_packed_float.txt">APPLE_texture_packed_float</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
