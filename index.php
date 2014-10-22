@@ -675,6 +675,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=195> <a href="extensions/APPLE/APPLE_texture_packed_float.txt">GL_APPLE_texture_packed_float</a>
 </li>
+<li value=196> <a href="extensions/NV/internalformat_sample_query.txt">GL_NV_internalformat_sample_query</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
