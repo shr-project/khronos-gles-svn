@@ -43,6 +43,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <b><a href="#specfiles">XML API Registry</a></b> of Reserved
      Enumerants and Functions </li>
 <li> <b><a href="#headersold">Legacy OpenGL ES Headers</a></b>
+<li> <b><a href="#otherextspecs">OpenGL ES Extension Registry</a></b>
 <li> <b> <a href="https://www.khronos.org/files/ip-disclosures/opengl/">
      IP Disclosures</a> Potentially Affecting OpenGL ES Implementations
      </b></li>
@@ -275,6 +276,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="api/old/2.0/gl2ext.h">gl2ext.h</a>, and
      <a href="api/old/2.0/gl2platform.h">gl2platform.h</a>.
 </ul>
+
+<hr>
 <h6> <a name="otherextspecs"></a>
      Extension Specifications</h6>
 <ol>
