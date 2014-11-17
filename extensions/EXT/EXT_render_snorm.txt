@@ -27,8 +27,7 @@ Version
 
 Number
 
-    TBD
-
+    OpenGL ES Extension #206
 
 Dependencies
 
@@ -39,7 +38,6 @@ Dependencies
 
      This extension interacts with EXT_texture_norm16.
 
-
 Overview
 
      OpenGL ES 3.1 supports a variety of signed normalized texture and
@@ -48,11 +46,9 @@ Overview
      This extension enables signed normalized texture and renderbuffer
      formats to be color-renderable.
 
-
 New Procedures and Functions
 
      None
-
 
 New Tokens
 
