@@ -728,6 +728,12 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=220> <a href="extensions/OES/OES_EGL_image_external_essl3.txt">GL_OES_EGL_image_external_essl3</a>
 </li>
+<li value=221> <a href="extensions/EXT/EXT_texture_sRGB_R8.txt">GL_EXT_texture_sRGB_R8</a>
+</li>
+<li value=222> <a href="extensions/EXT/EXT_YUV_target.txt">GL_EXT_yuv_target</a>
+</li>
+<li value=223> <a href="extensions/EXT/EXT_texture_sRGB_RG8.txt">GL_EXT_texture_sRGB_RG8</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
