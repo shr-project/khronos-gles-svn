@@ -33,7 +33,7 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 30077 $ on $Date: 2015-03-11 08:41:18 -0700 (Wed, 11 Mar 2015) $
+** Khronos $Revision$ on $Date$
 */
 
 #ifndef GL_APIENTRYP
