@@ -33,14 +33,14 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision$ on $Date$
+** Khronos $Revision: 30346 $ on $Date: 2015-03-25 23:28:00 -0700 (Wed, 25 Mar 2015) $
 */
 
 #ifndef GL_APIENTRYP
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20150311 */
+/* Generated on date 20150325 */
 
 /* Generated C header for:
  * API: gles2
@@ -1219,6 +1219,10 @@ GL_APICALL void GL_APIENTRY glDrawArraysInstancedEXT (GLenum mode, GLint start, 
 GL_APICALL void GL_APIENTRY glDrawElementsInstancedEXT (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount);
 #endif
 #endif /* GL_EXT_draw_instanced */
+
+#ifndef GL_EXT_float_blend
+#define GL_EXT_float_blend 1
+#endif /* GL_EXT_float_blend */
 
 #ifndef GL_EXT_geometry_point_size
 #define GL_EXT_geometry_point_size 1

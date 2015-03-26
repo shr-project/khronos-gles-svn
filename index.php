@@ -734,6 +734,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=223> <a href="extensions/EXT/EXT_texture_sRGB_RG8.txt">GL_EXT_texture_sRGB_RG8</a>
 </li>
+<li value=224> <a href="extensions/EXT/EXT_float_blend.txt">GL_EXT_float_blend</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
