@@ -764,6 +764,10 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=238> <a href="extensions/NV/NV_polygon_mode.txt">GL_NV_polygon_mode</a>
 </li>
+<li value=239> <a href="extensions/EXT/EXT_buffer_storage.txt">GL_EXT_buffer_storage</a>
+</li>
+<li value=240> <a href="extensions/EXT/EXT_sparse_texture.txt">GL_EXT_sparse_texture</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
