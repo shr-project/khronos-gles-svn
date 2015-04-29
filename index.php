@@ -768,6 +768,10 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=240> <a href="extensions/EXT/EXT_sparse_texture.txt">GL_EXT_sparse_texture</a>
 </li>
+<li value=241> <a href="extensions/OVR/multiview.txt">GL_OVR_multiview</a>
+</li>
+<li value=242> <a href="extensions/OVR/multiview2.txt">GL_OVR_multiview2</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
