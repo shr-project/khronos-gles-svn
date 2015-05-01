@@ -30,8 +30,8 @@ Status
 
 Version
 
-    Last Modified Date:   March 27, 2015
-    Author Revision:      2
+    Last Modified Date:   May 1, 2015
+    Author Revision:      3
 
 Number
 
@@ -194,9 +194,9 @@ Additions to Chapter 6 of the OpenGL ES 3.1 Specification (Buffer Objects)
     application. In particular:
 
         - If MAP_COHERENT_BIT_EXT is not set and the client performs a write
-          followed by a call to the MemoryBarrier command with the
-          CLIENT_MAPPED_BUFFER_BARRIER_BIT_EXT set, then in subsequent commands
-          the server will see the writes.
+          followed by a call to one of the FlushMapped*BufferRange commands
+          with a range including the written range, then in subsequent
+          commands the server will see the writes.
 
         - If MAP_COHERENT_BIT_EXT is set and the client performs a write, then in
           subsequent commands the server will see the writes.
@@ -511,5 +511,13 @@ Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------  -----------------------------------------
-     2    03/27/15  dkoch     Update status, clarify dependencies and tokens
      1    09/17/14  dkoch     EXT version based on ARB_buffer_storage v.24
+
+     2    03/27/15  dkoch     Update status, clarify dependencies and tokens
+
+     3    05/01/15  dkoch     Change description of MAP_COHERENT_BIT for
+                              buffer storage so that barriers with 
+                              CLIENT_MAPPED_BUFFER_BARRIER_BIT do not need
+                              to make CPU writes visible to the GPU in
+                              this case without an explicit flush (Bug
+                              13578, sync w/ ARB_buffer_storage v.25).
