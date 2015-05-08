@@ -772,6 +772,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=242> <a href="extensions/OVR/multiview2.txt">GL_OVR_multiview2</a>
 </li>
+<li value=243> <a href="extensions/KHR/no_error.txt">GL_KHR_no_error</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
