@@ -71,7 +71,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="specs/3.1/es_spec_3.1.pdf"> without changes marked </a>
      and
      <a href="specs/3.1/es_spec_3.1.withchanges.pdf"> with changes marked </a>. </li>
-<li> OpenGL ES Shading Language 3.10 Specification (June 6, 2014)
+<li> OpenGL ES Shading Language 3.10 Specification (April 29, 2015)
      <a href="specs/3.1/GLSL_ES_Specification_3.10.pdf"> without changes marked </a>
      and
      <a href="specs/3.1/GLSL_ES_Specification_3.10.withchanges.pdf"> with changes marked </a>. </li>
