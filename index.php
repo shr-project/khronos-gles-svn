@@ -79,6 +79,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
     <!-- Pending...
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man31/">
      OpenGL ES 3.2 Online Manual Pages.</a> </li>
+    -->
 </ul>
 
 <h6> <a name="specs31"></a> OpenGL ES 3.1 Specifications and
