@@ -26,6 +26,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <b><a href="#specs">Current OpenGL ES API and Shading Language
      Specifications and Reference Pages</a></b>
      <ul>
+     <li> <a href="#specs32">OpenGL ES 3.2 Specifications</a> </li>
      <li> <a href="#specs31">OpenGL ES 3.1 Specifications</a> </li>
      <li> <a href="#specs3">OpenGL ES 3 Specifications</a> </li>
      <li> <a href="#specs2">OpenGL ES 2 Specifications</a> </li>
@@ -34,6 +35,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      </ul> </li>
 <li> <b><a href="#headers">Core API and Extension Header Files</a></b>
      <ul>
+     <li> <a href="#headers32">OpenGL ES 3.2 Header Files</a> </li>
      <li> <a href="#headers31">OpenGL ES 3.1 Header Files</a> </li>
      <li> <a href="#headers3">OpenGL ES 3.0 Header Files</a> </li>
      <li> <a href="#headers2">OpenGL ES 2 Header Files</a> </li>
@@ -54,14 +56,30 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <h6> <a name="specs"></a> OpenGL ES Core API and Shading Language
      Specifications and Reference Pages </h6>
 
-<p> The current version of OpenGL ES is OpenGL ES 3.1. Specifications
-    for older versions 3.0, 2.0, 1.1, and 1.0 are also available below.
-    For additional specifications, headers, and documentation not listed
-    below, see the <a
-    href="http://www.khronos.org/developers/specs/">Khronos.org
+<p> The current version of OpenGL ES is OpenGL ES 3.2. Specifications for
+    older versions 3.1, 3.0, 2.0, 1.1, and 1.0 are also available below. For
+    additional specifications, headers, and documentation not listed below,
+    see the <a href="http://www.khronos.org/developers/specs/">Khronos.org
     Developer Pages</a>. Header files not labelled with a revision date
     include their last update time in comments near the top of the file.
     </p>
+
+<h6> <a name="specs32"></a> OpenGL ES 3.2 Specifications and
+     Documentation </h6>
+
+<ul>
+<li> OpenGL ES 3.2 Specification (August 10, 2015),
+     <a href="specs/3.2/es_spec_3.2.pdf"> without changes marked </a>
+     and
+     <a href="specs/3.2/es_spec_3.2.withchanges.pdf"> with changes marked </a>. </li>
+<li> OpenGL ES Shading Language 3.20 Specification (August 6, 2015)
+     <a href="specs/3.2/GLSL_ES_Specification_3.20.pdf"> without changes marked </a>
+     and
+     <a href="specs/3.2/GLSL_ES_Specification_3.20.withchanges.pdf"> with changes marked </a>. </li>
+    <!-- Pending...
+<li> <a href="http://www.khronos.org/opengles/sdk/docs/man31/">
+     OpenGL ES 3.2 Online Manual Pages.</a> </li>
+</ul>
 
 <h6> <a name="specs31"></a> OpenGL ES 3.1 Specifications and
      Documentation </h6>
@@ -76,7 +94,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      and
      <a href="specs/3.1/GLSL_ES_Specification_3.10.withchanges.pdf"> with changes marked </a>. </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man31/">
-      OpenGL ES 3.1 Online Manual Pages.</a> </li>
+     OpenGL ES 3.1 Online Manual Pages.</a> </li>
 </ul>
 
 <h6> <a name="specs3"></a> OpenGL ES 3.0 Specifications and
@@ -90,7 +108,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="specs/3.0/GLSL_ES_Specification_3.00.4.pdf">
      Specification </a> (March 6, 2013). </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man3/">
-      OpenGL ES 3.0 Online Manual Pages.</a> </li>
+     OpenGL ES 3.0 Online Manual Pages.</a> </li>
 </ul>
 
 <h6> <a name="specs2"></a> OpenGL ES 2.0 Specifications and
@@ -112,7 +130,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="specs/2.0/GLSL_ES_Specification_1.0.17.pdf">
      Specification </a> (May 12, 2009). </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man/">
-      OpenGL ES 2.0 Online Manual Pages.</a> </li>
+     OpenGL ES 2.0 Online Manual Pages.</a> </li>
 </ul>
 
 
@@ -148,17 +166,16 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <h6> <a name="headers"></a> API and Extension Header Files </h6>
 
-<p> Because extensions vary from platform to platform and driver to
-    driver, OpenGL ES segregates headers for each API version into a
-    header for the core API (OpenGL ES 1.0, 1.1, 2.0, 3.0, and 3.1) and
-    a separate header defining extension interfaces for that core API.
-    These header files are supplied here for developers and platform
-    vendors. They define interfaces including enumerants, prototypes,
-    and for platforms supporting dynamic runtime extension queries, such
-    as Linux and Microsoft Windows, function pointer typedefs. Please
-    report problems using the <a
-    href="http://www.khronos.org/bugzilla/">public Khronos Bugzilla</a>.
-    </p>
+<p> Because extensions vary from platform to platform and driver to driver,
+    OpenGL ES segregates headers for each API version into a header for the
+    core API (OpenGL ES 1.0, 1.1, 2.0, 3.0, 3.1 and 3.2) and a separate
+    header defining extension interfaces for that core API. These header
+    files are supplied here for developers and platform vendors. They define
+    interfaces including enumerants, prototypes, and for platforms
+    supporting dynamic runtime extension queries, such as Linux and
+    Microsoft Windows, function pointer typedefs. Please report problems
+    using the <a href="http://www.khronos.org/bugzilla/">public Khronos
+    Bugzilla</a>. </p>
 
 <p> In addition to the core API and extension headers, there is also an
     OpenGL ES version-specific platform header file intended to define
@@ -176,17 +193,29 @@ include_once("../../assets/static_pages/khr_page_top.php");
     obtained here, typically when new extensions are supplied
     on a platform. </p>
 
-<p> <a name="headers31"></a> <b> OpenGL ES 3.1 Headers </b> </p>
+<p> <a name="headers32"></a> <b> OpenGL ES 3.2 Headers </b> </p>
 
 <ul>
-<li> <tt><a href="api/GLES3/gl31.h"> &lt;GLES3/gl31.h&gt; </a></tt>
-     OpenGL ES 3.1 Header File. </li>
+<li> <tt><a href="api/GLES3/gl32.h"> &lt;GLES3/gl32.h&gt; </a></tt>
+     OpenGL ES 3.2 Header File. </li>
 <li> <tt><a href="api/GLES2/gl2ext.h"> &lt;GLES2/gl2ext.h&gt; </a></tt>
      OpenGL ES Extension Header File (this header is defined to contain
      all defined extension interfaces for OpenGL ES 2.0 and all later
      versions, since later versions are backwards-compatible with OpenGL
      ES 2.0).
      </li>
+<li> <tt><a href="api/GLES3/gl3platform.h"> &lt;GLES3/gl3platform.h&gt; </a></tt>
+     OpenGL ES 3.2 Platform-Dependent Macros (this header is shared with
+     OpenGL ES 3.0 and 3.1). </li>
+</ul>
+
+<p> <a name="headers31"></a> <b> OpenGL ES 3.1 Headers </b> </p>
+
+<ul>
+<li> <tt><a href="api/GLES3/gl31.h"> &lt;GLES3/gl31.h&gt; </a></tt>
+     OpenGL ES 3.1 Header File. </li>
+<li> <tt><a href="api/GLES2/gl2ext.h"> &lt;GLES2/gl2ext.h&gt; </a></tt>
+     OpenGL ES Extension Header File. </li>
 <li> <tt><a href="api/GLES3/gl3platform.h"> &lt;GLES3/gl3platform.h&gt; </a></tt>
      OpenGL ES 3.1 Platform-Dependent Macros (this header is shared with
      OpenGL ES 3.0). </li>
@@ -246,10 +275,10 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <p> The API Registry is a set of XML documents defining the APIs and
     enumerants used in OpenGL, OpenGL ES, EGL, and related APIs, as well as
-    enumerant ranges reserved to vendors but not used yet. There are
-    also scripts for loading the XML and processing it into header
-    files. All documents in the registry are available from the Khronos
-    Subversion server using <a
+    enumerant ranges reserved to vendors but not used yet. There are also
+    scripts for loading the XML and processing it into header files. All
+    documents in the registry are available from the Khronos Subversion
+    server using <a
     href="https://cvs.khronos.org/svn/repos/ogl/trunk/doc/registry/public/api/">
     anonymous public access. </a> Start with the <a
     href="https://cvs.khronos.org/svn/repos/ogl/trunk/doc/registry/public/api/readme.pdf">
@@ -259,7 +288,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <h6> <a name="headersold"></a> <b> Legacy OpenGL ES Headers </b> </h6>
 
-<p> Current versions of the OpenGL ES 3.1, 3.0 and 2.0 headers are
+<p> Current versions of the OpenGL ES 3.2, 3.1, 3.0 and 2.0 headers are
     autogenerated from the <a href="#specfiles">XML API Registry</a>.
     Older, handcoded versions of the 3.0 and 2.0 headers are
     functionally equivalent, but structurally different. We are no
@@ -773,6 +802,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li value=242> <a href="extensions/OVR/multiview2.txt">GL_OVR_multiview2</a>
 </li>
 <li value=243> <a href="extensions/KHR/no_error.txt">GL_KHR_no_error</a>
+</li>
+<li value=246> <a href="extensions/INTEL/framebuffer_CMAA.txt">GL_INTEL_framebuffer_CMAA</a>
 </li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
