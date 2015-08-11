@@ -76,10 +76,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="specs/3.2/GLSL_ES_Specification_3.20.pdf"> without changes marked </a>
      and
      <a href="specs/3.2/GLSL_ES_Specification_3.20.withchanges.pdf"> with changes marked </a>. </li>
-    <!-- Pending...
-<li> <a href="http://www.khronos.org/opengles/sdk/docs/man31/">
+<li> <a href="http://www.khronos.org/opengles/sdk/docs/man32/">
      OpenGL ES 3.2 Online Manual Pages.</a> </li>
-    -->
 </ul>
 
 <h6> <a name="specs31"></a> OpenGL ES 3.1 Specifications and
