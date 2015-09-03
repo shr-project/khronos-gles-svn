@@ -804,6 +804,10 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=246> <a href="extensions/INTEL/framebuffer_CMAA.txt">GL_INTEL_framebuffer_CMAA</a>
 </li>
+<li value=247> <a href="extensions/EXT/EXT_blend_func_extended.txt">GL_EXT_blend_func_extended</a>
+</li>
+<li value=248> <a href="extensions/EXT/EXT_multisample_compatibility.txt">GL_EXT_multisample_compatibility</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
