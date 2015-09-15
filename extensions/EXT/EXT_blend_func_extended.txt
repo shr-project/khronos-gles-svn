@@ -43,7 +43,7 @@ Version
 
 Number
 
-    247
+    OpenGL ES Extension #247
 
 Dependencies
 
@@ -409,7 +409,7 @@ Additions to the OpenGL ES Shading Language 1.00 Specification
     fragment color consumed is undefined."
 
     Add after the fifth paragraph:
-    
+
     "The variable gl_SecondaryFragDataEXT is an array. Writing to
     gl_SecondaryFragDataEXT[n] specifies the secondary fragment data that
     will be used by the subsequent fixed functionality pipeline for data n
@@ -520,7 +520,7 @@ Dependencies on OpenGL ES 3.1
 
         GetProgramResourceLocationIndexEXT
 
-    because program resource queries are added by ES 3.1.  
+    because program resource queries are added by ES 3.1.
 
     Also ignore the additions to chapter 7.
 
@@ -691,7 +691,7 @@ Issues
     RESOLVED:  Yes, both should be supported.  This makes it easier
     for existing applications to port to ES 3.0 as both mechanisms are
     available.
-    
+
     FYI: The "layout(location=0,index=1)" type syntax for dual-source
     blending was introduced to OpenGL in GLSL 3.30 and 4.00 in
     conjunction with OpenGL 3.3 and 4.0 respectively.  The original
