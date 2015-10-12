@@ -808,6 +808,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=248> <a href="extensions/EXT/EXT_multisample_compatibility.txt">GL_EXT_multisample_compatibility</a>
 </li>
+<li value=249> <a href="extensions/KHR/texture_compression_astc_sliced_3d.txt">GL_KHR_texture_compression_astc_sliced_3d</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>

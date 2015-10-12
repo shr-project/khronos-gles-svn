@@ -33,14 +33,14 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 31902 $ on $Date: 2015-09-03 15:44:53 -0700 (Thu, 03 Sep 2015) $
+** Khronos $Revision: 32107 $ on $Date: 2015-10-12 08:01:40 -0700 (Mon, 12 Oct 2015) $
 */
 
 #ifndef GL_APIENTRYP
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20150903 */
+/* Generated on date 20151012 */
 
 /* Generated C header for:
  * API: gles2
@@ -224,6 +224,10 @@ GL_APICALL void GL_APIENTRY glGetnUniformuivKHR (GLuint program, GLint location,
 #ifndef GL_KHR_texture_compression_astc_ldr
 #define GL_KHR_texture_compression_astc_ldr 1
 #endif /* GL_KHR_texture_compression_astc_ldr */
+
+#ifndef GL_KHR_texture_compression_astc_sliced_3d
+#define GL_KHR_texture_compression_astc_sliced_3d 1
+#endif /* GL_KHR_texture_compression_astc_sliced_3d */
 
 #ifndef GL_OES_EGL_image
 #define GL_OES_EGL_image 1
