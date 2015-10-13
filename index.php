@@ -810,6 +810,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=249> <a href="extensions/KHR/texture_compression_astc_sliced_3d.txt">GL_KHR_texture_compression_astc_sliced_3d</a>
 </li>
+<li value=250> <a href="extensions/OVR/multiview_multisampled_render_to_texture.txt">GL_OVR_multiview_multisampled_render_to_texture</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>

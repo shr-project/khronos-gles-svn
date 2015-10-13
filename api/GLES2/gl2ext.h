@@ -33,7 +33,7 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 32107 $ on $Date: 2015-10-12 08:01:40 -0700 (Mon, 12 Oct 2015) $
+** Khronos $Revision: 32109 $ on $Date: 2015-10-12 18:39:52 -0700 (Mon, 12 Oct 2015) $
 */
 
 #ifndef GL_APIENTRYP
@@ -2786,6 +2786,14 @@ GL_APICALL void GL_APIENTRY glFramebufferTextureMultiviewOVR (GLenum target, GLe
 #ifndef GL_OVR_multiview2
 #define GL_OVR_multiview2 1
 #endif /* GL_OVR_multiview2 */
+
+#ifndef GL_OVR_multiview_multisampled_render_to_texture
+#define GL_OVR_multiview_multisampled_render_to_texture 1
+typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTUREMULTISAMPLEMULTIVIEWOVRPROC) (GLenum target, GLenum attachment, GLuint texture, GLint level, GLsizei samples, GLint baseViewIndex, GLsizei numViews);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glFramebufferTextureMultisampleMultiviewOVR (GLenum target, GLenum attachment, GLuint texture, GLint level, GLsizei samples, GLint baseViewIndex, GLsizei numViews);
+#endif
+#endif /* GL_OVR_multiview_multisampled_render_to_texture */
 
 #ifndef GL_QCOM_alpha_test
 #define GL_QCOM_alpha_test 1
