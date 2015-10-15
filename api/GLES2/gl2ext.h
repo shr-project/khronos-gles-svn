@@ -33,14 +33,14 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 32109 $ on $Date: 2015-10-12 18:39:52 -0700 (Mon, 12 Oct 2015) $
+** Khronos $Revision: 32120 $ on $Date: 2015-10-15 04:27:13 -0700 (Thu, 15 Oct 2015) $
 */
 
 #ifndef GL_APIENTRYP
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20151012 */
+/* Generated on date 20151015 */
 
 /* Generated C header for:
  * API: gles2
@@ -1936,6 +1936,13 @@ GL_APICALL void GL_APIENTRY glFramebufferTexture2DMultisampleIMG (GLenum target,
 #define GL_COMPRESSED_RGBA_PVRTC_2BPPV2_IMG 0x9137
 #define GL_COMPRESSED_RGBA_PVRTC_4BPPV2_IMG 0x9138
 #endif /* GL_IMG_texture_compression_pvrtc2 */
+
+#ifndef GL_IMG_texture_filter_cubic
+#define GL_IMG_texture_filter_cubic 1
+#define GL_CUBIC_IMG                      0x9139
+#define GL_CUBIC_MIPMAP_NEAREST_IMG       0x913A
+#define GL_CUBIC_MIPMAP_LINEAR_IMG        0x913B
+#endif /* GL_IMG_texture_filter_cubic */
 
 #ifndef GL_INTEL_framebuffer_CMAA
 #define GL_INTEL_framebuffer_CMAA 1

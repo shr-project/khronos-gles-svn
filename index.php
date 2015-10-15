@@ -812,6 +812,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=250> <a href="extensions/OVR/multiview_multisampled_render_to_texture.txt">GL_OVR_multiview_multisampled_render_to_texture</a>
 </li>
+<li value=251> <a href="extensions/IMG/IMG_texture_filter_cubic.txt">GL_IMG_texture_filter_cubic</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
