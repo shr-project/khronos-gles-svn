@@ -814,6 +814,14 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=251> <a href="extensions/IMG/IMG_texture_filter_cubic.txt">GL_IMG_texture_filter_cubic</a>
 </li>
+<li value=252> <a href="extensions/EXT/polygon_offset_clamp.txt">GL_EXT_polygon_offset_clamp</a>
+</li>
+<li value=253> <a href="extensions/EXT/EXT_shader_pixel_local_storage2.txt">GL_EXT_shader_pixel_local_storage2</a>
+</li>
+<li value=254> <a href="extensions/EXT/EXT_shader_group_vote.txt">GL_EXT_shader_group_vote</a>
+</li>
+<li value=255> <a href="extensions/IMG/IMG_framebuffer_downsample.txt">GL_IMG_framebuffer_downsample</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
