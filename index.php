@@ -72,7 +72,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="specs/3.2/es_spec_3.2.pdf"> without changes marked </a>
      and
      <a href="specs/3.2/es_spec_3.2.withchanges.pdf"> with changes marked </a>. </li>
-<li> OpenGL ES Shading Language 3.20 Specification (August 6, 2015)
+<li> OpenGL ES Shading Language 3.20 Specification (January 29, 2016)
      <a href="specs/3.2/GLSL_ES_Specification_3.20.pdf"> without changes marked </a>
      and
      <a href="specs/3.2/GLSL_ES_Specification_3.20.withchanges.pdf"> with changes marked </a>. </li>
@@ -88,7 +88,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="specs/3.1/es_spec_3.1.pdf"> without changes marked </a>
      and
      <a href="specs/3.1/es_spec_3.1.withchanges.pdf"> with changes marked </a>. </li>
-<li> OpenGL ES Shading Language 3.10 Specification (April 29, 2015)
+<li> OpenGL ES Shading Language 3.10 Specification (January 29, 2016)
      <a href="specs/3.1/GLSL_ES_Specification_3.10.pdf"> without changes marked </a>
      and
      <a href="specs/3.1/GLSL_ES_Specification_3.10.withchanges.pdf"> with changes marked </a>. </li>
@@ -100,12 +100,12 @@ include_once("../../assets/static_pages/khr_page_top.php");
      Documentation </h6>
 
 <ul>
-<li> OpenGL ES 3.0.4
+<li> OpenGL ES 3.0
      <a href="specs/3.0/es_spec_3.0.4.pdf"> Specification </a>
      (August 27, 2014).
-<li> OpenGL ES Shading Language 3.00.4
-     <a href="specs/3.0/GLSL_ES_Specification_3.00.4.pdf">
-     Specification </a> (March 6, 2013). </li>
+<li> OpenGL ES Shading Language 3.00
+     <a href="specs/3.0/GLSL_ES_Specification_3.00.pdf">
+     Specification </a> (January 29, 2016). </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man3/">
      OpenGL ES 3.0 Online Manual Pages.</a> </li>
 </ul>
