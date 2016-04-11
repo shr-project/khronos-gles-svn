@@ -33,14 +33,14 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 32518 $ on $Date: 2016-03-11 02:42:11 -0800 (Fri, 11 Mar 2016) $
+** Khronos $Revision: 32614 $ on $Date: 2016-04-11 02:43:36 -0700 (Mon, 11 Apr 2016) $
 */
 
 #ifndef GL_APIENTRYP
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20160311 */
+/* Generated on date 20160411 */
 
 /* Generated C header for:
  * API: gles2
@@ -1085,6 +1085,21 @@ typedef void (GL_APIENTRYP PFNGLBUFFERSTORAGEEXTPROC) (GLenum target, GLsizeiptr
 GL_APICALL void GL_APIENTRY glBufferStorageEXT (GLenum target, GLsizeiptr size, const void *data, GLbitfield flags);
 #endif
 #endif /* GL_EXT_buffer_storage */
+
+#ifndef GL_EXT_clip_cull_distance
+#define GL_EXT_clip_cull_distance 1
+#define GL_MAX_CLIP_DISTANCES_EXT         0x0D32
+#define GL_MAX_CULL_DISTANCES_EXT         0x82F9
+#define GL_MAX_COMBINED_CLIP_AND_CULL_DISTANCES_EXT 0x82FA
+#define GL_CLIP_DISTANCE0_EXT             0x3000
+#define GL_CLIP_DISTANCE1_EXT             0x3001
+#define GL_CLIP_DISTANCE2_EXT             0x3002
+#define GL_CLIP_DISTANCE3_EXT             0x3003
+#define GL_CLIP_DISTANCE4_EXT             0x3004
+#define GL_CLIP_DISTANCE5_EXT             0x3005
+#define GL_CLIP_DISTANCE6_EXT             0x3006
+#define GL_CLIP_DISTANCE7_EXT             0x3007
+#endif /* GL_EXT_clip_cull_distance */
 
 #ifndef GL_EXT_color_buffer_float
 #define GL_EXT_color_buffer_float 1

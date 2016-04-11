@@ -822,6 +822,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=255> <a href="extensions/IMG/IMG_framebuffer_downsample.txt">GL_IMG_framebuffer_downsample</a>
 </li>
+<li value=257> <a href="extensions/EXT/EXT_clip_cull_distance.txt">GL_EXT_clip_cull_distance</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
