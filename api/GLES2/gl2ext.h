@@ -33,14 +33,14 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 32614 $ on $Date: 2016-04-11 02:43:36 -0700 (Mon, 11 Apr 2016) $
+** Khronos $Revision: 32621 $ on $Date: 2016-04-12 01:35:21 -0700 (Tue, 12 Apr 2016) $
 */
 
 #ifndef GL_APIENTRYP
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20160411 */
+/* Generated on date 20160412 */
 
 /* Generated C header for:
  * API: gles2
@@ -1448,6 +1448,12 @@ typedef void (GL_APIENTRYP PFNGLPRIMITIVEBOUNDINGBOXEXTPROC) (GLfloat minX, GLfl
 GL_APICALL void GL_APIENTRY glPrimitiveBoundingBoxEXT (GLfloat minX, GLfloat minY, GLfloat minZ, GLfloat minW, GLfloat maxX, GLfloat maxY, GLfloat maxZ, GLfloat maxW);
 #endif
 #endif /* GL_EXT_primitive_bounding_box */
+
+#ifndef GL_EXT_protected_textures
+#define GL_EXT_protected_textures 1
+#define GL_CONTEXT_FLAG_PROTECTED_CONTENT_BIT_EXT 0x00000010
+#define GL_TEXTURE_PROTECTED_EXT          0x8BFA
+#endif /* GL_EXT_protected_textures */
 
 #ifndef GL_EXT_pvrtc_sRGB
 #define GL_EXT_pvrtc_sRGB 1
