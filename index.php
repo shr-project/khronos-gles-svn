@@ -826,6 +826,14 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=257> <a href="extensions/EXT/EXT_clip_cull_distance.txt">GL_EXT_clip_cull_distance</a>
 </li>
+<li value=258> <a href="extensions/NV/viewport_swizzle.txt">GL_NV_viewport_swizzle</a>
+</li>
+<li value=259> <a href="extensions/EXT/sparse_texture2.txt">GL_EXT_sparse_texture2</a>
+</li>
+<li value=260> <a href="extensions/NV/gpu_shader5.txt">GL_NV_gpu_shader5</a>
+</li>
+<li value=261> <a href="extensions/NV/shader_atomic_fp16_vector.txt">GL_NV_shader_atomic_fp16_vector</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
