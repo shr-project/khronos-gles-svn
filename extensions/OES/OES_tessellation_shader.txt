@@ -31,7 +31,7 @@ Contributors
 
 Notice
 
-    Copyright (c) 2010-2015 The Khronos Group Inc. Copyright terms at
+    Copyright (c) 2010-2016 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
 
     Portions Copyright (c) 2013-2014 NVIDIA Corporation.
@@ -43,8 +43,8 @@ Status
 
 Version
 
-    Last Modified Date: July 23, 2015
-    Revision: 3
+    Last Modified Date: April 27, 2016
+    Revision: 4
 
 Number
 
@@ -1826,7 +1826,7 @@ New Implementation Dependent State
                                                                                   vertex outputs in TCS
     MAX_TESS_PATCH_COMPONENTS_OES                       Z+    GetIntegerv   120   No. components for per-patch    11.1ts.1.2
                                                                                   output varyings for TCS
-    MAX_TESS_CONTROL_TOTAL_OUTPUT_COMPONENTS_OES        Z+    GetIntegerv   4096  Total no. components for TCS    11.1ts.1.2
+    MAX_TESS_CONTROL_TOTAL_OUTPUT_COMPONENTS_OES        Z+    GetIntegerv   2048  Total no. components for TCS    11.1ts.1.2
                                                                                   outputs
     MAX_TESS_EVALUATION_OUTPUT_COMPONENTS_OES           Z+    GetIntegerv   64    No. components for per-vertex   11.1ts.3.2
                                                                                   outputs in TES
@@ -2685,6 +2685,10 @@ Revision History
 
     Rev.    Date      Author     Changes
     ----  ----------  --------  -------------------------------------------------
+     4    04/27/2016  Jon Leech Reduce minimum value of
+                                MAX_TESS_CONTROL_TOTAL_OUTPUT_COMPONENTS
+                                from 4096 to 2048 (Bug 12823).
+
      3    07/23/2015  Jon Leech Reduce minimum value of
                                 MAX_TESS_{CONTROL,EVALUATION}_{IN,OUT}PUT_COMPONENTS
                                 to 64 (Bug 12823)
