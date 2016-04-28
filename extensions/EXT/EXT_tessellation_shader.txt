@@ -2384,7 +2384,7 @@ Additions to the OpenGL ES Shading Language 3.10 Specification
       const mediump int gl_MaxTessControlOutputComponents = 128;
       const mediump int gl_MaxTessControlTextureImageUnits = 16;
       const mediump int gl_MaxTessControlUniformComponents = 1024;
-      const mediump int gl_MaxTessControlTotalOutputComponents = 4096;
+      const mediump int gl_MaxTessControlTotalOutputComponents = 2048;
 
       const mediump int gl_MaxTessEvaluationInputComponents = 128;
       const mediump int gl_MaxTessEvaluationOutputComponents = 128;
