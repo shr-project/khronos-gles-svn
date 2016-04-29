@@ -42,8 +42,8 @@ Status
 
 Version
 
-    Last Modified Date: April 27, 2016
-    Revision: 21
+    Last Modified Date: April 29, 2016
+    Revision: 22
 
 Number
 
@@ -2380,14 +2380,14 @@ Additions to the OpenGL ES Shading Language 3.10 Specification
     Add to Section 7.2 "Built-In Constants", matching the
     corresponding API implementation-dependent limits:
 
-      const mediump int gl_MaxTessControlInputComponents = 128;
-      const mediump int gl_MaxTessControlOutputComponents = 128;
+      const mediump int gl_MaxTessControlInputComponents = 64;
+      const mediump int gl_MaxTessControlOutputComponents = 64;
       const mediump int gl_MaxTessControlTextureImageUnits = 16;
       const mediump int gl_MaxTessControlUniformComponents = 1024;
       const mediump int gl_MaxTessControlTotalOutputComponents = 2048;
 
-      const mediump int gl_MaxTessEvaluationInputComponents = 128;
-      const mediump int gl_MaxTessEvaluationOutputComponents = 128;
+      const mediump int gl_MaxTessEvaluationInputComponents = 64;
+      const mediump int gl_MaxTessEvaluationOutputComponents = 64;
       const mediump int gl_MaxTessEvaluationTextureImageUnits = 16;
       const mediump int gl_MaxTessEvaluationUniformComponents = 1024;
 
@@ -2683,6 +2683,9 @@ Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------- -------------------------------------------------
+     22   04/29/16  Jon Leech Fix GLSL-ES built-in constants to match API
+                              limits (Bug 12823).
+
      21   04/27/16  Jon Leech Reduce minimum value of
                               MAX_TESS_CONTROL_TOTAL_OUTPUT_COMPONENTS_EXT        Z+    GetIntegerv   2048  Total no. components for TCS    11.1ts.1.2
                               from 4096 to 2048 (Bug 12823)
