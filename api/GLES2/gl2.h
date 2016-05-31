@@ -33,7 +33,7 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 32749 $ on $Date: 2016-04-28 18:03:03 +0200 (Thu, 28 Apr 2016) $
+** Khronos $Revision: 32749 $ on $Date: 2016-04-28 09:03:03 -0700 (Thu, 28 Apr 2016) $
 */
 
 #include <GLES2/gl2platform.h>
