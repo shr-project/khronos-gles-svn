@@ -33,14 +33,14 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 32685 $ on $Date: 2016-04-19 18:06:27 -0700 (Tue, 19 Apr 2016) $
+** Khronos $Revision: 32907 $ on $Date: 2016-05-31 17:15:14 -0700 (Tue, 31 May 2016) $
 */
 
 #ifndef GL_APIENTRYP
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20160419 */
+/* Generated on date 20160531 */
 
 /* Generated C header for:
  * API: gles2
@@ -2186,6 +2186,17 @@ typedef void (GL_APIENTRYP PFNGLSUBPIXELPRECISIONBIASNVPROC) (GLuint xbits, GLui
 GL_APICALL void GL_APIENTRY glSubpixelPrecisionBiasNV (GLuint xbits, GLuint ybits);
 #endif
 #endif /* GL_NV_conservative_raster */
+
+#ifndef GL_NV_conservative_raster_pre_snap_triangles
+#define GL_NV_conservative_raster_pre_snap_triangles 1
+#define GL_CONSERVATIVE_RASTER_MODE_NV    0x954D
+#define GL_CONSERVATIVE_RASTER_MODE_POST_SNAP_NV 0x954E
+#define GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_TRIANGLES_NV 0x954F
+typedef void (GL_APIENTRYP PFNGLCONSERVATIVERASTERPARAMETERINVPROC) (GLenum pname, GLint param);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glConservativeRasterParameteriNV (GLenum pname, GLint param);
+#endif
+#endif /* GL_NV_conservative_raster_pre_snap_triangles */
 
 #ifndef GL_NV_copy_buffer
 #define GL_NV_copy_buffer 1
