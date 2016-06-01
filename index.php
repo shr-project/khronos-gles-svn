@@ -834,6 +834,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=261> <a href="extensions/NV/shader_atomic_fp16_vector.txt">GL_NV_shader_atomic_fp16_vector</a>
 </li>
+<li value=262> <a href="extensions/NV/conservative_raster_pre_snap_triangles.txt">GL_NV_conservative_raster_pre_snap_triangles</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
