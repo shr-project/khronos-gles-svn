@@ -68,7 +68,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      Documentation </h6>
 
 <ul>
-<li> OpenGL ES 3.2 Specification (August 10, 2015),
+<li> OpenGL ES 3.2 Specification (June 15, 2016)
      <a href="specs/3.2/es_spec_3.2.pdf"> without changes marked </a>
      and
      <a href="specs/3.2/es_spec_3.2.withchanges.pdf"> with changes marked </a>. </li>
