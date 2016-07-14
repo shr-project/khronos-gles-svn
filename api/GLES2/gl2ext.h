@@ -33,14 +33,14 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 32953 $ on $Date: 2016-06-09 10:43:20 -0700 (Thu, 09 Jun 2016) $
+** Khronos $Revision: 33059 $ on $Date: 2016-07-14 15:58:14 -0700 (Thu, 14 Jul 2016) $
 */
 
 #ifndef GL_APIENTRYP
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20160609 */
+/* Generated on date 20160714 */
 
 /* Generated C header for:
  * API: gles2
@@ -1653,6 +1653,10 @@ GL_APICALL void GL_APIENTRY glProgramUniformMatrix4x3fvEXT (GLuint program, GLin
 #ifndef GL_EXT_shader_io_blocks
 #define GL_EXT_shader_io_blocks 1
 #endif /* GL_EXT_shader_io_blocks */
+
+#ifndef GL_EXT_shader_non_constant_global_initializers
+#define GL_EXT_shader_non_constant_global_initializers 1
+#endif /* GL_EXT_shader_non_constant_global_initializers */
 
 #ifndef GL_EXT_shader_pixel_local_storage
 #define GL_EXT_shader_pixel_local_storage 1

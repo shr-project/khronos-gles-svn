@@ -838,6 +838,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=263> <a href="extensions/EXT/window_rectangles.txt">GL_EXT_window_rectangles</a>
 </li>
+<li value=264> <a href="extensions/EXT/EXT_shader_non_constant_global_initializers.txt">GL_EXT_shader_non_constant_global_initializers</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
