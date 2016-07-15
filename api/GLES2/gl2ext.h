@@ -33,7 +33,7 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 33059 $ on $Date: 2016-07-14 15:58:14 -0700 (Thu, 14 Jul 2016) $
+** Khronos $Revision: 33061 $ on $Date: 2016-07-14 17:14:13 -0700 (Thu, 14 Jul 2016) $
 */
 
 #ifndef GL_APIENTRYP
@@ -2028,6 +2028,11 @@ GL_APICALL void GL_APIENTRY glFramebufferTexture2DMultisampleIMG (GLenum target,
 #define GL_CUBIC_MIPMAP_NEAREST_IMG       0x913A
 #define GL_CUBIC_MIPMAP_LINEAR_IMG        0x913B
 #endif /* GL_IMG_texture_filter_cubic */
+
+#ifndef GL_INTEL_conservative_rasterization
+#define GL_INTEL_conservative_rasterization 1
+#define GL_CONSERVATIVE_RASTERIZATION_INTEL 0x83FE
+#endif /* GL_INTEL_conservative_rasterization */
 
 #ifndef GL_INTEL_framebuffer_CMAA
 #define GL_INTEL_framebuffer_CMAA 1

@@ -840,6 +840,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=264> <a href="extensions/EXT/EXT_shader_non_constant_global_initializers.txt">GL_EXT_shader_non_constant_global_initializers</a>
 </li>
+<li value=265> <a href="extensions/INTEL/conservative_rasterization.txt">GL_INTEL_conservative_rasterization</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
