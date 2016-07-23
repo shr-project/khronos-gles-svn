@@ -842,6 +842,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=265> <a href="extensions/INTEL/conservative_rasterization.txt">GL_INTEL_conservative_rasterization</a>
 </li>
+<li value=266> <a href="extensions/NVX/nvx_blend_equation_advanced_multi_draw_buffers.txt">GL_NVX_blend_equation_advanced_multi_draw_buffers</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
