@@ -844,6 +844,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=266> <a href="extensions/NVX/nvx_blend_equation_advanced_multi_draw_buffers.txt">GL_NVX_blend_equation_advanced_multi_draw_buffers</a>
 </li>
+<li value=267> <a href="extensions/OES/OES_viewport_array.txt">GL_OES_viewport_array</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
