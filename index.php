@@ -846,6 +846,12 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=267> <a href="extensions/OES/OES_viewport_array.txt">GL_OES_viewport_array</a>
 </li>
+<li value=268> <a href="extensions/EXT/EXT_conservative_depth.txt">GL_EXT_conservative_depth</a>
+</li>
+<li value=269> <a href="extensions/EXT/EXT_clear_texture.txt">GL_EXT_clear_texture</a>
+</li>
+<li value=270> <a href="extensions/IMG/IMG_bindless_texture.txt">GL_IMG_bindless_texture</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
