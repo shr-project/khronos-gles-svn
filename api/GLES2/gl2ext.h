@@ -33,14 +33,14 @@ extern "C" {
 ** used to make the header, and the header can be found at
 **   http://www.opengl.org/registry/
 **
-** Khronos $Revision: 33080 $ on $Date: 2016-08-05 04:09:22 -0700 (Fri, 05 Aug 2016) $
+** Khronos $Revision: 33154 $ on $Date: 2016-09-17 12:58:13 -0700 (Sat, 17 Sep 2016) $
 */
 
 #ifndef GL_APIENTRYP
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20160805 */
+/* Generated on date 20160917 */
 
 /* Generated C header for:
  * API: gles2
@@ -1118,6 +1118,16 @@ GL_APICALL void GL_APIENTRY glBufferStorageEXT (GLenum target, GLsizeiptr size, 
 #endif
 #endif /* GL_EXT_buffer_storage */
 
+#ifndef GL_EXT_clear_texture
+#define GL_EXT_clear_texture 1
+typedef void (GL_APIENTRYP PFNGLCLEARTEXIMAGEEXTPROC) (GLuint texture, GLint level, GLenum format, GLenum type, const void *data);
+typedef void (GL_APIENTRYP PFNGLCLEARTEXSUBIMAGEEXTPROC) (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *data);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glClearTexImageEXT (GLuint texture, GLint level, GLenum format, GLenum type, const void *data);
+GL_APICALL void GL_APIENTRY glClearTexSubImageEXT (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *data);
+#endif
+#endif /* GL_EXT_clear_texture */
+
 #ifndef GL_EXT_clip_cull_distance
 #define GL_EXT_clip_cull_distance 1
 #define GL_MAX_CLIP_DISTANCES_EXT         0x0D32
@@ -1146,6 +1156,10 @@ GL_APICALL void GL_APIENTRY glBufferStorageEXT (GLenum target, GLsizeiptr size, 
 #define GL_FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT 0x8211
 #define GL_UNSIGNED_NORMALIZED_EXT        0x8C17
 #endif /* GL_EXT_color_buffer_half_float */
+
+#ifndef GL_EXT_conservative_depth
+#define GL_EXT_conservative_depth 1
+#endif /* GL_EXT_conservative_depth */
 
 #ifndef GL_EXT_copy_image
 #define GL_EXT_copy_image 1
@@ -1991,6 +2005,24 @@ GL_APICALL void GL_APIENTRY glWindowRectanglesEXT (GLenum mode, GLsizei count, c
 #define GL_FJ_shader_binary_GCCSO 1
 #define GL_GCCSO_SHADER_BINARY_FJ         0x9260
 #endif /* GL_FJ_shader_binary_GCCSO */
+
+#ifndef GL_IMG_bindless_texture
+#define GL_IMG_bindless_texture 1
+typedef GLuint64 (GL_APIENTRYP PFNGLGETTEXTUREHANDLEIMGPROC) (GLuint texture);
+typedef GLuint64 (GL_APIENTRYP PFNGLGETTEXTURESAMPLERHANDLEIMGPROC) (GLuint texture, GLuint sampler);
+typedef void (GL_APIENTRYP PFNGLUNIFORMHANDLEUI64IMGPROC) (GLint location, GLuint64 value);
+typedef void (GL_APIENTRYP PFNGLUNIFORMHANDLEUI64VIMGPROC) (GLint location, GLsizei count, const GLuint64 *value);
+typedef void (GL_APIENTRYP PFNGLPROGRAMUNIFORMHANDLEUI64IMGPROC) (GLuint program, GLint location, GLuint64 value);
+typedef void (GL_APIENTRYP PFNGLPROGRAMUNIFORMHANDLEUI64VIMGPROC) (GLuint program, GLint location, GLsizei count, const GLuint64 *values);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL GLuint64 GL_APIENTRY glGetTextureHandleIMG (GLuint texture);
+GL_APICALL GLuint64 GL_APIENTRY glGetTextureSamplerHandleIMG (GLuint texture, GLuint sampler);
+GL_APICALL void GL_APIENTRY glUniformHandleui64IMG (GLint location, GLuint64 value);
+GL_APICALL void GL_APIENTRY glUniformHandleui64vIMG (GLint location, GLsizei count, const GLuint64 *value);
+GL_APICALL void GL_APIENTRY glProgramUniformHandleui64IMG (GLuint program, GLint location, GLuint64 value);
+GL_APICALL void GL_APIENTRY glProgramUniformHandleui64vIMG (GLuint program, GLint location, GLsizei count, const GLuint64 *values);
+#endif
+#endif /* GL_IMG_bindless_texture */
 
 #ifndef GL_IMG_framebuffer_downsample
 #define GL_IMG_framebuffer_downsample 1
