@@ -852,6 +852,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=270> <a href="extensions/IMG/IMG_bindless_texture.txt">GL_IMG_bindless_texture</a>
 </li>
+<li value=271> <a href="extensions/NV/texture_barrier.txt">GL_NV_texture_barrier</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
