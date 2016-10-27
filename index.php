@@ -854,6 +854,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </li>
 <li value=271> <a href="extensions/NV/texture_barrier.txt">GL_NV_texture_barrier</a>
 </li>
+<li value=272> <a href="extensions/EXT/EXT_draw_transform_feedback.txt">GL_EXT_draw_transform_feedback</a>
+</li>
 </ol>
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
